@@ -13,8 +13,14 @@
     /* Custom CSS */
   </style>
   <body>
+    <?php include "includes/header.html"; ?>
 
     <h1> Hello world :^) </h1>
+    <a href="./backstore/dashboard.html">Backstore</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+
+    <?php include "includes/footer.html"; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
