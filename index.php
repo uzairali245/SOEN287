@@ -16,7 +16,6 @@
     <?php include "includes/header.html"; ?>
 
     <h1> Hello world :^) </h1>
-    <a href="./backstore/dashboard.html">Backstore</a>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     
 
