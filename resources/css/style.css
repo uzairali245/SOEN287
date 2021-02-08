@@ -1,0 +1,105 @@
+/*-------------------------------------------*/
+/* CSS COMPONENTS */
+/*-------------------------------------------*/
+
+/*------------------------------------------------*/
+/* BASICS */
+/*------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #99442B;
+    color: #fff; /* white font */
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 20px; /* any modified font size should be a percentage ... see h1 for example*/
+    text-rendering: optimizeLegibility;
+}
+
+
+/*-------------------------------------------*/
+/*  REUSABLE */
+/*-------------------------------------------*/
+
+/*----- BUTTONS -----*/
+
+.bttn:link,
+.bttn:visited {
+    font-size: 80%;
+    font-family: 'Exo', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.bttn-full:link,
+.bttn-visited:visited {
+    background-color: #EE4F3E;
+}
+
+.bttn:hover,
+.bttn:active {
+    background-color: #f16b5d; /* 2 shades lighter found on 0to255.com */
+    
+}
+
+
+/*----- HEADERS ------*/
+
+h1 {
+    margin:0;
+    font-size: 350%;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 4px;
+    word-spacing: 4px;
+    padding: 0 30px;
+}
+
+/*----- ICONS ------*/
+
+/*-------------------------------------------*/
+/*  PAGES  */
+/*-------------------------------------------*/
+
+
+/* ----- FRONT STORE ----- */
+
+/* WELCOME STORE PAGE */
+
+.welcome {
+    background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.5)),url(img/hero.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 100vh;
+}
+.welcome-store {
+    position:absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 30px;
+    text-align: left;
+}
+
+/* HOME PAGE */
+/* PRODUCT */
+/* AISLE */
+
+
+
+/* ----- BACK STORE ----- */
+
+
+
+
