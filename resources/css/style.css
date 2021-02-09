@@ -93,6 +93,19 @@ h1 {
 }
 
 /* HOME PAGE */
+
+
+ion-icon{
+    font-size: 160%;
+    color:  #db8d51
+}
+
+.navbar-custom{
+    background-color: #99442B;
+    color: #fff; /* white font */
+    font-family: 'Orbitron', sans-serif;
+}
+
 /* PRODUCT */
 /* AISLE */
 

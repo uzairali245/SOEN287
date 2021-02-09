@@ -8,11 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="resources/css/style.css" type="text/css"> 
     
-    <!-- Google fonts-->
+    <!-- Google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo&family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet"> 
   </head>
@@ -22,7 +19,26 @@
   <body>
     <?php include "includes/header.html"; ?>
 
-
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" >
+        <h2 style="font-size: 240%">
+            <a href="index.html" style="color: white; text-decoration:none">Mars Colonist Pantry </a>
+        </h2>
+        
+        <ul class="navbar-nav ml-auto  d-flex flex-row" >
+            
+            <li class="nav-item px-3 py-2">
+                <a class="nav-link" href="">
+                    <ion-icon name="person"></ion-icon>
+                </a>                
+            </li>
+            
+            <li class="nav-item px-3 py-2">  
+                <a class="nav-link" href="">
+                    <ion-icon name="cart-sharp"></ion-icon> 
+                </a>                                
+            </li>       
+        </ul>      
+    </nav>
     
 
     <?php include "includes/footer.html"; ?>
