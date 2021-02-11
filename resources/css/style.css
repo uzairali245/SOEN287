@@ -12,19 +12,42 @@
     box-sizing: border-box;
 }
 
-html {
+html,
+body {
     background-color: #99442B;
     color: #fff; /* white font */
     font-family: Roboto, sans-serif;
     font-weight: 400;
     font-size: 20px; /* any modified font size should be a percentage ... see h1 for example*/
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
+
+/* ~~~~ to clear float after using it ~~~~ */
+/* ~~~~ add to parent of element with float property ~~~~ */
+
+/*.clearfix {zoom: 1}
+.clearfix:after { 
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    
+}*/
+
+
 
 
 /*-------------------------------------------*/
 /*  REUSABLE */
 /*-------------------------------------------*/
+
+.row {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
 
 /*----- BUTTONS -----*/
 
@@ -137,7 +160,7 @@ ion-icon{
 
 /* Small phones: From 0 to 480px */
 @media only screen and (max-width: 480px) {
-    
+
 }
 
 
