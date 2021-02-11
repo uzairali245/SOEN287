@@ -22,9 +22,6 @@
   <style>
     /* Custom CSS */
 
-
-
-
   </style>
   <body>
     <?php include "includes/header.html"; ?>
@@ -33,11 +30,13 @@
     <!--CONTENTS OF PAGE STARTS HERE-->
     <div>
       <h1>Good evening, Trying text here</h1>
+      <h1>Good evening, Trying text here</h1>
+      <h1>Good evening, Trying text here</h1>
+      <h1>Good evening, Trying text here</h1>
+      <h1>Good evening, Trying text here</h1>
     </div>
 
-    <!--FOOTER-->
-    <div>
-    </div>
+
     
 
 
