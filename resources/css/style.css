@@ -67,6 +67,7 @@ h1 {
 
 /*----- ICONS ------*/
 
+
 /*-------------------------------------------*/
 /*  PAGES  */
 /*-------------------------------------------*/
@@ -113,6 +114,31 @@ ion-icon{
 
 /* ----- BACK STORE ----- */
 
+
+
+/*===========================================*/
+/*  MEDIA QUERIES  */
+/*===========================================*/
+
+/*Big tablet to 1200px (widths smaller than the 1140px row)*/
+@media only screen and (max-width: 1200px){
+
+}
+
+/*Small tablet to big tablet: from 768px to 1023px - since ipad landscape is 1024px*/
+@media only screen and (max-width: 1023px) {
+
+}
+
+/* Small phones to small tablets: from 481px-767px */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Small phones: From 0 to 480px */
+@media only screen and (max-width: 480px) {
+    
+}
 
 
 
