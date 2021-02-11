@@ -21,6 +21,10 @@ body {
     font-size: 20px; /* any modified font size should be a percentage ... see h1 for example*/
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+
+    height: 100%;
+    min-height: 100%;
+    margin:0;
 }
 
 
@@ -144,8 +148,7 @@ hr{
     font-family: 'Exo', sans-serif;
   }
 
-/*---FOOTER ---
-
+/*---FOOTER ---*/
 .custom-footer{
     background-color: #99442B;
     width: 100%;
@@ -156,7 +159,7 @@ hr{
     padding: 30px 0px 20px 0px;
     border-top: 20px solid #EE4F3E;
     text-align: center;
-}*/
+}
 
 
 /*-------------------------------------------*/
