@@ -33,7 +33,7 @@
       <h1>Good evening, Trying text here</h1>
       <h1>Good evening, Trying text here</h1>
       <h1>Good evening, Trying text here</h1>
-      <h1>Good evening, Trying text here</h1>
+      <h1>Gotta fix the div for the stuff thats hidden by the navbar</h1>
     </div>
 
 
