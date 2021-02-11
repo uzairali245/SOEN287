@@ -91,6 +91,54 @@ h1 {
 /*----- ICONS ------*/
 
 
+/*----- NAVBAR ------*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #6F230D;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 4;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #db8d51;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+        
+        hr{
+            background-color: #ac3614;
+            height: 2px;
+            padding:0;
+            margin: 0 10px 0 10px;
+        }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
 /*-------------------------------------------*/
 /*  PAGES  */
 /*-------------------------------------------*/
@@ -126,8 +174,10 @@ ion-icon{
 
 .navbar-custom{
     background-color: #99442B;
-    color: #fff; /* white font */
+    color: #db8d51; 
     font-family: 'Orbitron', sans-serif;
+    border-bottom:20px solid #EE4F3E;
+    z-index: 3;
 }
 
 /* PRODUCT */
