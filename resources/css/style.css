@@ -52,6 +52,7 @@ a {
     color: #fff;
 }
 
+
 /* GRID DISPLAY */
 
 
@@ -311,6 +312,11 @@ ion-icon{
 
 .product-info div {
     padding: 15px;
+}
+
+.product-info h5 {
+    text-align:center;
+    vertical-align: middle;
 }
 
 #manufacturer {
