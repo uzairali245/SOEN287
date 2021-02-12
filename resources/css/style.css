@@ -36,6 +36,44 @@ body {
     
 }
 
+/* DISPLAY */
+
+.row {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* GRID DISPLAY */
+
+
+.col {
+    display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; }
+
+/* GRID FRACTIONS*/
+
+.one-third {
+    width: 32.26%;
+    
+}
+
+.one-half {
+    width: 49.2%;
+}
+
 
 
 /* ~~~~ to clear float after using it ~~~~ */
@@ -58,39 +96,52 @@ body {
 /*  REUSABLE */
 /*-------------------------------------------*/
 
-.row {
-    max-width: 1200px; 
-    margin: 0 auto;
-}
 
 
 /*----- BUTTONS -----*/
 
 .bttn:link,
 .bttn:visited {
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.3s;
+    font-size: 80%;
+    font-family: 'Exo', sans-serif;
+    color: #fff;
+}
+
+.bttn-circle:link,
+.bttn-circle:visited{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    text-align: center;
     font-size: 80%;
     font-family: 'Exo', sans-serif;
     font-weight: bold;
     display: inline-block;
-    padding: 10px 30px;
     text-decoration: none;
-    border-radius: 200px;
     color: #fff;
-    margin-left: 30px;
-    margin-top: 10px;
+    padding: 5px;
 }
 
 .bttn-full:link,
-.bttn-visited:visited {
+.bttn-full:visited,
+.bttn-circle:link,
+.bttn-circle:visited{
     background-color: #EE4F3E;
 }
 
 .bttn:hover,
-.bttn:active {
-    background-color: #f16b5d; /* 2 shades lighter found on 0to255.com */
+.bttn:active,
+.bttn-circle:hover,
+.bttn-circle:active{
+    background-color: #f16b5d;
     
 }
-
 
 /*----- HEADERS ------*/
 
@@ -102,6 +153,27 @@ h1 {
     word-spacing: 4px;
     padding: 0 30px;
 }
+
+h2 {
+    font-size: 110%;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px; 
+    padding: 0 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 150%;
+}
+
+h5 {
+    font-family: Roboto, sans-serif;
+    font-size: 70%;
+}
+
 
 /*----- ICONS ------*/
 
@@ -201,14 +273,19 @@ ion-icon{
     background-position:center;
     height: 100vh;
 }
+
 .welcome-store {
     position:absolute;
-    width: 1140px;
+    width: 1200px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-left: 30px;
     text-align: left;
+}
+
+.welcome-store a{
+    margin-left: 30px;
 }
 
 /* HOME PAGE */
@@ -217,6 +294,32 @@ ion-icon{
 
 
 /* PRODUCT */
+
+.section-products{
+    position: relative;
+}
+
+.product-info {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.product-info img {
+    border-radius: 8px;
+    width:75;
+}
+
+.product-info div {
+    padding: 15px;
+}
+
+#manufacturer {
+    color: #EE4F3E;
+}
+
+#price-per-unit {
+    font-size: 100%;
+}
 /* AISLE */
 
 
@@ -231,6 +334,9 @@ ion-icon{
 
 /*Big tablet to 1200px (widths smaller than the 1140px row)*/
 @media only screen and (max-width: 1200px){
+    .welcome-store {
+        width:100%;
+    }
 
 }
 
