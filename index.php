@@ -14,13 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo&family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet"> 
 
-    <!--link to stylesheet-->
-    <link rel="stylesheet" href="resources/css/style.css">
+    <!--link to stylesheet -->
+    <link rel="stylesheet" href="resources\css\style.css"> 
 
 
   </head>
   <style>
     /* Custom CSS */
+
 
   </style>
   <body>
@@ -28,16 +29,14 @@
 
 
     <!--CONTENTS OF PAGE STARTS HERE-->
-    <div>
+    <div class="custom-page-container">
       <h1>Good evening, Trying text here</h1>
       <h1>Good evening, Trying text here</h1>
       <h1>Good evening, Trying text here</h1>
       <h1>Good evening, Trying text here</h1>
       <h1>Gotta fix the div for the stuff thats hidden by the navbar</h1>
-    </div>
-
-
-    
+      <p class="helo">helo </p>
+    </div> 
 
 
     <?php include "includes/footer.html"; ?>
