@@ -27,6 +27,15 @@ body {
     margin:0;
 }
 
+.page-container{
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+
 
 
 /* ~~~~ to clear float after using it ~~~~ */
@@ -97,7 +106,7 @@ h1 {
 /*----- ICONS ------*/
 
 
-/*----- NAVBAR ------*/
+/*----- NAVBAR SLIDE IN FROM LEFT ------*/
 .sidenav {
     height: 100%;
     width: 0;
@@ -148,6 +157,21 @@ hr{
     font-family: 'Exo', sans-serif;
   }
 
+
+/*--NAVIGATION BAR ON TOP --*/
+ion-icon{
+    font-size: 160%;
+    color:  #db8d51
+}
+
+.navbar-custom{
+    background-color: #99442B;
+    color: #db8d51; 
+    font-family: 'Orbitron', sans-serif;
+    border-bottom:10px solid #EE4F3E;
+    z-index: 3;
+}
+
 /*---FOOTER ---*/
 .custom-footer{
     background-color: #99442B;
@@ -157,7 +181,7 @@ hr{
     left: 0%;
     margin:20px 0 0 0;
     padding: 15px 0px 20px 0px;
-    border-top: 20px solid #EE4F3E;
+    border-top: 10px solid #EE4F3E;
     text-align: center;
 }
 
@@ -190,18 +214,7 @@ hr{
 /* HOME PAGE */
 
 
-ion-icon{
-    font-size: 160%;
-    color:  #db8d51
-}
 
-.navbar-custom{
-    background-color: #99442B;
-    color: #db8d51; 
-    font-family: 'Orbitron', sans-serif;
-    border-bottom:20px solid #EE4F3E;
-    z-index: 3;
-}
 
 /* PRODUCT */
 /* AISLE */
