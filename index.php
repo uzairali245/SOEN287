@@ -1,51 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-  <title>SOEN 287</title>
-  <!-- favicon <link rel="icon" href="includes/favicon.png?"/> -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<html>
     
+    <head>
+        
+        <title>Pre-Home Page</title>
+        
+        <link rel="stylesheet" href="resources/css/style.css" type="text/css"> 
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+        <section class="welcome">
+            <div class="welcome-store row">
+                <h1>Mars Grocers</h1>
+                <h2>It's been a long trip... Have something to eat.</h2>
+                <a class="bttn bttn-full" href="homepage.php">Enter store</a>
+                
+            </div>
+        </section>
+        
+        
+        
+    </body>
 
-    <!-- Google font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo&family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet"> 
 
-    <!--link to stylesheet -->
-    <link rel="stylesheet" href="resources\css\style.css"> 
-
-
-  </head>
-  <style>
-    /* Custom CSS */
-
-
-  </style>
-  <body>
-    <?php include "includes/header.html"; ?>
-
-
-    <!--CONTENTS OF PAGE STARTS HERE-->
-    <div class="custom-page-container">
-      <h1>Good evening, Trying text here</h1>
-      <h1>Good evening, Trying text here</h1>
-      <h1>Good evening, Trying text here</h1>
-      <h1>Good evening, Trying text here</h1>
-      <h1>Gotta fix the div for the stuff thats hidden by the navbar</h1>
-      <p class="helo">helo </p>
-    </div> 
-
-
-    <?php include "includes/footer.html"; ?>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script>
-        // Custom JS
-    </script>
-  </body>
 </html>
