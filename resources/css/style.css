@@ -49,8 +49,14 @@ body {
     margin: 0 auto;
 }
 
+.scale-row {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
 section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 a {
@@ -313,11 +319,15 @@ ion-icon{
 
 .product-info img {
     border-radius: 8px;
-    width:75;
+    width:100%;
 }
 
-.product-info div {
+/*.product-info div {
     padding: 15px;
+}*/
+
+.product-info {
+    width: 100%;
 }
 
 .product-info h5 {
@@ -332,6 +342,23 @@ ion-icon{
 #price-per-unit {
     font-size: 100%;
 }
+
+.accordion,
+.accordion-header {
+    padding: 0 !important;
+    
+}
+
+.accordion-button{
+    padding: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #EE4F3E !important;
+    color: #fff;
+}
+
+
 /* AISLE */
 
 

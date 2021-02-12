@@ -33,9 +33,9 @@
     <body>
         
         
-        <?php include "includes/header.html"; ?>
+        <?php include "includes/header.html"; ?> 
         
-        <section class="section-products">
+        <section class="section-products custom-page-container">
             <div class="row">
                 
                 <div class="col one-third">
@@ -51,13 +51,17 @@
                 
                 <div class="col one-third">
                     <div class="product-info">
+
                         <div>
                             <h3 id="manufacturer">Earth co.</h3>
                             <h3 id="product-name">Levitating Banana</h3>
                             <h3 id="price-per-unit">3.99$/lb</h3>
                             <h3 id="price">$3.99</h3>
-                        </div>    
-                        <div>
+                        </div>   
+
+                        
+                        <div class="scale-row">
+
                             <div class="col one-half qty">
                                 <a href="#" class="bttn-circle col one-third">-</a>
                                 <h5 class="col one-third">1</h5> <!-- convert to form-->
@@ -66,27 +70,30 @@
                             <div class="col one-half">
                                 <a href="#" class="bttn bttn-full">Add to cart</a>
                             </div>
+
                         </div>
+
+                        
+
                         <div>
-                        <div class="accordion" id="accordionExample">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
 
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        See more
-                    </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                    </div>
-                </div>
-  
-</div>
+                                    <h5 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        See more
+                                    </button>
+                                    </h5>
 
+                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <strong>We only eat Mars Bars on Mars</strong> kidding... we got potatoes also.
+                                        </div>
+                                    </div>
 
-                    </div>    
+                                </div>
+                            </div>
+                        </div>    
                   
                 </div>
 
