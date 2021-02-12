@@ -20,7 +20,7 @@
             <div class="welcome-store row">
                 <h1>Mars Grocers</h1>
                 <h2>It's been a long trip... Have something to eat.</h2>
-                <a class="bttn bttn-full" href="product.html">Enter store</a>
+                <a class="bttn bttn-full" href="#">Enter store</a>
                 
             </div>
         </section>
