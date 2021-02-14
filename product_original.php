@@ -36,20 +36,20 @@
         <?php include "includes/header.html"; ?> 
         
         <section class="section-products custom-page-container">
-            <div class="row">
+            <div class="custom-row">
                 
-                <div class="col one-third">
+                <div class="colmn one-third">
                     <div class="product-info">
                     &nbsp;
                     </div>
                 </div>
-                <div class="col one-third">
+                <div class="colmn one-third">
                     <div class="product-info">
                         <img src="resources/img/mars_bar.jpg" alt="product image">
                     </div>
                 </div>
                 
-                <div class="col one-third">
+                <div class="colmn one-third">
                     <div class="product-info">
 
                         <div>
@@ -62,12 +62,12 @@
                         
                         <div class="scale-row">
 
-                            <div class="col one-half qty">
-                                <a href="#" class="bttn-circle col one-third">-</a>
-                                <h5 class="col one-third">1</h5> <!-- convert to form-->
-                                <a href="#" class=" col one-third bttn-circle">+</a>
+                            <div class="colmn one-half qty">
+                                <a href="#" class="bttn-circle colmn one-third">-</a>
+                                <h5 class="colmn one-third">1</h5> <!-- convert to form-->
+                                <a href="#" class=" colmn one-third bttn-circle">+</a>
                             </div>
-                            <div class="col one-half">
+                            <div class="colmn one-half">
                                 <a href="#" class="bttn bttn-full">Add to cart</a>
                             </div>
 
