@@ -17,7 +17,7 @@
     
     <body>
         <section class="welcome">
-            <div class="welcome-store row">
+            <div class="welcome-store custom-row">
                 <h1>Mars Grocers</h1>
                 <h2>It's been a long trip... Have something to eat.</h2>
                 <a class="bttn bttn-full" href="homepage.php">Enter store</a>

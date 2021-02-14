@@ -39,15 +39,13 @@ body {
     margin-right: 60px;
     padding-left: 15px;
     padding-right: 15px;
-    
+
 }
 
 /* DISPLAY */
+*:focus {outline: none;}
 
-.row {
-    max-width: 1200px; 
-    margin: 0 auto;
-}
+
 
 .scale-row {
     width: 100%;
@@ -67,20 +65,28 @@ a {
 
 /* GRID DISPLAY */
 
+.custom-row {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
 
-.col {
+.colmn {
     display: block;
 	float:left;
 	margin: 1% 0 1% 1.6%;
 }
 
-.col:first-child { margin-left: 0; }
+.colmn:first-child { margin-left: 0; }
 
 /* GRID FRACTIONS*/
 
 .one-third {
     width: 32.26%;
     
+}
+
+.two-third {
+    width: 64.52%;
 }
 
 .one-half {
@@ -92,7 +98,7 @@ a {
 /* ~~~~ to clear float after using it ~~~~ */
 /* ~~~~ add to parent of element with float property ~~~~ */
 
-/*.clearfix {zoom: 1}
+.clearfix {zoom: 1}
 .clearfix:after { 
     content: '.';
     clear: both;
@@ -100,7 +106,7 @@ a {
     height: 0;
     visibility: hidden;
     
-}*/
+}
 
 
 
@@ -113,6 +119,21 @@ a {
 
 /*----- BUTTONS -----*/
 
+
+button {
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 120%;
+    background-color: #EE4F3E;
+    border-radius: 20px;
+    padding:10px;
+    
+}
+
 .bttn:link,
 .bttn:visited {
     display: inline-block;
@@ -120,14 +141,17 @@ a {
     font-weight: bold;
     text-decoration: none;
     border-radius: 200px;
+    -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s;
+    
     font-size: 80%;
     font-family: 'Exo', sans-serif;
     color: #fff;
 }
 
 .bttn-circle:link,
-.bttn-circle:visited{
+.bttn-circle:visited,
+.button-circle{
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -139,19 +163,19 @@ a {
     text-decoration: none;
     color: #fff;
     padding: 5px;
+    background-color: #EE4F3E;
 }
 
 .bttn-full:link,
-.bttn-full:visited,
-.bttn-circle:link,
-.bttn-circle:visited{
+.bttn-full:visited {
     background-color: #EE4F3E;
 }
 
 .bttn:hover,
 .bttn:active,
 .bttn-circle:hover,
-.bttn-circle:active{
+.bttn-circle:active,
+button:hover{
     background-color: #f16b5d;
     
 }
@@ -189,6 +213,26 @@ h5 {
 
 
 /*----- ICONS ------*/
+
+/* -----INPUTS -----*/
+
+input[type="text"]{
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-weight: 300;
+    color: #fff;
+    background-color: rgba(0,0,0,0);
+
+}
+
+.qty {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    height: 100%;
+}
 
 
 /*----- NAVBAR SLIDE IN FROM LEFT ------*/
@@ -367,6 +411,77 @@ ion-icon{
 
 
 /* AISLE */
+
+/* SHOPPING CART */
+
+.section-cart h2{
+    font-family: 'Exo', sans-serif;
+    font-size: 200%;
+    font-weight: 600;
+}
+
+.section-cart img {
+    border-radius: 8px;
+    margin: 10px 15px;
+}
+
+.section-cart h3 {
+    font-size: 100%;
+}
+
+.cart-element {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20%;
+}
+
+#total-price-item {
+    float:right;
+    vertical-align: middle;
+    line-height: 8;
+    margin-right: 40px;
+}
+
+#total-price-item h3 {
+    float: right;
+}
+
+.cart-header {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+}
+
+.cart-item {
+    border-bottom: 1px solid #fff;
+    position: relative;
+    width: 100%;
+}
+
+.delete-item {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0);
+}
+#cart-total {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.price-list {
+    float:right;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.price-descriptors {
+    float: left;
+    padding-left: 10px;
+}
+
 
 
 
