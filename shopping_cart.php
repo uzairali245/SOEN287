@@ -168,6 +168,8 @@
 
         </section>
 
+        <div class="clearfix"></div>
+
         <!--FOOTER-->
         <?php include "includes/footer.html"; ?>
         

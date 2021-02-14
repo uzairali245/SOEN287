@@ -103,7 +103,7 @@
     
         
         
-        <!--<div class="clearfix"></div>-->
+        <div class="clearfix"></div>
         <?php include "includes/footer.html"; ?>
         
         <!-- Bootstrap JS -->

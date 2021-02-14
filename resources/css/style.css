@@ -98,7 +98,7 @@ a {
 /* ~~~~ to clear float after using it ~~~~ */
 /* ~~~~ add to parent of element with float property ~~~~ */
 
-/*.clearfix {zoom: 1}
+.clearfix {zoom: 1}
 .clearfix:after { 
     content: '.';
     clear: both;
@@ -106,7 +106,7 @@ a {
     height: 0;
     visibility: hidden;
     
-}*/
+}
 
 
 
