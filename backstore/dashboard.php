@@ -18,7 +18,6 @@
   </head>
   <style>
     /* Custom CSS */
-    /* Custom CSS */
     body {
       background: #EBE2DE none repeat scroll 0 0;
       position: relative;
@@ -59,8 +58,12 @@
       font-weight: normal;
       font-size: 24px;
       line-height: 31px;
+      border-radius: 0px 0px 0px 0px;
     }
 
+    .tab-content {
+      padding: 25px;
+    }
 
   </style>
   <body>
@@ -68,7 +71,7 @@
 
     <div class="custom-page-container">
       <!-- Tab list -->
-      <ul class="nav nav-tabs flex-column flex-md-row justify-content-center" id="#navTab">
+      <ul class="nav nav-tabs flex-column flex-md-row justify-content-center">
         <li class="nav-item">
           <button class="nav-link active tab-item" data-bs-toggle="tab" data-bs-target="#products">Products</button>
         </li>
