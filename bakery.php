@@ -48,7 +48,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-bagel2.jpg" alt="Bagel">
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bagel</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bagel</h4>
                 <p style="margin-bottom: 0 ">10$/dozen</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -68,7 +68,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-baguette2.jpg" alt="Baguette">
-                 <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Baguette</h5>
+                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Baguette</h4>
                 <p style="margin-bottom: 0 ">7$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -88,7 +88,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-challah2.jpg" alt="Challah">
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Challah</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Challah</h4>
                 <p style="margin-bottom: 0 ">5$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -108,7 +108,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-chocolatine2.jpg" alt="Chocolatine"> 
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Chocolatine</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Chocolatine</h4>
                 <p style="margin-bottom: 0 ">3$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -127,7 +127,7 @@ img{
             
             <div class="aisle-item">
                 <img src="resources/img/bakery-ciabatta2.jpg" alt="Ciabatta">
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Ciabatta</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Ciabatta</h4>
                 <p style="margin-bottom: 0 ">7$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -146,7 +146,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-cinnamon2.jpg" alt="Cinammon Roll">
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Cinnamon Roll</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Cinnamon Roll</h4>
                 <p style="margin-bottom: 0 ">10$/pack (6)</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -165,7 +165,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-croissant2.jpg" alt="Croissant">
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Croissant</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Croissant</h4>
                 <p style="margin-bottom: 0 ">11$/pack (6)</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -184,7 +184,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-donut2.jpg" alt="Donut">
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Donut</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Donut</h4>
                 <p style="margin-bottom: 0 ">10$/dozen</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -203,7 +203,7 @@ img{
              
             <div class="aisle-item">
                 <img src="resources/img/bakery-pita2.jpg" alt="Pita">
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pita</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pita</h4>
                 <p style="margin-bottom: 0 ">5$/bag (8)</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -222,7 +222,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-pretzel2.jpg" alt="Pretzel">
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pretzel</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pretzel</h4>
                 <p style="margin-bottom: 0 ">4$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -241,7 +241,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-wheat-bread2.jpg" alt="Wheat Bread">
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Wheat Bread</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Wheat Bread</h4>
                 <p style="margin-bottom: 0 ">7$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -260,7 +260,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery-white-bread2.jpg" alt="White Bread"> 
-                <h5 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">White Bread</h5>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">White Bread</h4>
                 <p style="margin-bottom: 0 ">7$/bag</p>
                 
                 <div class="d-flex bd-highlight">                    
