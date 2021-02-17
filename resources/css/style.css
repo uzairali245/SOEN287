@@ -57,9 +57,14 @@ body {
     height: auto;
 }*/
 
-/*section {
-    padding: 60px 0;
-}*/
+.content-without-footer {
+    padding-top:120px;
+    padding-bottom: 100px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 a {
     text-decoration: none;
@@ -474,7 +479,7 @@ ion-icon{
 
 /* SHOPPING CART */
 
-.section-cart h2{
+.section-cart .custom-row h2{
     font-family: 'Exo', sans-serif;
     font-size: 200%;
     font-weight: 600;
