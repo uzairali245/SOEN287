@@ -18,12 +18,15 @@
   </head>
   <style>
     /* Custom CSS */
+    .header.navbar {
+    box-shadow: none;
+    }
+
     body {
       background: #EBE2DE none repeat scroll 0 0;
       position: relative;
       margin: 0;
       padding: 0;
-      min-height: 100%;
       height: auto;
     }
 
@@ -34,6 +37,8 @@
       margin-bottom: 100px;
       padding-left: 0px;
       padding-right: 0px;
+      padding-bottom: 100px;
+      position: relative;
     }
 
     .navbar-custom {
