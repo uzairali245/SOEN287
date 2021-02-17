@@ -60,20 +60,21 @@
                         </div>   
 
                         
-                        <div class="scale-row">
+                        <div>
 
                             <div class="colmn one-half qty">
-                                <a href="#" class="bttn-circle colmn one-third">-</a>
-                                <h5 class="colmn one-third">1</h5> <!-- convert to form-->
-                                <a href="#" class=" colmn one-third bttn-circle">+</a>
+                                <button class="button-circle" type="button" name="button">-</button>
+                                <input type="text" name="qty" value="1">
+                                <button class="button-circle" type="button" name="button">+</button>
                             </div>
+
                             <div class="colmn one-half">
-                                <a href="#" class="bttn bttn-full">Add to cart</a>
+                                <button type="submit" class="bttn bttn-full"> Add to cart </button>
                             </div>
 
                         </div>
 
-                        
+                         <div class="clearfix"></div>
 
                         <div>
                             <div class="accordion" id="accordionExample">
