@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>SOEN 287</title>
-  <!-- favicon <link rel="icon" href="includes/favicon.png?"/> -->
+    <title>SOEN 287</title>
+    <!-- favicon <link rel="icon" href="includes/favicon.png?"/> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="resources\css\style.css"> 
   </head>
   <style>
-    /* Custom CSS */
+    /* Custom CSS */ 
     
 img{
     max-height: 250px;
@@ -32,7 +32,10 @@ img{
     margin-top: 25px;
 }
 
-
+.section-titles{
+    font-size: 150%;
+    background-color: #db8d51;
+}
   </style>
   <body>
     <?php include "includes/header.html"; ?>
@@ -40,8 +43,8 @@ img{
 
     <!--CONTENTS OF PAGE STARTS HERE-->
     <div class="custom-page-container">
-    <div class="best-container homepage-block">
-            <h2>Guaranteed to deliver the best</h2>
+        <div class="best-container homepage-block">
+            <h2 class="section-titles">Guaranteed to deliver the best</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et eros lacus. Sed ornare, diam ut aliquam pharetra, leo dolor dapibus magna, eget rhoncus sapien.
             </p>
@@ -52,7 +55,7 @@ img{
         </div>
         
         <div class="schedule-container homepage-block">
-            <h2 class="d-flex justify-content-center">Schedule</h2>
+            <h2 class="d-flex justify-content-center section-titles">Schedule</h2>
             <div class="d-flex justify-content-center">
                 <img src="resources/img/hours-of-op.png" alt="hours of operation">
             </div>
@@ -62,7 +65,7 @@ img{
         
         
         <div class="sale-of-the-week-container homepage-block">
-            <h2 class="d-flex justify-content-center">Sales of the week</h2>
+            <h2 class="d-flex justify-content-center section-titles">Sales of the week</h2>
             
             <div class="d-flex flex-wrap justify-content-evenly ">
                 
@@ -156,11 +159,8 @@ img{
             
         </div>
         
-        
-        
-        
         <div class="new-arrivals-container homepage-block">
-            <h2 class="d-flex justify-content-center">New Arrivals</h2>
+            <h2 class="d-flex justify-content-center section-titles">New Arrivals</h2>
             
             <div class="d-flex flex-wrap justify-content-evenly ">
                 <div class="aisle-item"> 
@@ -237,21 +237,16 @@ img{
                         <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
                         </div>
                     </div>
-                </div>
-                
-                               
-            </div>
-            
+                </div>   
+            </div>            
         </div>
         
         <div class="work-with-us-container homepage-block">
-            <h2>Want to work with us?</h2>
+            <h2 class="section-titles">Want to work with us?</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus nunc odio, eget convallis nisi elementum at. Integer finibus sodales leo, vel volutpat justo varius vel. Cras mattis, nulla sed tincidunt facilisis, justo arcu maximus magna, in vestibulum purus nulla egestas nisi. Sed cursus pretium tortor facilisis luctus. Sed ipsum.
             </p>
         </div>  
-
-
     </div> 
 
 

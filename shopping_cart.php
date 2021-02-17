@@ -155,8 +155,10 @@
 
                         </div>
                     </div>
+
+                    <div class="clearfix"></div>
+                    <div class="center"><button type="submit" class="long-bttn"> Order Now </button></div>
                     
-                    <button type="submit"> Order Now </button>
                 
                 
                 </div>

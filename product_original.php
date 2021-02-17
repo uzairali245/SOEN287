@@ -23,9 +23,14 @@
         
         <!--Lato-->
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
-        
+
+        <!--Roboto-->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
         <!--Exo-->
-        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700&display=swap" rel="stylesheet">
+
+        <!--Main Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo&family=Orbitron:wght@500&family=Roboto:Roboto:ital,wght@0,500;1,500,1;600;1,700&display=swap" rel="stylesheet"> 
         
     
     </head>
@@ -39,12 +44,12 @@
             <div class="custom-row">
                 
                 <div class="colmn one-third">
-                    <div class="product-info">
+                    <div>
                     &nbsp;
                     </div>
                 </div>
                 <div class="colmn one-third">
-                    <div class="product-info">
+                    <div>
                         <img src="resources/img/mars_bar.jpg" alt="product image">
                     </div>
                 </div>
@@ -52,30 +57,38 @@
                 <div class="colmn one-third">
                     <div class="product-info">
 
-                        <div>
+                        <div class="product-info-element">
                             <h3 id="manufacturer">Earth co.</h3>
                             <h3 id="product-name">Levitating Banana</h3>
+                        </div>
+
+                        <div class="product-info-element">
                             <h3 id="price-per-unit">3.99$/lb</h3>
-                            <h3 id="price">$3.99</h3>
-                        </div>   
+                        </div>
+
+                        <div class="product-info-element">
+                            <h3 id="price">3.99$</h3>
+                        </div>
+                              
 
                         
-                        <div class="scale-row">
+                        <div class="product-info-element">
 
                             <div class="colmn one-half qty">
-                                <a href="#" class="bttn-circle colmn one-third">-</a>
-                                <h5 class="colmn one-third">1</h5> <!-- convert to form-->
-                                <a href="#" class=" colmn one-third bttn-circle">+</a>
+                                <button class="button-circle" type="button" name="button">-</button>
+                                <input type="text" name="qty" value="1">
+                                <button class="button-circle" type="button" name="button">+</button>
                             </div>
+
                             <div class="colmn one-half">
-                                <a href="#" class="bttn bttn-full">Add to cart</a>
+                                <button type="submit" class="bttn bttn-full"> Add to cart </button>
                             </div>
 
                         </div>
 
-                        
+                         <div class="clearfix"></div>
 
-                        <div>
+                        <div class="product-info-element">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
 
