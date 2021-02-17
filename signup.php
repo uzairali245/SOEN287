@@ -11,7 +11,7 @@
     <?php include "includes/header.html"; ?>
 
     <div class="signup-page">
-        <div class="form-signup-left">
+        <div class="form-signup">
             <h3 class="form-signup-header">Signup</h3>
             <br></br>
             <form class="register-form-signup">

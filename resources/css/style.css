@@ -605,7 +605,7 @@ background-color: #FFFFFF;
 
 
         }
-        .form-signup-right {
+        .form-signup {
             display: block;
             text-align: center;
             margin-left: 600px;
@@ -617,17 +617,7 @@ background-color: #FFFFFF;
             padding: 150px 555px 150px 150px;
         }
 
-        .form-signup-left {
-            display: block;
-            text-align: center;
-            margin-left: 600px;
-            max-width: 0px;
-            margin-top: 120px;
-            /*this is for the white border*/
-            border: 2px solid white;
-            box-sizing: border-box;
-            padding: 150px 555px 150px 150px;
-        }
+        
 
         button.signup {
             display: inline-block;
@@ -649,7 +639,7 @@ background-color: #FFFFFF;
         }
 
         .form-signup-header {
-            margin-left: 120px;
+            margin-left: 110px;
             color: white;
             font-size: 60px;
 
