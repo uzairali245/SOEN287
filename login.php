@@ -20,7 +20,8 @@
                 <label for="password">Password</label>
                 <input class="input-login" placeholder="Enter Password Here" id="password" type="text" />
                 <button class="login">Login</button><br><br>
-                <label class="sub-login-label">Forgot Password? <a class="sub-login" href="#">Click Here</a></button>
+                <label class="sub-login-label">Forgot Password? <a class="sub-login" href="#">Click Here</a></label><br><br>
+                <label class="sub-login-label">Not a Member? <a class="sub-login" href="signup.php">Click Here</a></label>
             </form>
         </div>
 
