@@ -521,9 +521,9 @@ background-color: #FFFFFF;
         .form {
             display: block;
             text-align: center;
-            margin-left: 600px;
+            /* margin-left: 600px; */
             max-width: 0px;
-            margin-top: 120px;
+            /* margin-top: 120px; */
             /*this is for the white border*/
             border: 2px solid white;
             box-sizing: border-box;
