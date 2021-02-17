@@ -43,7 +43,7 @@ body {
 }
 
 /* DISPLAY */
-*:focus {outline: none;}
+*:focus {outline: none !important;}
 
 
 
@@ -73,7 +73,7 @@ a {
 .colmn {
     display: block;
 	float:left;
-	margin: 1% 0 1% 1.6%;
+    margin: 1% 0 1% 1.6%;
 }
 
 .colmn:first-child { margin-left: 0; }
@@ -210,7 +210,7 @@ h1 {
 
 
 h2 {
-    font-size: 110%;
+    font-size: 200%;
     font-family: 'Orbitron', sans-serif;
     margin-bottom: 10px; 
     padding: 0 30px;
@@ -218,10 +218,11 @@ h2 {
 }
 
 h3 {
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-style: italic;
-    font-size: 150%;
+    font-size: 140%;
+    margin-block-end: 0;
 }
 
 h5 {
@@ -381,14 +382,16 @@ ion-icon{
     position: relative;
 }
 
-.product-info {
-    width: 90%;
-    margin-left: 5%;
+.product-info:last-of-type{
+    padding-left: 20px;
 }
 
-.product-info img {
+.section-products img {
     border-radius: 8px;
     width:100%;
+    padding:0;
+    min-width: 270px;
+    min-height: 270px;
 }
 
 /*.product-info div {
@@ -397,9 +400,16 @@ ion-icon{
 
 .product-info {
     width: 100%;
+    max-width: 300px;
+    /*border-left: 1px solid #fff;*/
 }
 
-.product-info h5 {
+.product-info-element {
+    margin-bottom: 20px;
+
+}
+
+.section-products h5 {
     text-align:center;
     vertical-align: middle;
 }
@@ -409,7 +419,7 @@ ion-icon{
 }
 
 #price-per-unit {
-    font-size: 100%;
+    font-size: 90%;
 }
 
 .section-products .one-half:first-child {
@@ -419,8 +429,9 @@ ion-icon{
 }
 
 .section-products .one-half:last-child button{
-    display: flex;
-    justify-content:right;
+    /*display: flex;
+    justify-content:right;*/
+    float: right;
 }
 
 .accordion,
