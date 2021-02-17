@@ -19,7 +19,7 @@
   <style>
     /* Custom CSS */
     .header.navbar {
-    box-shadow: none;
+      box-shadow: none;
     }
 
     body {
@@ -39,6 +39,7 @@
       padding-right: 0px;
       padding-bottom: 100px;
       position: relative;
+      height:auto;
     }
 
     .navbar-custom {
