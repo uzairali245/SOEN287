@@ -28,6 +28,7 @@
       margin: 0;
       padding: 0;
       height: auto;
+      min-height: 100vh;
     }
 
     .custom-page-container {
