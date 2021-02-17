@@ -5,8 +5,8 @@
     <title>User login</title>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Bootstrap CSS -->
@@ -18,6 +18,83 @@
 
     <!--link to stylesheet -->
     <link rel="stylesheet" href="resources\css\style.css">
+    <style>
+        .login-container {
+            width: 370px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            border-style: solid;
+            border-width: 2px;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+
+
+        .login-container h1 {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .login-container label {
+            display: block;
+        }
+
+        .login-container div {
+            margin-bottom: 20px;
+        }
+
+        .login-container input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            border: 1px solid;
+            background: transparent;
+            color: white;
+            height: 40px;
+        }
+
+        .login-container input[type="text"]::placeholder,
+        input[type="password"]::placeholder {
+            text-align: center;
+            color: #d3d3d3;
+
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            border: none;
+            outline: none;
+            height: 40px;
+            background-color: #EE4F3E;
+            color: #ffff;
+
+        }
+
+        .login-container input[type="submit"]:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 10px #696969;
+        }
+
+        a {
+            display: block;
+            text-align: left;
+            text-decoration: none;
+            color: white;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+
+        a:hover {
+            color: #d3d3d3;
+
+        }
+    </style>
+
 </head>
 
 
@@ -26,26 +103,23 @@
 <body>
     <?php include "includes/header.html"; ?>
 
-    <div class="login-page container-fluid">
-        <!-- <div class="col-md-4 col-sm-4"></div> -->
+    <div class="login-container">
+        <form action="">
+            <h1>LOGIN</h1>
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter your username here" value="">
+                
 
-        <div class="form d-flex justify-content-center">
-            <h3 class=" form-login-header">Login</h3>
-            <br><br>
-            <form class="register-form">
-                <!-- <label for="email">Email</label> -->
-                <input class="input-login" placeholder="Email" id="email" type="text" />
-                <!-- <label for="password">Password</label> -->
-                <br></br>
-                <input class="input-login" placeholder="Password" id="password" type="text" />
-                <button class="login">Login</button><br><br>
-                <label class="sub-login-label">Forgot Password? <a class="sub-login" href="#">Click Here</a></label><br><br>
-                <label class="sub-login-label">Not a Member? <a class="sub-login" href="signup.php">Click Here</a></label>
-            </form>
-
-        </div>
-        <!-- <div class="col-md-4 col-sm-4"></div> -->
-
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password here" value="">
+            </div>
+            <input type="submit" name="login" value="LOGIN">
+            <a href="#">Forgot Password?</a>
+            <a href="signup.php">Not a Member?</a>
+        </form>
     </div>
 
     <?php include "includes/footer.html"; ?>

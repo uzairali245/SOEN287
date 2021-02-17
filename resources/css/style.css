@@ -563,102 +563,14 @@ background-color: #FFFFFF;
     background-color: #ccc;
 }
 
-/*-------------------------------------------*/
-/* Login Page*/
-/*-------------------------------------------*/
 
-
-
-        /*            pxiel size should only bge in pixels in the body */
-
-
-        .form {
-            display: block;
-            text-align: center;
-            /* margin-left: 600px; */
-            max-width: 0px;
-            /* margin-top: 120px; */
-            /*this is for the white border*/
-            border: 2px solid white;
-            box-sizing: border-box;
-            padding: 150px 555px 150px 150px;
-
-
-
-        }
-
-        button.login {
-            display: inline-block;
-            margin-left: 0px;
-            margin-top: 10px;
-            padding: 3px 69px 3px 69px;
-            background-color: #EE4F3E;
-            border-radius: 0px;
-            color: aliceblue;
-            width: 400px
-        }
-
-
-
-        .register-form label {
-
-            font-size: 11px;
-            font-family: sans-serif;
-        }
-
-        .form-login-header {
-            margin-left:120px;
-            color: white;
-            font-size: 60px;
-
-        }
-
-        .login:hover,
-        .login:active {
-            background-color: #f16b5d;
-        }
-
-        .input-login[type="text"] {
-            width: 400px;
-            height: 49px;
-            border: solid;
-            border-color: white;
-            border-width: 1px;
-        }
-
-        .input-login::placeholder {
-            color: gainsboro;
-            text-align: left;
-            font-size: 16px !important;
-            text-align: center;
-
-        }
-
-        .sub-login:hover {
-            color: black;
-        }
-
-        label.sub-login-label {
-            margin-top: 1000px;
-            white-space: nowrap;
-            max-width: 0px;
-            font-size: 110%;
-        }
-
-        .register-form {
-            max-width: 0px;
-        }
-
-        .email,
-        .password {
-            font-size: 500%;
 
 /*-------------------------------------------*/
 /* Signup Page*/
 /*-------------------------------------------*/
 
 
-        }
+        
         .form-signup {
             display: block;
             text-align: center;
