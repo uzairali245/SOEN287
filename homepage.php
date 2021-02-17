@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>SOEN 287</title>
-  <!-- favicon <link rel="icon" href="includes/favicon.png?"/> -->
+    <title>SOEN 287</title>
+    <!-- favicon <link rel="icon" href="includes/favicon.png?"/> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="resources\css\style.css"> 
   </head>
   <style>
-    /* Custom CSS */
+    /* Custom CSS */ 
     
 img{
     max-height: 250px;
@@ -36,8 +36,6 @@ img{
     font-size: 150%;
     background-color: #db8d51;
 }
-
-
   </style>
   <body>
     <?php include "includes/header.html"; ?>
@@ -161,9 +159,6 @@ img{
             
         </div>
         
-        
-        
-        
         <div class="new-arrivals-container homepage-block">
             <h2 class="d-flex justify-content-center section-titles">New Arrivals</h2>
             
@@ -242,11 +237,8 @@ img{
                         <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
                         </div>
                     </div>
-                </div>
-                
-                               
-            </div>
-            
+                </div>   
+            </div>            
         </div>
         
         <div class="work-with-us-container homepage-block">
@@ -255,8 +247,6 @@ img{
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras luctus nunc odio, eget convallis nisi elementum at. Integer finibus sodales leo, vel volutpat justo varius vel. Cras mattis, nulla sed tincidunt facilisis, justo arcu maximus magna, in vestibulum purus nulla egestas nisi. Sed cursus pretium tortor facilisis luctus. Sed ipsum.
             </p>
         </div>  
-
-
     </div> 
 
 
