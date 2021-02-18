@@ -264,7 +264,12 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery/bakery-white-bread2.jpg" alt="White Bread"> 
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">White Bread</h4>
+                <br>
+                <!--
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">White Bread</h4> -->
+                <h4>
+                    <a href="product_whiteBread.php" style="color: white; text-decoration: none;">Bread </a>  
+                </h4>
                 <p style="margin-bottom: 0 ">7$/bag</p>
                 
                 <div class="d-flex bd-highlight">                    
