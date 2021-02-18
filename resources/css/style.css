@@ -557,7 +557,7 @@ ion-icon{
 @media only screen and (max-width: 550px) {
     .cart-item {width: 100%; display: inline-block;}
     .cart-element {width: 100%; display: block; float: left;}
-    .section-cart img {max-width: 450px;}
+    .section-cart img {max-width: 450px; margin: 0}
     
     /*.section-cart img, .cart-element.item-descrpt {
         margin: 0; 
@@ -646,6 +646,9 @@ background-color: #FFFFFF;
 
 }
 
+
+
+
 /* Additional Media Query Breakpoints */
 
 /* Width Breakpoint */
@@ -657,6 +660,13 @@ background-color: #FFFFFF;
     .product-info {max-width: 338px;}
 
 }
+
+@media only screen and (max-width: 575px) {
+    .container input[type="text"], input[type="password"], input[type="email"] {width: 100% !important;}
+
+}
+
+
 
 
 
