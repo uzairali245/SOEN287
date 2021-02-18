@@ -100,57 +100,60 @@
     <?php include "includes/header.html"; ?>
 
 
-        <div class="container">
-            <h1>Signup</h1>
-            <form>
-                <div class="row jumbotron">
-                    <div class="col-sm-6 form-group">
-                        <label for="name-f">First Name</label>
-                        <input type="text" class="form-control" name="fname" placeholder="Enter your first name." required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="name-l">Last name</label>
-                        <input type="text" class="form-control" name="lname" placeholder="Enter your last name." required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email." required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="name-l">Confirm Email</label>
-                        <input type="email" class="form-control" name="lname" placeholder="Confirm Email." required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="name-l">Language</label>
-                        <input type="text" class="form-control" name="lname" placeholder="Enter your Language." required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="province">Province</label>
-                        <input type="text" class="form-control" name="State" id="State" placeholder="Enter your Province." required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="pass">Password</label>
-                        <input type="Password" name="password" class="form-control" id="pass" placeholder="Enter your password." required>
-                    </div>
-                    <div class="col-sm-6 form-group">
-                        <label for="pass2">Confirm Password</label>
-                        <input type="Password" name="cnf-password" class="form-control" id="pass2" placeholder="Re-enter your password." required>
-                    </div>
-                    <div class="col-sm-12 form-group mb-0">
-                        <input type="submit" name="signup" value="SIGNUP">
-                    </div>
-                    <a href="login.php">Already a Member? Sign in!</a>
-
+    <div class="container">
+        <h1>Signup</h1>
+        <form>
+            <div class="row jumbotron">
+                <div class="col-sm-6 form-group">
+                    <label for="name-f">First Name</label>
+                    <input type="text" class="form-control" name="fname" placeholder="Enter your first name." required>
                 </div>
-            </form>
-        </div>
+                <div class="col-sm-6 form-group">
+                    <label for="name-l">Last name</label>
+                    <input type="text" class="form-control" name="lname" placeholder="Enter your last name." required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email." required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="name-l">Confirm Email</label>
+                    <input type="email" class="form-control" name="lname" placeholder="Confirm Email." required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="name-l">Language</label>
+                    <input type="text" class="form-control" name="lname" placeholder="Enter your Language." required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="province">Province</label>
+                    <input type="text" class="form-control" name="State" id="State" placeholder="Enter your Province." required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="pass">Password</label>
+                    <input type="Password" name="password" class="form-control" id="pass" placeholder="Enter your password." required>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label for="pass2">Confirm Password</label>
+                    <input type="Password" name="cnf-password" class="form-control" id="pass2" placeholder="Re-enter your password." required>
+                </div>
+                <div class="col-sm-12 form-group mb-0">
+                    <input type="submit" name="signup" value="SIGNUP">
+                </div>
+                <a href="login.php">Already a Member? Sign in!</a>
 
-        <?php include "includes/footer.html"; ?>
-    </body>
+            </div>
+        </form>
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+    <?php include "includes/footer.html"; ?>
+</body>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 
 
 </html>
