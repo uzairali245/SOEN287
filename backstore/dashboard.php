@@ -74,9 +74,10 @@
 
   </style>
   <body>
-    <?php include "../includes/header.html"; ?>
+    <div class="content-container">
 
-    <div class="custom-page-container">
+    <div class="content-without-footer">
+    <?php include "../includes/header.html"; ?>
       <!-- Tab list -->
       <ul class="nav nav-tabs flex-column flex-md-row justify-content-center">
         <li class="nav-item">
@@ -331,5 +332,6 @@
     <script>
       /* Custom JS */
     </script>
+    </div>
   </body>
 </html>
