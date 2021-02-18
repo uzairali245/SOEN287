@@ -97,58 +97,60 @@
 </Head>
 
 <body>
-    <?php include "includes/header.html"; ?>
+    <div class="content-container">
+        <div class="content-without-footer">
+            <?php include "includes/header.html"; ?>
 
 
-    <div class="container">
-        <h1>Signup</h1>
-        <form>
-            <div class="row jumbotron">
-                <div class="col-sm-6 form-group">
-                    <label for="name-f">First Name</label>
-                    <input type="text" class="form-control" name="fname" placeholder="Enter your first name." required>
-                </div>
-                <div class="col-sm-6 form-group">
-                    <label for="name-l">Last name</label>
-                    <input type="text" class="form-control" name="lname" placeholder="Enter your last name." required>
-                </div>
-                <div class="col-sm-6 form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email." required>
-                </div>
-                <div class="col-sm-6 form-group">
-                    <label for="name-l">Confirm Email</label>
-                    <input type="email" class="form-control" name="lname" placeholder="Confirm Email." required>
-                </div>
-                <div class="col-sm-6 form-group">
-                    <label for="name-l">Language</label>
-                    <input type="text" class="form-control" name="lname" placeholder="Enter your Language." required>
-                </div>
-                <div class="col-sm-6 form-group">
-                    <label for="province">Province</label>
-                    <input type="text" class="form-control" name="State" id="State" placeholder="Enter your Province." required>
-                </div>
-                <div class="col-sm-6 form-group">
-                    <label for="pass">Password</label>
-                    <input type="Password" name="password" class="form-control" id="pass" placeholder="Enter your password." required>
-                </div>
-                <div class="col-sm-6 form-group">
-                    <label for="pass2">Confirm Password</label>
-                    <input type="Password" name="cnf-password" class="form-control" id="pass2" placeholder="Re-enter your password." required>
-                </div>
-                <div class="col-sm-12 form-group mb-0">
-                    <input type="submit" name="signup" value="SIGNUP">
-                </div>
-                <a href="login.php">Already a Member? Sign in!</a>
+            <div class="container">
+                <h1>Signup</h1>
+                <form>
+                    <div class="row jumbotron">
+                        <div class="col-sm-6 form-group">
+                            <label for="name-f">First Name</label>
+                            <input type="text" class="form-control" name="fname" placeholder="Enter your first name." required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="name-l">Last name</label>
+                            <input type="text" class="form-control" name="lname" placeholder="Enter your last name." required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email." required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="name-l">Confirm Email</label>
+                            <input type="email" class="form-control" name="lname" placeholder="Confirm Email." required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="name-l">Language</label>
+                            <input type="text" class="form-control" name="lname" placeholder="Enter your Language." required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="province">Province</label>
+                            <input type="text" class="form-control" name="province" id="province" placeholder="Enter your Province." required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="pass">Password</label>
+                            <input type="Password" name="password" class="form-control" id="pass3" placeholder="Enter your password." required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="pass2">Confirm Password</label>
+                            <input type="Password" name="cnf-password" class="form-control" id="pass4" placeholder="Re-enter your password." required>
+                        </div>
+                        <div class="col-sm-12 form-group mb-0">
+                            <input type="submit" name="signup" value="SIGNUP">
+                        </div>
+                        <a href="login.php">Already a Member? Login!</a>
+
+                    </div>
+                </form>
 
             </div>
-        </form>
+        </div>
+        <?php include "includes/footer.html"; ?>
+
     </div>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <?php include "includes/footer.html"; ?>
 </body>
 
 <!-- Bootstrap JS -->

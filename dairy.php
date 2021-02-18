@@ -111,21 +111,21 @@
 
             <div class="aisle-item">
                 <img src="resources/img/dairy/milk.jpg" alt="milk">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Milk</h4>
-                <p style="margin-bottom: 0 ">5$</p>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;"><a href="product_milk.php" >Milk</a></h4>
+                        <p style="margin-bottom: 0 ">5$/bag</p>
 
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
+                        <div class="d-flex bd-highlight">
+                            <div class="flex-grow-1 bd-highlight">
+                                <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                                <span>1</span>
+                                <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                            </div>
 
-                    <div class="bd-highlight">
+                            <div class="bd-highlight">
 
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
+                                <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                            </div>
+                        </div>
             </div>
 
             <div class="aisle-item">
@@ -166,8 +166,8 @@
                 </div>
             </div>
 
-            
-               
+
+
 
         </div>
     </div>
