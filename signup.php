@@ -99,7 +99,6 @@
 <body>
     <?php include "includes/header.html"; ?>
 
-    <body>
 
         <div class="container">
             <h1>Signup</h1>
