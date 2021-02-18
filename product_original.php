@@ -110,12 +110,11 @@
                 </div>
 
             </div>
-
+            <div class="clearfix"></div>
         </section>
     
         
         
-            <div class="clearfix"></div>
             <?php include "includes/footer.html"; ?>
         </div> 
         

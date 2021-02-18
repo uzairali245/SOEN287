@@ -40,13 +40,13 @@
             </div>
             
             <div class="custom-row">
-                <div class="colmn two-third">
+                <div class="colmn two-third cart-list">
                     <div class="cart-header">3 items</div>
                     <div class="cart-item">
                        
                         <img class="cart-element" src="resources/img/mars_bar.jpg" alt="product image">
                        
-                        <div class="cart-element">
+                        <div class="cart-element item-descrpt">
                             <h3 id="manufacturer">Earth co.</h3>
                             <h3 id="product-name">Levitating Banana</h3>
                             <h3 id="price-per-unit">3.99$/lb</h3>
@@ -76,12 +76,13 @@
                        
                         <img class="cart-element" src="resources/img/mars_bar.jpg" alt="product image">
                        
-                        <div class="cart-element">
+                        <div class="cart-element item-descrpt">
                             <h3 id="manufacturer">Earth co.</h3>
                             <h3 id="product-name">Levitating Banana</h3>
                             <h3 id="price-per-unit">3.99$/lb</h3>
                             <h3 id="price">$3.99</h3>
                         </div> 
+
                         
                         <div class="cart-element qty">
                             <button class="button-circle" type="button" name="button">-</button>
@@ -106,7 +107,7 @@
                        
                         <img class="cart-element" src="resources/img/mars_bar.jpg" alt="product image">
                        
-                        <div class="cart-element">
+                        <div class="cart-element item-descrpt">
                             <h3 id="manufacturer">Earth co.</h3>
                             <h3 id="product-name">Levitating Banana</h3>
                             <h3 id="price-per-unit">3.99$/lb</h3>
@@ -133,7 +134,7 @@
                     </div>
                 </div>
                 
-                <div class="colmn one-third">
+                <div class="colmn one-third order-summary">
                     <div class="custom-row cart-header">Order Summary</div>
                     <div>
                         <div class="colmn one-half">
