@@ -27,9 +27,14 @@ body {
     font-size: 20px; /* any modified font size should be a percentage ... see h1 for example*/
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
-    min-height: 100vh;
     margin:0;
+    overflow: visible;
     position:relative;
+}
+
+.content-container {
+    position: relative;
+    min-height:100vh;
 }
 
 .custom-page-container{
@@ -39,8 +44,8 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 100px;
-    position: relative;
 }
+
 
 /* DISPLAY */
 *:focus {outline: none !important;}
@@ -53,9 +58,14 @@ body {
     height: auto;
 }*/
 
-/*section {
-    padding: 60px 0;
-}*/
+.content-without-footer {
+    padding-top:120px;
+    padding-bottom: 130px;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 a {
     text-decoration: none;
@@ -470,7 +480,7 @@ ion-icon{
 
 /* SHOPPING CART */
 
-.section-cart h2{
+.section-cart .custom-row h2{
     font-family: 'Exo', sans-serif;
     font-size: 200%;
     font-weight: 600;

@@ -31,9 +31,10 @@
 
     <body>
         <!--HEADER-->
-        <?php include "includes/header.html"; ?>
+        <div class="content-container">
 
-        <section class="section-cart custom-page-container">
+        <section class="section-cart content-without-footer">
+            <?php include "includes/header.html"; ?>
             <div class="custom-row">
                 <h2>My Cart</h2>
             </div>
@@ -167,13 +168,14 @@
             
             
             </div>
-
+            <div class="clearfix"></div>
         </section>
 
-        <div class="clearfix"></div>
+
 
         <!--FOOTER-->
         <?php include "includes/footer.html"; ?>
+        </div>
         
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
