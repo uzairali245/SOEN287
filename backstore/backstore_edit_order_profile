@@ -147,11 +147,12 @@
         
         <table style="width:100%">
           <tr>
-            <td><INPUT TYPE="Checkbox" Name="Product" ID="P1" Value="Banana" class="check-box-size"></td>
-            <td class="order-lower-text">Banana</td>
+            <td><INPUT TYPE="Checkbox" Name="Product" ID="P1" Value="Bagel" class="check-box-size"></td>
+            <td><img class="img-responsive" src="resources\img\bakery-bagel2.jpg" alt="Bagel"></td>
+            <td class="order-lower-text">Bagel</td>
             <td class="order-lower-text">133589</td>
             <td class="order-lower-text">3.99$</td>
-            <td><select class="input-box" name="banana-quantity" id="banana-quantity">
+            <td><select class="input-box" name="bagel-quantity" id="bagel-quantity">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -159,9 +160,10 @@
           </tr>
           <tr>
             <td><INPUT TYPE="Checkbox" Name="Product" ID="P2" Value="Donut" class="check-box-size"></td>
+            <td><img class="img-responsive" src="resources\img\bakery-donut2.jpg" alt="Donut"></td>
             <td class="order-lower-text">Donut</td>
-            <td class="order-lower-text">133589</td>
-            <td class="order-lower-text">3.99$</td>
+            <td class="order-lower-text">133590</td>
+            <td class="order-lower-text">4.99$</td>
             <td><select class="input-box" name="donut-quantity" id="donut-quantity">
           <option value="1">1</option>
           <option value="2">2</option>
@@ -170,17 +172,20 @@
           </tr>
           <tr>
             <td><INPUT TYPE="Checkbox" Name="Product" ID="P3" Value="Mars" class="check-box-size"></td>
+            <td><img class="img-responsive" src="resources\img\mars_bar.jpg" alt="Mars Bar"></td>
             <td class="order-lower-text">Mars</td>
-            <td class="order-lower-text">133589</td>
-            <td class="order-lower-text">3.99$</td>
+            <td class="order-lower-text">133593</td>
+            <td class="order-lower-text">5.99$</td>
             <td><select class="input-box" name="mars-quantity" id="mars-quantity">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
         </select></td>  
           </tr>
-        </table>
-        
+        </table><br><br>
+        <label class="order-lower-text" for="total-order-amount">Total order amount: </label>
+        <input class="input-box" type="text" id="total-order-amount" name="total-order-amount">
+        <button class="btn btn-info backstore-font">Save</button>
     </div>
     <?php include "../includes/footer.html"; ?>
 
