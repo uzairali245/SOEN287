@@ -37,10 +37,9 @@
     
     <body>
         
-        
+       <div class="content-container">
+        <section class="section-products content-without-footer">
         <?php include "includes/header.html"; ?> 
-        
-        <section class="section-products custom-page-container">
             <div class="custom-row">
                 
                 <div class="colmn one-third">
@@ -116,8 +115,9 @@
     
         
         
-        <div class="clearfix"></div>
-        <?php include "includes/footer.html"; ?>
+            <div class="clearfix"></div>
+            <?php include "includes/footer.html"; ?>
+        </div> 
         
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
