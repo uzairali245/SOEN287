@@ -46,20 +46,22 @@
                        
                         <img class="cart-element" src="resources/img/mars_bar.jpg" alt="product image">
                        
-                        <div class="cart-element item-descrpt">
-                            <h3 id="manufacturer">Earth co.</h3>
-                            <h3 id="product-name">Levitating Banana</h3>
-                            <h3 id="price-per-unit">3.99$/lb</h3>
-                            <h3 id="price">$3.99</h3>
-                        </div> 
-                        
-                        <div class="cart-element qty">
-                            <button type="button" name="button" class="button-circle">-</button>
-                            <input type="text" name="qty" value="1">
-                            <button type="button" name="button" class="button-circle">+</button>
-                            <!--<a href="#" class="bttn-circle col one-third">-</a>
-                            <h5 class="col one-third">1</h5> 
-                            <a href="#" class=" col one-third bttn-circle">+</a>-->
+                        <div class="mobile-wrapper">
+                            <div class="cart-element item-descrpt">
+                                <h3 id="manufacturer">Earth co.</h3>
+                                <h3 id="product-name">Levitating Banana</h3>
+                                <h3 id="price-per-unit">3.99$/lb</h3>
+                                <h3 id="price">3.99$</h3>
+                            </div> 
+                            
+                            <div class="cart-element qty">
+                                <button type="button" name="button" class="button-circle">-</button>
+                                <input type="text" name="qty" value="1">
+                                <button type="button" name="button" class="button-circle">+</button>
+                                <!--<a href="#" class="bttn-circle col one-third">-</a>
+                                <h5 class="col one-third">1</h5> 
+                                <a href="#" class=" col one-third bttn-circle">+</a>-->
+                            </div>
                         </div>
                         
                         <div class="cart-element" id="total-price-item">
@@ -75,22 +77,23 @@
                     <div class="cart-item">
                        
                         <img class="cart-element" src="resources/img/mars_bar.jpg" alt="product image">
-                       
-                        <div class="cart-element item-descrpt">
-                            <h3 id="manufacturer">Earth co.</h3>
-                            <h3 id="product-name">Levitating Banana</h3>
-                            <h3 id="price-per-unit">3.99$/lb</h3>
-                            <h3 id="price">$3.99</h3>
-                        </div> 
+                        <div class="mobile-wrapper">
+                            <div class="cart-element item-descrpt">
+                                <h3 id="manufacturer">Earth co.</h3>
+                                <h3 id="product-name">Levitating Banana</h3>
+                                <h3 id="price-per-unit">3.99$/lb</h3>
+                                <h3 id="price">3.99$</h3>
+                            </div> 
 
-                        
-                        <div class="cart-element qty">
-                            <button class="button-circle" type="button" name="button">-</button>
-                            <input type="text" name="qty" value="1">
-                            <button class="button-circle" type="button" name="button">+</button>
-                            <!--<a href="#" class="bttn-circle col one-third">-</a>
-                            <h5 class="col one-third">1</h5> 
-                            <a href="#" class=" col one-third bttn-circle">+</a>-->
+                            
+                            <div class="cart-element qty">
+                                <button class="button-circle" type="button" name="button">-</button>
+                                <input type="text" name="qty" value="1">
+                                <button class="button-circle" type="button" name="button">+</button>
+                                <!--<a href="#" class="bttn-circle col one-third">-</a>
+                                <h5 class="col one-third">1</h5> 
+                                <a href="#" class=" col one-third bttn-circle">+</a>-->
+                            </div>
                         </div>
                         
                         <div class="cart-element" id="total-price-item">
@@ -107,20 +110,22 @@
                        
                         <img class="cart-element" src="resources/img/mars_bar.jpg" alt="product image">
                        
-                        <div class="cart-element item-descrpt">
-                            <h3 id="manufacturer">Earth co.</h3>
-                            <h3 id="product-name">Levitating Banana</h3>
-                            <h3 id="price-per-unit">3.99$/lb</h3>
-                            <h3 id="price">$3.99</h3>
-                        </div> 
-                        
-                        <div class="cart-element qty">
-                            <button class="button-circle" type="button" name="button">-</button>
-                            <input type="text" name="qty" value="1">
-                            <button class="button-circle" type="button" name="button">+</button>
-                            <!--<a href="#" class="bttn-circle col one-third">-</a>
-                            <h5 class="col one-third">1</h5> 
-                            <a href="#" class=" col one-third bttn-circle">+</a>-->
+                        <div class="mobile-wrapper">
+                            <div class="cart-element item-descrpt">
+                                <h3 id="manufacturer">Earth co.</h3>
+                                <h3 id="product-name">Levitating Banana</h3>
+                                <h3 id="price-per-unit">3.99$/lb</h3>
+                                <h3 id="price">3.99$</h3>
+                            </div> 
+                            
+                            <div class="cart-element qty">
+                                <button class="button-circle" type="button" name="button">-</button>
+                                <input type="text" name="qty" value="1">
+                                <button class="button-circle" type="button" name="button">+</button>
+                                <!--<a href="#" class="bttn-circle col one-third">-</a>
+                                <h5 class="col one-third">1</h5> 
+                                <a href="#" class=" col one-third bttn-circle">+</a>-->
+                            </div>
                         </div>
                         
                         <div class="cart-element" id="total-price-item">
