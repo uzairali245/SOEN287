@@ -51,7 +51,7 @@ img{
         <div class="d-flex flex-wrap justify-content-evenly"> 
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-bagel2.jpg" alt="Bagel">
+                <img src="resources/img/bakery/bakery-bagel2.jpg" alt="Bagel">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bagel</h4>
                 <p style="margin-bottom: 0 ">10$/dozen</p>
                 
@@ -71,7 +71,7 @@ img{
             
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-baguette2.jpg" alt="Baguette">
+                <img src="resources/img/bakery/bakery-baguette2.jpg" alt="Baguette">
                  <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Baguette</h4>
                 <p style="margin-bottom: 0 ">7$/unit</p>
                 
@@ -91,7 +91,7 @@ img{
             
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-challah2.jpg" alt="Challah">
+                <img src="resources/img/bakery/bakery-challah2.jpg" alt="Challah">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Challah</h4>
                 <p style="margin-bottom: 0 ">5$/unit</p>
                 
@@ -111,7 +111,7 @@ img{
             
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-chocolatine2.jpg" alt="Chocolatine"> 
+                <img src="resources/img/bakery/bakery-chocolatine2.jpg" alt="Chocolatine"> 
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Chocolatine</h4>
                 <p style="margin-bottom: 0 ">3$/unit</p>
                 
@@ -130,7 +130,7 @@ img{
             </div>
             
             <div class="aisle-item">
-                <img src="resources/img/bakery-ciabatta2.jpg" alt="Ciabatta">
+                <img src="resources/img/bakery/bakery-ciabatta2.jpg" alt="Ciabatta">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Ciabatta</h4>
                 <p style="margin-bottom: 0 ">7$/unit</p>
                 
@@ -149,7 +149,7 @@ img{
             </div>
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-cinnamon2.jpg" alt="Cinammon Roll">
+                <img src="resources/img/bakery/bakery-cinnamon2.jpg" alt="Cinammon Roll">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Cinnamon Roll</h4>
                 <p style="margin-bottom: 0 ">10$/pack (6)</p>
                 
@@ -168,7 +168,7 @@ img{
             </div>
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-croissant2.jpg" alt="Croissant">
+                <img src="resources/img/bakery/bakery-croissant2.jpg" alt="Croissant">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Croissant</h4>
                 <p style="margin-bottom: 0 ">11$/pack (6)</p>
                 
@@ -187,7 +187,7 @@ img{
             </div>
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-donut2.jpg" alt="Donut">
+                <img src="resources/img/bakery/bakery-donut2.jpg" alt="Donut">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Donut</h4>
                 <p style="margin-bottom: 0 ">10$/dozen</p>
                 
@@ -206,7 +206,7 @@ img{
             </div>
              
             <div class="aisle-item">
-                <img src="resources/img/bakery-pita2.jpg" alt="Pita">
+                <img src="resources/img/bakery/bakery-pita2.jpg" alt="Pita">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pita</h4>
                 <p style="margin-bottom: 0 ">5$/bag (8)</p>
                 
@@ -225,7 +225,7 @@ img{
             </div>
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-pretzel2.jpg" alt="Pretzel">
+                <img src="resources/img/bakery/bakery-pretzel2.jpg" alt="Pretzel">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pretzel</h4>
                 <p style="margin-bottom: 0 ">4$/unit</p>
                 
@@ -244,7 +244,7 @@ img{
             </div>
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-wheat-bread2.jpg" alt="Wheat Bread">
+                <img src="resources/img/bakery/bakery-wheat-bread2.jpg" alt="Wheat Bread">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Wheat Bread</h4>
                 <p style="margin-bottom: 0 ">7$/unit</p>
                 
@@ -263,7 +263,7 @@ img{
             </div>
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery-white-bread2.jpg" alt="White Bread"> 
+                <img src="resources/img/bakery/bakery-white-bread2.jpg" alt="White Bread"> 
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">White Bread</h4>
                 <p style="margin-bottom: 0 ">7$/bag</p>
                 
