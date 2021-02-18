@@ -31,16 +31,13 @@
       min-height: 100vh;
     }
 
-    .custom-page-container {
-      margin-top: 120px;
+    .content-without-footer {
+      padding-top:120px;
+      padding-bottom: 130px;
       margin-left: 0px;
       margin-right: 0px;
-      margin-bottom: 100px;
       padding-left: 0px;
       padding-right: 0px;
-      padding-bottom: 100px;
-      position: relative;
-      height:auto;
     }
 
     .navbar-custom {
