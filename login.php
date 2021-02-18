@@ -97,35 +97,33 @@
 </Head>
 
 <body>
-    <?php include "includes/header.html"; ?>
+    <div class="content-container">
+        <?php include "includes/header.html"; ?>
 
+            <div class="content-without-footer">
+                <div class="container">
+                    <h1>LOGIN</h1>
+                    <form>
+                        <div class="row jumbotron">
 
-    <div class="container">
-        <h1>LOGIN</h1>
-        <form>
-            <div class="row jumbotron">
+                            <div class="col-sm-6 form-group">
+                                <label for="pass">Email</label>
+                                <input type="email" name="password" class="form-control" id="pass" placeholder="Enter your Email." required>
+                                <label for="pass"> Password</label>
+                                <input type="Password" name="cnf-password" class="form-control" id="pass2" placeholder="Re-enter your password." required>
+                            </div>
 
-                <div class="col-sm-6 form-group">
-                    <label for="pass">Email</label>
-                    <input type="email" name="password" class="form-control" id="pass" placeholder="Enter your Email." required>
-                    <label for="pass"> Password</label>
-                    <input type="Password" name="cnf-password" class="form-control" id="pass2" placeholder="Re-enter your password." required>
+                            <div class="col-sm-12 form-group mb-0">
+                                <input type="submit" name="signup" value="SIGNUP">
+                            </div>
+                            <a href="signup.php">Already a Member? Sign in!</a>
+
+                        </div>
+                    </form>
                 </div>
-
-                <div class="col-sm-12 form-group mb-0">
-                    <input type="submit" name="signup" value="SIGNUP">
-                </div>
-                <a href="signup.php">Already a Member? Sign in!</a>
-
             </div>
-        </form>
+        <?php include "includes/footer.html"; ?>
     </div>
-    <br></br>
-    <br></br>
-    <br></br>
-    <br></br>
-    <?php include "includes/footer.html"; ?>
-
 </body>
 
 <!-- Bootstrap JS -->
