@@ -61,9 +61,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button type="button" name="button" class="button-circle">-</button>
+                        <input type="text" name="qty" value="1">
+                        <button type="button" name="button" class="button-circle">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -81,9 +81,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button type="button" name="button" class="button-circle">-</button>
+                        <input type="text" name="qty" value="1">
+                        <button type="button" name="button" class="button-circle">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -101,9 +101,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button type="button" name="button" class="button-circle">-</button>
+                        <input type="text" name="qty" value="1">
+                        <button type="button" name="button" class="button-circle">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -121,9 +121,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button type="button" name="button" class="button-circle">-</button>
+                        <input type="text" name="qty" value="1">
+                        <button type="button" name="button" class="button-circle">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -140,9 +140,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button type="button" name="button" class="button-circle">-</button>
+                        <input type="text" name="qty" value="1">
+                        <button type="button" name="button" class="button-circle">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -159,9 +159,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button type="button" name="button" class="button-circle">-</button>
+                        <input type="text" name="qty" value="1">
+                        <button type="button" name="button" class="button-circle">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -178,9 +178,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button type="button" name="button" class="button-circle">-</button>
+                        <input type="text" name="qty" value="1">
+                        <button type="button" name="button" class="button-circle">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -197,9 +197,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button type="button" name="button" class="button-circle">-</button>
+                        <input type="text" name="qty" value="1">
+                        <button type="button" name="button" class="button-circle">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -216,9 +216,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button type="button" name="button" class="button-circle">-</button>
+                        <input type="text" name="qty" value="1">
+                        <button type="button" name="button" class="button-circle">+</button>
                     </div>
                     
                     <div class="bd-highlight">
