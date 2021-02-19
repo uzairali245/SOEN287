@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>SOEN 287</title>
+  <title>Beverages</title>
   <!-- favicon <link rel="icon" href="includes/favicon.png?"/> -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -63,7 +63,7 @@ img{
             <div class="aisle-item">
                 <img src="https://media.npr.org/assets/img/2015/11/19/salt-iconic-branding-0037edit_custom-106133bb015b56c78e6bd554cfcbc9cc648156bb-s800-c85.jpg" alt="Coke">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Coca Cola</h4>
-                <p style="margin-bottom: 0 ">2.5$/bottle</p>
+                <p style="margin-bottom: 0 ">2.50$/bottle</p>
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
@@ -83,7 +83,7 @@ img{
             <div class="aisle-item">
                 <img src="https://voila.ca/images-v2/2d92d19c-0354-49c0-8a91-5260ed0bf531/4b2788bd-7207-4a8e-b5ef-0ad94345846b/76891112-b190-4c30-b131-7fb0193636aa/f0fbb9c8-4c56-433c-950a-1a1fcadd6ef0/500x500.jpg" alt="7up">
                  <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">7Up</h4>
-                <p style="margin-bottom: 0 ">2.5$/bottle</p>
+                <p style="margin-bottom: 0 ">2.55$/bottle</p>
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
@@ -103,7 +103,7 @@ img{
             <div class="aisle-item">
                 <img src="https://www.directwholesale.com.sg/pub/media/catalog/product/cache/27ed4154bc0e5c3c51a580076325aed3/9/5/9556404120222_0012_1528450157610.jpg" alt="Pepsi">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pepsi Black</h4>
-                <p style="margin-bottom: 0 ">3$/bottle</p>
+                <p style="margin-bottom: 0 ">3.00$/bottle</p>
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
@@ -123,7 +123,7 @@ img{
             <div class="aisle-item">
                 <img src="https://target.scene7.com/is/image/Target/GUEST_06676e3b-ed22-4689-ad96-c3615081181a?wid=488&hei=488&fmt=pjpeg" alt="Soda">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Canada Dry</h4>
-                <p style="margin-bottom: 0 ">3$/unit</p>
+                <p style="margin-bottom: 0 ">3.00$/unit</p>
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
@@ -161,7 +161,7 @@ img{
             <div class="aisle-item">
                 <img src="https://images-na.ssl-images-amazon.com/images/I/71yo4On1tXL._SL1500_.jpg" alt="Sparkling water(bubly)">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Sparkling Water</h4>
-                <p style="margin-bottom: 0 ">3$/can </p>
+                <p style="margin-bottom: 0 ">3.25$/can </p>
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
@@ -199,7 +199,7 @@ img{
             <div class="aisle-item">
                 <img src="https://images.chickadvisor.com/item/48874/375/i/fruitopia.jpg" alt="Juice">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Fruitopia</h4>
-                <p style="margin-bottom: 0 ">5$/pack of 3</p>
+                <p style="margin-bottom: 0 ">5.00$/pack of 3</p>
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
@@ -218,7 +218,7 @@ img{
             <div class="aisle-item">
                 <img src="https://post.healthline.com/wp-content/uploads/2019/09/Red_Bull_732x549-thumbnail.jpg" alt="Energy Drink">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Red Bull</h4>
-                <p style="margin-bottom: 0 ">6$/can</p>
+                <p style="margin-bottom: 0 ">6.32$/can</p>
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
@@ -237,7 +237,7 @@ img{
             <div class="aisle-item">
                 <img src="https://i2.wp.com/nlliquor.com/wp-content/uploads/2020/02/10417_m_v3.jpg?fit=960%2C1280&ssl=1" alt="Beer">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Corona Beer</h4>
-                <p style="margin-bottom: 0 ">5$/bottle</p>
+                <p style="margin-bottom: 0 ">5.00$/bottle</p>
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
@@ -256,7 +256,7 @@ img{
             <div class="aisle-item">
                 <img src="https://img.alicdn.com/i1/725677994/O1CN01A9wMbK28vIkXfkqIk_!!725677994.jpg_640x640q90.jpg" alt="Beer">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Heineken Beer</h4>
-                <p style="margin-bottom: 0 ">7$/unit</p>
+                <p style="margin-bottom: 0 ">7.40$/unit</p>
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
