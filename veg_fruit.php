@@ -23,12 +23,12 @@
     /* Custom CSS */
     
 img{
-    /*max-height: 250px;
-    max-width: 320px;*/
-    height: 250px;
+    max-height: 250px;
+    max-width: 320px;
     width: 250px;
-    border-radius: 8px;
+    height: 250px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .aisle-item{
@@ -49,15 +49,15 @@ img{
     <!--CONTENTS OF PAGE STARTS HERE-->
     <div class="custom-page-container">
         <div style="margin-bottom: 20px">
-            <h1 style="font-size: 150%; text-align: center"> Earth Produce</h1>
+            <h1 style="font-size: 150%; text-align: center">Earth Produce</h1>
         </div>
 
         <div class="d-flex flex-wrap justify-content-evenly"> 
             
             <div class="aisle-item"> 
-                <a href="product_original.php"><img src="resources/img/veg-fruit/blueberry.jpg" alt="Blueberries"></a>
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;"><a href="product_original.php">Blueberries<a></h4>
-                <p style="margin-bottom: 0 ">8.99$/100g</p>
+                <img src="resources/img/veg-fruit/blueberry.jpg" alt="Blueberries">
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Blueberries</h4>
+                <p style="margin-bottom: 0 ">18.99$/100g</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -75,9 +75,9 @@ img{
             
             
             <div class="aisle-item"> 
-                <img src="resources/img/veg-fruit/tomato.jpg" alt="Tomato">
-                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Tomato</h4>
-                <p style="margin-bottom: 0 ">3.85$/unit</p>
+                <img src="resources/img/veg-fruit/strawberries.jpg" alt="Strawberries">
+                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Strawberries</h4>
+                <p style="margin-bottom: 0 ">23.25$/250g</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -95,9 +95,9 @@ img{
             
             
             <div class="aisle-item"> 
-                <img src="resources/img/veg-fruit/pumpkin.jpg" alt="Pumpkin">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pumpkin</h4>
-                <p style="margin-bottom: 0 ">15.29$/unit</p>
+                <img src="resources/img/veg-fruit/raspberries.jpg" alt="Raspberries">
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Raspberries</h4>
+                <p style="margin-bottom: 0 ">18.67/100g</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -117,7 +117,7 @@ img{
             <div class="aisle-item"> 
                 <img src="resources/img/veg-fruit/orange.jpg" alt="Orange"> 
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Orange</h4>
-                <p style="margin-bottom: 0 ">7.22$/unit</p>
+                <p style="margin-bottom: 0 ">10.89$/lb</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -134,122 +134,8 @@ img{
             </div>
             
             <div class="aisle-item">
-                <img src="resources/img/veg-fruit/artichoke.jpg" alt="artichoke">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Artichoke</h4>
-                <p style="margin-bottom: 0 ">18.35$/unit</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="aisle-item"> 
                 <img src="resources/img/veg-fruit/apple.jpg" alt="apple">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Apple</h4>
-                <p style="margin-bottom: 0 ">4.99$/100g</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="aisle-item"> 
-                <img src="resources/img/veg-fruit/carrots.jpg" alt="Carrots">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Carrots</h4>
-                <p style="margin-bottom: 0 ">7.99$/lb</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="aisle-item"> 
-                <img src="resources/img/veg-fruit/raspberries.jpg" alt="raspberries">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Raspberries</h4>
-                <p style="margin-bottom: 0 ">15.75$/250g</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-             
-            <div class="aisle-item">
-                <img src="resources/img/veg-fruit/strawberries.jpg" alt="strawberries">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Strawberries</h4>
-                <p style="margin-bottom: 0 ">14.59$/500g</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="aisle-item"> 
-                <img src="resources/img/bakery/bakery-pretzel2.jpg" alt="Pretzel">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pretzel</h4>
-                <p style="margin-bottom: 0 ">4$/unit</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="aisle-item"> 
-                <img src="resources/img/bakery/bakery-wheat-bread2.jpg" alt="Wheat Bread">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Wheat Bread</h4>
                 <p style="margin-bottom: 0 ">7$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -267,14 +153,9 @@ img{
             </div>
             
             <div class="aisle-item"> 
-                <img src="resources/img/bakery/bakery-white-bread2.jpg" alt="White Bread"> 
-                <br>
-                <!--
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">White Bread</h4> -->
-                <h4>
-                    <a href="product_whiteBread.php" style="color: white; text-decoration: none;">Bread </a>  
-                </h4>
-                <p style="margin-bottom: 0 ">7$/bag</p>
+                <img src="resources/img/veg-fruit/pumpkin.jpg" alt="Pumpkin">
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pumpkin</h4>
+                <p style="margin-bottom: 0 ">34$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -288,7 +169,65 @@ img{
                     <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
                     </div>
                 </div>
-            </div>    
+            </div>
+            
+            <div class="aisle-item"> 
+                <img src="resources/img/veg-fruit/artichoke.jpg" alt="Artichoke">
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Artichoke</h4>
+                <p style="margin-bottom: 0 ">22.35$/unit</p>
+                
+                <div class="d-flex bd-highlight">                    
+                    <div class="flex-grow-1 bd-highlight">
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span>1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                    </div>
+                    
+                    <div class="bd-highlight">
+                        
+                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="aisle-item"> 
+                <img src="resources/img/veg-fruit/tomato.jpg" alt="tomato">
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Tomato</h4>
+                <p style="margin-bottom: 0 ">24$/pack of 6</p>
+                
+                <div class="d-flex bd-highlight">                    
+                    <div class="flex-grow-1 bd-highlight">
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span>1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                    </div>
+                    
+                    <div class="bd-highlight">
+                        
+                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+             
+            <div class="aisle-item">
+                <img src="resources/img/veg-fruit/carrots.jpg" alt="Carrots">
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Carrots</h4>
+                <p style="margin-bottom: 0 ">12.34$/lb</p>
+                
+                <div class="d-flex bd-highlight">                    
+                    <div class="flex-grow-1 bd-highlight">
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span>1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                    </div>
+                    
+                    <div class="bd-highlight">
+                        
+                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            
             
         </div>
     </div> 
