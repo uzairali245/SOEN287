@@ -88,23 +88,23 @@
     <div class="custom-page-container">
         <label class="order-upper-text" for="customer-name">Customer Name:</label>
         <input class="input-box" type="text" id="customer-name" name="customer-name">
-        <button class="btn btn-info backstore-font">Edit</button><br><br>   
+        <br><br>   
         
         <label class="order-upper-text" for="order-number">Order Number:</label>
         <input class="input-box" type="text" id="order-number" name="order-number">
-        <button class="btn btn-info backstore-font">Edit</button><br><br>
+        <br><br>
         
         <label class="order-upper-text" for="order-date">Order Date:</label>
         <input class="input-box" type="date" id="order-date" name="order-date">
-        <button class="btn btn-info backstore-font">Edit</button><br><br>
+        <br><br>
         
         <label class="order-upper-text" for="delivery-date">Delivery Date:</label>
         <input class="input-box" type="date" id="delivery-date" name="delivery-date">
-        <button class="btn btn-info backstore-font">Edit</button><br><br>
+        <br><br>
         
         <label class="order-upper-text" for="delivery-address">Delivery Address:</label>
         <input class="input-box" type="text" id="delivery-address" name="delivery-address">
-        <button class="btn btn-info backstore-font">Edit</button><br><br>
+        <br><br>
         
         <label class="order-upper-text" for="shipping-speed">Shipping Speed:</label>
         <select class="input-box" name="shipping-speed" id="shipping-speed">
@@ -112,7 +112,7 @@
           <option value="express-delivery">Express Delivery</option>
           <option value="same-day-delivery">Same-day Delivery</option>
         </select>
-        <button class="btn btn-info backstore-font">Edit</button><br><br><br><br>
+        <br><br><br><br>
         
         <p class = order-title>Products Ordered</p><br>
         
