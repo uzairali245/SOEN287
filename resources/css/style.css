@@ -415,6 +415,10 @@ ion-icon{
     min-height: 250px;
 }
 
+.section-products h3 {
+    font-family: 'Exo', sans-serif;
+}
+
 .section-products h5 {
     text-align:center;
     vertical-align: middle;
@@ -529,6 +533,7 @@ ion-icon{
 .cart-item h3{
     font-size: 100%;
     font-weight: bold;
+    font-family: 'Exo',sans-serif;
 }
 
 .cart-item .button-circle,
