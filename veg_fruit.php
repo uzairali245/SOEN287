@@ -55,8 +55,8 @@ img{
         <div class="d-flex flex-wrap justify-content-evenly"> 
             
             <div class="aisle-item"> 
-                <img src="resources/img/veg-fruit/blueberry.jpg" alt="Blueberries">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Blueberries</h4>
+                <a href="product_original.php"><img src="resources/img/veg-fruit/blueberry.jpg" alt="Blueberries"></a>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;"><a href="product_original.php">Blueberries</a></h4>
                 <p style="margin-bottom: 0 ">18.99$/100g</p>
                 
                 <div class="d-flex bd-highlight">                    
