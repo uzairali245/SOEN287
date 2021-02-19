@@ -55,8 +55,8 @@ img{
         <div class="d-flex flex-wrap justify-content-evenly"> 
             
             <div class="aisle-item"> 
-                <a href="product_original.php"><img src="resources\img\snacks\dark_chocolate_image.jpg" alt="Dark Chocolate"></a>
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;"><a href="product_original.php">Dark Chocolate</a></h4>
+                <a href="product_dark_chocolate.php"><img src="resources\img\snacks\dark_chocolate_image.jpg" alt="Dark Chocolate"></a>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;"><a href="product_dark_chocolate.php">Dark Chocolate</a></h4>
                 <p style="margin-bottom: 0 ">18.99$/100g</p>
                 
                 <div class="d-flex bd-highlight">                    
