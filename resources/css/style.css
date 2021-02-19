@@ -388,58 +388,60 @@ ion-icon {
 /* PRODUCT */
 
 .section-products {
-  position: relative;
-}
-
-.section-products .one-half:first-child {
-  display: flex;
-  justify-content: left;
-  vertical-align: center;
-}
-
-.section-products .one-half:last-child button {
-  /*display: flex;
-    justify-content:right;*/
-  float: right;
-}
-
-.section-products img {
-  border-radius: 8px;
-  width: 100%;
-  padding: 0;
-  min-width: 250px;
-  min-height: 250px;
-}
-
-.section-products h3 {
-  font-family: "Exo", sans-serif;
-}
-
-.section-products h5 {
-  text-align: center;
-  vertical-align: middle;
-}
-
-.product-info {
-  width: 100%;
-  max-width: 300px;
-}
-
-.product-info:last-of-type {
-  padding-left: 20px;
-}
-
-.product-info-element {
-  margin-bottom: 20px;
-}
-
-.product-info #price-per-unit {
-  font-size: 90%;
-}
-
-#manufacturer {
-  color: #ee4f3e;
-}
+    position: relative;
+  }
+  
+  .section-products .one-half:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    vertical-align: center;
+  }
+  
+  .section-products .one-half:last-child button {
+    float: right;
+  }
+  
+  .section-products img {
+    border-radius: 8px;
+    width: 100%;
+    padding: 0;
+    min-width: 250px;
+    min-height: 250px;
+  }
+  
+  .section-products h3 {
+    font-family: "Exo", sans-serif;
+  }
+  
+  .section-products h5 {
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .product-info {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .product-info:last-of-type {
+    padding-left: 20px;
+  }
+  
+  .product-info-element {
+    margin-bottom: 20px;
+  }
+  
+  .product-info #price-per-unit {
+    font-size: 90%;
+  }
+  
+  #manufacturer {
+    color: #ee4f3e;
+  }
 
 .accordion,
 .accordion-header {
