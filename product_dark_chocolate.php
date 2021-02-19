@@ -99,7 +99,7 @@
 
                                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>Ingredients: </strong>Cocoa Mass, Cocoa Butter, Sugar, Cocoa Powder, Milk Ingredients.
+                                            <strong>Ingredients: </strong>Cocoa Mass, Cocoa Butter, Sugar, Cocoa Powder, Milk Ingredients.<br>
 
                                                 <strong>May Contain Peanuts, Tree Nuts, Soy, And Sesame.</strong>
                                         </div>
