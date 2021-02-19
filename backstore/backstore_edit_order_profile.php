@@ -35,35 +35,6 @@
       padding-left: 0px;
       padding-right: 0px;
     }
-
-    .navbar-custom {
-      background-color: #B35859;
-      border-bottom:10px solid #EFA060;
-    }
-
-    .custom-footer {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        padding: 1rem;
-        background-color: #B35859;
-        border-top:10px solid #EFA060;
-    }
-
-    .nav-link {
-      color: #734234;
-      font-family: Audiowide;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      line-height: 31px;
-      border-radius: 0px 0px 0px 0px;
-    }
-
-    .tab-content {
-      padding: 25px;
-    }
     
     .order-upper-text {
         font-family: Audiowide;

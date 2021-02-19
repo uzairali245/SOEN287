@@ -57,7 +57,7 @@ img{
             <div class="aisle-item"> 
                 <a href="product_dark_chocolate.php"><img src="resources\img\snacks\dark_chocolate_image.jpg" alt="Dark Chocolate"></a>
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;"><a href="product_dark_chocolate.php">Dark Chocolate</a></h4>
-                <p style="margin-bottom: 0 ">18.99$/100g</p>
+                <p style="margin-bottom: 0 ">3.10$/100g</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -77,7 +77,7 @@ img{
             <div class="aisle-item"> 
                 <img src="resources\img\snacks\cookies_image.jpg" alt="Cookies">
                  <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Cookies</h4>
-                <p style="margin-bottom: 0 ">23.25$/250g</p>
+                <p style="margin-bottom: 0 ">6.99$/250g</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -97,7 +97,7 @@ img{
             <div class="aisle-item"> 
                 <img src="resources\img\snacks\popcorn_image.jpg" alt="Popcorn">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Popcorn</h4>
-                <p style="margin-bottom: 0 ">18.67/100g</p>
+                <p style="margin-bottom: 0 ">4.25$/100g</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -117,7 +117,7 @@ img{
             <div class="aisle-item"> 
                 <img src="resources\img\snacks\chips_image.jpg" alt="Tortilla Chips"> 
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Tortilla Chips</h4>
-                <p style="margin-bottom: 0 ">10.89$/lb</p>
+                <p style="margin-bottom: 0 ">4.80$/100g</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -136,7 +136,7 @@ img{
             <div class="aisle-item">
                 <img src="resources\img\snacks\protein_bars_image.jpg" alt="Protein bar">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Protein Bar</h4>
-                <p style="margin-bottom: 0 ">7$/unit</p>
+                <p style="margin-bottom: 0 ">3.99$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -155,7 +155,7 @@ img{
             <div class="aisle-item"> 
                 <img src="resources\img\snacks\apple_compote_image.jpg" alt="Apple compote">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Apple Compote</h4>
-                <p style="margin-bottom: 0 ">34$/unit</p>
+                <p style="margin-bottom: 0 ">4.27$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -174,7 +174,7 @@ img{
             <div class="aisle-item"> 
                 <img src="resources\img\snacks\marshmallows_image.jpg" alt="Marshmallows">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Marshmallows</h4>
-                <p style="margin-bottom: 0 ">22.35$/unit</p>
+                <p style="margin-bottom: 0 ">5.89$/(100g)</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -193,7 +193,7 @@ img{
             <div class="aisle-item"> 
                 <img src="resources\img\snacks\candy_image.jpg" alt="Candy">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Candy</h4>
-                <p style="margin-bottom: 0 ">24$/pack of 6</p>
+                <p style="margin-bottom: 0 ">8.49$/pack of 5</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">

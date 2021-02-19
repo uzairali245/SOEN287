@@ -62,11 +62,11 @@
                         </div>
 
                         <div class="product-info-element">
-                            <h3 id="price-per-unit">3.99$/lb</h3>
+                            <h3 id="price-per-unit">3.10$/100g</h3>
                         </div>
 
                         <div class="product-info-element">
-                            <h3 id="price">3.99$</h3>
+                            <h3 id="price">3.10$</h3>
                         </div>
                               
 
