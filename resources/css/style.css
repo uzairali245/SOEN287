@@ -147,7 +147,7 @@ button {
     padding:5px 20px;
 }
 
-button .delete-item {
+button .delete-item-bttn {
     background-color: rgba(0,0,0,0);
 }
 
@@ -531,7 +531,7 @@ ion-icon{
     width: 100%;
 }
 
-.delete-item {
+.delete-item-bttn {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -558,7 +558,7 @@ ion-icon{
     margin-left: 10px;
 }
 
-.delete-item {
+.delete-item-bttn {
     top: 0;
     right: 0;
     padding: 2px 5px;
@@ -572,15 +572,15 @@ ion-icon{
     margin-bottom: 20px;
 }
 
+.price-descriptors {
+    float: left;
+    padding-left: 10px;
+}
+
 .price-list {
     float:right;
     padding-right: 10px;
     text-align: right;
-}
-
-.price-descriptors {
-    float: left;
-    padding-left: 10px;
 }
 
 

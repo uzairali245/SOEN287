@@ -70,7 +70,7 @@
                             <h3>7.58$</h3>
                         </div>
                         
-                        <button href="#" class="delete-item" type="button" >x</button>
+                        <button href="#" class="delete-item-bttn" type="button" >x</button>
                     
                     
                     
@@ -104,7 +104,7 @@
                             <h3>7.58$</h3>
                         </div>
                         
-                        <button href="#" class="delete-item" type="button" >x</button>
+                        <button href="#" class="delete-item-bttn" type="button" >x</button>
                     
                     
                     
@@ -138,7 +138,7 @@
                             <h3>7.58$</h3>
                         </div>
                         
-                        <button href="#" class="delete-item" type="button" >x</button>
+                        <button href="#" class="delete-item-bttn" type="button" >x</button>
                     
                     
                     
