@@ -807,10 +807,14 @@ ion-icon {
 }
 
 /* LOGIN PAGE */
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 577px) {
   .container input[type="text"],
   input[type="password"],
   input[type="email"] {
     width: 100% !important;
   }
+  /* signup page */
+    .container {
+      width: 100% !important;
+    }
 }
