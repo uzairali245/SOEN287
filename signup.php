@@ -89,6 +89,12 @@
             margin-top: 10px;
 
         }
+
+        @media only screen and (max-width: 575px) {
+
+
+           
+        }
     </style>
 
 </head>
