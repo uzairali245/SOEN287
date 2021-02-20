@@ -21,7 +21,7 @@
     <style>
         .container {
             width: 375px;
-            margin-top: 15%;
+            margin-top: 10%;
             border-style: solid;
             padding: 20px;
             border-width: 2px;
