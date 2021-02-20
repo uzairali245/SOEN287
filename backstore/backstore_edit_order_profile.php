@@ -182,6 +182,7 @@
         <input type="text" id="total-order-amount" name="total-order-amount">&nbsp;&nbsp;&nbsp;
         <button class="btn btn-info backstore-font">Save</button>
     </div>
+    <br>
     <?php include "../includes/footer.html"; ?>
 
     <!-- Bootstrap Bundle with Popper -->
