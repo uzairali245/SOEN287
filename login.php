@@ -114,7 +114,7 @@
                             </div>
 
                             <div class="col-sm-12 form-group mb-0">
-                                <input type="submit" name="signup" value="SIGNUP">
+                                <input type="submit" name="Login" value="Login">
                             </div>
                             <a href="signup.php">Already a Member? Sign in!</a>
 
