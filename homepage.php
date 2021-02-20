@@ -39,7 +39,7 @@ img{
 
 @media only screen and (max-width: 480px) {
     .firstTitle{
-        padding = 0;
+        padding:0;
     }
 }
   </style>
@@ -50,7 +50,7 @@ img{
     <!--CONTENTS OF PAGE STARTS HERE-->
     <div class="custom-page-container">
         <div class="best-container homepage-block">
-            <h2 class="section-titles firstTitle">Guaranteed to deliver the best</h2>
+            <h2 class="section-titles firstTitle" >Guaranteed to deliver the best</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et eros lacus. Sed ornare, diam ut aliquam pharetra, leo dolor dapibus magna, eget rhoncus sapien.
             </p>
