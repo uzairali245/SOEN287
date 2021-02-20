@@ -21,7 +21,7 @@
     <style>
         .container {
             width: 375px;
-            margin-top: 15%;
+            margin-top: 10%;
             border-style: solid;
             padding: 20px;
             border-width: 2px;
@@ -110,11 +110,11 @@
                                 <label for="pass">Email</label>
                                 <input type="email" name="password" class="form-control" id="pass" placeholder="Enter your Email." required>
                                 <label for="pass"> Password</label>
-                                <input type="Password" name="cnf-password" class="form-control" id="pass2" placeholder="Re-enter your password." required>
+                                <input type="Password" name="cnf-password" class="form-control" id="pass2" placeholder="Enter your password." required>
                             </div>
 
                             <div class="col-sm-12 form-group mb-0">
-                                <input type="submit" name="signup" value="SIGNUP">
+                                <input type="submit" name="Login" value="Login">
                             </div>
                             <a href="signup.php">Already a Member? Sign in!</a>
 
