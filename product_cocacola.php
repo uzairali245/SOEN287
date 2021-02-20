@@ -3,7 +3,7 @@
 
     <head>
 
-        <title>Coca Cola</title>
+        <title>Product Page</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
@@ -37,10 +37,9 @@
 
     <body>
 
-
+       <div class="content-container">
+        <section class="section-products content-without-footer">
         <?php include "includes/header.html"; ?>
-
-        <section class="section-products custom-page-container">
             <div class="custom-row">
 
                 <div class="colmn one-third">
@@ -58,7 +57,7 @@
                     <div class="product-info">
 
                         <div class="product-info-element">
-                            <h3 id="manufacturer">Earth co.</h3>
+                            <h3 id="manufacturer">Coke Factory</h3>
                             <h3 id="product-name">Coca Cola</h3>
                         </div>
 
@@ -67,7 +66,7 @@
                         </div>
 
                         <div class="product-info-element">
-                            <h3 id="price">2.50$</h3>
+                            <h3 id="price">2.50$/bottle</h3>
                         </div>
 
 
@@ -100,8 +99,8 @@
 
                                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <p>Enjoy the delicious & refreshing taste of Coca-Cola with meals, on the go, or to share. Serve ice cold for maximum refreshment.
-                                            Made with no artificial flavors or preservatives so you get a full flavor in each sip.</p>
+                                            Enjoy the delicious & refreshing taste of Coca-Cola with meals, on the go, or to share. Serve ice cold for maximum refreshment.<br>
+                                            Made with no artificial flavors or preservatives so you get a full flavor in each sip.
                                         </div>
                                     </div>
 
@@ -112,13 +111,13 @@
                 </div>
 
             </div>
-
+            <div class="clearfix"></div>
         </section>
 
 
 
-        <div class="clearfix"></div>
-        <?php include "includes/footer.html"; ?>
+            <?php include "includes/footer.html"; ?>
+        </div>
 
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
@@ -130,3 +129,4 @@
 
 
 </html>
+
