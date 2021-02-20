@@ -81,17 +81,41 @@
           height: 35px;
       }
 
+      img{
+         max-height: 100px;
+         max-width: 100px;
+         width: 100px;
+         height: 100px;
+         object-fit: cover;
+         border-radius: 8px;
+       }
+
+       td{
+           padding: 15px;
+            }
+
+       input[type="text"] {
+            -webkit-appearance: none;
+            border: none;
+            text-align: left;
+            width: 310px;
+            font-weight: 300;
+            color: #000000;
+            background-color: #F5F5F6;
+            border-radius: 7px;
+}     
+
   </style>
   <body>
     <?php include "../includes/header.html"; ?>
 
     <div class="custom-page-container">
-        <label class="order-upper-text" for="customer-name">Customer Name:</label>
-        <input class="input-box" type="text" id="customer-name" name="customer-name">
+        <br><label class="order-upper-text" for="customer-name">Customer Name:</label>
+        <input type="text" id="customer-name" name="customer-name">
         <br><br>   
         
         <label class="order-upper-text" for="order-number">Order Number:</label>
-        <input class="input-box" type="text" id="order-number" name="order-number">
+        <input type="text" id="order-number" name="order-number">
         <br><br>
         
         <label class="order-upper-text" for="order-date">Order Date:</label>
@@ -103,7 +127,7 @@
         <br><br>
         
         <label class="order-upper-text" for="delivery-address">Delivery Address:</label>
-        <input class="input-box" type="text" id="delivery-address" name="delivery-address">
+        <input type="text" id="delivery-address" name="delivery-address">
         <br><br>
         
         <label class="order-upper-text" for="shipping-speed">Shipping Speed:</label>
@@ -118,12 +142,12 @@
         
         <table style="width:100%">
           <tr>
-            <td><INPUT TYPE="Checkbox" Name="Product" ID="P1" Value="Bagel" class="check-box-size"></td>
-            <td><img class="img-responsive" src="resources\img\bakery-bagel2.jpg" alt="Bagel"></td>
-            <td class="order-lower-text">Bagel</td>
+            <td><INPUT TYPE="Checkbox" Name="Product" ID="P1" Value="Candy" class="check-box-size"></td>
+            <td><img src="..\resources\img\snacks\candy_image.jpg" alt="Candy"></td>
+            <td class="order-lower-text">Candy</td>
             <td class="order-lower-text">133589</td>
             <td class="order-lower-text">3.99$</td>
-            <td><select class="input-box" name="bagel-quantity" id="bagel-quantity">
+            <td><select class="input-box" name="candy-quantity" id="candy-quantity">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -131,7 +155,7 @@
           </tr>
           <tr>
             <td><INPUT TYPE="Checkbox" Name="Product" ID="P2" Value="Donut" class="check-box-size"></td>
-            <td><img class="img-responsive" src="resources\img\bakery-donut2.jpg" alt="Donut"></td>
+            <td><img src="..\resources\img\snacks\cookies_image.jpg" alt="Donut"></td>
             <td class="order-lower-text">Donut</td>
             <td class="order-lower-text">133590</td>
             <td class="order-lower-text">4.99$</td>
@@ -143,7 +167,7 @@
           </tr>
           <tr>
             <td><INPUT TYPE="Checkbox" Name="Product" ID="P3" Value="Mars" class="check-box-size"></td>
-            <td><img class="img-responsive" src="resources\img\mars_bar.jpg" alt="Mars Bar"></td>
+            <td><img class="img-responsive" src="..\resources\img\snacks\marshmallows_image.jpg" alt="Mars Bar"></td>
             <td class="order-lower-text">Mars</td>
             <td class="order-lower-text">133593</td>
             <td class="order-lower-text">5.99$</td>
@@ -154,8 +178,8 @@
         </select></td>  
           </tr>
         </table><br><br>
-        <label class="order-lower-text" for="total-order-amount">Total order amount: </label>
-        <input class="input-box" type="text" id="total-order-amount" name="total-order-amount">
+        <label class="order-lower-text" for="total-order-amount">Total order amount: </label>&nbsp;
+        <input type="text" id="total-order-amount" name="total-order-amount">&nbsp;&nbsp;&nbsp;
         <button class="btn btn-info backstore-font">Save</button>
     </div>
     <?php include "../includes/footer.html"; ?>
