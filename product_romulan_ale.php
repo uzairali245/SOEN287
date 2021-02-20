@@ -30,46 +30,26 @@
         <!--Main Fonts-->
         <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo&family=Orbitron:wght@500&family=Roboto:Roboto:ital,wght@0,500;1,500,1;600;1,700&display=swap" rel="stylesheet"> 
     </head>
-    <style>
-    /* Custom CSS */
-    body {
-        background: #d48067;
-    }
 
-    .custom-page-container{
-        margin-top:90px;
-        padding-top: 30px;
-        padding-bottom: 130px;
-    }
-
-    .custom-page-container {
-        margin-left: 0px;
-        margin-right: 0px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .card{
-        color: #734234;
-        background-color: #EBE2DE ;
-        min-width: auto;
-        padding:25px;
-    }
-
-    </style>
     <body>
         
        <div class="content-container">
         <section class="section-products content-without-footer">
         <?php include "includes/header.html"; ?>
-            <div class="card">
-            <div class="row justify-content-center" style="overflow-x: auto;">
+        <div class="custom-row">
                 
-                <div class="justify-content-center d-flex col-md-6">
-                    <img src="resources/img/interstellar-foods/romulan-ale.jpg" alt="product image">
+                <div class="colmn one-third">
+                    <div>
+                    &nbsp;
+                    </div>
+                </div>
+                <div class="colmn one-third">
+                    <div>
+                        <img src="resources/img/interstellar-foods/romulan-ale.jpg" alt="product image">
+                    </div>
                 </div>
                 
-                <div class="justify-content-center d-flex col-md-6" style="justify">
+                <div class="colmn one-third">
                     <div class="product-info">
 
                         <div class="product-info-element">
@@ -101,21 +81,21 @@
 
                         </div>
 
-                        <div class="clearfix"></div>
+                         <div class="clearfix"></div>
 
                         <div class="product-info-element">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
 
                                     <h5 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: #734234; background-color: #f3887c;">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         See more
                                     </button>
                                     </h5>
 
                                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>We only eat Mars Bars on Mars</strong> kidding... we got potatoes also.
+                                            Classic beverage of the Romulan Empire, shipped straight from Romulus!
                                         </div>
                                     </div>
 
@@ -124,7 +104,7 @@
                         </div>    
                   
                 </div>
-            </div>
+
             </div>
             <div class="clearfix"></div>
         </section>

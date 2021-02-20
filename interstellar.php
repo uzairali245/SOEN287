@@ -21,33 +21,10 @@
   </head>
   <style>
     /* Custom CSS */
-
-    body {
-        background: #d48067;
-    }
-
-    .custom-page-container{
-        margin-top:90px;
-        padding-top: 30px;
-        padding-bottom: 130px;
-    }
     
     img{
         max-height: 250px;
         max-width: 320px;
-    }
-
-    .custom-page-container {
-        margin-left: 0px;
-        margin-right: 0px;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .card{
-        color: #734234;
-        background-color: #EBE2DE ;
-        min-width: auto;
     }
 
     .aisle-item{
@@ -71,12 +48,10 @@
 
         <div class="d-flex flex-wrap justify-content-evenly"> 
             
-            <div class="aisle-item card">
+            <div class="aisle-item">
                 <img src="resources/img/interstellar-foods/bloodwine.jpg" alt="Blood Wine">
-                <div class="text-center">
                     <h4 class="justify-text-center" style="font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Klingon Blood Wine</h4>
-                    <p style="margin-bottom: 0 "><strong>37$</strong></p>
-                </div>
+                    <p style="margin-bottom: 0 ">37$</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -93,13 +68,10 @@
             </div>
             
             
-            <div class="aisle-item card"> 
+            <div class="aisle-item"> 
                 <img src="resources/img/interstellar-foods/tube-grub.jpg" alt="Tube Grub">
-                <div class="text-center">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Ferengi Tube Grubs</h4>
-                    <p style="margin-bottom: 0 "><strong>41$/kg</strong></p>
-                </div>
-
+                    <p style="margin-bottom: 0 ">41$/kg</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -116,12 +88,10 @@
             </div>
             
             
-            <div class="aisle-item card"> 
+            <div class="aisle-item"> 
                 <img src="resources/img/interstellar-foods/gagh.jpg" alt="Gagh">
-                <div class="text-center">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Klingon Gagh</h4>
-                    <p style="margin-bottom: 0 "><strong>15.41$/kg</strong></p>
-                </div>
+                    <p style="margin-bottom: 0 ">15.41$/kg</p>
 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -137,12 +107,10 @@
                 </div>
             </div>
 
-            <div class="aisle-item card"> 
+            <div class="aisle-item"> 
                 <img src="resources/img/interstellar-foods/hasperat.jpg" alt="Hasperat">
-                <div class="text-center">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bajoran Hasperat</h4>
-                    <p style="margin-bottom: 0 "><strong>10$</strong></p>
-                </div>
+                    <p style="margin-bottom: 0 ">10$</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -159,12 +127,10 @@
             </div>
             
             
-            <div class="aisle-item card"> 
+            <div class="aisle-item"> 
                 <img src="resources/img/interstellar-foods/jiballian-fudge.jpg" alt="Jiballian Fudge">
-                <div class="text-center">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Jiballian Fudge Cake</h4>
-                    <p style="margin-bottom: 0 "><strong>176$</strong></p>
-                </div>
+                    <p style="margin-bottom: 0 ">176$</p>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -181,13 +147,12 @@
             </div>
             
             
-            <div class="aisle-item card"> 
+            <div class="aisle-item"> 
                 <img src="resources/img/interstellar-foods/romulan-ale.jpg" alt="Romulan Ale">
-                <div class="text-center">
+
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Romulan Ale</h4>
                     <p style="margin-bottom: 0 "><strong>73.69$ (6)</strong></p>
-                </div>
-                
+
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
                         <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
