@@ -18,10 +18,6 @@
   </head>
   <style>
     /* Custom CSS */
-    .header.navbar {
-      box-shadow: none;
-    }
-
     body {
       background: #EBE2DE none repeat scroll 0 0;
       position: relative;
