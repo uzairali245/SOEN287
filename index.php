@@ -3,9 +3,11 @@
     
     <head>
         
-        <title>Pre-Home Page</title>
+        <title>Welcome Page</title>
+        <meta name="author" content="Anne Bastien">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
+    
         
         <link rel="stylesheet" href="resources/css/style.css" type="text/css"> 
         
@@ -20,7 +22,7 @@
     <body class="background-containter">
         <section class="welcome">
             <div class="welcome-store custom-row">
-                <h1>Mars Grocers</h1>
+                <h1>Mars Colonist Pantry</h1>
                 <h2>It's been a long trip... Have something to eat.</h2>
                 <a class="bttn bttn-full" href="homepage.php">Enter store</a>
                 
