@@ -2,7 +2,8 @@
 <html>
 <head>
         
-        <title>Product Page</title>
+        <title>Shopping Cart</title>
+        <meta name="author" content="Anne Bastien">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
@@ -44,16 +45,22 @@
                     <div class="cart-header">3 items</div>
                     <div class="cart-item">
                        
-                        <a href="#" ><img class="cart-element" src="resources/img/mars_bar.jpg" alt="product image"></a>
+                        <a href="#" ><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
                        
                         <div class="mobile-wrapper">
                             <div class="cart-element item-descrpt">
                                 <a href="#">
                                     <h3 id="manufacturer">Earth co.</h3>
-                                    <h3 id="product-name">Levitating Banana</h3>
+                                    <h3 id="product-name">Wild Blueberries</h3>
                                 <a>
-                                <h3 id="price-per-unit">3.99$/lb</h3>
-                                <h3 id="price">3.99$</h3>
+                                <h3 id="price-per-unit">$18.99/100g</h3>
+                                <form action="/action_page.php">
+                                    <select name="format" id="product-format">
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                    </select>
+                                </form>
                             </div> 
                             
                             <div class="cart-element qty">
@@ -67,7 +74,7 @@
                         </div>
                         
                         <div class="cart-element" id="total-price-item">
-                            <h3>7.58$</h3>
+                            <h3>$18.99</h3>
                         </div>
                         
                         <button href="#" class="delete-item-bttn" type="button" >x</button>
@@ -78,15 +85,21 @@
                     
                     <div class="cart-item">
                        
-                        <a href="#" ><img class="cart-element" src="resources/img/mars_bar.jpg" alt="product image"></a>
+                        <a href="#" ><img class="cart-element" src="resources/img/snacks/dark_chocolate_square.jpg" alt="Dark Chocolate"></a>
                         <div class="mobile-wrapper">
                             <div class="cart-element item-descrpt">
                                 <a href="#" >
-                                    <h3 id="manufacturer">Earth co.</h3>
-                                    <h3 id="product-name">Levitating Banana</h3>
+                                    <h3 id="manufacturer">Cacao Pow</h3>
+                                    <h3 id="product-name">Dark Chocolate</h3>
                                 </a>
-                                <h3 id="price-per-unit">3.99$/lb</h3>
-                                <h3 id="price">3.99$</h3>
+                                <h3 id="price-per-unit">$3.10/100g</h3>
+                                <form action="/action_page.php">
+                                    <select name="format" id="product-format">
+                                        <option value="100g">100g</option>
+                                        <option value="250g">250g</option>
+                                        <option value="500g">500g</option>
+                                    </select>
+                                </form>
                             </div> 
 
                             
@@ -101,7 +114,7 @@
                         </div>
                         
                         <div class="cart-element" id="total-price-item">
-                            <h3>7.58$</h3>
+                            <h3>$3.10</h3>
                         </div>
                         
                         <button href="#" class="delete-item-bttn" type="button" >x</button>
@@ -112,21 +125,20 @@
                     
                     <div class="cart-item">
                        
-                        <a href="#" ><img class="cart-element" src="resources/img/mars_bar.jpg" alt="product image"><a>
+                        <a href="#" ><img class="cart-element" src="resources/img/bakery/bakery-ciabatta2-square.jpg" alt="product image"><a>
                        
                         <div class="mobile-wrapper">
                             <div class="cart-element item-descrpt">
                                 <a href="#" >
-                                    <h3 id="manufacturer">Earth co.</h3>
-                                    <h3 id="product-name">Levitating Banana</h3>
+                                    <h3 id="manufacturer">Olympus Hearth</h3>
+                                    <h3 id="product-name">Ciabatta</h3>
                                 </a>
-                                <h3 id="price-per-unit">3.99$/lb</h3>
-                                <h3 id="price">3.99$</h3>
+                                <h3 id="price-per-unit">$7.00/unit</h3>
                             </div> 
                             
                             <div class="cart-element qty">
                                 <button class="button-circle" type="button" name="button">-</button>
-                                <input type="text" name="qty" value="1">
+                                <input type="text" name="qty" value="2">
                                 <button class="button-circle" type="button" name="button">+</button>
                                 <!--<a href="#" class="bttn-circle col one-third">-</a>
                                 <h5 class="col one-third">1</h5> 
@@ -135,7 +147,7 @@
                         </div>
                         
                         <div class="cart-element" id="total-price-item">
-                            <h3>7.58$</h3>
+                            <h3>$14.00</h3>
                         </div>
                         
                         <button href="#" class="delete-item-bttn" type="button" >x</button>
@@ -152,25 +164,27 @@
                             <div class="price-descriptors">
                                 <p>3 items</p>
                                 <p>Shipping</p>
-                                <p>Tax</p>
+                                <p>GST</p>
+                                <p>QST</p>
 
                                 <p id="cart-total">TOTAL</p>
                             </div>
                         </div>
                         <div class="colmn one-half">
                             <div class="price-list">
-                                <p>7.74$</p>
-                                <p>5.00$</p>
-                                <p>---</p>
+                                <p>$36.09</p>
+                                <p>$5.00</p>
+                                <p>$1.80</p>
+                                <p>$3.60</p>
 
-                                <p id="cart-total">12.74$</p>
+                                <p id="cart-total">$41.49</p>
                             </div>    
 
                         </div>
                     </div>
 
                     <div class="clearfix"></div>
-                    <div class="center"><button type="submit" class="long-bttn"> Order Now </button></div>
+                    <div class="center"><button type="submit" class="long-bttn" onclick="window.location.href='/SOEN287/checkout.php'"> Order Now </button></div>
                     
                 
                 
