@@ -4,6 +4,7 @@
     <head>
         
         <title>Product Page</title>
+        <meta name="author" content="Anne Bastien">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
@@ -49,7 +50,7 @@
                 </div>
                 <div class="colmn one-third">
                     <div>
-                        <img src="resources/img/mars_bar.jpg" alt="product image">
+                        <img src="resources/img/veg-fruit/blueberry.jpg" alt="wild blueberries">
                     </div>
                 </div>
                 
@@ -58,15 +59,21 @@
 
                         <div class="product-info-element">
                             <h3 id="manufacturer">Earth co.</h3>
-                            <h3 id="product-name">Levitating Banana</h3>
+                            <h3 id="product-name">Wild Blueberries</h3>
+                        </div>
+
+                        <div class="product-info-element" id="product-format">
+                            <button class="bttn-full bttn" type="button">100g</button>
+                            <button class="bttn-full bttn" type="button">250g</button>
+                            <button class="bttn-full bttn" type="button">500g</button>
                         </div>
 
                         <div class="product-info-element">
-                            <h3 id="price-per-unit">3.99$/lb</h3>
+                            <h3 id="price-per-unit">$18.99/100g</h3>
                         </div>
 
                         <div class="product-info-element">
-                            <h3 id="price">3.99$</h3>
+                            <h3 id="price">$18.99</h3>
                         </div>
                               
 
@@ -99,7 +106,7 @@
 
                                     <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            <strong>We only eat Mars Bars on Mars</strong> kidding... we got potatoes also.
+                                            <strong>A Rare Find!</strong> Fresh wild blueberries delivered directly from Earth by the Perseverance rover.
                                         </div>
                                     </div>
 
