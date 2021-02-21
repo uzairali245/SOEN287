@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+       <!DOCTYPE html>
   <html lang="en" dir="ltr">
     <head>
       <meta charset="utf-8">
@@ -50,9 +50,10 @@
             border-top:10px solid #EFA060;
         }
         form{
-          allign:center;
+
           width: 40%;
           margin-left: 50px;
+
 
 
 
@@ -88,57 +89,24 @@
           right: 240px;
           top: 25px;
         }
-
-
-
-        .dropbtn {
-
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: red;
-}
-
+        .content-without-footer {
+          padding-top:0;
+          padding-bottom: 130px;
+          margin-left: 0px;
+          margin-right: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
 
 
 
     </style>
 
     <body>
+      <div class="content-without-footer">
       <?php include "../includes/header.html"; ?>
   <div class="custom-page-container">
+
 <h3>Edit Profile</h3>
 <img  class="prof"src="https://static.toiimg.com/photo/msid-73951313/73951313.jpg" alt="Cr7">
 <div class="intro">
@@ -146,8 +114,6 @@
 
 </div>
 <button class="yo"type="submit" name="button">Change Photo </button>
-
-
 
 
     <form >
@@ -173,7 +139,7 @@
       <label for="">Password:</label>
       <div class="row mb-3">
         <div class="col">
-          <input type="password" class="form-control" placeholder="Old Password" value="1234567" >
+          <input type="password" class="form-control" placeholder="Current Password" value="1234567" >
         </div>
         <div class="col">
           <input type="name" class="form-control" placeholder="New Password" >
@@ -188,22 +154,23 @@
           <input type="address" class="form-control" placeholder="New Postal code" >
         </div>
       </div>
+<label>Are you staff or Customer?</label>
+      <div class="input-group mb-3">
 
-      <div class="dropdown">
-  <button class="dropbtn">Occupation</button>
-  <div class="dropdown-content">
-  <a href="#">Employee</a>
-  <a href="#">Customer</a>
+  <select class="form-select" >
+    <option selected>Select</option>
+    <option value="1">Staff</option>
+    <option value="2">Customer</option>
 
-  </div>
+  </select>
 </div>
+<button type="submit" name="button" style="width:100px">Save</button>
 
 
     </form>
 
 
-
-
+</div>
   </div>
 
   <?php include "../includes/footer.html"; ?>
