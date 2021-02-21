@@ -62,7 +62,9 @@ img{
 
             <div class="aisle-item">
                 <img src="https://media.npr.org/assets/img/2015/11/19/salt-iconic-branding-0037edit_custom-106133bb015b56c78e6bd554cfcbc9cc648156bb-s800-c85.jpg" alt="Coke">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Coca Cola</h4>
+                <h4 >
+<a href="product_cocacola.php" style="color: white; text-decoration: none;">Coca Cola </a>
+                  </h4>
                 <p style="margin-bottom: 0 ">2.50$/bottle</p>
 
                 <div class="d-flex bd-highlight">
@@ -308,3 +310,4 @@ img{
     </script>
   </body>
 </html>
+
