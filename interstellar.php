@@ -49,10 +49,11 @@
         <div class="d-flex flex-wrap justify-content-evenly"> 
             
             <div class="aisle-item">
-                <img src="resources/img/interstellar-foods/bloodwine.jpg" alt="Blood Wine">
+                <a href="./product_romulan_ale.php">
+                    <img src="resources/img/interstellar-foods/bloodwine.jpg" alt="Blood Wine">
                     <h4 class="justify-text-center" style="font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Klingon Blood Wine</h4>
                     <p style="margin-bottom: 0 ">37$</p>
-                
+                </a>
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
                         <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
@@ -69,10 +70,12 @@
             
             
             <div class="aisle-item"> 
-                <img src="resources/img/interstellar-foods/tube-grub.jpg" alt="Tube Grub">
+                <a href="./product_romulan_ale.php">
+                    <img src="resources/img/interstellar-foods/tube-grub.jpg" alt="Tube Grub">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Ferengi Tube Grubs</h4>
                     <p style="margin-bottom: 0 ">41$/kg</p>
-                
+                </a>
+
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
                         <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
@@ -89,9 +92,11 @@
             
             
             <div class="aisle-item"> 
-                <img src="resources/img/interstellar-foods/gagh.jpg" alt="Gagh">
+                <a href="./product_romulan_ale.php">
+                    <img src="resources/img/interstellar-foods/gagh.jpg" alt="Gagh">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Klingon Gagh</h4>
                     <p style="margin-bottom: 0 ">15.41$/kg</p>
+                </a>
 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -108,9 +113,11 @@
             </div>
 
             <div class="aisle-item"> 
-                <img src="resources/img/interstellar-foods/hasperat.jpg" alt="Hasperat">
+                <a href="./product_romulan_ale.php">
+                    <img src="resources/img/interstellar-foods/hasperat.jpg" alt="Hasperat">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bajoran Hasperat</h4>
                     <p style="margin-bottom: 0 ">10$</p>
+                </a>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -128,9 +135,11 @@
             
             
             <div class="aisle-item"> 
-                <img src="resources/img/interstellar-foods/jiballian-fudge.jpg" alt="Jiballian Fudge">
+                <a href="./product_romulan_ale.php">
+                    <img src="resources/img/interstellar-foods/jiballian-fudge.jpg" alt="Jiballian Fudge">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Jiballian Fudge Cake</h4>
                     <p style="margin-bottom: 0 ">176$</p>
+                </a>
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
@@ -148,10 +157,11 @@
             
             
             <div class="aisle-item"> 
-                <img src="resources/img/interstellar-foods/romulan-ale.jpg" alt="Romulan Ale">
-
+                <a href="./product_romulan_ale.php">
+                    <img src="resources/img/interstellar-foods/romulan-ale.jpg" alt="Romulan Ale">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Romulan Ale</h4>
                     <p style="margin-bottom: 0 "><strong>73.69$ (6)</strong></p>
+                </a>
 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
