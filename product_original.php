@@ -62,10 +62,10 @@
                             <h3 id="product-name">Wild Blueberries</h3>
                         </div>
 
-                        <div class="product-info-element" id="product-format">
-                            <button class="bttn-full bttn" type="button">100g</button>
-                            <button class="bttn-full bttn" type="button">250g</button>
-                            <button class="bttn-full bttn" type="button">500g</button>
+                        <div class=" product-info-element btn-group" role="group" aria-label="Basic example" id="product-format">
+                            <button class="bttn-full bttn btn" type="button">100g</button>
+                            <button class="bttn-full bttn btn" type="button">250g</button>
+                            <button class="bttn-full bttn btn" type="button">500g</button>
                         </div>
 
                         <div class="product-info-element">
