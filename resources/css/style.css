@@ -138,7 +138,7 @@ Secondary bright orange: #EE4F3E;
   
   
   button {
-    color: #fff !important;
+    color: #fff;
     cursor: pointer;
     border: none;
     text-decoration: none;
@@ -146,7 +146,7 @@ Secondary bright orange: #EE4F3E;
          appearance: none;
     -webkit-appearance: none;
     font-size: 80%;
-    background-color: #ee4f3e !important;
+    background-color: #ee4f3e;
     border-radius: 8px;
     padding: 5px 20px;
   }
@@ -196,7 +196,7 @@ Secondary bright orange: #EE4F3E;
   .bttn-full:link,
   .bttn-full:visited,
   .section-cart #product-format{
-    background-color: #ee4f3e !important;
+    background-color: #ee4f3e;
   }
   
   .bttn:hover,
@@ -204,7 +204,7 @@ Secondary bright orange: #EE4F3E;
   .bttn-circle:hover,
   .bttn-circle:active,
   button:hover{
-    background-color: #f16b5d !important;
+    background-color: #f16b5d;
   }
   
   .long-bttn {
@@ -456,7 +456,14 @@ Secondary bright orange: #EE4F3E;
       border-radius: 8px;
       padding: 2px 10px !important;
       font-size: 80% !important;
+      background-color: #ee4f3e !important;
+      color: #fff !important;
     } 
+
+    #product-format button:hover{
+        background-color: #f16b5d !important;
+}
+    
   
   .accordion,
   .accordion-header {
