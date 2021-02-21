@@ -45,11 +45,11 @@
                     <div class="cart-header">3 items</div>
                     <div class="cart-item">
                        
-                        <a href="#" ><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
+                        <a href="product_original.php" ><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
                        
                         <div class="mobile-wrapper">
                             <div class="cart-element item-descrpt">
-                                <a href="#">
+                                <a href="product_original.php">
                                     <h3 id="manufacturer">Earth co.</h3>
                                     <h3 id="product-name">Wild Blueberries</h3>
                                 <a>
@@ -88,7 +88,7 @@
                         <a href="#" ><img class="cart-element" src="resources/img/snacks/dark_chocolate_square.jpg" alt="Dark Chocolate"></a>
                         <div class="mobile-wrapper">
                             <div class="cart-element item-descrpt">
-                                <a href="#" >
+                                <a href="" >
                                     <h3 id="manufacturer">Cacao Pow</h3>
                                     <h3 id="product-name">Dark Chocolate</h3>
                                 </a>
@@ -97,7 +97,6 @@
                                     <select name="format" id="product-format">
                                         <option value="100g">100g</option>
                                         <option value="250g">250g</option>
-                                        <option value="500g">500g</option>
                                     </select>
                                 </form>
                             </div> 
