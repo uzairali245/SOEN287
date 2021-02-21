@@ -90,7 +90,7 @@
         <div class="tab-pane fade show active" id="products">
           <div class="row justify-content-center">
             <div class="col-lg-2">
-              <button class="btn btn-success backstore-font add-btn">Add</button>
+              <a class="btn btn-success backstore-font add-btn" href="./editproduct.php">Add</a>
             </div>
             <div class="col-lg-10" style="overflow-x: auto;">
               <table class="table table-striped table-bordered table-hover table-sm">
@@ -109,7 +109,7 @@
                     <td>Fruits & Vegetables</td>
                     <td>$3.73/lb</td>
                     <td>82</td>
-                    <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
                     <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                   </tr>
 
@@ -119,7 +119,7 @@
                     <td>Dry Foods</td>
                     <td>$4.99ea</td>
                     <td>17</td>
-                    <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
                     <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                   </tr>
 
@@ -129,7 +129,7 @@
                     <td>Powders & Spices</td>
                     <td>$8.99ea</td>
                     <td>36</td>
-                    <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
                     <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                   </tr>
 
@@ -139,7 +139,7 @@
                     <td>Baked Goods</td>
                     <td>$3.99</td>
                     <td>41</td>
-                    <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
                     <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                   </tr>
 
@@ -149,7 +149,7 @@
                     <td>Rice</td>
                     <td>$0.001/grain</td>
                     <td>250172102</td>
-                    <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
                     <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                   </tr>
               </table>
@@ -161,7 +161,7 @@
         <div class="tab-pane fade" id="orders">
           <div class="row justify-content-center">
             <div class="col-lg-2">
-              <button class="btn btn-success backstore-font add-btn">Add</button>
+              <a class="btn btn-success backstore-font add-btn" href="./backstore_edit_order_profile.php">Add</a>
             </div>
             <div class="col-lg-10" style="overflow-x: auto;">
               <table class="table table-striped table-bordered table-hover table-sm">
@@ -178,8 +178,7 @@
                     <td>21/01/2021</td>
                     <td>Steve</td>
                     <td>$404.23</td>
-                    <td class="text-center"><button class="btn btn-warning backstore-font">Items</button></td>
-                    <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                    <td class="text-center"><a class="btn btn-info backstore-font" href="./backstore_edit_order_profile.php">Edit</a></td>
                     <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                   </tr>
 
@@ -188,8 +187,7 @@
                     <td>25/02/2021</td>
                     <td>Ronald</td>
                     <td>$213.08</td>
-                    <td class="text-center"><button class="btn btn-warning backstore-font">Items</button></td>
-                    <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                    <td class="text-center"><a class="btn btn-info backstore-font" href="./backstore_edit_order_profile.php">Edit</a></td>
                     <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                   </tr>
 
@@ -198,8 +196,7 @@
                     <td>20/04/2020</td>
                     <td>Natalie</td>
                     <td>$142.67</td>
-                    <td class="text-center"><button class="btn btn-warning backstore-font">Items</button></td>
-                    <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                    <td class="text-center"><a class="btn btn-info backstore-font" href="./backstore_edit_order_profile.php">Edit</a></td>
                     <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                   </tr>
               </table>
@@ -211,7 +208,7 @@
         <div class="tab-pane fade" id="users">
           <div class="row justify-content-center">
             <div class="col-lg-2">
-                <button class="btn btn-success backstore-font add-btn">Add</button>
+                <a class="btn btn-success backstore-font add-btn" href="./userprofile.php">Add</a>
               </div>
               <div class="col-lg-10" style="overflow-x: auto; overflow-y: auto;">
                 <table class="table table-striped table-bordered table-hover table-sm">
@@ -226,8 +223,7 @@
                       <td>0000001</td>
                       <td>Elon</td>
                       <td>Owner</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
 
@@ -235,8 +231,7 @@
                       <td>0000002</td>
                       <td>Anne</td>
                       <td>Web Developer</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
 
@@ -244,8 +239,7 @@
                       <td>0000003</td>
                       <td>David</td>
                       <td>Web Developer</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
 
@@ -253,8 +247,7 @@
                       <td>0000004</td>
                       <td>Jay</td>
                       <td>Web Developer</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
 
@@ -262,8 +255,7 @@
                       <td>0000005</td>
                       <td>Mohamad</td>
                       <td>Web Developer</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
 
@@ -271,8 +263,7 @@
                       <td>0000006</td>
                       <td>Monica</td>
                       <td>Web Developer</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
 
@@ -280,8 +271,7 @@
                       <td>0000007</td>
                       <td>Uzair</td>
                       <td>Web Developer</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
 
@@ -289,8 +279,7 @@
                       <td>0000008</td>
                       <td>Ronald</td>
                       <td>Customer</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
 
@@ -298,8 +287,7 @@
                       <td>0000009</td>
                       <td>Steve</td>
                       <td>Customer</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
 
@@ -307,8 +295,7 @@
                       <td>0000010</td>
                       <td>Natalie</td>
                       <td>Customer</td>
-                      <td class="text-center"><button class="btn btn-warning backstore-font">Details</button></td>
-                      <td class="text-center"><button class="btn btn-info backstore-font">Edit</button></td>
+                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
                       <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
                     </tr>
                 </table>
