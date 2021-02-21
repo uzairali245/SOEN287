@@ -3,6 +3,7 @@
   <head>
   <title>SOEN 287</title>
   <!-- favicon <link rel="icon" href="includes/favicon.png?"/> -->
+    <meta name="author" content="Monica Chen (template) - Anne Bastien">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -22,22 +23,20 @@
   <style>
     /* Custom CSS */
     
-img{
-    max-height: 250px;
-    max-width: 320px;
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-}
+    img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
 
-.aisle-item{
-    margin: 10px 0;
-}
+    .aisle-item{
+        margin: 10px 0;
+    }
 
-.h4{
-    font-size:100%;
-}
+    .h4{
+        font-size:100%;
+    }
 
 
 
@@ -56,7 +55,7 @@ img{
             
             <div class="aisle-item"> 
                 <a href="product_original.php"><img src="resources/img/veg-fruit/blueberry.jpg" alt="Blueberries"></a>
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;"><a href="product_original.php">Blueberries</a></h4>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;"><a href="product_original.php">Wild Blueberries</a></h4>
                 <p style="margin-bottom: 0 ">18.99$/100g</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -116,7 +115,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/veg-fruit/orange.jpg" alt="Orange"> 
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Orange</h4>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Navel Oranges</h4>
                 <p style="margin-bottom: 0 ">10.89$/lb</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -135,7 +134,7 @@ img{
             
             <div class="aisle-item">
                 <img src="resources/img/veg-fruit/apple.jpg" alt="apple">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Apple</h4>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Cortland Apple</h4>
                 <p style="margin-bottom: 0 ">7$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -154,7 +153,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/veg-fruit/pumpkin.jpg" alt="Pumpkin">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pumpkin</h4>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Mini Pumpkins</h4>
                 <p style="margin-bottom: 0 ">34$/unit</p>
                 
                 <div class="d-flex bd-highlight">                    
@@ -192,7 +191,7 @@ img{
             
             <div class="aisle-item"> 
                 <img src="resources/img/veg-fruit/tomato.jpg" alt="tomato">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Tomato</h4>
+                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Roma Tomatoes</h4>
                 <p style="margin-bottom: 0 ">24$/pack of 6</p>
                 
                 <div class="d-flex bd-highlight">                    
