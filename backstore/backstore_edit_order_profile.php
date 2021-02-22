@@ -18,20 +18,21 @@
   </head>
   <style>
     /* Custom CSS */
-    body {
+    html, body {
       background: #EBE2DE none repeat scroll 0 0;
       position: relative;
       margin: 0;
       padding: 0;
-      min-height: 100%;
       height: auto;
+      min-height: 100vh;
     }
 
     .custom-page-container {
-      margin-top: 120px;
+      margin-top: 0px;
       margin-left: 20px;
       margin-right: 0px;
       margin-bottom: 100px;
+      padding-top: 120px;
       padding-left: 0px;
       padding-right: 0px;
     }
@@ -103,13 +104,53 @@
             color: #000000;
             background-color: #F5F5F6;
             border-radius: 7px;
-}     
+         }     
+
+
+          .content-without-footer {
+              padding-top:120px;
+              padding-bottom: 130px;
+              margin-left: 20px;
+              margin-right: 0px;
+              padding-left: 0px;
+              padding-right: 0px;
+          }
+
+    .navbar-custom {
+      background-color: #B35859;
+      border-bottom:10px solid #EFA060;
+    }
+
+    .custom-footer {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        background-color: #B35859;
+        border-top:10px solid #EFA060;
+    }
+
+    .nav-link {
+      color: #734234;
+      font-family: Audiowide;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 31px;
+      border-radius: 0px 0px 0px 0px;
+    }
+
+    .tab-content {
+      padding: 25px;
+    }
 
   </style>
   <body>
+    <div class="content-container">
+    <div class="content-without-footer">
     <?php include "../includes/header.html"; ?>
 
-    <div class="custom-page-container">
         <br><label class="order-upper-text" for="customer-name">Customer Name:</label>
         <input type="text" id="customer-name" name="customer-name">
         <br><br>   
@@ -190,5 +231,6 @@
     <script>
       /* Custom JS */
     </script>
+    </div>
   </body>
 </html>
