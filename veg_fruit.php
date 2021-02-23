@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>SOEN 287</title>
+  <title>Earth Produce</title>
   <!-- favicon <link rel="icon" href="includes/favicon.png?"/> -->
     <meta name="author" content="Monica Chen (template) - Anne Bastien">
     <meta charset="utf-8">
