@@ -55,7 +55,7 @@
                                 <a>
                                 <h3 id="price-per-unit">$18.99/100g</h3>
                                 <form action="/action_page.php">
-                                    <select name="format" id="product-format0" onChange="updateFormat(0)">
+                                    <select name="format" class="product-format" id="product-format0" onChange="updateFormat(0)">
                                         <option value="100g">100g</option>
                                         <option value="250g">250g</option>
                                         <option value="500g">500g</option>
@@ -94,7 +94,7 @@
                                 </a>
                                 <h3 id="price-per-unit">$3.10/100g</h3>
                                 <form action="/action_page.php">
-                                    <select name="format" id="product-format">
+                                    <select name="format" class="product-format" id="product-format1">
                                         <option value="100g">100g</option>
                                         <option value="250g">250g</option>
                                     </select>
