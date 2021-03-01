@@ -248,7 +248,7 @@
                 let gst = subtotal*0.05;
                 let qst = subtotal*0.09975;
 
-                let total = subtotal + gst.toFixed(2) + qst.toFixed(2) + shippingCost;
+                let total = subtotal + gst + qst + shippingCost;
 
                 document.getElementById("cart-subtotal").innerHTML = "$" + subtotal;
 
