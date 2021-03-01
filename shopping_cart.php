@@ -172,7 +172,7 @@
                         <div class="colmn one-half">
                             <div class="price-list">
                                 <p id="cart-subtotal"></p>
-                                <p>$5.00</p>
+                                <p id="shipping-cost">$5.00</p>
                                 <p id="cart-gst"></p>
                                 <p id="cart-qst">$3.60</p>
 
@@ -240,6 +240,7 @@
 
             function calculateCartSubtotal() {
                 let subtotal = 0.0;
+                let shippingCost = parseFloat(document.getElementById("cart-qst").innerHTML.substring(1));
                 for (i = 0; i < cart_count; i++) {
                     subtotal += parseFloat(document.getElementById("total-price-item"+i).innerHTML.substring(1));
                 }
@@ -247,11 +248,15 @@
                 let gst = subtotal*0.05;
                 let qst = subtotal*0.09975;
 
+                let total = subtotal + gst.toFixed(2) + qst.toFixed(2) + shippingCost;
+
                 document.getElementById("cart-subtotal").innerHTML = "$" + subtotal;
 
                 document.getElementById("cart-gst").innerHTML = "$" + gst.toFixed(2);
 
                 document.getElementById("cart-qst").innerHTML = "$" + qst.toFixed(2);
+
+                document.getElementById("cart-total").innerHTML = "$" + total.toFixed(2);
 
             }
         </script>
