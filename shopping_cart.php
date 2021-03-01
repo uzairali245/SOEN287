@@ -41,8 +41,13 @@
             </div>
             
             <div class="custom-row">
-                <div class="colmn two-third cart-list">
+                <div id = "empty-cart"></div>
+                <div class="colmn two-third cart-list" id="cart-list">
                     <div class="cart-header" id="cartcount0">3 items</div>
+                    <div class = "empty-cart-container">
+                        <div id = "empty-cart"></div>
+                        <div id = "empty-cart-text"></div>
+                    </div>
                     <div class="cart-item" id="cart0">
                        
                         <a href="product_original.php" ><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
@@ -156,7 +161,7 @@
                     </div>
                 </div>
                 
-                <div class="colmn one-third order-summary">
+                <div class="colmn one-third order-summary" id="order-summary">
                     <div class="custom-row cart-header">Order Summary</div>
                     <div>
                         <div class="colmn one-half">
@@ -218,6 +223,21 @@
                 cart_count = cart_count - 1;
                 updateCartCount();
                 calculateCartSubtotal();
+
+                if (cart_count == 0) {
+                    let orderSummary = document.getElementById("order-summary");
+                    let cartList = document.getElementById("cart-list");
+                    orderSummary.remove();
+                    cartList.remove();
+
+                    var img = document.createElement("img"); 
+ 
+                    img.src = "resources/img/lonely_in_space.jpg"; 
+                    img.alt = "lonely in space";
+                    var src = document.getElementById("empty-cart"); 
+ 
+                    src.appendChild(img); 
+                }
             }
 
             function updateCartCount() {
@@ -228,6 +248,8 @@
 
                 elem0.textContent= cart_count + " items";
                 elem1.textContent= cart_count + " items";
+
+                
             }
 
             function updateFormatPrice(index) {

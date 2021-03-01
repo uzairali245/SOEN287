@@ -597,6 +597,24 @@ Secondary bright orange: #EE4F3E;
       margin-top: 30px;
       margin-bottom: 20px;
   }
+
+  #empty-cart img {
+    width: 100%;
+    max-width: none;
+    margin:0;
+  }
+
+  .empty-cart-container {
+      position: relative;
+      text-align: center;
+  }
+
+  #empty-cart-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   
   /* ----- BACK STORE ----- */
   
