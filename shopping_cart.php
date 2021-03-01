@@ -36,18 +36,18 @@
 
         <section class="section-cart content-without-footer">
             <?php include "includes/header.html"; ?>
-            <div class="custom-row">
+            <div class="custom-row" id="cart-title">
                 <h2>My Cart</h2>
             </div>
             
             <div class="custom-row">
-                <div id = "empty-cart"></div>
+                <div class = "empty-cart-container">
+                    <div id = "empty-cart"></div>
+                    <h2 id = "empty-cart-text"></h2>
+                </div>
                 <div class="colmn two-third cart-list" id="cart-list">
                     <div class="cart-header" id="cartcount0">3 items</div>
-                    <div class = "empty-cart-container">
-                        <div id = "empty-cart"></div>
-                        <div id = "empty-cart-text"></div>
-                    </div>
+
                     <div class="cart-item" id="cart0">
                        
                         <a href="product_original.php" ><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
@@ -230,6 +230,11 @@
                     orderSummary.remove();
                     cartList.remove();
 
+                    let cartTitle = document.getElementById("cart-title");
+                    cartTitle.remove();
+
+
+
                     var img = document.createElement("img"); 
  
                     img.src = "resources/img/lonely_in_space.jpg"; 
@@ -237,6 +242,11 @@
                     var src = document.getElementById("empty-cart"); 
  
                     src.appendChild(img); 
+
+                    var theDiv = document.getElementById("empty-cart-text");
+                    var content = document.createTextNode("Fill the void inside... with a snack");
+                    theDiv.appendChild(content);
+
                 }
             }
 

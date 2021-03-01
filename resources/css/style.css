@@ -608,6 +608,7 @@ Secondary bright orange: #EE4F3E;
   .empty-cart-container {
       position: relative;
       text-align: center;
+      color: #fff;
   }
 
   #empty-cart-text {
@@ -615,6 +616,8 @@ Secondary bright orange: #EE4F3E;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 50%;
+    font-size: 100%;
   }
   
   /* ----- BACK STORE ----- */
