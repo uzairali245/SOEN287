@@ -157,7 +157,8 @@ Secondary bright orange: #EE4F3E;
   
   .bttn:link,
   .bttn:visited,
-  .section-cart #product-format {
+  .section-cart .product-format {
+    cursor: pointer;
     display: inline-block;
     padding: 10px;
     font-weight: bold;
@@ -171,7 +172,7 @@ Secondary bright orange: #EE4F3E;
     color: #fff;
   }
   
-  .section-cart #product-format {
+  .section-cart .product-format {
       padding: 2px 5px;
   }
   
@@ -195,7 +196,7 @@ Secondary bright orange: #EE4F3E;
   
   .bttn-full:link,
   .bttn-full:visited,
-  .section-cart #product-format{
+  .section-cart .product-format{
     background-color: #ee4f3e;
   }
   
@@ -451,7 +452,7 @@ Secondary bright orange: #EE4F3E;
   
   #manufacturer {color: #ee4f3e;}
   
-  #product-format button {
+  .product-format button {
       margin-right: 10px;
       border-radius: 8px;
       padding: 2px 10px !important;
@@ -460,7 +461,7 @@ Secondary bright orange: #EE4F3E;
       color: #fff !important;
     } 
 
-    #product-format button:hover{
+    .product-format button:hover{
         background-color: #f16b5d !important;
 }
     
@@ -722,7 +723,7 @@ Secondary bright orange: #EE4F3E;
     .section-cart #price-per-unit,
     .section-cart #price{ font-size: 65%;}
 
-    .section-cart #product-format {
+    .section-cart .product-format {
       -webkit-appearance:none;
     }
   
