@@ -42,7 +42,7 @@
             
             <div class="custom-row">
                 <div class="colmn two-third cart-list">
-                    <div class="cart-header">3 items</div>
+                    <div class="cart-header" id="cartcount0">3 items</div>
                     <div class="cart-item" id="cart0">
                        
                         <a href="product_original.php" ><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
@@ -161,7 +161,7 @@
                     <div>
                         <div class="colmn one-half">
                             <div class="price-descriptors">
-                                <p>3 items</p>
+                                <p id="cartcount1">3 items</p>
                                 <p>Shipping</p>
                                 <p>GST</p>
                                 <p>QST</p>
@@ -207,9 +207,23 @@
         
         <script>
             // Custom JS
+            var cart_count = 3;
+
             function removeItem(item) {
                 var elem = document.querySelector(item);
                 elem.remove();
+                cart_count = cart_count - 1;
+                updateCartCount();
+            }
+
+            function updateCartCount() {
+                var elem0 = document.querySelector('#cartcount0');
+                var elem1 = document.querySelector('#cartcount1');
+
+                console.log(cart_count + " items");
+
+                elem0.textContent= cart_count + " items";
+                elem1.textContent= cart_count + " items";
             }
         </script>
     </body>
