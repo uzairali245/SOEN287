@@ -55,7 +55,7 @@
                                 <a>
                                 <h3 id="price-per-unit">$18.99/100g</h3>
                                 <form action="/action_page.php">
-                                    <select name="format" id="product-format">
+                                    <select name="format" id="product-format0" onChange="updateFormat(0)">
                                         <option value="100g">100g</option>
                                         <option value="250g">250g</option>
                                         <option value="500g">500g</option>
@@ -216,6 +216,7 @@
                 elem.remove();
                 cart_count = cart_count - 1;
                 updateCartCount();
+                calculateCartSubtotal();
             }
 
             function updateCartCount() {
@@ -226,6 +227,15 @@
 
                 elem0.textContent= cart_count + " items";
                 elem1.textContent= cart_count + " items";
+            }
+
+            function updateFormatPrice(index) {
+                
+
+            }
+
+            function updateItemCost() {
+
             }
 
             function calculateCartSubtotal() {
