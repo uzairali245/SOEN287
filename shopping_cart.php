@@ -208,6 +208,7 @@
         <script>
             // Custom JS
             var cart_count = 3;
+            var init_cart_count = 3;
 
             calculateCartSubtotal();
 
@@ -241,7 +242,11 @@
             function calculateCartSubtotal() {
                 let subtotal = 0.0;
                 let shippingCost = parseFloat(document.getElementById("shipping-cost").innerHTML.substring(1));
-                for (i = 0; i < cart_count; i++) {
+                for (i = 0; i < init_cart_count; i++) {
+                    let myElem = document.getElementById("total-price-item"+i)
+                    if (myElem === null){
+                        continue;
+                    }
                     subtotal += parseFloat(document.getElementById("total-price-item"+i).innerHTML.substring(1));
                 }
 
@@ -250,7 +255,7 @@
 
                 let total = subtotal + gst + qst + shippingCost;
 
-                document.getElementById("cart-subtotal").innerHTML = "$" + subtotal;
+                document.getElementById("cart-subtotal").innerHTML = "$" + subtotal.toFixed(2);
 
                 document.getElementById("cart-gst").innerHTML = "$" + gst.toFixed(2);
 
