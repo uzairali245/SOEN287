@@ -43,7 +43,7 @@
             <div class="custom-row">
                 <div class="colmn two-third cart-list">
                     <div class="cart-header">3 items</div>
-                    <div class="cart-item">
+                    <div class="cart-item" id="cart0">
                        
                         <a href="product_original.php" ><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
                        
@@ -77,13 +77,13 @@
                             <h3>$18.99</h3>
                         </div>
                         
-                        <button href="#" class="delete-item-bttn" type="button" >x</button>
+                        <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart0')">x</button>
                     
                     
                     
                     </div>
                     
-                    <div class="cart-item">
+                    <div class="cart-item" id="cart1">
                        
                         <a href="#" ><img class="cart-element" src="resources/img/snacks/dark_chocolate_square.jpg" alt="Dark Chocolate"></a>
                         <div class="mobile-wrapper">
@@ -116,13 +116,13 @@
                             <h3>$3.10</h3>
                         </div>
                         
-                        <button href="#" class="delete-item-bttn" type="button" >x</button>
+                        <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart1')">x</button>
                     
                     
                     
                     </div>
                     
-                    <div class="cart-item">
+                    <div class="cart-item" id="cart2">
                        
                         <a href="#" ><img class="cart-element" src="resources/img/bakery/bakery-ciabatta2-square.jpg" alt="product image"><a>
                        
@@ -149,7 +149,7 @@
                             <h3>$14.00</h3>
                         </div>
                         
-                        <button href="#" class="delete-item-bttn" type="button" >x</button>
+                        <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart2')">x</button>
                     
                     
                     
@@ -204,7 +204,14 @@
         
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-
+        
+        <script>
+            // Custom JS
+            function removeItem(item) {
+                var elem = document.querySelector(item);
+                elem.remove();
+            }
+        </script>
     </body>
 
 
