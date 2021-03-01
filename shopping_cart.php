@@ -73,8 +73,8 @@
                             </div>
                         </div>
                         
-                        <div class="cart-element" id="total-price-item">
-                            <h3>$18.99</h3>
+                        <div class="cart-element" class="total-price-item">
+                            <h3 id="total-price-item0">$18.99</h3>
                         </div>
                         
                         <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart0')">x</button>
@@ -112,8 +112,8 @@
                             </div>
                         </div>
                         
-                        <div class="cart-element" id="total-price-item">
-                            <h3>$3.10</h3>
+                        <div class="cart-element" class="total-price-item">
+                            <h3 id="total-price-item1">$3.10</h3>
                         </div>
                         
                         <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart1')">x</button>
@@ -145,8 +145,8 @@
                             </div>
                         </div>
                         
-                        <div class="cart-element" id="total-price-item">
-                            <h3>$14.00</h3>
+                        <div class="cart-element" class="total-price-item">
+                            <h3 id="total-price-item2">$14.00</h3>
                         </div>
                         
                         <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart2')">x</button>
@@ -166,17 +166,17 @@
                                 <p>GST</p>
                                 <p>QST</p>
 
-                                <p id="cart-total">TOTAL</p>
+                                <p class="cart-total">TOTAL</p>
                             </div>
                         </div>
                         <div class="colmn one-half">
                             <div class="price-list">
-                                <p>$36.09</p>
+                                <p id="cart-subtotal"></p>
                                 <p>$5.00</p>
-                                <p>$1.80</p>
-                                <p>$3.60</p>
+                                <p id="cart-gst"></p>
+                                <p id="cart-qst">$3.60</p>
 
-                                <p id="cart-total">$41.49</p>
+                                <p class="cart-total" id="cart-total">$46.49</p>
                             </div>    
 
                         </div>
@@ -209,6 +209,8 @@
             // Custom JS
             var cart_count = 3;
 
+            calculateCartSubtotal();
+
             function removeItem(item) {
                 var elem = document.querySelector(item);
                 elem.remove();
@@ -224,6 +226,23 @@
 
                 elem0.textContent= cart_count + " items";
                 elem1.textContent= cart_count + " items";
+            }
+
+            function calculateCartSubtotal() {
+                let subtotal = 0.0;
+                for (i = 0; i < cart_count; i++) {
+                    subtotal += parseFloat(document.getElementById("total-price-item"+i).innerHTML.substring(1));
+                }
+
+                let gst = subtotal*0.05;
+                let qst = subtotal*0.09975;
+
+                document.getElementById("cart-subtotal").innerHTML = "$" + subtotal;
+
+                document.getElementById("cart-gst").innerHTML = "$" + gst.toFixed(2);
+
+                document.getElementById("cart-qst").innerHTML = "$" + qst.toFixed(2);
+
             }
         </script>
     </body>

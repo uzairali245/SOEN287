@@ -559,12 +559,12 @@ Secondary bright orange: #EE4F3E;
     width: 100%;
   }
   
-  #total-price-item {
+  .total-price-item {
       width: 10%;
       font-size: 90%;
   }
   
-  #total-price-item h3 {text-align: center;}
+  .total-price-item h3 {text-align: center;}
   
   .delete-item-bttn {
       position: absolute;
@@ -591,7 +591,7 @@ Secondary bright orange: #EE4F3E;
     font-family: 'Exo', sans-serif;
   }
   
-  #cart-total {
+  .cart-total {
       text-transform: uppercase;
       font-weight: bold;
       margin-top: 30px;
@@ -678,6 +678,7 @@ Secondary bright orange: #EE4F3E;
         margin-right: 0;
         margin-left: 0;
     }
+
   }
   
   /* Small phones: From 0 to 480px */
@@ -709,7 +710,7 @@ Secondary bright orange: #EE4F3E;
   
     .section-cart .mobile-wrapper { width: 38%;}
   
-    #total-price-item { width: 12%;}
+    .total-price-item { width: 12%;}
   
     .section-cart .button-circle {
       height: 25px;
@@ -720,6 +721,10 @@ Secondary bright orange: #EE4F3E;
   
     .section-cart #price-per-unit,
     .section-cart #price{ font-size: 65%;}
+
+    .section-cart #product-format {
+      -webkit-appearance:none;
+    }
   
     /* NAVBAR */
     ion-icon { font-size: 120%;}
@@ -755,12 +760,12 @@ Secondary bright orange: #EE4F3E;
       margin: 0 auto;
     }
   
-    #total-price-item {
+    .total-price-item {
       display: inline-block;
       width: 50%;
     }
   
-    #total-price-item h3 { float: right;}
+    .total-price-item h3 { float: right;}
   
     /* PRODUCT - ANNE BASTIEN #40133471 */
   
