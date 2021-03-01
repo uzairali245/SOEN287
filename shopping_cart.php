@@ -53,12 +53,12 @@
                                     <h3 id="manufacturer">Earth co.</h3>
                                     <h3 id="product-name">Wild Blueberries</h3>
                                 <a>
-                                <h3 id="price-per-unit">$18.99/100g</h3>
+                                <h3 id="price-per-unit0">$18.99/100g</h3>
                                 <form action="/action_page.php">
-                                    <select name="format" class="product-format" id="product-format0" onChange="updateFormat(0)">
-                                        <option value="100g">100g</option>
-                                        <option value="250g">250g</option>
-                                        <option value="500g">500g</option>
+                                    <select name="format" class="product-format" id="product-format0" onChange="updateFormatPrice(0)" data-initial="100">
+                                        <option value="100">100g</option>
+                                        <option value="250">250g</option>
+                                        <option value="500">500g</option>
                                     </select>
                                 </form>
                             </div> 
@@ -92,11 +92,11 @@
                                     <h3 id="manufacturer">Cacao Pow</h3>
                                     <h3 id="product-name">Dark Chocolate</h3>
                                 </a>
-                                <h3 id="price-per-unit">$3.10/100g</h3>
+                                <h3 id="price-per-unit1">$3.10/100g</h3>
                                 <form action="/action_page.php">
-                                    <select name="format" class="product-format" id="product-format1">
-                                        <option value="100g">100g</option>
-                                        <option value="250g">250g</option>
+                                    <select name="format" class="product-format" id="product-format1" onChange="updateFormatPrice(1)" data-initial="100">
+                                        <option value="100">100g</option>
+                                        <option value="250">250g</option>
                                     </select>
                                 </form>
                             </div> 
@@ -132,7 +132,7 @@
                                     <h3 id="manufacturer">Olympus Hearth</h3>
                                     <h3 id="product-name">Ciabatta</h3>
                                 </a>
-                                <h3 id="price-per-unit">$7.00/unit</h3>
+                                <h3 id="price-per-unit2">$7.00/unit</h3>
                             </div> 
                             
                             <div class="cart-element qty">
@@ -224,19 +224,20 @@
                 var elem0 = document.querySelector('#cartcount0');
                 var elem1 = document.querySelector('#cartcount1');
 
-                console.log(cart_count + " items");
-
                 elem0.textContent= cart_count + " items";
                 elem1.textContent= cart_count + " items";
             }
 
             function updateFormatPrice(index) {
+                var price = document.getElementById("price-per-unit"+index).innerHTML.substring(1).split('/')[0];
+                var format = document.getElementById("product-format"+index).value;
+                var defaultFormat = document.getElementById("product-format"+index).getAttribute("data-initial");
+
+                price = price * (format/defaultFormat);
+
+                document.getElementById("total-price-item"+index).innerHTML = "$" + price.toFixed(2);
                 
-
-            }
-
-            function updateItemCost() {
-
+                calculateCartSubtotal();
             }
 
             function calculateCartSubtotal() {
