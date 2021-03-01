@@ -240,7 +240,7 @@
 
             function calculateCartSubtotal() {
                 let subtotal = 0.0;
-                let shippingCost = parseFloat(document.getElementById("cart-qst").innerHTML.substring(1));
+                let shippingCost = parseFloat(document.getElementById("shipping-cost").innerHTML.substring(1));
                 for (i = 0; i < cart_count; i++) {
                     subtotal += parseFloat(document.getElementById("total-price-item"+i).innerHTML.substring(1));
                 }
