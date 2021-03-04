@@ -57,9 +57,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="counter">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -77,9 +77,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="counter">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -147,44 +147,7 @@ img{
                     </div>
                 </div>
             </div>
-            
-            <div class="aisle-item"> 
-                <img src="resources/img/bakery/bakery-cinnamon2.jpg" alt="Cinammon Roll">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Cinnamon Roll</h4>
-                <p style="margin-bottom: 0 ">10$/pack (6)</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="aisle-item"> 
-                <img src="resources/img/bakery/bakery-croissant2.jpg" alt="Croissant">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Croissant</h4>
-                <p style="margin-bottom: 0 ">11$/pack (6)</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
+        
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery/bakery-donut2.jpg" alt="Donut">
@@ -204,63 +167,7 @@ img{
                     </div>
                 </div>
             </div>
-             
-            <div class="aisle-item">
-                <img src="resources/img/bakery/bakery-pita2.jpg" alt="Pita">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pita</h4>
-                <p style="margin-bottom: 0 ">5$/bag (8)</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="aisle-item"> 
-                <img src="resources/img/bakery/bakery-pretzel2.jpg" alt="Pretzel">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Pretzel</h4>
-                <p style="margin-bottom: 0 ">4$/unit</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="aisle-item"> 
-                <img src="resources/img/bakery/bakery-wheat-bread2.jpg" alt="Wheat Bread">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Wheat Bread</h4>
-                <p style="margin-bottom: 0 ">7$/unit</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
+
             
             <div class="aisle-item"> 
                 <img src="resources/img/bakery/bakery-white-bread2.jpg" alt="White Bread"> 
@@ -299,7 +206,43 @@ img{
     
     
     <script>
-        // Custom JS
+
+        var btn = document.querySelectorAll(".plusButton")[0];
+        btn.onclick = function(){
+            alert("you clicked me!");
+        }
+
+        var txt = document.querySelectorAll(".counter")[0];
+        txt.onclick = function(){
+            alert("Im a bagel!");
+        }
+
+        var count = document.querySelectorAll(".counter"); //DAVID LOOK HERE FOR THE NUMBER count[0] = 1 <--1st product's amount
+        
+        
+        //adding eventlistener to minus buttons
+        for(var i=0; i<document.querySelectorAll(".minusButton").length; i++){
+            document.querySelectorAll(".minusButton")[i].addEventListener("click", function (){
+                count[i].textContent = parseInt(count[i].innerHTML) + 1; }
+            );
+        }
+
+        //adding eventlistener to plus buttons
+        for(var i=0; i<document.querySelectorAll(".plusButton").length; i++){
+            document.querySelectorAll(".plusButton")[i].addEventListener("click", decrement(i));
+        }
+
+        function increment(index){
+            count[index].textContent = parseInt(count[index].innerHTML) + 1;
+        }
+
+        function decrement(index){
+            if(parseInt(count[index].innerHTMML) == 1)
+                return;
+            else
+                count[index].textContent = parseInt(count[index].innerHTML) - 1;
+        }
+    
     </script>
   </body>
 </html>

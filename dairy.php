@@ -56,9 +56,9 @@
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button onclick ="decrement()" class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="counter">1</span>
+                        <button onclick ="increment()" class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -182,7 +182,15 @@
 
 
     <script>
-        // Custom JS
+        var count = document.querySelector(".counter"); //DAVID LOOK HERE FOR THE NUMBER count[0] = 1 <--1st product's amount
+
+        function increment(){
+            count.textContent = parseInt(count[index].innerHTML) + 1;
+        }
+
+        function decrement(){
+            count.textContent = parseInt(count[index].innerHTML) -1;
+        }
     </script>
 </body>
 
