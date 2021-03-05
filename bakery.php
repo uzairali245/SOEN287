@@ -58,8 +58,8 @@ img{
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
                         <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="counter">1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <span class="amount" id="span1">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -78,8 +78,8 @@ img{
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
                         <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="counter">1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <span class="amount" id="span2">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -97,9 +97,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount" id = "span3">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -207,29 +207,77 @@ img{
     
     <script>
 
-        var btn = document.querySelectorAll(".plusButton")[0];
-        btn.onclick = function(){
-            alert("you clicked me!");
+        var counterArray = [1,1,1,1,1,1,1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
+        var amountArray = document.getElementsByClassName("amount");
+        console.log(amountArray);
+        
+
+        // INCREMENT BUTTON
+        var plusButtons = document.querySelectorAll(".plusButton");
+        var plusButtonsLength = plusButtons.length; //3 for now
+        console.log(plusButtonsLength);
+
+        for(var i =0; i< plusButtonsLength; i++){
+            plusButtons[i].onclick = function(){
+                increment(this);
+            }
         }
 
-        var txt = document.querySelectorAll(".counter")[0];
-        txt.onclick = function(){
-            alert("Im a bagel!");
+        function increment(button){
+            var index = button.id;
+            counterArray[index] ++;
+            amountArray[index].textContent = counterArray[index];
+        } 
+
+        //DECREMENT BUTTON
+        /*
+        var minusButtons = document.querySelectoreAll(".minusButton");
+        vart minusButtonsLength = minusButtons.length; //3 for now
+
+        for(var i = 0; i<minusButtonsLength; i++){
+            minusButtonsp[i].onclick = function(){
+                decrement(this);
+            }
+        }
+        
+        function decrement(button){
+            var index = button.id;
+            if(counterArray[index] == 1)
+                return;
+            else
+                counterArray[index]--;
+
+            amountArray[index].textContent = counterArray[index];  
         }
 
+        */
+        
+
+
+        /*
         var count = document.querySelectorAll(".counter"); //DAVID LOOK HERE FOR THE NUMBER count[0] = 1 <--1st product's amount
         
         
+        var s1 = document.getElementById("span1").getAttribute("id");
+        var s2 = document.getElementById("span2").getAttribute("id");
+        var s3 = document.getElementById("span3").getAttribute("id");
+
+        console.log("helo");
+        console.log(s1);
+
+        var counterArray = [1, 1, 1, 1, 1, 1, 1];
+        console.log(counterArray);
+
+
         //adding eventlistener to minus buttons
         for(var i=0; i<document.querySelectorAll(".minusButton").length; i++){
-            document.querySelectorAll(".minusButton")[i].addEventListener("click", function (){
-                count[i].textContent = parseInt(count[i].innerHTML) + 1; }
-            );
+            var x = i;
+            document.querySelectorAll(".minusButton")[i].addEventListener("click", decrement);
         }
 
         //adding eventlistener to plus buttons
         for(var i=0; i<document.querySelectorAll(".plusButton").length; i++){
-            document.querySelectorAll(".plusButton")[i].addEventListener("click", decrement(i));
+            document.querySelectorAll(".plusButton")[i].addEventListener("click", increment);
         }
 
         function increment(index){
@@ -242,6 +290,7 @@ img{
             else
                 count[index].textContent = parseInt(count[index].innerHTML) - 1;
         }
+        */
     
     </script>
   </body>
