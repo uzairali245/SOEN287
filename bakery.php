@@ -208,12 +208,13 @@ img{
     <script>
 
         var counterArray = [1,1,1,1,1,1,1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
-        var amountArray = document.getElementsByClassName("amount");
-        console.log(amountArray);
+        var amountArray = document.getElementsByClassName("amount");//span text array
+        console.log("counterArray"+counterArray);
+        console.log("text array (Span)"+amountArray[0].textContent + amountArray[1].textContent + amountArray[2].textContent);
         
 
         // INCREMENT BUTTON
-        var plusButtons = document.querySelectorAll(".plusButton");
+        var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
         var plusButtonsLength = plusButtons.length; //3 for now
         console.log(plusButtonsLength);
 
@@ -230,16 +231,23 @@ img{
         } 
 
         //DECREMENT BUTTON
-        /*
-        var minusButtons = document.querySelectoreAll(".minusButton");
-        vart minusButtonsLength = minusButtons.length; //3 for now
+        var minusButtons = document.querySelectorAll(".minusButton");
+        var minusButtonsLength = minusButtons.length; //3 for now
 
         for(var i = 0; i<minusButtonsLength; i++){
-            minusButtonsp[i].onclick = function(){
+            minusButtons[i].onclick = function(){
                 decrement(this);
             }
         }
         
+        /*
+        function decrement(button){
+            var index = button.id;
+            console.log(index);
+        }
+        */
+       
+        /*
         function decrement(button){
             var index = button.id;
             if(counterArray[index] == 1)
@@ -249,7 +257,6 @@ img{
 
             amountArray[index].textContent = counterArray[index];  
         }
-
         */
         
 
