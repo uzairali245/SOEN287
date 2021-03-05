@@ -57,7 +57,7 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
                         <span class="amount" id="span1">1</span>
                         <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
@@ -77,7 +77,7 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
                         <span class="amount" id="span2">1</span>
                         <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
@@ -97,7 +97,7 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
                         <span class="amount" id = "span3">1</span>
                         <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
@@ -207,6 +207,7 @@ img{
     
     <script>
 
+        
         var counterArray = [1,1,1,1,1,1,1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
         var amountArray = document.getElementsByClassName("amount");//span text array
         console.log("counterArray"+counterArray);
@@ -226,36 +227,47 @@ img{
 
         function increment(button){
             var index = button.id;
+            console.log(counterArray[index]);
             counterArray[index] ++;
             amountArray[index].textContent = counterArray[index];
         } 
 
+        console.log(counterArray);
         //DECREMENT BUTTON
         var minusButtons = document.querySelectorAll(".minusButton");
         var minusButtonsLength = minusButtons.length; //3 for now
 
-        for(var i = 0; i<minusButtonsLength; i++){
+        for(var i = 0; i<minusButtonsLength; i++){ //THIS WORKS
             minusButtons[i].onclick = function(){
                 decrement(this);
             }
         }
+    
         
-        /*
+        console.log(counterArray);
+
         function decrement(button){
+            console.log(counterArray); //it exists here
             var index = button.id;
-            console.log(index);
-        }
-        */
-       
-        /*
-        function decrement(button){
-            var index = button.id;
+            console.log(counterArray[index]);
             if(counterArray[index] == 1)
                 return;
             else
                 counterArray[index]--;
 
             amountArray[index].textContent = counterArray[index];  
+        }
+        
+
+
+
+
+
+
+                /* THIS WORKS!
+        function decrement(button){
+            var index = button.id;
+            console.log(index);
         }
         */
         
