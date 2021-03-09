@@ -37,51 +37,6 @@
     }
 </style>
 
-<script>
-    var counterArray = [1, 1, 1, 1, 1, 1, 1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
-    var amountArray = document.getElementsByClassName("amount");
-    console.log(amountArray);
-
-
-    // INCREMENT BUTTON
-    var plusButtons = document.querySelectorAll(".plusButton");
-    var plusButtonsLength = plusButtons.length; //3 for now
-    console.log(plusButtonsLength);
-
-    for (var i = 0; i < plusButtonsLength; i++) {
-        plusButtons[i].onclick = function() {
-            increment(this);
-        }
-    }
-
-    function increment(button) {
-        var index = button.id;
-        counterArray[index]++;
-        amountArray[index].textContent = counterArray[index];
-    }
-
-    //DECREMENT BUTTON
-
-    // var minusButtons = document.querySelectorAll(".minusButton");
-    // var minusButtonsLength = minusButtons.length; //3 for now
-
-    // for (var i = 0; i < minusButtonsLength; i++) {
-    //     minusButtonsp[i].onclick = function() {
-    //         decrement(this);
-    //     }
-    // }
-
-    // function decrement(button) {
-    //     var index = button.id;
-    //     if (counterArray[index] == 1)
-    //         return;
-    //     else
-    //         counterArray[index]--;
-
-    //     amountArray[index].textContent = counterArray[index];
-    // }
-</script>
-
 <body>
     <?php include "includes/header.html"; ?>
 
@@ -226,17 +181,54 @@
 
 
 
-    <!-- <script>
-        var count = document.querySelector(".counter"); //DAVID LOOK HERE FOR THE NUMBER count[0] = 1 <--1st product's amount
+     <script>
+        var numOfProducts = document.getElementsByClassName("amount").length;
+        var counterArray = new Array(numOfProducts);
+            
+        for (var i = 0; i < numOfProducts; i++) 
+            counterArray[i] = 1;
+        var amountArray = document.getElementsByClassName("amount");//span text array
+        
 
-        function increment() {
-            count.textContent = parseInt(count[index].innerHTML) + 1;
+        // INCREMENT BUTTON
+        var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
+        var plusButtonsLength = plusButtons.length; 
+        console.log(plusButtonsLength);
+
+        for(var i =0; i< plusButtonsLength; i++){
+            plusButtons[i].onclick = function(){
+                increment(this);
+            }
         }
 
-        function decrement() {
-            count.textContent = parseInt(count[index].innerHTML) - 1;
-        }
-    </script> -->
+        function increment(button){
+            var index = button.id;
+            counterArray[index] ++;
+            amountArray[index].textContent = counterArray[index];
+        } 
+
+        
+        //DECREMENT BUTTON
+        var minusButtons = document.querySelectorAll(".minusButton");
+        var minusButtonsLength = minusButtons.length; 
+
+        for(var i = 0; i<minusButtonsLength; i++){ 
+            minusButtons[i].onclick = function(){
+                decrement(this);
+            }
+        }   
+        
+
+        function decrement(button){
+            var index = button.id;
+            if(counterArray[index] == 1)
+                return;
+            else
+                counterArray[index]--;
+
+            amountArray[index].textContent = counterArray[index];  
+        }       
+    </script> 
 </body>
 
 </html>
