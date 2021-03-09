@@ -58,7 +58,7 @@ img{
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
                         <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="amount" id="span1">1</span>
+                        <span class="amount">1</span>
                         <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
@@ -78,7 +78,7 @@ img{
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
                         <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="amount" id="span2">1</span>
+                        <span class="amount">1</span>
                         <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
@@ -98,7 +98,7 @@ img{
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
                         <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="amount" id = "span3">1</span>
+                        <span class="amount">1</span>
                         <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
@@ -117,9 +117,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 "  id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -136,9 +136,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " id="4"  style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -156,9 +156,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -181,9 +181,9 @@ img{
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 " id="6" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 "  id="6" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -207,11 +207,14 @@ img{
     
     <script>
 
-        
-        var counterArray = [1,1,1,1,1,1,1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
+        var numOfProducts = document.getElementsByClassName("amount").length;
+        var counterArray = new Array(numOfProducts);
+            
+        for (var i = 0; i < numOfProducts; i++) 
+            counterArray[i] = 1;
+
+        //var counterArray = [1,1,1,1,1,1,1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
         var amountArray = document.getElementsByClassName("amount");//span text array
-        console.log("counterArray"+counterArray);
-        console.log("text array (Span)"+amountArray[0].textContent + amountArray[1].textContent + amountArray[2].textContent);
         
 
         // INCREMENT BUTTON
@@ -227,90 +230,33 @@ img{
 
         function increment(button){
             var index = button.id;
-            console.log(counterArray[index]);
             counterArray[index] ++;
             amountArray[index].textContent = counterArray[index];
         } 
 
-        console.log(counterArray);
+        
         //DECREMENT BUTTON
         var minusButtons = document.querySelectorAll(".minusButton");
-        var minusButtonsLength = minusButtons.length; //3 for now
+        var minusButtonsLength = minusButtons.length; 
 
-        for(var i = 0; i<minusButtonsLength; i++){ //THIS WORKS
+        for(var i = 0; i<minusButtonsLength; i++){ 
             minusButtons[i].onclick = function(){
                 decrement(this);
             }
-        }
-    
+        }   
         
-        console.log(counterArray);
 
         function decrement(button){
-            console.log(counterArray); //it exists here
             var index = button.id;
-            console.log(counterArray[index]);
             if(counterArray[index] == 1)
                 return;
             else
                 counterArray[index]--;
 
             amountArray[index].textContent = counterArray[index];  
-        }
-        
+        }        
 
 
-
-
-
-
-                /* THIS WORKS!
-        function decrement(button){
-            var index = button.id;
-            console.log(index);
-        }
-        */
-        
-
-
-        /*
-        var count = document.querySelectorAll(".counter"); //DAVID LOOK HERE FOR THE NUMBER count[0] = 1 <--1st product's amount
-        
-        
-        var s1 = document.getElementById("span1").getAttribute("id");
-        var s2 = document.getElementById("span2").getAttribute("id");
-        var s3 = document.getElementById("span3").getAttribute("id");
-
-        console.log("helo");
-        console.log(s1);
-
-        var counterArray = [1, 1, 1, 1, 1, 1, 1];
-        console.log(counterArray);
-
-
-        //adding eventlistener to minus buttons
-        for(var i=0; i<document.querySelectorAll(".minusButton").length; i++){
-            var x = i;
-            document.querySelectorAll(".minusButton")[i].addEventListener("click", decrement);
-        }
-
-        //adding eventlistener to plus buttons
-        for(var i=0; i<document.querySelectorAll(".plusButton").length; i++){
-            document.querySelectorAll(".plusButton")[i].addEventListener("click", increment);
-        }
-
-        function increment(index){
-            count[index].textContent = parseInt(count[index].innerHTML) + 1;
-        }
-
-        function decrement(index){
-            if(parseInt(count[index].innerHTMML) == 1)
-                return;
-            else
-                count[index].textContent = parseInt(count[index].innerHTML) - 1;
-        }
-        */
-    
     </script>
   </body>
 </html>
