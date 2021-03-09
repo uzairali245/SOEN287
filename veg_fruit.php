@@ -60,9 +60,10 @@
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle">-</button>
-                        <input type="text" name="qty" value="1">
-                        <button type="button" name="button" class="button-circle">+</button>
+                        <button type="button" name="button" class="button-circle minusButton" id="0">-</button>
+                        <!--input type="text" name="qty" value="1" class = "amount"-->
+                        <span class="amount"> 1</span>
+                        <button type="button" name="button" class="button-circle plusButton" id="0">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -80,9 +81,10 @@
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle">-</button>
-                        <input type="text" name="qty" value="1">
-                        <button type="button" name="button" class="button-circle">+</button>
+                        <button type="button" name="button" class="button-circle minusButton" id="1">-</button>
+                        <!--input type="text" name="qty" value="1"-->
+                        <span class="amount"> 1</span>
+                        <button type="button" name="button" class="button-circle plusButton" id="1">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -100,9 +102,10 @@
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle">-</button>
-                        <input type="text" name="qty" value="1">
-                        <button type="button" name="button" class="button-circle">+</button>
+                        <button type="button" name="button" class="button-circle minusButton" id="2">-</button>
+                        <!--input type="text" name="qty" value="1"-->
+                        <span class="amount"> 1</span>
+                        <button type="button" name="button" class="button-circle plusButton" id="2">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -120,9 +123,10 @@
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle">-</button>
-                        <input type="text" name="qty" value="1">
-                        <button type="button" name="button" class="button-circle">+</button>
+                        <button type="button" name="button" class="button-circle minusButton" id="3">-</button>
+                        <!--input type="text" name="qty" value="1"-->
+                        <span class="amount"> 1</span>
+                        <button type="button" name="button" class="button-circle plusButton" id="3">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -139,9 +143,10 @@
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle">-</button>
-                        <input type="text" name="qty" value="1">
-                        <button type="button" name="button" class="button-circle">+</button>
+                        <button type="button" name="button" class="button-circle minusButton" id="4">-</button>
+                        <!--input type="text" name="qty" value="1"-->
+                        <span class="amount"> 1</span>
+                        <button type="button" name="button" class="button-circle plusButton" id="4">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -158,9 +163,10 @@
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle">-</button>
-                        <input type="text" name="qty" value="1">
-                        <button type="button" name="button" class="button-circle">+</button>
+                        <button type="button" name="button" class="button-circle minusButton" id="5">-</button>
+                        <!--input type="text" name="qty" value="1"-->
+                        <span class="amount"> 1</span>
+                        <button type="button" name="button" class="button-circle plusButton" id="5">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -177,9 +183,10 @@
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle">-</button>
-                        <input type="text" name="qty" value="1">
-                        <button type="button" name="button" class="button-circle">+</button>
+                        <button type="button" name="button" class="button-circle minusButton" id="6">-</button>
+                        <!--input type="text" name="qty" value="1"-->
+                        <span class="amount"> 1</span>
+                        <button type="button" name="button" class="button-circle plusButton" id="6">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -196,9 +203,10 @@
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle">-</button>
-                        <input type="text" name="qty" value="1">
-                        <button type="button" name="button" class="button-circle">+</button>
+                        <button type="button" name="button" class="button-circle minusButton" id="7">-</button>
+                        <!--input type="text" name="qty" value="1"-->
+                        <span class="amount"> 1</span>
+                        <button type="button" name="button" class="button-circle plusButton" id="7">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -215,9 +223,10 @@
                 
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle">-</button>
-                        <input type="text" name="qty" value="1">
-                        <button type="button" name="button" class="button-circle">+</button>
+                        <button type="button" name="button" class="button-circle minusButton" id="8">-</button>
+                        <!--input type="text" name="qty" value="1" class="amount"-->
+                        <span class="amount"> 1</span>
+                        <button type="button" name="button" class="button-circle plusButton" id="8">+</button>
                     </div>
                     
                     <div class="bd-highlight">
@@ -241,7 +250,56 @@
     
     
     <script>
-        // Custom JS
+        
+        var numOfProducts = document.getElementsByClassName("amount").length;
+        var counterArray = new Array(numOfProducts);
+            
+        for (var i = 0; i < numOfProducts; i++) 
+            counterArray[i] = 1;
+
+        var amountArray = document.getElementsByClassName("amount");//span text array
+        
+
+        // INCREMENT BUTTON
+        var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
+        var plusButtonsLength = plusButtons.length; //3 for now
+        console.log(plusButtonsLength);
+
+        for(var i =0; i< plusButtonsLength; i++){
+            plusButtons[i].onclick = function(){
+                increment(this);
+            }
+        }
+
+        function increment(button){
+            var index = button.id;
+            counterArray[index] ++;
+            amountArray[index].textContent = counterArray[index];
+        } 
+
+        
+        //DECREMENT BUTTON
+        var minusButtons = document.querySelectorAll(".minusButton");
+        var minusButtonsLength = minusButtons.length; 
+
+        for(var i = 0; i<minusButtonsLength; i++){ 
+            minusButtons[i].onclick = function(){
+                decrement(this);
+            }
+        }   
+        
+
+        function decrement(button){
+            var index = button.id;
+            if(counterArray[index] == 1)
+                return;
+            else
+                counterArray[index]--;
+
+            amountArray[index].textContent = counterArray[index];  
+        }        
+
+
     </script>
   </body>
 </html>

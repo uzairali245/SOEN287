@@ -238,7 +238,6 @@ img{
         for (var i = 0; i < numOfProducts; i++) 
             counterArray[i] = 1;
 
-        //var counterArray = [1,1,1,1,1,1,1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
         var amountArray = document.getElementsByClassName("amount");//span text array
         
 
