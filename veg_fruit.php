@@ -262,7 +262,7 @@
 
         // INCREMENT BUTTON
         var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
-        var plusButtonsLength = plusButtons.length; //3 for now
+        var plusButtonsLength = plusButtons.length; 
         console.log(plusButtonsLength);
 
         for(var i =0; i< plusButtonsLength; i++){
