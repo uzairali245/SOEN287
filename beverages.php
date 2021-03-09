@@ -69,9 +69,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -89,9 +89,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -109,9 +109,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -129,9 +129,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -148,9 +148,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -167,9 +167,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -186,9 +186,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="6" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="6" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -205,9 +205,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " id="7" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="7" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -224,9 +224,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="8" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="8" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -243,9 +243,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " id="9" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton " id="9" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -262,9 +262,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="10" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="10" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -281,9 +281,9 @@ img{
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span>1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " id="11" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <span class="amount">1</span>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="11" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
@@ -306,7 +306,55 @@ img{
 
 
     <script>
-        // Custom JS
+        var numOfProducts = document.getElementsByClassName("amount").length;
+        var counterArray = new Array(numOfProducts);
+            
+        for (var i = 0; i < numOfProducts; i++) 
+            counterArray[i] = 1;
+
+        var amountArray = document.getElementsByClassName("amount");//span text array
+       
+
+        // INCREMENT BUTTON
+        var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
+        var plusButtonsLength = plusButtons.length; //3 for now
+        console.log(plusButtonsLength);
+
+        for(var i =0; i< plusButtonsLength; i++){
+            plusButtons[i].onclick = function(){
+                increment(this);
+            }
+        }
+
+        function increment(button){
+            var index = button.id;
+            counterArray[index] ++;
+            amountArray[index].textContent = counterArray[index];
+        } 
+
+        
+        //DECREMENT BUTTON
+        var minusButtons = document.querySelectorAll(".minusButton");
+        var minusButtonsLength = minusButtons.length; 
+
+        for(var i = 0; i<minusButtonsLength; i++){ 
+            minusButtons[i].onclick = function(){
+                decrement(this);
+            }
+        }   
+        
+
+        function decrement(button){
+            var index = button.id;
+            if(counterArray[index] == 1)
+                return;
+            else
+                counterArray[index]--;
+
+            amountArray[index].textContent = counterArray[index];  
+        }        
+
+
     </script>
   </body>
 </html>
