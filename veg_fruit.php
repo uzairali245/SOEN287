@@ -62,7 +62,6 @@
                     <div class="flex-grow-1 bd-highlight">
                         <button type="button" name="button" class="button-circle minusButton" id="0">-</button>
                         <input type="text" name="qty" value="1" class = "amount">
-                        <!--span class="amount"> 1</!--span-->
                         <button type="button" name="button" class="button-circle plusButton" id="0">+</button>
                     </div>
                     
@@ -83,7 +82,6 @@
                     <div class="flex-grow-1 bd-highlight">
                         <button type="button" name="button" class="button-circle minusButton" id="1">-</button>
                         <input type="text" name="qty" value="1" class = "amount">
-                        <!--span class="amount"> 1</!--span-->
                         <button type="button" name="button" class="button-circle plusButton" id="1">+</button>
                     </div>
                     
@@ -104,7 +102,6 @@
                     <div class="flex-grow-1 bd-highlight">
                         <button type="button" name="button" class="button-circle minusButton" id="2">-</button>
                         <input type="text" name="qty" value="1" class = "amount">
-                        <!--span class="amount"> 1</!--span-->
                         <button type="button" name="button" class="button-circle plusButton" id="2">+</button>
                     </div>
                     
@@ -125,7 +122,6 @@
                     <div class="flex-grow-1 bd-highlight">
                         <button type="button" name="button" class="button-circle minusButton" id="3">-</button>
                         <input type="text" name="qty" value="1" class = "amount">
-                        <!--span class="amount"> 1</!--span-->
                         <button type="button" name="button" class="button-circle plusButton" id="3">+</button>
                     </div>
                     
@@ -145,7 +141,6 @@
                     <div class="flex-grow-1 bd-highlight">
                         <button type="button" name="button" class="button-circle minusButton" id="4">-</button>
                         <input type="text" name="qty" value="1" class = "amount">
-                        <!--span class="amount"> 1</!--span-->
                         <button type="button" name="button" class="button-circle plusButton" id="4">+</button>
                     </div>
                     
@@ -165,7 +160,6 @@
                     <div class="flex-grow-1 bd-highlight">
                         <button type="button" name="button" class="button-circle minusButton" id="5">-</button>
                         <input type="text" name="qty" value="1" class = "amount">
-                        <!--span class="amount"> 1</!--span-->
                         <button type="button" name="button" class="button-circle plusButton" id="5">+</button>
                     </div>
                     
@@ -185,7 +179,6 @@
                     <div class="flex-grow-1 bd-highlight">
                         <button type="button" name="button" class="button-circle minusButton" id="6">-</button>
                         <input type="text" name="qty" value="1" class = "amount">
-                        <!--span class="amount"> 1</!--span-->
                         <button type="button" name="button" class="button-circle plusButton" id="6">+</button>
                     </div>
                     
@@ -205,7 +198,6 @@
                     <div class="flex-grow-1 bd-highlight">
                         <button type="button" name="button" class="button-circle minusButton" id="7">-</button>
                         <input type="text" name="qty" value="1" class = "amount">
-                        <!--span class="amount"> 1</!--span-->
                         <button type="button" name="button" class="button-circle plusButton" id="7">+</button>
                     </div>
                     
@@ -225,7 +217,6 @@
                     <div class="flex-grow-1 bd-highlight">
                         <button type="button" name="button" class="button-circle minusButton" id="8">-</button>
                         <input type="text" name="qty" value="1" class="amount">
-                        <!--span class="amount"> 1</!--span-->
                         <button type="button" name="button" class="button-circle plusButton" id="8">+</button>
                     </div>
                     
