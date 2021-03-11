@@ -78,8 +78,8 @@
                             </div>
                         </div>
                         
-                        <div class="cart-element" class="total-price-item">
-                            <h3 id="total-price-item0">$18.99</h3>
+                        <div class="cart-element total-price-item">
+                            <h3 class="total-price-item" id="total-price-item0">$18.99</h3>
                         </div>
                         
                         <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart0')">x</button>
@@ -117,8 +117,8 @@
                             </div>
                         </div>
                         
-                        <div class="cart-element" class="total-price-item">
-                            <h3 id="total-price-item1">$3.10</h3>
+                        <div class="cart-element total-price-item">
+                            <h3 class= "total-price-item" id="total-price-item1">$3.10</h3>
                         </div>
                         
                         <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart1')">x</button>
@@ -150,8 +150,8 @@
                             </div>
                         </div>
                         
-                        <div class="cart-element" class="total-price-item">
-                            <h3 id="total-price-item2">$14.00</h3>
+                        <div class="cart-element total-price-item">
+                            <h3 class="total-price-item" id="total-price-item2">$14.00</h3>
                         </div>
                         
                         <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart2')">x</button>
