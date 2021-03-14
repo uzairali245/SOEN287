@@ -35,14 +35,16 @@ img{
     font-size:100%;
 }
 #Uzair{
-  background-image: url("https://ihpl.llu.edu/sites/ihpl.llu.edu/files/field/image/beverage-aisle.jpg");
- min-height: 500px;
- background-attachment: fixed;
- background-position: center;
- background-repeat: no-repeat;
- background-size: cover;: 250px;
- color: black;
-
+ background-image: url("https://ihpl.llu.edu/sites/ihpl.llu.edu/files/field/image/beverage-aisle.jpg");
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    : 250px;
+    color: black;
 }
 
 
@@ -54,7 +56,7 @@ img{
     <!--CONTENTS OF PAGE STARTS HERE-->
     <div class="custom-page-container">
         <div style="margin-bottom: 20px">
-            <h1 id="Uzair" style="font-size: 200%; text-align: center;padding-top: 50px"> Beverages</h1>
+            <h1 id="Uzair" style="font-size: 150%; text-align: center;padding-top: 50px"> Beverages</h1>
 
         </div>
 
