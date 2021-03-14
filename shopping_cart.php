@@ -28,6 +28,12 @@
     <!--Exo-->
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap" rel="stylesheet">
 
+    <style>
+        .amount {
+            float: left;
+            width: 20px;
+        }
+    </style>
 
 </head>
 
