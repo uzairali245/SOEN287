@@ -33,6 +33,12 @@
     <!--Main Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo&family=Orbitron:wght@500&family=Roboto:Roboto:ital,wght@0,500;1,500,1;600;1,700&display=swap" rel="stylesheet">
 
+    <style>
+
+    .amount {
+        width: 20px;
+    }
+    </style>
 
 </head>
 
@@ -81,9 +87,9 @@
                         <div class="product-info-element">
 
                             <div class="colmn one-half qty">
-                                <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                                <button class="button-circle minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
                                 <span class="amount">1</span>
-                                <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                                <button class="button-circle plusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                             </div>
 
                             <div class="colmn one-half">

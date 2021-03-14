@@ -28,6 +28,12 @@
     <!--Exo-->
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600&display=swap" rel="stylesheet">
 
+    <style>
+        .amount {
+            float: left;
+            width: 20px;
+        }
+    </style>
 
 </head>
 
@@ -71,7 +77,7 @@
 
                             <div class="cart-element qty">
                                 <button class="button-circle minusButton" type="button" id="0" name="button">-</button>
-                                <span class="amount">1</span>
+                                <span class="amount" id="amount0">1</span>
                                 <button class="button-circle plusButton" type="button" id="0" name="button">+</button>
                                 <!--<a href="#" class="bttn-circle col one-third">-</a>
                                 <h5 class="col one-third">1</h5> 
@@ -110,7 +116,7 @@
 
                             <div class="cart-element qty">
                                 <button class="button-circle minusButton" type="button" id="1" name="button">-</button>
-                                <span class="amount">1</span>
+                                <span class="amount" id="amount1">1</span>
                                 <button class="button-circle plusButton" type="button" id="1" name="button">+</button>
                                 <!--<a href="#" class="bttn-circle col one-third">-</a>
                                 <h5 class="col one-third">1</h5> 
@@ -143,7 +149,7 @@
 
                                     <div class="cart-element qty">
                                         <button class="button-circle minusButton" type="button" id="2" name="button">-</button>
-                                        <span class="amount">1</span>
+                                        <span class="amount" id="amount2">1</span>
                                         <button class="button-circle plusButton" type="button" id="2" name="button">+</button>
                                         <!--<a href="#" class="bttn-circle col one-third">-</a>
                                 <h5 class="col one-third">1</h5> 
@@ -265,8 +271,9 @@
             var price = document.getElementById("price-per-unit" + index).innerHTML.substring(1).split('/')[0];
             var format = document.getElementById("product-format" + index).value;
             var defaultFormat = document.getElementById("product-format" + index).getAttribute("data-initial");
+            var amount = document.getElementById("amount" + index).innerHTML;
 
-            price = price * (format / defaultFormat);
+            price = price * (format / defaultFormat) * amount;
 
             document.getElementById("total-price-item" + index).innerHTML = "$" + price.toFixed(2);
 
@@ -318,6 +325,7 @@
             var index = button.id;
             counterArray[index]++;
             amountArray[index].textContent = counterArray[index];
+            updateFormatPrice(index);
         }
 
         //DECREMENT BUTTON
@@ -330,9 +338,6 @@
             }
         }
 
-
-        console.log(counterArray);
-
         function decrement(button) {
             console.log(counterArray); //it exists here
             var index = button.id;
@@ -343,6 +348,7 @@
                 counterArray[index]--;
 
             amountArray[index].textContent = counterArray[index];
+            updateFormatPrice(index);
         }
 
         var remeberSize = document.querySelectorAll(".amount").length;
