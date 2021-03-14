@@ -21,7 +21,7 @@
     <style>
         .container {
             width: 600px;
-            margin-top: 10%;
+            margin-top: 6%;
             border-style: solid;
             padding: 20px;
             border-width: 2px;
@@ -36,6 +36,7 @@
         .container input[type="text"],
         input[type="password"],
         input[type="email"] {
+            text-align: center;
             width: 100%;
             border: 1px solid;
             background: transparent;
@@ -45,10 +46,11 @@
         }
 
         .container input[type="text"]::placeholder,
-        input[type="password"]::placeholder,
+        input[type="Password"]::placeholder,
         input[type="email"]::placeholder {
             text-align: center;
             color: #d3d3d3;
+
 
         }
 
@@ -108,11 +110,11 @@
                     <div class="row jumbotron">
                         <div class="col-sm-6 form-group">
                             <label for="name-f">First Name</label>
-                            <input type="text" class="form-control" name="fname" placeholder="Enter your first name." required>
+                            <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter your first name." required>
                         </div>
                         <div class="col-sm-6 form-group">
-                            <label for="name-l">Last name</label>
-                            <input type="text" class="form-control" name="lname" placeholder="Enter your last name." required>
+                            <label for="name-l">Last Name</label>
+                            <input type="text" class="form-control" name="lname" id="lname" placeholder="Enter your last name." required>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="email">Email</label>
@@ -120,11 +122,11 @@
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="name-l">Confirm Email</label>
-                            <input type="email" class="form-control" name="lname" placeholder="Confirm Email." required>
+                            <input type="email" class="form-control" name="lname" id="cemail"placeholder="Confirm Email." required>
                         </div>
                         <div class="col-sm-6 form-group">
-                            <label for="name-l">Language</label>
-                            <input type="text" class="form-control" name="lname" placeholder="Enter your Language." required>
+                            <label for="name-l">Postal Code</label>
+                            <input type="text" class="form-control" id="postal-code" placeholder="Enter your Postal Code Here." required>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="province">Province</label>
@@ -132,11 +134,11 @@
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="pass">Password</label>
-                            <input type="Password" name="password" class="form-control" id="pass3" placeholder="Enter your password." required>
+                            <input type="Password" name="password" class="form-control" id="password" placeholder="Enter your password." required>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="pass2">Confirm Password</label>
-                            <input type="Password" name="cnf-password" class="form-control" id="pass4" placeholder="Re-enter your password." required>
+                            <input type="Password" name="cnf-password" class="form-control" id="password2" placeholder="Re-enter your password." required>
                         </div>
                         <div class="col-sm-12 form-group mb-0">
                             <input type="submit" name="signup" value="SIGNUP">
@@ -151,6 +153,8 @@
         <?php include "includes/footer.html"; ?>
 
     </div>
+    <script type="text/Javascript" src="signup-validation.js"></script>
+    <script type="text/Javascript" src="signup-validation-eventhandling.js"></script>
 </body>
 
 <!-- Bootstrap JS -->
