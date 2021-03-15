@@ -229,6 +229,8 @@
 
         calculateCartSubtotal();
 
+
+        //Refresh Deleted items
         if (storedDeletedItems) {
             console.log(JSON.parse(localStorage.getItem('deletedItems')));
             for (let k = 0; k < storedDeletedItems.length; k++){
@@ -236,6 +238,7 @@
             }
         }
 
+        //Refresh Format Values
         if (storedFormatValues) {
             console.log(JSON.parse(localStorage.getItem('formatValues')));
             for (let r = 0; r < Object.keys(storedFormatValues).length; r++){
