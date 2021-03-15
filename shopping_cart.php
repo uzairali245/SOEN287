@@ -67,7 +67,7 @@
                                     <a>
                                         <h3 id="price-per-unit0">$18.99/100g</h3>
                                         <form action="/action_page.php">
-                                            <select name="format" class="product-format" id="product-format0" onChange="updateFormatPrice(0)" data-initial="100">
+                                            <select name="format" class="productFormat" id="productFormat0" onChange="updateFormatPrice(0)" data-initial="100">
                                                 <option value="100">100g</option>
                                                 <option value="250">250g</option>
                                                 <option value="500">500g</option>
@@ -106,7 +106,7 @@
                                 </a>
                                 <h3 id="price-per-unit1">$3.10/100g</h3>
                                 <form action="/action_page.php">
-                                    <select name="format" class="product-format" id="product-format1" onChange="updateFormatPrice(1)" data-initial="100">
+                                    <select name="format" class="productFormat" id="productFormat1" onChange="updateFormatPrice(1)" data-initial="100">
                                         <option value="100">100g</option>
                                         <option value="250">250g</option>
                                     </select>
@@ -223,6 +223,8 @@
         var init_cart_count = 3;
         var deletedItems = [];
         var storedDeletedItems = JSON.parse(localStorage.getItem('deletedItems'));
+        var formatValues = {};
+        var storedFormatValues = JSON.parse(localStorage.getItem('formatValues'));
 
 
         calculateCartSubtotal();
@@ -231,6 +233,22 @@
             console.log(JSON.parse(localStorage.getItem('deletedItems')));
             for (let k = 0; k < storedDeletedItems.length; k++){
                     removeItem(storedDeletedItems[k]);
+            }
+        }
+
+        if (storedFormatValues) {
+            console.log(JSON.parse(localStorage.getItem('formatValues')));
+            for (let r = 0; r < Object.keys(storedFormatValues).length; r++){
+                    var key = Object.keys(storedFormatValues)[r]; 
+                    let index = key.substr(13);
+                    let value = parseInt(storedFormatValues[key])
+                    formatValues[key]= value;
+                    let myElem = document.getElementById(key)
+                    if (myElem === null) {
+                        continue;
+                    }
+                    document.getElementById(key).value = value ;
+                    updateFormatPrice(index);
             }
         }
 
@@ -280,15 +298,17 @@
 
             elem0.textContent = cart_count + " items";
             elem1.textContent = cart_count + " items";
-
-
         }
+
 
         function updateFormatPrice(index) {
             var price = document.getElementById("price-per-unit" + index).innerHTML.substring(1).split('/')[0];
-            var format = document.getElementById("product-format" + index).value;
-            var defaultFormat = document.getElementById("product-format" + index).getAttribute("data-initial");
+            var identifier = "productFormat"+index
+            var format = document.getElementById(identifier).value;
+            var defaultFormat = document.getElementById(identifier).getAttribute("data-initial");
             var amount = document.getElementById("amount" + index).innerHTML;
+            formatValues[identifier]=parseInt(format);
+            localStorage.setItem('formatValues', JSON.stringify(formatValues));
 
             price = price * (format / defaultFormat) * amount;
 
