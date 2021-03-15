@@ -136,12 +136,13 @@
         var numOfProducts = document.getElementsByClassName("amount").length;
         var counterArray = new Array(numOfProducts);
         
+        //UPDATE PRICE when format changed
         function updatePrice(index) {
             var price = document.getElementById("price-per-unit").innerHTML.substring(1).split('/')[0];
             var format = document.getElementById("format"+index).value;
             var defaultFormat = document.getElementById("productFormat").getAttribute("data-initial");
 
-            price = price * (format / defaultFormat)
+            price = price * (format / defaultFormat);
             console.log(price);
             console.log(format);
             console.log(defaultFormat);
