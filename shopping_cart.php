@@ -33,6 +33,13 @@
             float: left;
             width: 20px;
         }
+
+        .contShop {
+            font-size: 100%;
+            background-color: rgba(0,0,0,0);
+            border: 1px solid white;
+            margin-top: 10px;
+        }
     </style>
 
 </head>
@@ -151,9 +158,6 @@
                                         <button class="button-circle minusButton" type="button" id="2" name="button">-</button>
                                         <span class="amount" id="amount2">1</span>
                                         <button class="button-circle plusButton" type="button" id="2" name="button">+</button>
-                                        <!--<a href="#" class="bttn-circle col one-third">-</a>
-                                <h5 class="col one-third">1</h5> 
-                                <a href="#" class=" col one-third bttn-circle">+</a>-->
                                     </div>
                                 </div>
 
@@ -196,7 +200,7 @@
 
                     <div class="clearfix"></div>
                     <div class="center"><button type="submit" class="long-bttn" onclick="window.location.href='/SOEN287/checkout.php'"> Order Now </button></div>
-
+                    <div class="center"><button class="long-bttn contShop" onclick="window.location.href='/SOEN287/homepage.php'"> Continue Shopping </button> </div>
 
 
                 </div>
@@ -263,6 +267,8 @@
             cart_count = cart_count - 1;
             updateCartCount();
             calculateCartSubtotal();
+
+            //For Refresh Storage Purpose
             deletedItems[deletedItems.length] = item.toString();
             localStorage.setItem('deletedItems', JSON.stringify(deletedItems));
 
@@ -310,6 +316,8 @@
             var format = document.getElementById(identifier).value;
             var defaultFormat = document.getElementById(identifier).getAttribute("data-initial");
             var amount = document.getElementById("amount" + index).innerHTML;
+
+            //For Refresh Storage Purpose
             formatValues[identifier]=parseInt(format);
             localStorage.setItem('formatValues', JSON.stringify(formatValues));
 
