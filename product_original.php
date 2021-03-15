@@ -182,6 +182,25 @@ document.querySelector(".description").innerHTML="A Rare Find! Fresh wild bluebe
         
         var numOfProducts = document.getElementsByClassName("amount").length;
         var counterArray = new Array(numOfProducts);
+        var formatValues = {};
+        var storedFormatValues = JSON.parse(localStorage.getItem('formatProductValues'));
+
+        //KEEP FORMAT UPDATED
+        if (storedFormatValues) {
+            console.log(JSON.parse(localStorage.getItem('formatProductValues')));
+            for (let r = 0; r < Object.keys(storedFormatValues).length; r++){
+                    var key = Object.keys(storedFormatValues)[r]; 
+                    let index = key.substr(6);
+                    let value = parseInt(storedFormatValues[key])
+                    formatValues[key]= value;
+                    let myElem = document.getElementById(key)
+                    if (myElem === null) {
+                        continue;
+                    }
+                    document.getElementById(key).value = value ;
+                    updatePrice(index);
+            }
+        }
         
         //UPDATE PRICE when format changed
         function updatePrice(index) {
@@ -190,6 +209,12 @@ document.querySelector(".description").innerHTML="A Rare Find! Fresh wild bluebe
             var defaultFormat = document.getElementById("productFormat").getAttribute("data-initial");
 
             price = price * (format / defaultFormat);
+
+            //STORAGE PURPOSE
+            formatValues = {};
+            formatValues["format"+index]=parseInt(format);
+            localStorage.setItem('formatProductValues', JSON.stringify(formatValues));
+
             console.log(price);
             console.log(format);
             console.log(defaultFormat);
