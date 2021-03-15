@@ -207,7 +207,7 @@ img{
     
     <script>
  
- var numOfProducts = document.getElementsByClassName("amount").length;
+        var numOfProducts = document.getElementsByClassName("amount").length;
         var counterArray = new Array(numOfProducts);
             
         for (var i = 0; i < numOfProducts; i++) 

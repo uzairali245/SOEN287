@@ -58,14 +58,14 @@
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="amount">1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" onclick="storeCountArray()" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <input type="text" name="qty" value="1" class="amount">
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" onclick="storeCountArray()" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
 
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="0" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -78,14 +78,14 @@
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="amount">1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" onclick="storeCountArray()" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <input type="text" name="qty" value="1" class="amount">
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" onclick="storeCountArray()" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
 
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="1" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -98,14 +98,14 @@
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="amount">1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" onclick="storeCountArray()" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <input type="text" name="qty" value="1" class="amount">
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" onclick="storeCountArray()" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
 
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="2" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -118,14 +118,14 @@
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="amount">1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" onclick="storeCountArray()" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <input type="text" name="qty" value="1" class="amount">
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" onclick="storeCountArray()" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
 
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="3" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -137,14 +137,14 @@
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="amount">1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" onclick="storeCountArray()" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <input type="text" name="qty" value="1" class="amount">
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" onclick="storeCountArray()" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
 
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="4" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -156,14 +156,14 @@
 
                 <div class="d-flex bd-highlight">
                     <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <span class="amount">1</span>
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" onclick="storeCountArray()" id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
+                        <input type="text" name="qty" value="1" class="amount">
+                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" onclick="storeCountArray()" id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
                     </div>
 
                     <div class="bd-highlight">
 
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 " style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
+                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="5" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -181,61 +181,68 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 
+    <body onload="getCountArray()">
 
 
-    <script>
-        var counterArray = [1, 1, 1, 1, 1, 1, 1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
-        var amountArray = document.getElementsByClassName("amount");
-        console.log(amountArray);
 
+        <script>
+            var numOfProducts = document.getElementsByClassName("amount").length;
+            var counterArray = new Array(numOfProducts);
 
-        // INCREMENT BUTTON
-        var plusButtons = document.querySelectorAll(".plusButton");
-        var plusButtonsLength = plusButtons.length; //3 for now
-        console.log(plusButtonsLength);
+            for (var i = 0; i < numOfProducts; i++)
+                counterArray[i] = 1;
 
-        for (var i = 0; i < plusButtonsLength; i++) {
-            plusButtons[i].onclick = function() {
-                increment(this);
+            // CART BUTTON 
+            var cartButtons = document.querySelectorAll(".cartButton"); //array of all the cart buttons
+            var cartButtonsLength = cartButtons.length;
+            for (var i = 0; i < cartButtonsLength; i++) {
+                cartButtons[i].onclick = function() {
+                    addToCart(this);
+                }
             }
-        }
 
-        function increment(button) {
-            var index = button.id;
-            counterArray[index]++;
-            amountArray[index].textContent = counterArray[index];
-        }
-
-        //DECREMENT BUTTON
-        var minusButtons = document.querySelectorAll(".minusButton");
-        var minusButtonsLength = minusButtons.length; //3 for now
-
-        for (var i = 0; i < minusButtonsLength; i++) { //THIS WORKS
-            minusButtons[i].onclick = function() {
-                decrement(this);
+            function addToCart(button) { //what happens when add to cart is clicked
+                var index = button.id;
+                counterArray[index] = parseInt(document.getElementsByClassName("amount")[index].value);
             }
-        }
 
+            // INCREMENT BUTTON
+            var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
+            var plusButtonsLength = plusButtons.length;
 
-        console.log(counterArray);
+            for (var i = 0; i < plusButtonsLength; i++) {
+                plusButtons[i].onclick = function() {
+                    increment(this);
+                }
+            }
 
-        function decrement(button) {
-            console.log(counterArray); //it exists here
-            var index = button.id;
-            console.log(counterArray[index]);
-            if (counterArray[index] == 1)
-                return;
-            else
-                counterArray[index]--;
+            function increment(button) {
+                var index = button.id;
+                counterArray[index]++;
+                document.getElementsByClassName("amount")[index].value = counterArray[index];
+            }
 
-            amountArray[index].textContent = counterArray[index];
-        }
+            //DECREMENT BUTTON
+            var minusButtons = document.querySelectorAll(".minusButton");
+            var minusButtonsLength = minusButtons.length;
 
-        // var remeberSize = document.querySelectorAll(".amount").length;
-        // for (i=0;i<rememberSize;i++){
-            
-        // }
-    </script>
-</body>
+            for (var i = 0; i < minusButtonsLength; i++) {
+                minusButtons[i].onclick = function() {
+                    decrement(this);
+                }
+            }
+
+            function decrement(button) {
+                var index = button.id;
+                if (counterArray[index] == 1)
+                    return;
+                else
+                    counterArray[index]--;
+
+                document.getElementsByClassName("amount")[index].value = counterArray[index];
+            }
+        </script>
+
+    </body>
 
 </html>

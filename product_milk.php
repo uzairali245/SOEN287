@@ -75,12 +75,12 @@
 
                             <div class="colmn one-half qty">
                                 <button class="button-circle minusButton" type="button" id="0" name="button">-</button>
-                                <span class="amount">1</span>
+                                <input type="text" name="qty" value="1" class="amount">
                                 <button class="button-circle plusButton" type="button" id="0" name="button">+</button>
                             </div>
 
                             <div class="colmn one-half">
-                                <button type="submit" class="bttn bttn-full"> Add to cart </button>
+                                <button type="submit" id="0" class="bttn bttn-full cartButton"> Add to cart </button>
                             </div>
 
                         </div>
@@ -121,15 +121,29 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
-        var counterArray = [1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
-        var amountArray = document.getElementsByClassName("amount");
-        console.log(amountArray);
+        var numOfProducts = document.getElementsByClassName("amount").length;
+        var counterArray = new Array(numOfProducts);
 
+        for (var i = 0; i < numOfProducts; i++)
+            counterArray[i] = 1;
+
+        // CART BUTTON 
+        var cartButtons = document.querySelectorAll(".cartButton"); //array of all the cart buttons
+        var cartButtonsLength = cartButtons.length;
+        for (var i = 0; i < cartButtonsLength; i++) {
+            cartButtons[i].onclick = function() {
+                addToCart(this);
+            }
+        }
+
+        function addToCart(button) { //what happens when add to cart is clicked
+            var index = button.id;
+            counterArray[index] = parseInt(document.getElementsByClassName("amount")[index].value);
+        }
 
         // INCREMENT BUTTON
-        var plusButtons = document.querySelectorAll(".plusButton");
-        var plusButtonsLength = plusButtons.length; //3 for now
-        console.log(plusButtonsLength);
+        var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
+        var plusButtonsLength = plusButtons.length;
 
         for (var i = 0; i < plusButtonsLength; i++) {
             plusButtons[i].onclick = function() {
@@ -140,37 +154,27 @@
         function increment(button) {
             var index = button.id;
             counterArray[index]++;
-            amountArray[index].textContent = counterArray[index];
+            document.getElementsByClassName("amount")[index].value = counterArray[index];
         }
 
         //DECREMENT BUTTON
         var minusButtons = document.querySelectorAll(".minusButton");
-        var minusButtonsLength = minusButtons.length; //3 for now
+        var minusButtonsLength = minusButtons.length;
 
-        for (var i = 0; i < minusButtonsLength; i++) { //THIS WORKS
+        for (var i = 0; i < minusButtonsLength; i++) {
             minusButtons[i].onclick = function() {
                 decrement(this);
             }
         }
 
-
-        console.log(counterArray);
-
         function decrement(button) {
-            console.log(counterArray); //it exists here
             var index = button.id;
-            console.log(counterArray[index]);
             if (counterArray[index] == 1)
                 return;
             else
                 counterArray[index]--;
 
-            amountArray[index].textContent = counterArray[index];
-        }
-
-        var remeberSize = document.querySelectorAll(".amount").length;
-        for (i = 0; i < rememberSize; i++) {
-
+            document.getElementsByClassName("amount")[index].value = counterArray[index];
         }
     </script>
 </body>
