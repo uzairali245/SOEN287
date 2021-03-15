@@ -32,6 +32,47 @@
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo&family=Orbitron:wght@500&family=Roboto:Roboto:ital,wght@0,500;1,500,1;600;1,700&display=swap" rel="stylesheet">
 </head>
 
+<style >
+    .collapsible {
+  /*background-color: #777;
+  color: white;*/
+  margin-top: 10px;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+/*  background-color: #555;*/
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #ee4f3e;
+  border-radius: 0 0 30px 30px;
+}
+.collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+    </style>
+
 <body>
 
     <div class="content-container">
@@ -84,25 +125,10 @@
 
                         <div class="clearfix"></div>
 
-                        <div class="product-info-element">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-
-                                    <h5 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            See more
-                                        </button>
-                                    </h5>
-
-                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            Classic beverage of the Romulan Empire, shipped straight from Romulus!
-                                        </div>
-                                    </div>
-
-                                </div>
+                        <button class="collapsible">See More</button>
+                            <div class="content">
+                              <p class="description"></p>
                             </div>
-                        </div>
 
                     </div>
 
@@ -118,6 +144,26 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
+          // This code is for Product Description
+        var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+document.querySelector(".description").innerHTML="Classic beverage of the Romulan Empire, shipped straight from Romulus!";
+//document.querySelector(".collapsible:after .active:after ").style.color="white";
+// Description sec ends here
+        
+        
         var numOfProducts = document.getElementsByClassName("amount").length;
         var counterArray = new Array(numOfProducts);
 
