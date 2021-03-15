@@ -221,16 +221,32 @@
         // Custom JS
         var cart_count = 3;
         var init_cart_count = 3;
+        var deletedItems = [];
+        var storedDeletedItems = JSON.parse(localStorage.getItem('deletedItems'));
+
 
         calculateCartSubtotal();
 
+        if (storedDeletedItems) {
+            console.log(JSON.parse(localStorage.getItem('deletedItems')));
+            for (let k = 0; k < storedDeletedItems.length; k++){
+                    removeItem(storedDeletedItems[k]);
+            }
+        }
+
+        //REMOVE CART ITEM
         function removeItem(item) {
+            
             var elem = document.querySelector(item);
             elem.remove();
             cart_count = cart_count - 1;
             updateCartCount();
             calculateCartSubtotal();
+            deletedItems[deletedItems.length] = item.toString();
+            localStorage.setItem('deletedItems', JSON.stringify(deletedItems));
 
+
+            //DISPLAY WHEN CART EMPTY
             if (cart_count == 0) {
                 let orderSummary = document.getElementById("order-summary");
                 let cartList = document.getElementById("cart-list");
@@ -257,6 +273,7 @@
             }
         }
 
+
         function updateCartCount() {
             var elem0 = document.querySelector('#cartcount0');
             var elem1 = document.querySelector('#cartcount1');
@@ -280,6 +297,7 @@
             calculateCartSubtotal();
         }
 
+        //CALCULATE CART COST BREAKDOWN
         function calculateCartSubtotal() {
             let subtotal = 0.0;
             let shippingCost = parseFloat(document.getElementById("shipping-cost").innerHTML.substring(1));
@@ -351,7 +369,7 @@
             updateFormatPrice(index);
         }
 
-        var remeberSize = document.querySelectorAll(".amount").length;
+        var rememberSize = document.querySelectorAll(".amount").length;
         for (i = 0; i < rememberSize; i++) {
 
         }
