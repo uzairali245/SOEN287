@@ -181,68 +181,122 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 
-    <body onload="getCountArray()">
+    <!-- <body onload="getCountArray()"> -->
 
 
 
-        <script>
-            var numOfProducts = document.getElementsByClassName("amount").length;
-            var counterArray = new Array(numOfProducts);
+    <script>
+        var counterArray;
 
-            for (var i = 0; i < numOfProducts; i++)
-                counterArray[i] = 1;
+        window.addEventListener('load', (event) => {
+            counterArray = getCountArray();
 
-            // CART BUTTON 
-            var cartButtons = document.querySelectorAll(".cartButton"); //array of all the cart buttons
-            var cartButtonsLength = cartButtons.length;
-            for (var i = 0; i < cartButtonsLength; i++) {
-                cartButtons[i].onclick = function() {
-                    addToCart(this);
+        }); // var numOfProducts = document.getElementsByClassName("amount").length;
+        // var counterArray = new Array(numOfProducts);
+
+
+
+        // CART BUTTON 
+        var cartButtons = document.querySelectorAll(".cartButton"); //array of all the cart buttons
+        var cartButtonsLength = cartButtons.length;
+        for (var i = 0; i < cartButtonsLength; i++) {
+            cartButtons[i].onclick = function() {
+                addToCart(this);
+                storeCountArray();
+            }
+        }
+
+
+        function addToCart(button) { //what happens when add to cart is clicked
+            var index = button.id;
+            counterArray[index] = parseInt(document.getElementsByClassName("amount")[index].value);
+        }
+
+
+        function storeCountArray() {
+            console.log(localStorage.getItem("counterArray"));
+            // localStorage.setItem("names", JSON.stringify(names));
+            localStorage.setItem("counterArray", JSON.stringify(counterArray));
+            console.log(counterArray + "hello");
+            alert("it entered store");
+            // alert("worked");
+        };
+
+
+
+        //retreives countarray on refresh
+        function getCountArray() {
+            counterArray = JSON.parse(localStorage.getItem("counterArray")); //get them back
+            console.log(counterArray);
+            if (counterArray != null) {
+                var numOfProducts = document.getElementsByClassName("amount").length;
+                for (var i = 0; i < numOfProducts; i++) {
+                    document.getElementsByClassName("amount")[i].value = parseInt(counterArray[i]);
+
                 }
+                return counterArray;
             }
+            //localStorage.getItem("counterArray");
+            alert("it entered");
 
-            function addToCart(button) { //what happens when add to cart is clicked
-                var index = button.id;
-                counterArray[index] = parseInt(document.getElementsByClassName("amount")[index].value);
-            }
-
-            // INCREMENT BUTTON
-            var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
-            var plusButtonsLength = plusButtons.length;
-
-            for (var i = 0; i < plusButtonsLength; i++) {
-                plusButtons[i].onclick = function() {
-                    increment(this);
+            if (counterArray == null) {
+                var numOfProducts = document.getElementsByClassName("amount").length;
+                var counterArray = new Array(numOfProducts);
+                for (var i = 0; i < numOfProducts; i++) {
+                    counterArray[i] = 1;
                 }
+                alert("counterarray being initialized");
+                console.log(counterArray);
+                return counterArray;
             }
+        }
 
-            function increment(button) {
-                var index = button.id;
-                counterArray[index]++;
-                document.getElementsByClassName("amount")[index].value = counterArray[index];
+
+
+
+
+
+
+        // INCREMENT BUTTON
+        var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
+        var plusButtonsLength = plusButtons.length;
+
+        for (var i = 0; i < plusButtonsLength; i++) {
+            plusButtons[i].onclick = function() {
+                increment(this, counterArray);
+                storeCountArray();
             }
+        }
 
-            //DECREMENT BUTTON
-            var minusButtons = document.querySelectorAll(".minusButton");
-            var minusButtonsLength = minusButtons.length;
+        function increment(button, counterArray) {
+            var index = button.id;
+            console.log(counterArray);
+            counterArray[index]++;
+            document.getElementsByClassName("amount")[index].value = counterArray[index];
+        }
 
-            for (var i = 0; i < minusButtonsLength; i++) {
-                minusButtons[i].onclick = function() {
-                    decrement(this);
-                }
+        //DECREMENT BUTTON
+        var minusButtons = document.querySelectorAll(".minusButton");
+        var minusButtonsLength = minusButtons.length;
+
+        for (var i = 0; i < minusButtonsLength; i++) {
+            minusButtons[i].onclick = function() {
+                decrement(this, counterArray);
+                storeCountArray();
             }
+        }
 
-            function decrement(button) {
-                var index = button.id;
-                if (counterArray[index] == 1)
-                    return;
-                else
-                    counterArray[index]--;
+        function decrement(button, counterArray) {
+            var index = button.id;
+            if (counterArray[index] == 1)
+                return;
+            else
+                counterArray[index]--;
 
-                document.getElementsByClassName("amount")[index].value = counterArray[index];
-            }
-        </script>
+            document.getElementsByClassName("amount")[index].value = counterArray[index];
+        }
+    </script>
 
-    </body>
+</body>
 
 </html>
