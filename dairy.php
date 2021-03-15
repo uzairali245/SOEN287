@@ -214,11 +214,10 @@
 
 
         function storeCountArray() {
-            console.log(localStorage.getItem("counterArray"));
+            console.log(sessionStorage.getItem("counterArray"));
             // localStorage.setItem("names", JSON.stringify(names));
-            localStorage.setItem("counterArray", JSON.stringify(counterArray));
+            sessionStorage.setItem("counterArray", JSON.stringify(counterArray));
             console.log(counterArray + "hello");
-            alert("it entered store");
             // alert("worked");
         };
 
@@ -226,7 +225,7 @@
 
         //retreives countarray on refresh
         function getCountArray() {
-            counterArray = JSON.parse(localStorage.getItem("counterArray")); //get them back
+            counterArray = JSON.parse(sessionStorage.getItem("counterArray")); //get them back
             console.log(counterArray);
             if (counterArray != null) {
                 var numOfProducts = document.getElementsByClassName("amount").length;
@@ -237,7 +236,6 @@
                 return counterArray;
             }
             //localStorage.getItem("counterArray");
-            alert("it entered");
 
             if (counterArray == null) {
                 var numOfProducts = document.getElementsByClassName("amount").length;
@@ -245,7 +243,6 @@
                 for (var i = 0; i < numOfProducts; i++) {
                     counterArray[i] = 1;
                 }
-                alert("counterarray being initialized");
                 console.log(counterArray);
                 return counterArray;
             }

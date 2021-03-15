@@ -308,62 +308,112 @@ img{
 
 
     <script>
-        var numOfProducts = document.getElementsByClassName("amount").length;
-        var counterArray = new Array(numOfProducts);
-            
-        for (var i = 0; i < numOfProducts; i++) 
-            counterArray[i] = 1;
-                                   
+        var counterArrayBeverages;
+
+        window.addEventListener('load', (event) => {
+            counterArrayBeverages = getCountArray();
+
+        }); // var numOfProducts = document.getElementsByClassName("amount").length;
+        // var counterArrayBeverages = new Array(numOfProducts);
+
+
+
         // CART BUTTON 
         var cartButtons = document.querySelectorAll(".cartButton"); //array of all the cart buttons
         var cartButtonsLength = cartButtons.length;
-        for(var i=0; i<cartButtonsLength; i++){
-            cartButtons[i].onclick = function(){
+        for (var i = 0; i < cartButtonsLength; i++) {
+            cartButtons[i].onclick = function() {
                 addToCart(this);
+                storeCountArray();
             }
         }
 
-        function addToCart(button){ //what happens when add to cart is clicked
+
+        function addToCart(button) { //what happens when add to cart is clicked
             var index = button.id;
-            counterArray[index] = parseInt(document.getElementsByClassName("amount")[index].value);
-        }        
+            counterArrayBeverages[index] = parseInt(document.getElementsByClassName("amount")[index].value);
+        }
+
+
+        function storeCountArray() {
+            console.log(sessionStorage.getItem("counterArrayBeverages"));
+            // localStorage.setItem("names", JSON.stringify(names));
+            sessionStorage.setItem("counterArrayBeverages", JSON.stringify(counterArrayBeverages));
+            console.log(counterArrayBeverages + "hello");
+            // alert("worked");
+        };
+
+
+
+        //retreives countarray on refresh
+        function getCountArray() {
+            counterArrayBeverages = JSON.parse(sessionStorage.getItem("counterArrayBeverages")); //get them back
+            console.log(counterArrayBeverages);
+            if (counterArrayBeverages != null) {
+                var numOfProducts = document.getElementsByClassName("amount").length;
+                for (var i = 0; i < numOfProducts; i++) {
+                    document.getElementsByClassName("amount")[i].value = parseInt(counterArrayBeverages[i]);
+
+                }
+                return counterArrayBeverages;
+            }
+            //localStorage.getItem("counterArrayBeverages");
+
+            if (counterArrayBeverages == null) {
+                var numOfProducts = document.getElementsByClassName("amount").length;
+                var counterArrayBeverages = new Array(numOfProducts);
+                for (var i = 0; i < numOfProducts; i++) {
+                    counterArrayBeverages[i] = 1;
+                }
+                console.log(counterArrayBeverages);
+                return counterArrayBeverages;
+            }
+        }
+
+
+
+
+
+
 
         // INCREMENT BUTTON
         var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
-        var plusButtonsLength = plusButtons.length; 
-   
-        for(var i =0; i< plusButtonsLength; i++){
-            plusButtons[i].onclick = function(){
-                increment(this);
+        var plusButtonsLength = plusButtons.length;
+
+        for (var i = 0; i < plusButtonsLength; i++) {
+            plusButtons[i].onclick = function() {
+                increment(this, counterArrayBeverages);
+                storeCountArray();
             }
         }
 
-        function increment(button){
+        function increment(button, counterArrayBeverages) {
             var index = button.id;
-            counterArray[index] ++;
-            document.getElementsByClassName("amount")[index].value = counterArray[index];
-        } 
-        
+            console.log(counterArrayBeverages);
+            counterArrayBeverages[index]++;
+            document.getElementsByClassName("amount")[index].value = counterArrayBeverages[index];
+        }
+
         //DECREMENT BUTTON
         var minusButtons = document.querySelectorAll(".minusButton");
-        var minusButtonsLength = minusButtons.length; 
+        var minusButtonsLength = minusButtons.length;
 
-        for(var i = 0; i<minusButtonsLength; i++){ 
-            minusButtons[i].onclick = function(){
-                decrement(this);
+        for (var i = 0; i < minusButtonsLength; i++) {
+            minusButtons[i].onclick = function() {
+                decrement(this, counterArrayBeverages);
+                storeCountArray();
             }
-        }           
+        }
 
-        function decrement(button){
+        function decrement(button, counterArrayBeverages) {
             var index = button.id;
-            if(counterArray[index] == 1)
+            if (counterArrayBeverages[index] == 1)
                 return;
             else
-                counterArray[index]--;
+                counterArrayBeverages[index]--;
 
-            document.getElementsByClassName("amount")[index].value = counterArray[index];
-        }     
-
+            document.getElementsByClassName("amount")[index].value = counterArrayBeverages[index];
+        }
     </script>
   </body>
 </html>
