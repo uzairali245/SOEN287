@@ -87,27 +87,10 @@
 
                         <div class="clearfix"></div>
 
-                        <div class="product-info-element">
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-
-                                    <h5 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            See more
-                                        </button>
-                                    </h5>
-
-                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                        <div class="accordion-body">
-                                            <strong>Ingredients: </strong>Cocoa Mass, Cocoa Butter, Sugar, Cocoa Powder, Milk Ingredients.<br>
-
-                                            <strong>May Contain Peanuts, Tree Nuts, Soy, And Sesame.</strong>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                       <button class="collapsible">See More</button>
+                          <div class="content">
+                            <p class="description"></p>
+                          </div>
 
                     </div>
 
@@ -125,6 +108,27 @@
 
 </body>
 <script>
+    // This code is for Product Description
+        var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+document.querySelector(".description").innerHTML="Ingredients: Cocoa Mass, Cocoa Butter, Sugar, Cocoa Powder, Milk Ingredients. May Contain Peanuts, Tree Nuts, Soy, And Sesame.";
+//document.querySelector(".collapsible:after .active:after ").style.color="white";
+// Description sec ends here
+    
+    
+    
     var numOfProducts = document.getElementsByClassName("amount").length;
     var counterArray = new Array(numOfProducts);
 
