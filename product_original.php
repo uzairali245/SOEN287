@@ -67,10 +67,10 @@
                             <h3 id="product-name">Wild Blueberries</h3>
                         </div>
 
-                        <div class=" product-info-element btn-group productFormat" role="group" aria-label="Basic example" id="productFormat">
-                            <button class="bttn-full bttn btn" type="button">100g</button>
-                            <button class="bttn-full bttn btn" type="button">250g</button>
-                            <button class="bttn-full bttn btn" type="button">500g</button>
+                        <div class=" product-info-element btn-group productFormat" role="group" aria-label="Basic example" id="productFormat" data-initial="100">
+                            <button class="bttn-full bttn btn" type="button" value="100" id="format1" onClick="updatePrice(1)">100g</button>
+                            <button class="bttn-full bttn btn" type="button" value="250" id="format2" onClick="updatePrice(2)">250g</button>
+                            <button class="bttn-full bttn btn" type="button" value="500" id="format3" onClick="updatePrice(3)">500g</button>
                         </div>
 
                         <div class="product-info-element">
@@ -135,6 +135,20 @@
     <script>
         var numOfProducts = document.getElementsByClassName("amount").length;
         var counterArray = new Array(numOfProducts);
+        
+        function updatePrice(index) {
+            var price = document.getElementById("price-per-unit").innerHTML.substring(1).split('/')[0];
+            var format = document.getElementById("format"+index).value;
+            var defaultFormat = document.getElementById("productFormat").getAttribute("data-initial");
+
+            price = price * (format / defaultFormat)
+            console.log(price);
+            console.log(format);
+            console.log(defaultFormat);
+
+            document.getElementById("price").innerHTML = "$" + price.toFixed(2);
+        }
+
 
         for (var i = 0; i < numOfProducts; i++)
             counterArray[i] = 1;
