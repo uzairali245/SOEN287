@@ -83,9 +83,9 @@
                             </div>
 
                             <div class="cart-element qty">
-                                <button class="button-circle minusButton" type="button" id="0" name="button">-</button>
+                                <button class="button-circle minusButton" type="button" id="0" name="button" onClick="decrement(0)">-</button>
                                 <span class="amount" id="amount0">1</span>
-                                <button class="button-circle plusButton" type="button" id="0" name="button">+</button>
+                                <button class="button-circle plusButton" type="button" id="0" name="button" onClick="increment(0)">+</button>
                                 <!--<a href="#" class="bttn-circle col one-third">-</a>
                                 <h5 class="col one-third">1</h5> 
                                 <a href="#" class=" col one-third bttn-circle">+</a>-->
@@ -122,9 +122,9 @@
 
 
                             <div class="cart-element qty">
-                                <button class="button-circle minusButton" type="button" id="1" name="button">-</button>
+                                <button class="button-circle minusButton" type="button" id="1" name="button" onClick="decrement(1)">-</button>
                                 <span class="amount" id="amount1">1</span>
-                                <button class="button-circle plusButton" type="button" id="1" name="button">+</button>
+                                <button class="button-circle plusButton" type="button" id="1" name="button" onClick="increment(1)">+</button>
                                 <!--<a href="#" class="bttn-circle col one-third">-</a>
                                 <h5 class="col one-third">1</h5> 
                                 <a href="#" class=" col one-third bttn-circle">+</a>-->
@@ -155,14 +155,14 @@
                                     </div>
 
                                     <div class="cart-element qty">
-                                        <button class="button-circle minusButton" type="button" id="2" name="button">-</button>
+                                        <button class="button-circle minusButton" type="button" id="2" name="button" onClick="decrement(2)">-</button>
                                         <span class="amount" id="amount2">1</span>
-                                        <button class="button-circle plusButton" type="button" id="2" name="button">+</button>
+                                        <button class="button-circle plusButton" type="button" id="2" name="button" onClick="increment(2)">+</button>
                                     </div>
                                 </div>
 
                                 <div class="cart-element total-price-item">
-                                    <h3 class="total-price-item" id="total-price-item2">$14.00</h3>
+                                    <h3 class="total-price-item" id="total-price-item2">$7.00</h3>
                                 </div>
 
                                 <button href="#" class="delete-item-bttn" type="button" onClick="removeItem('#cart2')">x</button>
@@ -229,7 +229,7 @@
         var storedDeletedItems = JSON.parse(localStorage.getItem('deletedItems'));
         var formatValues = {};
         var storedFormatValues = JSON.parse(localStorage.getItem('formatValues'));
-
+        var storedItemAmounts = JSON.parse(localStorage.getItem('counterArray'));
 
         calculateCartSubtotal();
 
@@ -257,6 +257,23 @@
                     document.getElementById(key).value = value ;
                     updateFormatPrice(index);
             }
+        }
+
+        var counterArray = [];
+        var itemAmount = 0;
+        // Refresh Amount Values
+        if (storedItemAmounts) {
+            console.log(storedItemAmounts);
+            for (let i = 0; i < storedItemAmounts.length; i++){
+                itemAmount = document.getElementById("amount" + i);
+                if (itemAmount != null){
+                    itemAmount.textContent = storedItemAmounts[i];
+                    updateFormatPrice(i);
+                }
+            }
+            counterArray = storedItemAmounts;
+        } else {
+            counterArray = [1, 1, 1];
         }
 
         //REMOVE CART ITEM
@@ -312,16 +329,26 @@
 
         function updateFormatPrice(index) {
             var price = document.getElementById("price-per-unit" + index).innerHTML.substring(1).split('/')[0];
+            console.log(price);
             var identifier = "productFormat"+index
-            var format = document.getElementById(identifier).value;
-            var defaultFormat = document.getElementById(identifier).getAttribute("data-initial");
+            var format = null;
+            var defaultFormat = null;
+            if (document.getElementById("price-per-unit" + index).innerHTML.substring(1).split('/')[1] != "unit"){
+                format = document.getElementById(identifier).value;
+                defaultFormat = document.getElementById(identifier).getAttribute("data-initial");
+            }
             var amount = document.getElementById("amount" + index).innerHTML;
 
             //For Refresh Storage Purpose
             formatValues[identifier]=parseInt(format);
             localStorage.setItem('formatValues', JSON.stringify(formatValues));
 
-            price = price * (format / defaultFormat) * amount;
+            if (format != null){
+                price = price * (format / defaultFormat) * amount;
+            } else {
+                price = price * amount;
+            }
+
 
             document.getElementById("total-price-item" + index).innerHTML = "$" + price.toFixed(2);
 
@@ -354,13 +381,13 @@
             document.getElementById("cart-total").innerHTML = "$" + total.toFixed(2);
 
         }
-        var counterArray = [1,1,1]; //try not to have it hard coded later (to fix!) 1.find span amount 2. initialize array to that amount 3.insert 1 to entire array
-        var amountArray = document.getElementsByClassName("amount");
+
+        var amountArray = [document.getElementById("amount0"),document.getElementById("amount1"),document.getElementById("amount2")];
         console.log(amountArray);
 
 
         // INCREMENT BUTTON
-        var plusButtons = document.querySelectorAll(".plusButton");
+        /*var plusButtons = document.querySelectorAll(".plusButton");
         var plusButtonsLength = plusButtons.length; //3 for now
         console.log(plusButtonsLength);
 
@@ -368,33 +395,39 @@
             plusButtons[i].onclick = function() {
                 increment(this);
             }
-        }
+        }*/
 
-        function increment(button) {
-            var index = button.id;
+        function increment(index) {
             counterArray[index]++;
             amountArray[index].textContent = counterArray[index];
+
+            // Store amount of item @ index for refresh
+            localStorage.setItem('counterArray', JSON.stringify(counterArray));
+
             updateFormatPrice(index);
         }
 
         //DECREMENT BUTTON
-        var minusButtons = document.querySelectorAll(".minusButton");
+        /*var minusButtons = document.querySelectorAll(".minusButton");
         var minusButtonsLength = minusButtons.length; //3 for now
 
         for (var i = 0; i < minusButtonsLength; i++) { //THIS WORKS
             minusButtons[i].onclick = function() {
                 decrement(this);
             }
-        }
+        }*/
 
-        function decrement(button) {
+        function decrement(index) {
             console.log(counterArray); //it exists here
-            var index = button.id;
             console.log(counterArray[index]);
             if (counterArray[index] == 1)
                 return;
             else
                 counterArray[index]--;
+
+                
+            // Store amount of item @ index for refresh
+            localStorage.setItem('counterArray', JSON.stringify(counterArray));
 
             amountArray[index].textContent = counterArray[index];
             updateFormatPrice(index);
