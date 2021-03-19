@@ -210,10 +210,7 @@
         window.addEventListener('load', (event) => {
             counterArrayBakery = getCountArray();
 
-        }); // var numOfProducts = document.getElementsByClassName("amount").length;
-        // var counterArrayBakery = new Array(numOfProducts);
-
-
+        });
 
         // CART BUTTON 
         var cartButtons = document.querySelectorAll(".cartButton"); //array of all the cart buttons
@@ -224,7 +221,6 @@
                 storeCountArray();
             }
         }
-
 
         function addToCart(button) { //what happens when add to cart is clicked
             var index = button.id;
@@ -239,7 +235,6 @@
             console.log(counterArrayBakery + "hello");
             // alert("worked");
         };
-
 
 
         //retreives countarray on refresh
@@ -266,12 +261,6 @@
                 return counterArrayBakery;
             }
         }
-
-
-
-
-
-
 
         // INCREMENT BUTTON
         var plusButtons = document.querySelectorAll(".plusButton"); //array of all the plus buttons
