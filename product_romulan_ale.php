@@ -178,6 +178,7 @@ document.querySelector(".description").innerHTML="Classic beverage of the Romula
                 document.getElementsByClassName("amount")[i].value = counterArray[i];
             } else {
                 counterArray[i] = 1;
+                localStorage.setItem('counterArray', JSON.stringify(counterArray));
             }
         }
 

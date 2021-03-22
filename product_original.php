@@ -234,7 +234,8 @@ document.querySelector(".description").innerHTML="A Rare Find! Fresh wild bluebe
                 document.getElementsByClassName("amount")[i].value = counterArray[i];
             } else {
                 counterArray[i] = 1;
-            }
+                localStorage.setItem('counterArray', JSON.stringify(counterArray));
+}
         }
 
         // CART BUTTON 

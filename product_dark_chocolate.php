@@ -184,7 +184,8 @@ document.querySelector(".description").innerHTML="Ingredients: Cocoa Mass, Cocoa
             document.getElementsByClassName("amount")[i].value = counterArray[i];
         } else {
             counterArray[i] = 1;
-        }
+            localStorage.setItem('counterArray', JSON.stringify(counterArray));
+}
     }
 
     // CART BUTTON 

@@ -181,7 +181,8 @@ document.querySelector(".description").innerHTML="Ingredients: Enriched flour, w
                 document.getElementsByClassName("amount")[i].value = counterArray[i];
             } else {
                 counterArray[i] = 1;
-            }
+                localStorage.setItem('counterArray', JSON.stringify(counterArray));
+}
         }
 
         // CART BUTTON 
