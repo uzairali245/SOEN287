@@ -182,9 +182,20 @@
 
         var numOfProducts = document.getElementsByClassName("amount").length;
         var counterArray = new Array(numOfProducts);
+        var storedItemCount = JSON.parse(localStorage.getItem('counterArray'));
+        var storedProductName = JSON.parse(localStorage.getItem('productName'));
+        var productName = document.getElementById("product-name").innerHTML;
+        localStorage.setItem('productName', JSON.stringify(productName));
 
-        for (var i = 0; i < numOfProducts; i++)
-            counterArray[i] = 1;
+
+        for (var i = 0; i < numOfProducts; i++){
+            if(storedItemCount && storedProductName == productName){
+                counterArray[i] = storedItemCount[i];
+                document.getElementsByClassName("amount")[i].value = counterArray[i];
+            } else {
+                counterArray[i] = 1;
+            }
+        }
 
         // CART BUTTON 
         var cartButtons = document.querySelectorAll(".cartButton"); //array of all the cart buttons
@@ -214,6 +225,8 @@
             var index = button.id;
             counterArray[index]++;
             document.getElementsByClassName("amount")[index].value = counterArray[index];
+            localStorage.setItem('counterArray', JSON.stringify(counterArray));
+
         }
 
         //DECREMENT BUTTON
@@ -234,7 +247,8 @@
                 counterArray[index]--;
 
             document.getElementsByClassName("amount")[index].value = counterArray[index];
-        
+            localStorage.setItem('counterArray', JSON.stringify(counterArray));
+
         }
     </script>
 </body>
