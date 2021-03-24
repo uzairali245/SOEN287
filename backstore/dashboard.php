@@ -70,7 +70,9 @@
     <div class="content-container">
 
     <div class="content-without-footer">
-    <?php include "../includes/header.html"; ?>
+    <?php 
+      include "../includes/header.html"; 
+    ?>
       <!-- Tab list -->
       <ul class="nav nav-tabs flex-column flex-md-row justify-content-center">
         <li class="nav-item">
@@ -304,6 +306,12 @@
           </div>
         </div>
       </div>
+      <?php
+      include "../includes/dbc.php"; 
+      $sql = mysqli_query($conn,"Select * from users where role = 'client';");
+      while ($row = $sql->fetch_assoc()){
+        echo ''.$row['first_name'].' '.$row['last_name'].' <br>';
+      }?>
     </div>
     <?php include "../includes/footer.html"; ?>
 
