@@ -167,9 +167,9 @@ table{
 
 
               <div class="flex-grow-1 bd-highlight">
-                  <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color: #bf0d00; border-color:  #bf0d00;"> - </button>
-                  <span>1</span>
-                  <button class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #bf0d00; border-color:  #bf0d00;"> + </button>
+                  <button type="button" name="button" onclick="decrementFunction(this.form)" class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color: #bf0d00; border-color:  #bf0d00;" id="inc"> - </button>
+                  <input type="text" name="qty" value="1" class="amount" id="qty">
+                  <button type="button" name="button" onclick="incrementFunction(this.form)" class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #bf0d00; border-color:  #bf0d00;" id="dec"> + </button>
               </div>
               </div>
 
@@ -203,5 +203,21 @@ table{
         </div>
 
         <?php include "../includes/footer.html"; ?>
+
+        <script>
+        
+        function incrementFunction() {
+          document.getElementById("qty").value = parseInt(document.getElementById("qty").value) + 1;
+        }
+
+        function decrementFunction() {
+          if (document.getElementById("qty").value > 1) {
+            document.getElementById("qty").value = parseInt(document.getElementById("qty").value) - 1;
+          }
+          
+        }
+
+        
+    </script>
           </body>
         </html>
