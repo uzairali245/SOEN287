@@ -1,3 +1,5 @@
+<?php include "includes/session.php"; ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -62,6 +64,80 @@
                 <div class="colmn two-third cart-list" id="cart-list">
                     <div class="cart-header" id="cartcount0">3 items</div>
 
+                <?php
+
+                    include "includes/dbc.php"; 
+                    $nbItemsInCart =  sizeof($_SESSION["customercart"]);
+                    $cartnb = 0;
+
+                    include "../includes/dbc.php"; 
+
+                    foreach ($_SESSION["customercart"] as $item){
+
+                        $productId = $item[0];
+                        $format = $item[1];
+                        $qty = $item[2];
+                        
+                        $result = mysqli_query($conn, "Select * from products where product_id = $productId;");
+                        
+                        if (!$result) {
+                            echo 'Could not find product: ' . mysql_error();
+                            exit;
+                        } else {
+                            //echo "fetched!";
+                        }
+                        $row = mysqli_fetch_assoc($result);
+
+                        $formatArr = explode("/",$row['format']);
+                        
+                        echo "<div class='cart-item' id='cart+{$cartnb}'>
+
+                            <a href='product_original.php'><img class='cart-element' src='resources/img/veg-fruit/blueberry.jpg' alt='product image'></a>
+
+                            <div class='mobile-wrapper'>
+                                <div class='cart-element item-descrpt'>
+                                    <a href='product_original.php'>
+                                        <h3 id='manufacturer'>{$row['manufacturer']}</h3>
+                                        <h3 id='product-name'>{$row['name']}</h3>
+                                        <a>
+                                            <h3 id='price-per-unit+{$cartnb}'>\${$row['price']}/{$formatArr[0]}{$row['unit']}</h3>
+                                            <form action='/action_page.php'>
+                                                <select name='format' class='productFormat' id='productFormat+{$cartnb}' onChange='updateFormatPrice({$cartnb})' data-initial='100'>";
+
+                                                    foreach ($formatArr as $format){
+                                                        echo "<option value=$format>{$format}g</option>";
+                                                    }
+
+                                                echo "</select>
+                                            </form>
+                                </div>
+
+                                <div class='cart-element qty'>
+                                    <button class='button-circle minusButton' type='button' id='{$cartnb}' name='button' onClick='decrement({$cartnb})'>-</button>
+                                    <span class='amount' id='amount+{$cartnb}'>{$qty}</span>
+                                    <button class='button-circle plusButton' type='button' id='{$cartnb}' name='button' onClick='increment({$cartnb})'>+</button>
+                                    <!--<a href='#' class='bttn-circle col one-third'>-</a>
+                                    <h5 class='col one-third'>1</h5> 
+                                    <a href='#' class='col one-third bttn-circle'>+</a>-->
+                                </div>
+                            </div>
+
+                            <div class='cart-element total-price-item'>
+                                <h3 class='total-price-item' id='total-price-item+{$cartnb}'></h3>
+                            </div>
+
+                            <button href='#' class='delete-item-bttn' type='button' onClick='removeItem('#cart+{$cartnb}')'>x</button>
+
+
+
+                        </div> ";
+
+                        $cartnb++;
+                }
+                ?>
+
+
+
                     <div class="cart-item" id="cart0">
 
                         <a href="product_original.php"><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
@@ -101,6 +177,11 @@
 
 
                     </div>
+
+
+
+
+
 
                     <div class="cart-item" id="cart1">
 
