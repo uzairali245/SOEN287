@@ -136,7 +136,7 @@
 
 
 
-                    <div class="cart-item" id="cart0">
+                   <!-- <div class="cart-item" id="cart0">
 
                         <a href="product_original.php"><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
 
@@ -160,9 +160,6 @@
                                 <button class="button-circle minusButton" type="button" id="0" name="button" onClick="decrement(0)">-</button>
                                 <span class="amount" id="amount0">1</span>
                                 <button class="button-circle plusButton" type="button" id="0" name="button" onClick="increment(0)">+</button>
-                                <!--<a href="#" class="bttn-circle col one-third">-</a>
-                                <h5 class="col one-third">1</h5> 
-                                <a href="#" class=" col one-third bttn-circle">+</a>-->
                             </div>
                         </div>
 
@@ -204,9 +201,7 @@
                                 <button class="button-circle minusButton" type="button" id="1" name="button" onClick="decrement(1)">-</button>
                                 <span class="amount" id="amount1">1</span>
                                 <button class="button-circle plusButton" type="button" id="1" name="button" onClick="increment(1)">+</button>
-                                <!--<a href="#" class="bttn-circle col one-third">-</a>
-                                <h5 class="col one-third">1</h5> 
-                                <a href="#" class=" col one-third bttn-circle">+</a>-->
+                            
                             </div>
                         </div>
 
@@ -248,7 +243,7 @@
 
 
 
-                    </div>
+                    </div>-->
                 </div>
 
                 <div class="colmn one-third order-summary" id="order-summary">
