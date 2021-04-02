@@ -70,8 +70,6 @@
                     $nbItemsInCart =  sizeof($_SESSION["customercart"]);
                     $cartnb = 0;
 
-                    include "../includes/dbc.php"; 
-
                     foreach ($_SESSION["customercart"] as $item){
 
                         $productId = $item[0];
@@ -90,7 +88,7 @@
 
                         $formatArr = explode("/",$row['format']);
                         
-                        echo "<div class='cart-item' id='cart+{$cartnb}'>
+                        echo "<div class='cart-item' id='cart{$cartnb}'>
 
                             <a href='product_original.php'><img class='cart-element' src='resources/img/veg-fruit/blueberry.jpg' alt='product image'></a>
 
@@ -100,9 +98,9 @@
                                         <h3 id='manufacturer'>{$row['manufacturer']}</h3>
                                         <h3 id='product-name'>{$row['name']}</h3>
                                         <a>
-                                            <h3 id='price-per-unit+{$cartnb}'>\${$row['price']}/{$formatArr[0]}{$row['unit']}</h3>
+                                            <h3 id='price-per-unit{$cartnb}'>\${$row['price']}/{$formatArr[0]}{$row['unit']}</h3>
                                             <form action='/action_page.php'>
-                                                <select name='format' class='productFormat' id='productFormat+{$cartnb}' onChange='updateFormatPrice({$cartnb})' data-initial='100'>";
+                                                <select name='format' class='productFormat' id='productFormat{$cartnb}' onChange='updateFormatPrice({$cartnb})' data-initial='100'>";
 
                                                     foreach ($formatArr as $format){
                                                         echo "<option value=$format>{$format}g</option>";
@@ -114,7 +112,7 @@
 
                                 <div class='cart-element qty'>
                                     <button class='button-circle minusButton' type='button' id='{$cartnb}' name='button' onClick='decrement({$cartnb})'>-</button>
-                                    <span class='amount' id='amount+{$cartnb}'>{$qty}</span>
+                                    <span class='amount' id='amount{$cartnb}'>{$qty}</span>
                                     <button class='button-circle plusButton' type='button' id='{$cartnb}' name='button' onClick='increment({$cartnb})'>+</button>
                                     <!--<a href='#' class='bttn-circle col one-third'>-</a>
                                     <h5 class='col one-third'>1</h5> 
@@ -123,10 +121,10 @@
                             </div>
 
                             <div class='cart-element total-price-item'>
-                                <h3 class='total-price-item' id='total-price-item+{$cartnb}'></h3>
+                                <h3 class='total-price-item' id='total-price-item{$cartnb}'></h3>
                             </div>
 
-                            <button href='#' class='delete-item-bttn' type='button' onClick='removeItem('#cart+{$cartnb}')'>x</button>
+                            <button href='#' class='delete-item-bttn' type='button' onClick='removeItem('#cart{$cartnb}')'>x</button>
 
 
 
