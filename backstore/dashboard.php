@@ -72,6 +72,7 @@
     <div class="content-without-footer">
     <?php 
       include "../includes/header.html"; 
+      include "../includes/dbc.php";
     ?>
       <!-- Tab list -->
       <ul class="nav nav-tabs flex-column flex-md-row justify-content-center">
@@ -104,57 +105,22 @@
                     <th class="text-center backstore-font">Stock</th>
                 </thead></tr>
 
-                  <!-- Data -->
-                  <tr>
-                    <td>4093</td>
-                    <td>Avocado</td>
-                    <td>Fruits & Vegetables</td>
-                    <td>$3.73/lb</td>
-                    <td>82</td>
-                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
-                    <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                  </tr>
-
-                  <tr>
-                    <td>6341</td>
-                    <td>Fruit Loops</td>
-                    <td>Dry Foods</td>
-                    <td>$4.99ea</td>
-                    <td>17</td>
-                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
-                    <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                  </tr>
-
-                  <tr>
-                    <td>9645</td>
-                    <td>Curry Powder</td>
-                    <td>Powders & Spices</td>
-                    <td>$8.99ea</td>
-                    <td>36</td>
-                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
-                    <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                  </tr>
-
-                  <tr>
-                    <td>7777</td>
-                    <td>Croissant (6)</td>
-                    <td>Baked Goods</td>
-                    <td>$3.99</td>
-                    <td>41</td>
-                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
-                    <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                  </tr>
-
-                  <tr>
-                    <td>1201</td>
-                    <td>Rice</td>
-                    <td>Rice</td>
-                    <td>$0.001/grain</td>
-                    <td>250172102</td>
-                    <td class="text-center"><a class="btn btn-info backstore-font" href="./editproduct.php">Edit</a></td>
-                    <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                  </tr>
-              </table>
+                <?php // Data
+                    $sql = "SELECT product_id,name,aisle,price,inventory FROM products;";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result))
+                    {
+                        echo"<tr><td>{$row['product_id']}</td>
+                        <td>{$row['name']}</td>
+                        <td>{$row['aisle']}</td>
+                        <td>{$row['price']}</td>
+                        <td>{$row['inventory']}</td>
+                        <td class='text-center'><a class='btn btn-info backstore-font' href='./editproduct.php'>Edit</a></td> 
+                        <td class='text-center'><button class='btn btn-danger backstore-font'>Delete</button></td>
+                        </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually
+                    }
+                    echo"</table>";
+                  ?>
             </div>
           </div>
         </div>
@@ -169,39 +135,52 @@
               <table class="table table-striped table-bordered table-hover table-sm">
                 <thead class="thead"><tr>
                     <th class="text-center backstore-font">ID</th>
-                    <th class="text-center backstore-font">Date</th>
-                    <th class="text-center backstore-font">Customer</th>
+                    <th class="text-center backstore-font">Order Date</th>
+                    <th class="text-center backstore-font">Customer ID</th>
+                    <th class="text-center backstore-font">Name</th>
                     <th class="text-center backstore-font">Total</th>
                 </thead></tr>
 
-                  <!-- Data -->
-                  <tr>
-                    <td>1000000</td>
-                    <td>21/01/2021</td>
-                    <td>Steve</td>
-                    <td>$404.23</td>
-                    <td class="text-center"><a class="btn btn-info backstore-font" href="./backstore_edit_order_profile.php">Edit</a></td>
-                    <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                  </tr>
+                <?php // Data
+                    $sql = "SELECT * FROM orders;";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result))
+                    {
+                      // Get Customer's first name from ID
+                      $sql_first_name = "SELECT first_name FROM users WHERE user_id = {$row['customer_id']};";
+                      $result_first_name = mysqli_query($conn, $sql_first_name);
+                      $customers_first_name = mysqli_fetch_assoc($result_first_name)['first_name'];
 
-                  <tr>
-                    <td>1000001</td>
-                    <td>25/02/2021</td>
-                    <td>Ronald</td>
-                    <td>$213.08</td>
-                    <td class="text-center"><a class="btn btn-info backstore-font" href="./backstore_edit_order_profile.php">Edit</a></td>
-                    <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                  </tr>
+                      // Get order total from sales
+                      $sql_sales = "SELECT product_id, format, quantity FROM sales WHERE order_id = {$row['order_id']}";
+                      $result_sales = mysqli_query($conn, $sql_sales);
+                      $order_total = 0;
+                      while($row_sales = mysqli_fetch_assoc($result_sales)){
+                        $sql_product = "SELECT price,format FROM products WHERE product_id = {$row_sales['product_id']}";
+                        $result_products = mysqli_query($conn, $sql_product);
+                        $row_products = mysqli_fetch_assoc($result_products);
+                        $product_price = $row_products['price'];
+                        $product_format = $row_products['format'];
 
-                  <tr>
-                    <td>1000002</td>
-                    <td>20/04/2020</td>
-                    <td>Natalie</td>
-                    <td>$142.67</td>
-                    <td class="text-center"><a class="btn btn-info backstore-font" href="./backstore_edit_order_profile.php">Edit</a></td>
-                    <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                  </tr>
-              </table>
+                        if($product_format == null){
+                          $order_total += $row_sales['quantity'] * $product_price;
+                        } else {
+                          $product_base_format = explode('/', $product_format)[0];
+                          $order_total += $row_sales['quantity'] * $product_price * ($row_sales['format']/$product_base_format);
+                        }
+                      }
+
+                      echo"<tr><td>{$row['order_id']}</td>
+                      <td>{$row['order_date']}</td>
+                      <td>{$row['customer_id']}</td>
+                      <td>{$customers_first_name}</td>
+                      <td>{$order_total}</td>
+                      <td class='text-center'><a class='btn btn-info backstore-font' href='./backstore_edit_order_profile.php'>Edit</a></td>
+                      <td class='text-center'><button class='btn btn-danger backstore-font'>Delete</button></td>
+                      </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually
+                    }
+                    echo"</table>";
+                  ?>
             </div>
           </div>
         </div>
@@ -219,99 +198,25 @@
                       <th class="text-center backstore-font">Name</th>
                       <th class="text-center backstore-font">Role</th>
                   </thead></tr>
-
-                    <!-- Data -->
-                    <tr>
-                      <td>0000001</td>
-                      <td>Elon</td>
-                      <td>Owner</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>0000002</td>
-                      <td>Anne</td>
-                      <td>Web Developer</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>0000003</td>
-                      <td>David</td>
-                      <td>Web Developer</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>0000004</td>
-                      <td>Jay</td>
-                      <td>Web Developer</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>0000005</td>
-                      <td>Mohamad</td>
-                      <td>Web Developer</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>0000006</td>
-                      <td>Monica</td>
-                      <td>Web Developer</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>0000007</td>
-                      <td>Uzair</td>
-                      <td>Web Developer</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>0000008</td>
-                      <td>Ronald</td>
-                      <td>Customer</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>0000009</td>
-                      <td>Steve</td>
-                      <td>Customer</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-
-                    <tr>
-                      <td>0000010</td>
-                      <td>Natalie</td>
-                      <td>Customer</td>
-                      <td class="text-center"><a class="btn btn-info backstore-font" href="./userprofile.php">Edit</a></td>
-                      <td class="text-center"><button class="btn btn-danger backstore-font">Delete</button></td>
-                    </tr>
-                </table>
+                  <?php // Data
+                    $sql = "SELECT user_id,first_name,last_name,role FROM users;";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result))
+                    {
+                        echo"<tr><td>{$row['user_id']}</td>
+                        <td>{$row['first_name']} {$row['last_name']}</td>
+                        <td>{$row['role']}</td>
+                        <td class='text-center'><a class='btn btn-info backstore-font' href='./userprofile.php'>Edit</a></td> 
+                        <td class='text-center'><button class='btn btn-danger backstore-font'>Delete</button></td>
+                        </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually
+                    }
+                    echo"</table>";
+                  ?>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <?php
-      include "../includes/dbc.php"; 
-      $sql = mysqli_query($conn,"Select * from users where role = 'client';");
-      while ($row = $sql->fetch_assoc()){
-        echo ''.$row['first_name'].' '.$row['last_name'].' <br>';
-      }?>
     </div>
     <?php include "../includes/footer.html"; ?>
 
