@@ -68,6 +68,7 @@
 
                     include "includes/dbc.php"; 
                     $nbItemsInCart =  sizeof($_SESSION["customercart"]);
+
                     $cartnb = 0;
 
                     foreach ($_SESSION["customercart"] as $item){
@@ -310,8 +311,8 @@
 
     <script>
         // Custom JS
-        var cart_count = 3;
-        var init_cart_count = 3;
+        var cart_count = <?php echo json_encode($nbItemsInCart) ?> //okay? - 3 
+        var init_cart_count = <?php echo json_encode($nbItemsInCart) ?> //okay?
         var deletedItems = [];
         var storedDeletedItems = JSON.parse(localStorage.getItem('deletedItems'));
         var formatValues = {};
