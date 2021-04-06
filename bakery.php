@@ -29,7 +29,7 @@
     }
 
     .aisle-item {
-        margin: 10px 0;
+        margin: 10px 0px;
     }
 
     .h4 {
