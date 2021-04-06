@@ -56,6 +56,7 @@
                     while ($row = mysqli_fetch_assoc($result))
                     {
                             echo"<tr>
+                            <td> REMOVE THIS BLOCK LATER</td>
                             <td>{$row['name']}</td>                        
                             <td>{$row['price']}</td>
                             <td>{$row['unit']}</td>
@@ -65,22 +66,24 @@
                             </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually   
                     }
                     echo"</table>";
-            ?>
+        ?>
 
         <div class="d-flex flex-wrap justify-content-evenly">
             
             <?php
                  $bakery = "Bakery";
-                 $sql = "SELECT name, price, unit, aisle, image FROM products WHERE aisle = 'Bakery'";
+                 $sql = "SELECT name, price, unit, aisle, image,product_id FROM products WHERE aisle = 'Bakery'";
                  $result = mysqli_query($conn, $sql);
                  $index = 0;
                  while ($row = mysqli_fetch_assoc($result))
                  {
                      echo"
                      <div class='aisle-item'>
+                        <a href='product_display.php?varname={$row['product_id']}'>
                         <img src='{$row['image']}' alt='{$row['name']}'>
                         <h4 style='font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;'>{$row['name']}</h4>
                         <p style='margin-bottom: 0 '>{$row['price']}$/{$row['unit']}</p>
+                        </a>
      
                          <div class='d-flex bd-highlight'>
                              <div class='flex-grow-1 bd-highlight'>
