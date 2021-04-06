@@ -86,7 +86,9 @@
                         }
                         $row = mysqli_fetch_assoc($result);
 
-                        $formatArr = explode("/",$row['format']);
+                       
+                            $formatArr = explode("/",$row['format']);
+                     
                         
                         echo "<div class='cart-item' id='cart{$cartnb}'>
 
@@ -98,16 +100,27 @@
                                         <h3 id='manufacturer'>{$row['manufacturer']}</h3>
                                         <h3 id='product-name'>{$row['name']}</h3>
                                         <a>
-                                            <h3 id='price-per-unit{$cartnb}'>\${$row['price']}/{$formatArr[0]}{$row['unit']}</h3>
+                                            <h3 id='price-per-unit{$cartnb}'>\${$row['price']}/{$formatArr[0]}{$row['unit']}</h3>";
+                                            
+                                            if(!is_null($row['format'])){
+                                            echo " 
                                             <form action='/action_page.php'>
-                                                <select name='format' class='productFormat' id='productFormat{$cartnb}' onChange='updateFormatPrice({$cartnb})' data-initial='100'>";
-
-                                                    foreach ($formatArr as $format){
-                                                        echo "<option value=$format>{$format}g</option>";
+                                                <select name='format' class='productFormat' id='productFormat{$cartnb}' onChange='updateFormatPrice({$cartnb})' data-initial=$formatArr[0]>";  
+                                            }
+                                            if(!is_null($row['format'])){
+                                                    foreach ($formatArr as $formats){
+                                                        if ($formats == $format){
+                                                            echo "<option selected value=$formats>{$formats}g</option>";
+                                                        } else {
+                                                            echo "<option value=$formats>{$formats}g</option>";  
+                                                        }
                                                     }
-
-                                                echo "</select>
-                                            </form>
+                                            }
+                                            if(!is_null($row['format'])){
+                                               echo " </select>
+                                            </form>";  
+                                            }
+                                echo "
                                 </div>
 
                                 <div class='cart-element qty'>
@@ -124,7 +137,7 @@
                                 <h3 class='total-price-item' id='total-price-item{$cartnb}'></h3>
                             </div>
 
-                            <button href='#' class='delete-item-bttn' type='button' onClick='removeItem('#cart{$cartnb}')'>x</button>
+                            <button href='#' class='delete-item-bttn' type='button' onClick=\"removeItem('#cart{$cartnb}')\">x</button>
 
 
 
@@ -136,7 +149,7 @@
 
 
 
-                   <!-- <div class="cart-item" id="cart0">
+                    <!--<div class="cart-item" id="cart0">
 
                         <a href="product_original.php"><img class="cart-element" src="resources/img/veg-fruit/blueberry.jpg" alt="product image"></a>
 
@@ -457,7 +470,7 @@
         }
 
         var amountArray = [document.getElementById("amount0"),document.getElementById("amount1"),document.getElementById("amount2")];
-        console.log(amountArray);
+       console.log(amountArray);
 
 
         // INCREMENT BUTTON
