@@ -117,14 +117,6 @@
                             $result = mysqli_query($conn, $sql);
                             $row = mysqli_fetch_assoc($result);
                             
-                                echo"<tr>
-                                <td>{$row['name']}</td>                        
-                                <td>{$row['price']}$</td>
-                                <td>{$row['unit']}</td>
-                                <td> </td>
-                                <br>
-                                </tr>";
-
                                 echo"
                                 <div class='product-info-element'>
                                     <h3 id='manufacturer'>{$row['manufacturer']}</h3>
@@ -147,8 +139,10 @@
                                 <div class='product-info-element'>
                                     <h3 id='price'>{$row['price']}$</h3>
                                 </div>
-        
-        
+
+                                <p> 
+                                    {$row['description']}
+                                </p>
         
                                 <div class='product-info-element'>
         
@@ -165,6 +159,8 @@
                                 </div>
         
                                 <div class='clearfix'></div>
+
+                                
         
                                 <button class='collapsible'>See More</button>
                                 <div class='content'>
