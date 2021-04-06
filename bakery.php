@@ -51,7 +51,7 @@
 
         <?php // Data
                     $bakery = "Bakery";
-                    $sql = "SELECT name, price, unit, aisle FROM products WHERE aisle = 'Bakery'";
+                    $sql = "SELECT name, price, unit, aisle, product_id FROM products WHERE aisle = 'Bakery'";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result))
                     {
@@ -59,6 +59,8 @@
                             <td>{$row['name']}</td>                        
                             <td>{$row['price']}</td>
                             <td>{$row['unit']}</td>
+                            <td>{$row['product_id']}</td>
+                            <td><a href ='product_display.php?varname={$row['product_id']}'>{$row['name']} </a> </td>
                             <br>
                             </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually   
                     }
