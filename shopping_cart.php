@@ -73,9 +73,9 @@
 
                     foreach ($_SESSION["customercart"] as $item){
 
-                        $productId = $item[0];
-                        $format = $item[1];
-                        $qty = $item[2];
+                        $productId = $item['product_id'];
+                        $format = $item['format'];
+                        $qty = $item['qty'];
                         
                         $result = mysqli_query($conn, "Select * from products where product_id = $productId;");
                         
@@ -100,6 +100,7 @@
                                     <a href='product_original.php'>
                                         <h3 id='manufacturer'>{$row['manufacturer']}</h3>
                                         <h3 id='product-name'>{$row['name']}</h3>
+                                        <h3 hidden id='product_id'>{$row['product_id']}</h3>
                                         <a>
                                             <h3 id='price-per-unit{$cartnb}'>\${$row['price']}/{$formatArr[0]}{$row['unit']}</h3>";
                                             
@@ -311,8 +312,8 @@
 
     <script>
         // Custom JS
-        var cart_count = <?php echo json_encode($nbItemsInCart) ?> //okay? - 3 
-        var init_cart_count = <?php echo json_encode($nbItemsInCart) ?> //okay?
+        var cart_count = 3
+        var init_cart_count = 3
         var deletedItems = [];
         var storedDeletedItems = JSON.parse(localStorage.getItem('deletedItems'));
         var formatValues = {};
@@ -415,7 +416,20 @@
         }
 
 
+        
+
         function updateFormatPrice(index) {
+
+            //var identifier = "productFormat"+index;
+            //formatVal = document.getElementById(identifier).value;
+            //var productId = document.getElementById("product_id"+index).innerHTML;
+
+            //$.post("/session.php",{"format": formatVal, "product_id": productId });
+
+            //find item in cart with name and change format
+            
+            //var name = document.getElementById("product_id"+index).innerHTML;
+
             var price = document.getElementById("price-per-unit" + index).innerHTML.substring(1).split('/')[0];
             console.log(price);
             var identifier = "productFormat"+index
