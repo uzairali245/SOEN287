@@ -71,6 +71,72 @@
 
                     $cartnb = 0;
 
+                    echo '<script>        
+                    function updateFormatPrice(index) {
+
+                        //var identifier = "productFormat"+index;
+                        //formatVal = document.getElementById(identifier).value;
+                        //var productId = document.getElementById("product_id"+index).innerHTML;
+            
+                        //$.post("/session.php",{"format": formatVal, "product_id": productId });
+            
+                        //find item in cart with name and change format
+                        
+                        //var name = document.getElementById("product_id"+index).innerHTML;
+            
+                        var price = document.getElementById("price-per-unit" + index).innerHTML.substring(1).split("/")[0];
+                        console.log(price);
+                        var identifier = "productFormat"+index
+                        var format = null;
+                        var defaultFormat = null;
+                        if (document.getElementById("price-per-unit" + index).innerHTML.substring(1).split("/")[1] != "un"){
+                            format = document.getElementById(identifier).value;
+                            defaultFormat = document.getElementById(identifier).getAttribute("data-initial");
+                        }
+                        var amount = document.getElementById("amount" + index).innerHTML;
+            
+                        //For Refresh Storage Purpose
+                        //formatValues[identifier]=parseInt(format);
+                        //localStorage.setItem("formatValues", JSON.stringify(formatValues));
+            
+                        if (format != null){
+                            price = price * (format / defaultFormat) * amount;
+                        } else {
+                            price = price * amount;
+                        }
+            
+            
+                        document.getElementById("total-price-item" + index).innerHTML = "$" + price.toFixed(2);
+            
+                        calculateCartSubtotal();
+                    }
+                    //CALCULATE CART COST BREAKDOWN
+                    function calculateCartSubtotal() {
+                        let subtotal = 0.0;
+                        let shippingCost = parseFloat(document.getElementById("shipping-cost").innerHTML.substring(1));
+                        for (i = 0; i < init_cart_count; i++) {
+                            let myElem = document.getElementById("total-price-item" + i)
+                            if (myElem === null) {
+                                continue;
+                            }
+                            subtotal += parseFloat(document.getElementById("total-price-item" + i).innerHTML.substring(1));
+                        }
+            
+                        let gst = subtotal * 0.05;
+                        let qst = subtotal * 0.09975;
+            
+                        let total = subtotal + gst + qst + shippingCost;
+            
+                        document.getElementById("cart-subtotal").innerHTML = "$" + subtotal.toFixed(2);
+            
+                        document.getElementById("cart-gst").innerHTML = "$" + gst.toFixed(2);
+            
+                        document.getElementById("cart-qst").innerHTML = "$" + qst.toFixed(2);
+            
+                        document.getElementById("cart-total").innerHTML = "$" + total.toFixed(2);
+            
+                    }</script>';
+
                     foreach ($_SESSION["customercart"] as $item){
 
                         $productId = $item['product_id'];
@@ -144,6 +210,7 @@
 
 
                         </div> ";
+                        echo "<script> updateFormatPrice({$cartnb});</script>";
 
                         $cartnb++;
                 }
@@ -351,7 +418,7 @@
         var counterArray = [];
         var itemAmount = 0;
         // Refresh Amount Values
-        if (storedItemAmounts) {
+        /*if (storedItemAmounts) {
             console.log(storedItemAmounts);
             for (let i = 0; i < storedItemAmounts.length; i++){
                 itemAmount = document.getElementById("amount" + i);
@@ -363,7 +430,7 @@
             counterArray = storedItemAmounts;
         } else {
             counterArray = [1, 1, 1];
-        }
+        }*/
 
         //REMOVE CART ITEM
         function removeItem(item) {
@@ -416,73 +483,8 @@
         }
 
 
-        
-
-        function updateFormatPrice(index) {
-
-            //var identifier = "productFormat"+index;
-            //formatVal = document.getElementById(identifier).value;
-            //var productId = document.getElementById("product_id"+index).innerHTML;
-
-            //$.post("/session.php",{"format": formatVal, "product_id": productId });
-
-            //find item in cart with name and change format
-            
-            //var name = document.getElementById("product_id"+index).innerHTML;
-
-            var price = document.getElementById("price-per-unit" + index).innerHTML.substring(1).split('/')[0];
-            console.log(price);
-            var identifier = "productFormat"+index
-            var format = null;
-            var defaultFormat = null;
-            if (document.getElementById("price-per-unit" + index).innerHTML.substring(1).split('/')[1] != "unit"){
-                format = document.getElementById(identifier).value;
-                defaultFormat = document.getElementById(identifier).getAttribute("data-initial");
-            }
-            var amount = document.getElementById("amount" + index).innerHTML;
-
-            //For Refresh Storage Purpose
-            formatValues[identifier]=parseInt(format);
-            localStorage.setItem('formatValues', JSON.stringify(formatValues));
-
-            if (format != null){
-                price = price * (format / defaultFormat) * amount;
-            } else {
-                price = price * amount;
-            }
 
 
-            document.getElementById("total-price-item" + index).innerHTML = "$" + price.toFixed(2);
-
-            calculateCartSubtotal();
-        }
-
-        //CALCULATE CART COST BREAKDOWN
-        function calculateCartSubtotal() {
-            let subtotal = 0.0;
-            let shippingCost = parseFloat(document.getElementById("shipping-cost").innerHTML.substring(1));
-            for (i = 0; i < init_cart_count; i++) {
-                let myElem = document.getElementById("total-price-item" + i)
-                if (myElem === null) {
-                    continue;
-                }
-                subtotal += parseFloat(document.getElementById("total-price-item" + i).innerHTML.substring(1));
-            }
-
-            let gst = subtotal * 0.05;
-            let qst = subtotal * 0.09975;
-
-            let total = subtotal + gst + qst + shippingCost;
-
-            document.getElementById("cart-subtotal").innerHTML = "$" + subtotal.toFixed(2);
-
-            document.getElementById("cart-gst").innerHTML = "$" + gst.toFixed(2);
-
-            document.getElementById("cart-qst").innerHTML = "$" + qst.toFixed(2);
-
-            document.getElementById("cart-total").innerHTML = "$" + total.toFixed(2);
-
-        }
 
         var amountArray = [document.getElementById("amount0"),document.getElementById("amount1"),document.getElementById("amount2")];
        console.log(amountArray);
