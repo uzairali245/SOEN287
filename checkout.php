@@ -51,9 +51,29 @@
     </head>
     
     <body>
+        <?php include "includes/session.php"; ?>
         <div class="content-container">
             <section class="section-checkout content-without-footer">
-            <?php include "includes/header.html"; ?>
+            <?php 
+            
+                include "includes/header.html"; 
+                include "includes/dbc.php";
+                
+
+                $_SESSION["user"] = 9; // TEMPORARY STATIC USER ID 
+
+                $todate = getdate()['mday']."/".getdate()['mon']."/".getdate()['year']; // Current date as DD/MM/YYYY
+
+                $new_order = "INSERT INTO orders(customer_id, order_date, ) VALUES();"
+
+                foreach ($_SESSION["customercart"] as $item){
+
+                    $productId = $item[0];
+                    $format = $item[1];
+                    $qty = $item[2];
+                        
+                }
+            ?>
             <div>
                 <div class="checkout-message">
                     <h2> Thank you for your order </h2>
