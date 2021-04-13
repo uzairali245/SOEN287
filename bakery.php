@@ -29,7 +29,7 @@
     }
 
     .aisle-item {
-        margin: 10px 0;
+        margin: 10px 0px;
     }
 
     .h4 {
@@ -38,7 +38,9 @@
 </style>
 
 <body>
-    <?php include "includes/header.html"; ?>
+    <?php include "includes/header.html";
+          include "includes/dbc.php";
+     ?>
 
 
     <!--CONTENTS OF PAGE STARTS HERE-->
@@ -47,8 +49,62 @@
             <h1 style="font-size: 150%; text-align: center"> Bakery</h1>
         </div>
 
-        <div class="d-flex flex-wrap justify-content-evenly">
+        <?php // Data
+                    $bakery = "Bakery";
+                    $sql = "SELECT name, price, unit, aisle, product_id FROM products WHERE aisle = 'Bakery'";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result))
+                    {
+                            echo"<tr>
+                            <td> REMOVE THIS BLOCK LATER</td>
+                            <td>{$row['name']}</td>                        
+                            <td>{$row['price']}</td>
+                            <td>{$row['unit']}</td>
+                            <td>{$row['product_id']}</td>
+                            <td><a href ='product_display.php?varname={$row['product_id']}'>{$row['name']} </a> </td>
+                            <br>
+                            </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually   
+                    }
+                    echo"</table>";
+        ?>
 
+        <div class="d-flex flex-wrap justify-content-evenly">
+            
+            <?php
+                 $bakery = "Bakery";
+                 $sql = "SELECT name, price, unit, aisle, image,product_id FROM products WHERE aisle = 'Bakery'";
+                 $result = mysqli_query($conn, $sql);
+                 $index = 0;
+                 while ($row = mysqli_fetch_assoc($result))
+                 {
+                     echo"
+                     <div class='aisle-item'>
+                        <a href='product_display.php?varname={$row['product_id']}'>
+                        <img src='{$row['image']}' alt='{$row['name']}'>
+                        <h4 style='font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;'>{$row['name']}</h4>
+                        <p style='margin-bottom: 0 '>{$row['price']}$/{$row['unit']}</p>
+                        </a>
+     
+                         <div class='d-flex bd-highlight'>
+                             <div class='flex-grow-1 bd-highlight'>
+                                 <button class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                 <input type='text' name='qty' value='1' class='amount'>
+                                 <button class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                             </div>
+     
+                            <div class='bd-highlight'>
+     
+                                 <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;'> Add to Cart</button>
+                            </div>
+                        </div>
+                    </div> ";
+                    $index++;
+                 }           
+            
+            ?>
+
+            
+            <!--
             <div class="aisle-item">
                 <img src="resources/img/bakery/bakery-bagel2.jpg" alt="Bagel">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bagel</h4>
@@ -167,12 +223,14 @@
                 </div>
             </div>
 
-
+            
             <div class="aisle-item">
                 <img src="resources/img/bakery/bakery-white-bread2.jpg" alt="White Bread">
                 <br>
+                -->
                 <!--
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">White Bread</h4> -->
+                <!--
                 <h4>
                     <a href="product_whiteBread.php" style="color: white; text-decoration: none;">Bread </a>
                 </h4>
@@ -191,6 +249,7 @@
                     </div>
                 </div>
             </div>
+            -->
 
         </div>
     </div>
