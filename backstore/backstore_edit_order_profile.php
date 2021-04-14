@@ -181,9 +181,7 @@
           <option value="express-delivery">Express Delivery</option>
           <option value="same-day-delivery">Same-day Delivery</option>
         </select>
-
-        <button type="submit" class="btn btn-info backstore-font">Save</button>
-      </form>
+      
         <br><br><br><br>
         
 
@@ -230,7 +228,8 @@
         </table><br><br>
         <label class="order-lower-text" for="total-order-amount">Total order amount: </label>&nbsp;
         <input type="text" id="total-order-amount" name="total-order-amount">&nbsp;&nbsp;&nbsp;
-        <!--<button type="submit" class="btn btn-info backstore-font">Save</button>-->
+        <button type="submit" class="btn btn-info backstore-font">Save</button>
+      </form>
     </div>
     <br>
     <?php include "../includes/footer.html"; ?>
