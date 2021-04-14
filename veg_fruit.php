@@ -1,3 +1,4 @@
+<?php include "includes/session.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,6 +34,7 @@
 
     .aisle-item {
         margin: 10px 0;
+        padding: 5px 0 ;
     }
 
     .h4 {
