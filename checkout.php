@@ -1,3 +1,4 @@
+<?php include "includes/session.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -64,15 +65,17 @@
 
                 $todate = getdate()['mday']."/".getdate()['mon']."/".getdate()['year']; // Current date as DD/MM/YYYY
 
-                $new_order = "INSERT INTO orders(customer_id, order_date, ) VALUES();"
+                foreach($_SESSION["customercart"] as $key => &$val){
 
-                foreach ($_SESSION["customercart"] as $item){
-
-                    $productId = $item[0];
-                    $format = $item[1];
-                    $qty = $item[2];
+                    $productId = $_SESSION["customercart"][$key]['product_id'];
+                    $format = $_SESSION["customercart"][$key]['format'];
+                    $qty = $_SESSION["customercart"][$key]['qty'];
                         
                 }
+
+                $new_order = "INSERT INTO orders(customer_id, order_date, ) VALUES();";
+
+                
             ?>
             <div>
                 <div class="checkout-message">
