@@ -149,8 +149,12 @@
   <body>
     <div class="content-container">
     <div class="content-without-footer">
-    <?php include "../includes/header.html"; ?>
+    <?php 
+          include "../includes/header.html";
+          include "../includes/dbc.php"; 
+    ?>
 
+      <form action="data_process.php" method="post"> 
         <br><label class="order-upper-text" for="customer-name">Customer Name:</label>
         <input type="text" id="customer-name" name="customer-name">
         <br><br>   
@@ -177,8 +181,11 @@
           <option value="express-delivery">Express Delivery</option>
           <option value="same-day-delivery">Same-day Delivery</option>
         </select>
+      
         <br><br><br><br>
         
+
+
         <p class = order-title>Products Ordered</p><br>
         
         <table style="width:100%">
@@ -221,7 +228,8 @@
         </table><br><br>
         <label class="order-lower-text" for="total-order-amount">Total order amount: </label>&nbsp;
         <input type="text" id="total-order-amount" name="total-order-amount">&nbsp;&nbsp;&nbsp;
-        <button class="btn btn-info backstore-font">Save</button>
+        <button type="submit" class="btn btn-info backstore-font">Save</button>
+      </form>
     </div>
     <br>
     <?php include "../includes/footer.html"; ?>
