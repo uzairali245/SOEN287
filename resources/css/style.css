@@ -508,6 +508,10 @@ Secondary bright orange: #EE4F3E;
     width: 33%;
     border-radius: 8px;
   }
+
+  #shipping-choice {
+    width: 150px;
+  }
   
   .section-cart .mobile-wrapper {
     display: inline-block;
