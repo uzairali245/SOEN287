@@ -26,7 +26,7 @@
             'product_id' => 6,
             'format' => null,
             'qty' => 4
-            ) //Pumpkin, null format - over inventory
+        ), //Pumpkin, null format - over inventory
         );
     }
 
@@ -43,7 +43,7 @@
     //UPDATE QUANTITY CART
     if (isset($_POST['qty'])){
         foreach($_SESSION["customercart"] as $key => &$val){
-        if($val["product_id"]==$_POST['product_id']){
+        if($val["product_id"]==$_POST['product_id'] && $val["format"]==$_POST['format']){
                 $_SESSION["customercart"][$key]['qty'] = $_POST['qty'];
         }
         }
@@ -52,7 +52,7 @@
     //REMOVE ITEM CART
     if (isset($_POST['remove'])){
         foreach($_SESSION["customercart"] as $key => &$val){
-        if($val["product_id"]==$_POST['product_id']){
+        if($val["product_id"]==$_POST['product_id'] && $val["qty"]==$_POST['qty']){
                unset($_SESSION["customercart"][$key]); 
         }
         }
