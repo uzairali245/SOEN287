@@ -115,7 +115,7 @@
                         <td>{$row['aisle']}</td>
                         <td>{$row['price']}</td>
                         <td>{$row['inventory']}</td>
-                        <td class='text-center'><a class='btn btn-info backstore-font' href='./editproduct.php'>Edit</a></td> 
+                        <td class='text-center'><a class='btn btn-info backstore-font' href='./editproduct.php?product_id={$row['product_id']}'>Edit</a></td> 
                         <td class='text-center'><button class='btn btn-danger backstore-font'>Delete</button></td>
                         </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually
                     }
@@ -175,7 +175,7 @@
                       <td>{$row['customer_id']}</td>
                       <td>{$customers_first_name}</td>
                       <td>{$order_total}</td>
-                      <td class='text-center'><a class='btn btn-info backstore-font' href='./backstore_edit_order_profile.php'>Edit</a></td>
+                      <td class='text-center'><a class='btn btn-info backstore-font' href='./backstore_edit_order_profile.php?order_id={$row['id']}'>Edit</a></td>
                       <td class='text-center'><button class='btn btn-danger backstore-font'>Delete</button></td>
                       </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually
                     }
@@ -206,7 +206,7 @@
                         echo"<tr><td>{$row['user_id']}</td>
                         <td>{$row['first_name']} {$row['last_name']}</td>
                         <td>{$row['role']}</td>
-                        <td class='text-center'><a class='btn btn-info backstore-font' href='./userprofile.php'>Edit</a></td> 
+                        <td class='text-center'><a class='btn btn-info backstore-font' href='./userprofile.php?user_id={$row['user_id']}'>Edit</a></td> 
                         <td class='text-center'><button class='btn btn-danger backstore-font'>Delete</button></td>
                         </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually
                     }
