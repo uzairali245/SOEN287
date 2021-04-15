@@ -73,7 +73,9 @@
 
                     $cartnb = 0;
 
-                    echo '  <script>       
+                    echo '  <script> 
+                    
+
                     function updateFormatPrice(index){
                         
                         var price = document.getElementById("price-per-unit" + index).innerHTML.substring(1).split("/")[0];
@@ -129,6 +131,24 @@
             
                         document.getElementById("cart-total").innerHTML = "$" + total.toFixed(2);
             
+                    }
+
+                    function updateDelivery() {
+
+                        var shipChoice = document.getElementById(\'shipping-choice\').value;
+                
+                        if (shipChoice === \'0\') {
+                            document.getElementById(\'shipping-choice\').value = 0;
+                            document.getElementById("shipping-cost").innerHTML = "$" + parseFloat(0).toFixed(2);
+                        } else if (shipChoice === \'5\') {
+                            document.getElementById(\'shipping-choice\').value = 5;
+                            document.getElementById("shipping-cost").innerHTML = "$" + parseFloat(5).toFixed(2);
+                        } else if (shipChoice === \'10\') {
+                            document.getElementById(\'shipping-choice\').value = 10;
+                            document.getElementById("shipping-cost").innerHTML = "$" + parseFloat(10).toFixed(2);
+                        }
+                
+                        calculateCartSubtotal();
                     }
                 </script>';
 
@@ -221,7 +241,7 @@
 
 
                         </div> ";
-                        echo "<script> updateFormatPrice({$cartnb});</script>";
+                        echo "<script> updateFormatPrice({$cartnb}); updateDelivery();</script>";
 
                         $cartnb++;
                 }
@@ -234,6 +254,13 @@
                         <div class="colmn one-half">
                             <div class="price-descriptors">
                                 <p id="cartcount1">3 items</p>
+                                <p>
+                                <select class = 'productFormat' name='shipping' id = 'shipping-choice' onchange=updateDelivery()>
+                                    <option selected value='0'>Free Delivery</option>
+                                    <option value='5'>Express Delivery</option>
+                                    <option value='10'>Same Day Delivery</option>
+                                </select>
+                                </p>
                                 <p>Shipping</p>
                                 <p>GST</p>
                                 <p>QST</p>
@@ -244,7 +271,7 @@
                         <div class="colmn one-half">
                             <div class="price-list">
                                 <p id="cart-subtotal"></p>
-                                <p id="shipping-cost">$5.00</p>
+                                <p id="shipping-cost">$0.00</p>
                                 <p id="cart-gst"></p>
                                 <p id="cart-qst">$3.60</p>
 
@@ -337,6 +364,8 @@
         for (i = 0; i < rememberSize; i++) {
 
         }
+
+    
 
     updateCartCount();
 
