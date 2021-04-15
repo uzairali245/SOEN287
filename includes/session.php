@@ -27,6 +27,11 @@
             'format' => null,
             'qty' => 4
         ), //Pumpkin, null format - over inventory
+        array(
+            'product_id' => 5,
+            'format' => null,
+            'qty' => 3
+        ),
         );
     }
 
