@@ -73,6 +73,8 @@
                         
                 }
 
+                //decrement inventory
+
                 $new_order = "INSERT INTO orders(customer_id, order_date, ) VALUES();";
 
                 

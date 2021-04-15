@@ -23,22 +23,44 @@
             'qty' => 4
             ), //Roma Tomatoes
         array(
+            'product_id' => 8,
+            'format' => 6,
+            'qty' => 7
+            ),
+        array(
             'product_id' => 6,
             'format' => null,
             'qty' => 4
         ), //Pumpkin, null format - over inventory
+        array(
+            'product_id' => 5,
+            'format' => null,
+            'qty' => 3
+        ),
         );
     }
 
     //UPDATE FORMAT CART
-    if (isset($_POST['format'])){
+    $qtyRepeat = 0;
+
+    if (isset($_POST['format']) && !isset($_POST['qty'])){
+        //Check if another with same product ID and format to which you want to change. 
         foreach($_SESSION["customercart"] as $key => &$val){
-        if($val["product_id"]==$_POST['product_id']){
-                $_SESSION["customercart"][$key]['format'] = $_POST['format'];
-                console.log("updated format yay");
+        if($val["product_id"]==$_POST['product_id'] && ($val["format"]==$_POST['format'] || is_null($val["format"]) )){
+                $qtyRepeat +=$_SESSION["customercart"][$key]['qty'];
+                unset($_SESSION["customercart"][$key]);
+                break;
+            }
         }
+
+        foreach($_SESSION["customercart"] as $key => &$val){
+            if($val["product_id"]==$_POST['product_id']){
+                $_SESSION["customercart"][$key]['format'] = $_POST['format'];
+                $_SESSION["customercart"][$key]['qty'] += $qtyRepeat;
+            }
         }
     }
+    
 
     //UPDATE QUANTITY CART
     if (isset($_POST['qty'])){
