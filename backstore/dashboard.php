@@ -170,7 +170,7 @@
                         }
                       }
 
-                      echo"<tr><td>{$row['id']}</td>
+                      echo"<tr><td>{$row['order_id']}</td>
                       <td>{$row['order_date']}</td>
                       <td>{$row['customer_id']}</td>
                       <td>{$customers_first_name}</td>
