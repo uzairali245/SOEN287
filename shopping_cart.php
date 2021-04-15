@@ -1,4 +1,9 @@
 <?php include "includes/session.php"; ?>
+<?php 
+    
+
+?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!DOCTYPE html>
 <html>
@@ -74,9 +79,9 @@
                     echo '<script>        
                     function updateFormatPrice(index) {
 
-                        //var identifier = "productFormat"+index;
-                        //formatVal = document.getElementById(identifier).value;
-                        //var productId = document.getElementById("product_id"+index).innerHTML;
+                       // var id = "productFormat"+index;
+                        //var formatVal = document.getElementById(id).value;
+                        var productId = document.getElementById("product_id"+index).innerHTML;
             
                         //$.post("/session.php",{"format": formatVal, "product_id": productId });
             
@@ -86,12 +91,13 @@
             
                         var price = document.getElementById("price-per-unit" + index).innerHTML.substring(1).split("/")[0];
                         console.log(price);
-                        var identifier = "productFormat"+index
+                        var identifier = "productFormat"+index;
                         var format = null;
                         var defaultFormat = null;
                         if (document.getElementById("price-per-unit" + index).innerHTML.substring(1).split("/")[1] != "un"){
                             format = document.getElementById(identifier).value;
                             defaultFormat = document.getElementById(identifier).getAttribute("data-initial");
+                            //$.post("/session.php",{"format": format, "product_id": productId });
                         }
                         var amount = document.getElementById("amount" + index).innerHTML;
             
@@ -155,6 +161,9 @@
 
                        
                             $formatArr = explode("/",$row['format']);
+
+                        //TO ADD TO CODE:
+                        //<input type='hidden' name='product_id' id='product_id{$row['product_id]}' value='{$row['product_id]}'>
                      
                         
                         echo "<div class='cart-item' id='cart{$cartnb}'>
@@ -164,16 +173,17 @@
                             <div class='mobile-wrapper'>
                                 <div class='cart-element item-descrpt'>
                                     <a href='product_original.php'>
-                                        <h3 id='manufacturer'>{$row['manufacturer']}</h3>
-                                        <h3 id='product-name'>{$row['name']}</h3>
-                                        <h3 hidden id='product_id'>{$row['product_id']}</h3>
+                                        <h3 id='manufacturer{$cartnb}'>{$row['manufacturer']}</h3>
+                                        <h3 id='product-name{$cartnb}'>{$row['name']}</h3>
+                                        <h3 hidden id='product_id{$cartnb}'>{$row['product_id']}</h3>
                                         <a>
                                             <h3 id='price-per-unit{$cartnb}'>\${$row['price']}/{$formatArr[0]}{$row['unit']}</h3>";
                                             
                                             if(!is_null($row['format'])){
                                             echo " 
-                                            <form action='/action_page.php'>
-                                                <select name='format' class='productFormat' id='productFormat{$cartnb}' onChange='updateFormatPrice({$cartnb})' data-initial=$formatArr[0]>";  
+                                            <form action=\"\" method=\"post\">
+                                                <input hidden type=\"text\"  name=\"product_id\" value={$row['product_id']}>
+                                                <select name='format' class='productFormat' id='productFormat{$cartnb}' onchange='updateFormatPrice({$cartnb})'  oninput='this.form.submit()' data-initial=$formatArr[0]>";  
                                             }
                                             if(!is_null($row['format'])){
                                                     foreach ($formatArr as $formats){
@@ -204,9 +214,10 @@
                             <div class='cart-element total-price-item'>
                                 <h3 class='total-price-item' id='total-price-item{$cartnb}'></h3>
                             </div>
-
-                            <button href='#' class='delete-item-bttn' type='button' onClick=\"removeItem('#cart{$cartnb}')\">x</button>
-
+                            <form action=\"\" method=\"post\">
+                            <input hidden type=\"text\"  name=\"product_id\" value={$row['product_id']}>
+                            <button href='#' name='remove' value = 'true' class='delete-item-bttn' type='button' onClick='this.form.submit()')\">x</button>
+                            </form>
 
 
                         </div> ";
@@ -540,6 +551,19 @@
         var rememberSize = document.querySelectorAll(".amount").length;
         for (i = 0; i < rememberSize; i++) {
 
+        }
+    </script>
+    <script>
+        function update_format_value(value) {
+            $.ajax({
+                type: "POST",
+                url: 'http://localhost:8888/SOEN287/shopping_cart.php', 
+                data: 'format=' + value,
+                dataType: 'json',
+                success: function (data) {
+
+                }
+            });
         }
     </script>
 </body>
