@@ -70,9 +70,25 @@
     <div class="content-container">
 
     <div class="content-without-footer">
-    <?php 
+    <?php
+    include "../includes/dbc.php"; 
+      if (isset($_POST['delete']) && isset($_POST['table'])){
+        $table_to_delete = $_POST['table'];
+        if ($table_to_delete == "prd") {
+          $table_to_delete = "products";
+        } else if ($table_to_delete == "usr") {
+          $table_to_delete = "users";
+        } else if ($table_to_delete == "ordr") {
+          $table_to_delete = "orders";
+        }
+        $id_to_delete = $_POST['delete'];
+        $sql = "DELETE FROM $table_to_delete WHERE id = $id_to_delete";
+        mysqli_query($conn, $sql);
+      }
+      
+      
       include "../includes/header.html"; 
-      include "../includes/dbc.php";
+      
     ?>
       <!-- Tab list -->
       <ul class="nav nav-tabs flex-column flex-md-row justify-content-center">
@@ -106,7 +122,7 @@
                 </thead></tr>
 
                 <?php // Data
-                    $sql = "SELECT product_id,name,aisle,price,inventory FROM products;";
+                    $sql = "SELECT id,product_id,name,aisle,price,inventory FROM products;";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result))
                     {
@@ -116,8 +132,8 @@
                         <td>{$row['price']}</td>
                         <td>{$row['inventory']}</td>
                         <td class='text-center'><a class='btn btn-info backstore-font' href='./editproduct.php?product_id={$row['product_id']}'>Edit</a></td> 
-                        <td class='text-center'><button class='btn btn-danger backstore-font'>Delete</button></td>
-                        </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually
+                        <td class='text-center'><form action='' method='post'><input type='hidden' name='delete' value='{$row['id']}'><input type='hidden' name='table' value='prd'><button class='btn btn-danger backstore-font' onClick='return confirmSubmit()'>Delete</button></form></td>
+                        </tr>";
                     }
                     echo"</table>";
                   ?>
@@ -176,8 +192,8 @@
                       <td>{$customers_first_name}</td>
                       <td>{$order_total}</td>
                       <td class='text-center'><a class='btn btn-info backstore-font' href='./backstore_edit_order_profile.php?order_id={$row['id']}'>Edit</a></td>
-                      <td class='text-center'><button class='btn btn-danger backstore-font'>Delete</button></td>
-                      </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually
+                      <td class='text-center'><form action='' method='post'><input type='hidden' name='delete' value='{$row['id']}'><input type='hidden' name='table' value='ordr'><button class='btn btn-danger backstore-font' onClick='return confirmSubmit()'>Delete</button></form></td>
+                      </tr>";
                     }
                     echo"</table>";
                   ?>
@@ -199,7 +215,7 @@
                       <th class="text-center backstore-font">Role</th>
                   </thead></tr>
                   <?php // Data
-                    $sql = "SELECT user_id,first_name,last_name,role FROM users;";
+                    $sql = "SELECT id,user_id,first_name,last_name,role FROM users;";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result))
                     {
@@ -207,8 +223,8 @@
                         <td>{$row['first_name']} {$row['last_name']}</td>
                         <td>{$row['role']}</td>
                         <td class='text-center'><a class='btn btn-info backstore-font' href='./userprofile.php?user_id={$row['user_id']}'>Edit</a></td> 
-                        <td class='text-center'><button class='btn btn-danger backstore-font'>Delete</button></td>
-                        </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually
+                        <td class='text-center'><form action='' method='post'><input type='hidden' name='delete' value='{$row['id']}'><input type='hidden' name='table' value='usr'><button class='btn btn-danger backstore-font' onClick='return confirmSubmit()'>Delete</button></form></td>
+                        </tr>";
                     }
                     echo"</table>";
                   ?>
@@ -224,6 +240,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
       /* Custom JS */
+      function confirmSubmit(){
+        var confirmed = confirm("Are you sure you wish to delete this item?");
+        if(confirmed) 
+          return true;
+        else 
+          return false;
+      }
     </script>
     </div>
   </body>
