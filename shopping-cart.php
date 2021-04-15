@@ -197,6 +197,7 @@
                                     <button class='button-circle minusButton' type='submit' id='{$cartnb}' name='buttonDec' onClick='decrement({$cartnb})'>-</button>
                                     <input type=\"text\" name=\"qty\" class='quantity' id='quantity{$cartnb}' value=\"{$qty}\" onChange='this.form.submit()'>
                                     <input hidden type=\"text\"  name=\"product_id\" value={$row['product_id']}>
+                                    <input hidden type=\"text\"  name=\"format\" value={$format}>
                                     <button class='button-circle plusButton' type='submit' id='{$cartnb}' name='buttonInc' onClick='increment({$cartnb})'>+</button>
                                     </form>
                                     <!--<a href='#' class='bttn-circle col one-third'>-</a>
@@ -211,6 +212,7 @@
 
                             <form action=\"\" method=\"post\">
                             <input hidden type=\"text\"  name=\"product_id\" value={$row['product_id']}>
+                            <input hidden type=\"text\"  name=\"qty\" value={$qty}>
                             <button href='#' name='remove' value = 'true' class='delete-item-bttn'  onClick='this.form.submit()')\">x</button>
                             
                             </form>
