@@ -215,7 +215,7 @@
                                 <div class='cart-element qty'>
                                     <form action=\"\" method=\"post\">
                                     <button class='button-circle minusButton' type='submit' id='{$cartnb}' name='buttonDec' onClick='decrement({$cartnb})'>-</button>
-                                    <input type=\"text\" name=\"qty\" class='quantity' id='quantity{$cartnb}' value=\"{$qty}\" onChange='checkQuantity({$cartnb});this.form.submit()' >
+                                    <input type=\"text\" name=\"qty\" class='quantity' id='quantity{$cartnb}' value=\"{$qty}\" onLoad ='checkQuantity({$cartnb})' onChange='checkQuantity({$cartnb});this.form.submit()' >
                                     <input hidden type=\"text\"  name=\"product_id\" value={$row['product_id']}>
                                     <input hidden type=\"text\"  name=\"format\" value={$format}>
                                     <button class='button-circle plusButton' type='submit' id='{$cartnb}' name='buttonInc' onClick='increment({$cartnb})'>+</button>
