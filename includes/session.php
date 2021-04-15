@@ -40,6 +40,17 @@
         );
     }
 
+    //$key = 0;
+    //$val =  array(
+        //'product_id'=> 2,
+        //'format' => 500,
+       // 'qty' => 3
+       // )
+
+    
+
+   // $_SESSION["customercart"][1]['qty']
+
     //UPDATE FORMAT CART
     $qtyRepeat = 0;
 
@@ -60,18 +71,19 @@
             }
         }
     }
-    
+
 
     //UPDATE QUANTITY CART
     if (isset($_POST['qty'])){
         foreach($_SESSION["customercart"] as $key => &$val){
-        if($val["product_id"]==$_POST['product_id'] && $val["format"]==$_POST['format']){
+        if($val["product_id"]==$_POST['product_id'] && $val["format"]==$_POST['format']){ //use to check if item already in cart 
                 $_SESSION["customercart"][$key]['qty'] = $_POST['qty'];
         }
         }
     }
 
     //REMOVE ITEM CART
+    //Check if variable set
     if (isset($_POST['remove'])){
         foreach($_SESSION["customercart"] as $key => &$val){
         if($val["product_id"]==$_POST['product_id'] && $val["qty"]==$_POST['qty']){
@@ -85,10 +97,16 @@
        // $_SESSION['customercart']= array();
    // }
 
+
+
     //ADD TO CART POSSIBILITIES
     //1. New item
     //2. Item with same format already in cart - update qty
-    //3. Bad qty input 
+    //3. Bad qty input  X
+
+
+    // 1. Check if received post request --> isset
+    // 2. Key-value pair
 
 
     //QTY SENT VALIDATION INPUT (greater than 0 and a integer)
