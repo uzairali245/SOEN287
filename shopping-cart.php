@@ -179,7 +179,7 @@
                         
                         echo "<div class='cart-item' id='cart{$cartnb}'>
 
-                            <a href='product_original.php'><img class='cart-element' src='resources/img/veg-fruit/blueberry.jpg' alt='product image'></a>
+                            <a href='product_original.php'><img class='cart-element' src='{$row['image']}' alt='product image'></a>
 
                             <div class='mobile-wrapper'>
                                 <div class='cart-element item-descrpt'>
@@ -215,11 +215,12 @@
                                 <div class='cart-element qty'>
                                     <form action=\"\" method=\"post\">
                                     <button class='button-circle minusButton' type='submit' id='{$cartnb}' name='buttonDec' onClick='decrement({$cartnb})'>-</button>
-                                    <input type=\"text\" name=\"qty\" class='quantity' id='quantity{$cartnb}' value=\"{$qty}\" onChange='this.form.submit()'>
+                                    <input type=\"text\" name=\"qty\" class='quantity' id='quantity{$cartnb}' value=\"{$qty}\" onChange='checkQuantity({$cartnb});this.form.submit()' >
                                     <input hidden type=\"text\"  name=\"product_id\" value={$row['product_id']}>
                                     <input hidden type=\"text\"  name=\"format\" value={$format}>
                                     <button class='button-circle plusButton' type='submit' id='{$cartnb}' name='buttonInc' onClick='increment({$cartnb})'>+</button>
                                     </form>
+                                    <p hidden id=\"inventory{$cartnb}\">{$row['inventory']}</p>
                                     <!--<a href='#' class='bttn-circle col one-third'>-</a>
                                     <h5 class='col one-third'>1</h5> 
                                     <a href='#' class='col one-third bttn-circle'>+</a>-->
@@ -342,10 +343,15 @@
 
     //INCREMENT
     function increment(index) {
-
         quantity = parseInt(document.getElementById('quantity'+index).value);
-        document.getElementById('quantity'+index).value = quantity + 1;
 
+        let inventory = document.getElementById("inventory"+index).innerHTML;
+            if (quantity == inventory) {
+                confirm("Ouf... I hope that next shipment is coming in soon.");
+            } else {
+                document.getElementById('quantity'+index).value = quantity + 1;
+            }
+        
         updateFormatPrice(index);
     }
 
@@ -363,7 +369,18 @@
         var rememberSize = document.querySelectorAll(".amount").length;
         for (i = 0; i < rememberSize; i++) {
 
+    }
+
+    function checkQuantity(index) {
+        quantity = parseInt(document.getElementById('quantity'+index).value);
+
+        let inventory = document.getElementById("inventory"+index).innerHTML;
+        if (quantity > inventory) {
+                confirm("Ouf... I hope that next shipment is coming in soon.");
+                document.getElementById('quantity'+index).value = inventory;
         }
+
+    }
 
     
 
