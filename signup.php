@@ -106,7 +106,7 @@
 
             <div class="container">
                 <h1>Signup</h1>
-                <form>
+                <form action="registration.php" method="post">
                     <div class="row jumbotron">
                         <div class="col-sm-6 form-group">
                             <label for="name-f">First Name</label>
@@ -122,16 +122,28 @@
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="name-l">Confirm Email</label>
-                            <input type="email" class="form-control" name="lname" id="cemail"placeholder="Confirm Email." required>
+                            <input type="email" class="form-control" name="email" id="cemail" placeholder="Confirm Email." required>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="name-l">Postal Code</label>
-                            <input type="text" class="form-control" id="postal-code" placeholder="Enter your Postal Code Here." required>
+                            <input type="text" class="form-control" name="postal-code" id="postal-code" placeholder="Enter your Postal Code Here." required>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="province">Province</label>
                             <input type="text" class="form-control" name="province" id="province" placeholder="Enter your Province." required>
                         </div>
+
+                        <div class="col-sm-6 form-group">
+                            <label for="province">Address</label>
+                            <input type="text" class="form-control" name="address" id="address" placeholder="Enter your Province." required>
+                        </div>
+
+                        <div class="col-sm-6 form-group">
+                            <label for="province">Confirm Address</label>
+                            <input type="text" class="form-control" name="addressC" id="addressC" placeholder="Enter your Province." required>
+                        </div>
+
+
                         <div class="col-sm-6 form-group">
                             <label for="pass">Password</label>
                             <input type="Password" name="password" class="form-control" id="password" placeholder="Enter your password." required>
