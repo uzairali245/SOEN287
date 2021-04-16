@@ -82,6 +82,20 @@
         }
     }
 
+    //ADD TO CART
+
+    if(isset($_POST['qty']) && isset($_POST['chosenFormat']) && isset($_POST['product_id'])){
+        
+        $newProduct = array(
+            'product_id' => $_POST['product_id'],
+            'format' => $_POST['chosenFormat'],
+            'qty' => $_POST['qty']
+        );
+
+        array_push($_SESSION['customercart'], $newProduct);
+  
+    }
+
     //REMOVE ITEM CART
     //Check if variable set
     if (isset($_POST['remove'])){

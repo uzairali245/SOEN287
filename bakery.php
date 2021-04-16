@@ -1,4 +1,4 @@
-
+<?php include "includes/session.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +41,6 @@
 <body>
     <?php include "includes/header.html";
           include "includes/dbc.php";
-          include "includes/session.php";
      ?>
 
 
@@ -90,16 +89,26 @@
      
                          <div class='d-flex bd-highlight'>
                              <div class='flex-grow-1 bd-highlight'>
+
+
+                                <form action=\"\" method=\"post\">
                                  <button class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                 <input type='text' name='qty' value='1' id ='{$index}' class='amount'>";
+                                 <input type='text' name='qty' value='1' id ='{$index}' class='amount'>
+                                 <input hidden type='text' name='chosenFormat' value='{$row['format']}'>
+                                 <input hidden type=\"text\"  name='product_id' value={$row['product_id']}>
+                                 ";
                                  
                                  echo"
                                  <button class='btn btn-primary rounded-circle btn-sm py-0 plusButton'   id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                 
+
+
                              </div>
      
                             <div class='bd-highlight'>
      
-                                 <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;' > Add to Cart</button>
+                                 <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                 </form>
                             </div>
                         </div>
                     </div> ";
@@ -328,7 +337,7 @@
         function addToCart(button) { //what happens when add to cart is clicked
             var index = button.id;
             counterArrayBakery[index] = parseInt(document.getElementsByClassName("amount")[index].value);
-            var addToCart = { 
+            /*var addToCart = { 
              product_id : productIndexToId[index], 
              format : 1,
              qty: counterArrayBakery[index]              
@@ -341,19 +350,12 @@
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.open("POST", "bakery.php");
             xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xmlhttp.send(encodedArrayCart);
+            xmlhttp.send(encodedArrayCart);*/
 
            
                 
 
-           <?php
-                if(isset($_POST['encodedArrayCart'])){ //if endedarraycart exists, then add to session array
-                    array_push($_SESSION['customercart'],$_POST['encodedArrayCart']);
-                }
-
-                echo $_SESSION['customercart'];
-                             
-            ?>
+           
             
            
 

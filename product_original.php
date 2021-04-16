@@ -111,7 +111,9 @@
                             <button class="bttn-full bttn btn" type="button" value="100" id="format1" onClick="updatePrice(1)">100g</button>
                             <button class="bttn-full bttn btn" type="button" value="250" id="format2" onClick="updatePrice(2)">250g</button>
                             <button class="bttn-full bttn btn" type="button" value="500" id="format3" onClick="updatePrice(3)">500g</button>
+                            <input hidden name="chosenFormat" type='text' value="100" id="chosenFormat">
                         </div>
+
 
                         <div class="product-info-element">
                             <h3 id="price-per-unit">$18.99/100g</h3>
@@ -222,6 +224,9 @@ document.querySelector(".description").innerHTML="A Rare Find! Fresh wild bluebe
             console.log(defaultFormat);
 
             document.getElementById("price").innerHTML = "$" + price.toFixed(2);
+
+            //to change the input in the form
+            document.getElementById("chosenFormat").value = format;
         }
 
         var storedItemCount = JSON.parse(localStorage.getItem('counterArray'));
