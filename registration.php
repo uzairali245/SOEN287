@@ -27,5 +27,6 @@
         $input=" INSERT INTO users( user_id, role, email, password, first_name, last_name, postal_code, province, address) 
         values('11', 'admin', '$email', '$pass', '$fname', '$lname', '$postal', '$province', '$address')";
         mysqli_query($con, $input);
+        //test
         echo "registration worked";
     }
