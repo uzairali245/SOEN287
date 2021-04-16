@@ -152,6 +152,7 @@
     <?php 
           include "../includes/header.html";
           include "../includes/dbc.php";
+          
           if(array_key_exists("order_id", $_GET)) {
             $temp = $_GET['order_id'];
           } else {
@@ -189,11 +190,11 @@
           <option value="same-day-delivery">Same-day Delivery</option>
         </select>
       
-        <br><br><br><br>
+        <br><br><br>
         
 
 
-        <p class = order-title>Products Ordered</p><br>
+        <!--<p class = order-title>Products Ordered</p><br>
         
         <table style="width:100%">
           <tr>
@@ -234,7 +235,7 @@
           </tr>
         </table><br><br>
         <label class="order-lower-text" for="total-order-amount">Total order amount: </label>&nbsp;
-        <input type="text" id="total-order-amount" name="total-order-amount">&nbsp;&nbsp;&nbsp;
+        <input type="text" id="total-order-amount" name="total-order-amount">&nbsp;&nbsp;&nbsp;-->
         <button type="submit" class="btn btn-info backstore-font">Save</button>
       </form>
     </div>
