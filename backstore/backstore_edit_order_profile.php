@@ -151,10 +151,17 @@
     <div class="content-without-footer">
     <?php 
           include "../includes/header.html";
-          include "../includes/dbc.php"; 
+          include "../includes/dbc.php";
+          if(array_key_exists("order_id", $_GET)) {
+            $temp = $_GET['order_id'];
+          } else {
+            $temp = "NULL";
+          } 
     ?>
 
-      <form action="data_process.php" method="post"> 
+      <form action="data_process.php" method="post">
+        <input type="hidden" id="order-id" name="order-id" value="<?php echo $temp; ?>">
+
         <br><label class="order-upper-text" for="customer-name">Customer Name:</label>
         <input type="text" id="customer-name" name="customer-name">
         <br><br>   
