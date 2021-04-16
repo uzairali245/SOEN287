@@ -1,4 +1,4 @@
-<?php include "includes/session.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,6 +41,7 @@
 <body>
     <?php include "includes/header.html";
           include "includes/dbc.php";
+          include "includes/session.php";
      ?>
 
 
@@ -79,6 +80,7 @@
                  while ($row = mysqli_fetch_assoc($result))
                  {
                      echo"
+                     
                      <div class='aisle-item'>
                         <a href='product_display.php?varname={$row['product_id']}'>
                         <img src='{$row['image']}' alt='{$row['name']}'>
@@ -89,20 +91,59 @@
                          <div class='d-flex bd-highlight'>
                              <div class='flex-grow-1 bd-highlight'>
                                  <button class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                 <input type='text' name='qty' value='1' class='amount'>
-                                 <button class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                 <input type='text' name='qty' value='1' id ='{$index}' class='amount'>";
+                                 
+                                 echo"
+                                 <button class='btn btn-primary rounded-circle btn-sm py-0 plusButton'   id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
                              </div>
      
                             <div class='bd-highlight'>
      
-                                 <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;'> Add to Cart</button>
+                                 <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;' > Add to Cart</button>
                             </div>
                         </div>
                     </div> ";
+
+    
+
                     $index++;
                  }           
             
             ?>
+
+            
+
+            
+                           <!--
+                                 <form action=\"\" method=\"get\">
+                                 <input type=\"text\"  name=\"qty\" id=\"qty\" class=\"amount\" value=\"1\">
+                                 </form>"
+
+                                 $toAdd = array (
+                                    'product_id' => $row['product_id'],
+                                    'format'=> $row['format'],
+                                    'qty' => ???
+                                );
+                                
+                                array_push($_SESSION['customercart'],$toAdd); // Items added to cart
+
+                                'array_push($_SESSION[customercart],$toAdd)'
+                                
+
+
+
+                               $b=array("product"=>"$product","quantity"=>$quantity);
+                                array_push($_SESSION['customercart'],$b); // Items added to cart
+                               
+                               
+                                <form action=\"\" method=\"post\">
+                            <input hidden type=\"text\"  name=\"product_id\" value={$row['product_id']}>
+                            <input hidden type=\"text\"  name=\"qty\" value={$qty}>
+                            <button href='#' name='remove' value = 'true' class='delete-item-bttn'  onClick='this.form.submit()')\">x</button> 
+                            </form>
+                            -->
+                            
+
 
             
             <!--
@@ -267,6 +308,8 @@
     <script>
         var counterArrayBakery;
 
+        var productIndexToId = [1000, 1001, 1002, 1003, 1004, 1005, 1006];
+
         window.addEventListener('load', (event) => {
             counterArrayBakery = getCountArray();
 
@@ -285,6 +328,35 @@
         function addToCart(button) { //what happens when add to cart is clicked
             var index = button.id;
             counterArrayBakery[index] = parseInt(document.getElementsByClassName("amount")[index].value);
+            var addToCart = { 
+             product_id : productIndexToId[index], 
+             format : 1,
+             qty: counterArrayBakery[index]              
+           };
+           console.log(addToCart);
+            //STUCK HERE
+           var encodedArrayCart = JSON.stringify(addToCart); //encodes the array
+           
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("POST", "bakery.php");
+            xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xmlhttp.send(encodedArrayCart);
+
+           
+                
+
+           <?php
+                if(isset($_POST['encodedArrayCart'])){ //if endedarraycart exists, then add to session array
+                    array_push($_SESSION['customercart'],$_POST['encodedArrayCart']);
+                }
+
+                echo $_SESSION['customercart'];
+                             
+            ?>
+            
+           
+
         }
 
 
@@ -338,6 +410,8 @@
             console.log(counterArrayBakery);
             counterArrayBakery[index]++;
             document.getElementsByClassName("amount")[index].value = counterArrayBakery[index];
+            document.getElementsByClassName("amount")[index].setAttribute("value", counterArrayBakery[index]);
+
         }
 
         //DECREMENT BUTTON
@@ -359,6 +433,7 @@
                 counterArrayBakery[index]--;
 
             document.getElementsByClassName("amount")[index].value = counterArrayBakery[index];
+            document.getElementsByClassName("amount")[index].setAttribute("value", counterArrayBakery[index]);
         }
     </script>
 </body>

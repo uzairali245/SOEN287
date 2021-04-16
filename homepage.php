@@ -78,11 +78,12 @@ img{
                 
                             
                 <div class="aisle-item"> 
+                    <a href='product_display.php?varname=1005'>
                     <img src="resources/img/bakery/bakery-donut2.jpg" alt="Donut">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Donut</h4>
                     <span style="margin-bottom: 0 ">10$/dozen</span>
                     <span style="text-decoration: line-through; font-size: 70%"> 12$/dozen</span>
-
+                    </a>
 
                     <div class="d-flex bd-highlight">                    
                         <div class="flex-grow-1 bd-highlight">
@@ -99,10 +100,12 @@ img{
                 </div>
 
                 <div class="aisle-item"> 
+                    <a href='product_display.php?varname=3543'>
                     <img src="resources/img/interstellar-foods/gagh.jpg" alt="gagh">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Klingon Gagh</h4>
                     <span style="margin-bottom: 0 ">15.41$/kg</span>
                     <span style="text-decoration: line-through; font-size: 70%"> 20$/kg</span>
+                    </a>
 
 
                     <div class="d-flex bd-highlight">                    
@@ -121,10 +124,12 @@ img{
 
 
                 <div class="aisle-item"> 
+                <a href='product_display.php?varname=3000'>
                     <img src="resources/img/dairy/brie.jpg" alt="brie">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Brie</h4>
                     <span style="margin-bottom: 0 ">10$/unit</span>
                     <span style="text-decoration: line-through; font-size: 70%"> 15$/unit</span>
+                    </a>
 
 
                     <div class="d-flex bd-highlight">                    
@@ -143,10 +148,12 @@ img{
 
                 
                 <div class="aisle-item"> 
+                    <a href='product_display.php?varname=1001'>
                     <img src="resources/img/bakery/bakery-baguette2.jpg" alt="Baguette">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Baguette</h4>
                     <span style="margin-bottom: 0 ">7$/unit</span>
                     <span style="text-decoration: line-through; font-size: 70%"> 10$/unit</span>
+                    </a>
 
 
                     <div class="d-flex bd-highlight">                    
@@ -171,10 +178,12 @@ img{
             
             <div class="d-flex flex-wrap justify-content-evenly ">
                 <div class="aisle-item"> 
+                <a href='product_display.php?varname=1000'>
                 <img src="resources/img/bakery/bakery-bagel2.jpg" alt="Bagel">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bagel</h4>
                 <p style="margin-bottom: 0 ">10$/dozen</p>
-                
+                </a>
+
                 <div class="d-flex bd-highlight">                    
                     <div class="flex-grow-1 bd-highlight">
                         <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
@@ -190,9 +199,11 @@ img{
                 </div>
 
                 <div class="aisle-item"> 
+                    <a href='product_display.php?varname=1003'>
                     <img src="resources/img/bakery/bakery-chocolatine2.jpg" alt="chocolatine">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Chocolatine</h4>
                     <p style="margin-bottom: 0 ">3$/unit</p>
+                    </a>
 
                     <div class="d-flex bd-highlight">                    
                         <div class="flex-grow-1 bd-highlight">
@@ -209,9 +220,11 @@ img{
                 </div>
 
                 <div class="aisle-item"> 
+                    <a href='product_display.php?varname=3003'>
                     <img src="resources/img/dairy/milk.jpg" alt="Milk">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Milk</h4>
                     <p style="margin-bottom: 0 ">5$/bag</p>
+                    </a>
 
                     <div class="d-flex bd-highlight">                    
                         <div class="flex-grow-1 bd-highlight">
@@ -228,9 +241,11 @@ img{
                 </div>
 
                 <div class="aisle-item"> 
+                    <a href='product_display.php?varname=6464'>
                     <img src="resources/img/interstellar-foods/tube-grub.jpg" alt="tube-grub">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Ferengi Tube Grubs</h4>
                     <p style="margin-bottom: 0 ">41$/kg</p>
+                    </a>
 
                     <div class="d-flex bd-highlight">                    
                         <div class="flex-grow-1 bd-highlight">
