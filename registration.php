@@ -13,7 +13,7 @@
     $lname=$_POST['lname'];
     $postal =$_POST['postal-code'];
     $province=$_POST['province'];
-    $adress=$POST['adress'];
+    $address=$_POST['address'];
 
 
     $s ="SELECT * from users where email='$email'";
@@ -24,7 +24,8 @@
     if($num==1){
         echo "user name taken";
     }else{
-        $reg=" INSERT INTO users( user_id, role, email, password, first_name, last_name, postal_code, province, address) 
+        $input=" INSERT INTO users( user_id, role, email, password, first_name, last_name, postal_code, province, address) 
         values('11', 'admin', '$email', '$pass', '$fname', '$lname', '$postal', '$province', '$address')";
+        mysqli_query($con, $input);
         echo "registration worked";
     }
