@@ -24,9 +24,11 @@
     if($num==1){
         echo "user name taken";
     }else{
+        $a = "SELECT * from users";
+        $rows = mysqli_query($con, $a);
+        $num = mysqli_num_rows($rows)+1;
         $input=" INSERT INTO users( user_id, role, email, password, first_name, last_name, postal_code, province, address) 
-        values('11', 'admin', '$email', '$pass', '$fname', '$lname', '$postal', '$province', '$address')";
+        values('$num', 'client', '$email', '$pass', '$fname', '$lname', '$postal', '$province', '$address')";
         mysqli_query($con, $input);
-        //test
         echo "registration worked";
     }
