@@ -82,19 +82,32 @@
         }
     }
 
+    
     //ADD TO CART
-
     if(isset($_POST['qty']) && isset($_POST['chosenFormat']) && isset($_POST['product_id'])){
+        $duplicate = false;
         
-        $newProduct = array(
-            'product_id' => $_POST['product_id'],
-            'format' => $_POST['chosenFormat'],
-            'qty' => $_POST['qty']
-        );
+        foreach($_SESSION["customercart"] as $key => &$val){
+             //ADD TO CART SAME ITEM- ONLY UPDATE QUANTITY
+            if($val["product_id"]==$_POST['product_id'] && ($val["format"]==$_POST['chosenFormat'] || is_null($val["format"]) )){
+                    $_SESSION["customercart"][$key]['qty'] += $_POST['qty'];
+                    $duplicate = true; 
+                    break;
+                }            
+        }
 
-        array_push($_SESSION['customercart'], $newProduct);
+        if(!($duplicate)){
+            $newProduct = array(
+                'product_id' => $_POST['product_id'],
+                'format' => $_POST['chosenFormat'],
+                'qty' => $_POST['qty']
+            );
+
+            array_push($_SESSION['customercart'], $newProduct);
+        }
   
     }
+
 
     //REMOVE ITEM CART
     //Check if variable set
