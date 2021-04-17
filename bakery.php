@@ -39,7 +39,7 @@
 </style>
 
 <body>
-    <?php include "includes/header.html";
+    <?php //include "includes/header.html";
           include "includes/dbc.php";
      ?>
 
@@ -73,7 +73,7 @@
             
             <?php
                  $bakery = "Bakery";
-                 $sql = "SELECT name, price, unit, aisle, image,product_id FROM products WHERE aisle = 'Bakery'";
+                 $sql = "SELECT * FROM products WHERE aisle = 'Bakery'";
                  $result = mysqli_query($conn, $sql);
                  $index = 0;
                  while ($row = mysqli_fetch_assoc($result))
@@ -350,14 +350,7 @@
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.open("POST", "bakery.php");
             xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xmlhttp.send(encodedArrayCart);*/
-
-           
-                
-
-           
-            
-           
+            xmlhttp.send(encodedArrayCart);*/    
 
         }
 

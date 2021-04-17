@@ -76,7 +76,7 @@
     //UPDATE QUANTITY CART
     if (isset($_POST['qty'])){
         foreach($_SESSION["customercart"] as $key => &$val){
-        if($val["product_id"]==$_POST['product_id'] && $val["format"]==$_POST['format']){ //use to check if item already in cart 
+        if($val["product_id"]==$_POST['product_id'] && isset($_POST['format']) && $val["format"]==$_POST['format']){ //use to check if item already in cart 
                 $_SESSION["customercart"][$key]['qty'] = $_POST['qty'];
         }
         }
