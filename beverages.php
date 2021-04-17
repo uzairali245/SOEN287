@@ -29,7 +29,7 @@ img{
 }
 
 .aisle-item{
-    margin: 10px 0;
+    margin: 10px 20px;
 }
 
 .h4{
@@ -51,7 +51,9 @@ img{
 
   </style>
   <body>
-    <?php include "includes/header.html"; ?>
+    <?php include "includes/header.html";
+          include "includes/dbc.php"; 
+    ?>
 
 
     <!--CONTENTS OF PAGE STARTS HERE-->
@@ -63,10 +65,47 @@ img{
 
         <div class="d-flex flex-wrap justify-content-evenly">
 
+        <?php
+                 $sql = "SELECT * FROM products WHERE aisle = 'Beverages'";
+                 $result = mysqli_query($conn, $sql);
+                 $index = 0;
+                 while ($row = mysqli_fetch_assoc($result))
+                 {
+                     echo"
+                     
+                     <div class='aisle-item'>
+                        <a href='product_display.php?varname={$row['product_id']}'>
+                        <img src='{$row['image']}' alt='{$row['name']}'>
+                        <h4 style='font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;'>{$row['name']}</h4>
+                        <p style='margin-bottom: 0 '>{$row['price']}$/{$row['unit']}</p>
+                        </a>
+     
+                         <div class='d-flex bd-highlight'>
+                             <div class='flex-grow-1 bd-highlight'>
+                                 <form action=\"\" method=\"post\">
+                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                 <input type='text' name='qty' value='1' id ='{$index}' class='amount'>
+                                 <input hidden type='text' name='chosenFormat' value='{$row['format']}'>
+                                 <input hidden type=\"text\"  name='product_id' value={$row['product_id']}>
+                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 plusButton'   id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>                                
+                             </div>
+     
+                            <div class='bd-highlight'>
+                                 <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                 </form>
+                            </div>
+                        </div>
+                    </div> ";
+                    $index++;
+                 }           
+            
+            ?>
+
+            <!--
             <div class="aisle-item">
                 <img src="https://media.npr.org/assets/img/2015/11/19/salt-iconic-branding-0037edit_custom-106133bb015b56c78e6bd554cfcbc9cc648156bb-s800-c85.jpg" alt="Coke">
                 <h4 >
-<a href="product_cocacola.php" style="color: white; text-decoration: none;">Coca Cola </a>
+                <a href="product_cocacola.php" style="color: white; text-decoration: none;">Coca Cola </a>
                   </h4>
                 <p style="margin-bottom: 0 ">2.50$/bottle</p>
 
@@ -297,6 +336,7 @@ img{
             </div>
 
         </div>
+        -->
     </div>
 
 
