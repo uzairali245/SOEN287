@@ -1,4 +1,5 @@
-<?php include "includes/session.php"; ?>
+<?php include "includes/session.php";?>
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -65,7 +66,7 @@
 
                 $todate = getdate()['hours']."/".getdate()['minutes']."/".getdate()['seconds']."/".getdate()['mday']."/".getdate()['mon']."/".getdate()['year']; // Current date as DD/MM/YYYY
 
-                
+
 
                 foreach($_SESSION["customercart"] as $key => &$val){
 
@@ -74,6 +75,13 @@
                     $qty = $_SESSION["customercart"][$key]['qty'];
                         
                 }
+
+                $orderId = $_SESSION["user"]["id"].$todate;
+                echo $orderId;
+
+                //Free 
+                //Express
+                //Same Day 
 
                 //decrement inventory
 
