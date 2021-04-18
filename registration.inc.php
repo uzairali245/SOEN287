@@ -1,6 +1,7 @@
 <?php
+    session_start(); //resumes session
     include "includes/dbc.php";
-    session_start();//resumes session
+
 
     //logs into data base
 
@@ -36,11 +37,11 @@
         values('$num', 'client', '$email', '$pass', '$fname', '$lname', '$postal', '$province', '$address')";
         mysqli_query($conn, $input);
 
-    //creates session variable
-    $_SESSION["user"]=array(
-        'id' => mysqli_fetch_assoc(mysqli_query($conn, "SELECT id FROM users WHERE email=$email"))["id"],
+        //creates session variable
+        $_SESSION["user"]=array(
+        'id' => mysqli_fetch_assoc(mysqli_query($conn, "SELECT id FROM users WHERE email='$email'"))["id"],
         'role'=> 'client'
-    );
-
-    header('Location:homepage.php');
+        );
+        header('Location:homepage.php');
+        exit();
     }

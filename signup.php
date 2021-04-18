@@ -115,7 +115,7 @@
                         <?php
                         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
                         if (strpos($fullUrl, "signup=error") == true) {
-                            echo "<p class='error'> The Email you enterd is already in use!</p>";
+                            echo "<p> The Email you enterd is already in use!</p>";
                         }
                         ?>
                         <div class="col-sm-6 form-group">
