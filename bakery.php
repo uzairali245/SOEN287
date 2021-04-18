@@ -30,7 +30,7 @@
     }
 
     .aisle-item {
-        margin: 10px 0px;
+        margin: 10px 20px;
     }
 
     .h4 {
@@ -50,36 +50,16 @@
             <h1 style="font-size: 150%; text-align: center"> Bakery</h1>
         </div>
 
-        <?php // Data
-                    $bakery = "Bakery";
-                    $sql = "SELECT name, price, unit, aisle, product_id FROM products WHERE aisle = 'Bakery'";
-                    $result = mysqli_query($conn, $sql);
-                    while ($row = mysqli_fetch_assoc($result))
-                    {
-                            echo"<tr>
-                            <td> REMOVE THIS BLOCK LATER</td>
-                            <td>{$row['name']}</td>                        
-                            <td>{$row['price']}</td>
-                            <td>{$row['unit']}</td>
-                            <td>{$row['product_id']}</td>
-                            <td><a href ='product_display.php?varname={$row['product_id']}'>{$row['name']} </a> </td>
-                            <br>
-                            </tr>"; // TODO Don't forget to send post/get data for the edit and delete buttons eventually   
-                    }
-                    echo"</table>";
-        ?>
 
         <div class="d-flex flex-wrap justify-content-evenly">
             
             <?php
-                 $bakery = "Bakery";
-                 $sql = "SELECT name, price, unit, aisle, image,product_id FROM products WHERE aisle = 'Bakery'";
+                 $sql = "SELECT * FROM products WHERE aisle = 'Bakery'";
                  $result = mysqli_query($conn, $sql);
                  $index = 0;
                  while ($row = mysqli_fetch_assoc($result))
                  {
-                     echo"
-                     
+                     echo"                     
                      <div class='aisle-item'>
                         <a href='product_display.php?varname={$row['product_id']}'>
                         <img src='{$row['image']}' alt='{$row['name']}'>
@@ -89,218 +69,24 @@
      
                          <div class='d-flex bd-highlight'>
                              <div class='flex-grow-1 bd-highlight'>
-
-
-                                <form action=\"\" method=\"post\">
-                                 <button class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                 <form action=\"\" method=\"post\">
+                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
                                  <input type='text' name='qty' value='1' id ='{$index}' class='amount'>
                                  <input hidden type='text' name='chosenFormat' value='{$row['format']}'>
                                  <input hidden type=\"text\"  name='product_id' value={$row['product_id']}>
-                                 ";
-                                 
-                                 echo"
-                                 <button class='btn btn-primary rounded-circle btn-sm py-0 plusButton'   id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
-                                 
-
-
+                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 plusButton'   id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>                                
                              </div>
      
                             <div class='bd-highlight'>
-     
                                  <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
                                  </form>
                             </div>
                         </div>
                     </div> ";
-
-    
-
                     $index++;
                  }           
             
             ?>
-
-            
-
-            
-                           <!--
-                                 <form action=\"\" method=\"get\">
-                                 <input type=\"text\"  name=\"qty\" id=\"qty\" class=\"amount\" value=\"1\">
-                                 </form>"
-
-                                 $toAdd = array (
-                                    'product_id' => $row['product_id'],
-                                    'format'=> $row['format'],
-                                    'qty' => ???
-                                );
-                                
-                                array_push($_SESSION['customercart'],$toAdd); // Items added to cart
-
-                                'array_push($_SESSION[customercart],$toAdd)'
-                                
-
-
-
-                               $b=array("product"=>"$product","quantity"=>$quantity);
-                                array_push($_SESSION['customercart'],$b); // Items added to cart
-                               
-                               
-                                <form action=\"\" method=\"post\">
-                            <input hidden type=\"text\"  name=\"product_id\" value={$row['product_id']}>
-                            <input hidden type=\"text\"  name=\"qty\" value={$qty}>
-                            <button href='#' name='remove' value = 'true' class='delete-item-bttn'  onClick='this.form.submit()')\">x</button> 
-                            </form>
-                            -->
-                            
-
-
-            
-            <!--
-            <div class="aisle-item">
-                <img src="resources/img/bakery/bakery-bagel2.jpg" alt="Bagel">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bagel</h4>
-                <p style="margin-bottom: 0 ">10$/dozen</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="0" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="aisle-item">
-                <img src="resources/img/bakery/bakery-baguette2.jpg" alt="Baguette">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Baguette</h4>
-                <p style="margin-bottom: 0 ">7$/unit</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="1" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="aisle-item">
-                <img src="resources/img/bakery/bakery-challah2.jpg" alt="Challah">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Challah</h4>
-                <p style="margin-bottom: 0 ">5$/unit</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="2" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="aisle-item">
-                <img src="resources/img/bakery/bakery-chocolatine2.jpg" alt="Chocolatine">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Chocolatine</h4>
-                <p style="margin-bottom: 0 ">3$/unit</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="3" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aisle-item">
-                <img src="resources/img/bakery/bakery-ciabatta2.jpg" alt="Ciabatta">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Ciabatta</h4>
-                <p style="margin-bottom: 0 ">7$/unit</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="4" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="aisle-item">
-                <img src="resources/img/bakery/bakery-donut2.jpg" alt="Donut">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Donut</h4>
-                <p style="margin-bottom: 0 ">10$/dozen</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="5" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            
-            <div class="aisle-item">
-                <img src="resources/img/bakery/bakery-white-bread2.jpg" alt="White Bread">
-                <br>
-                -->
-                <!--
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">White Bread</h4> -->
-                <!--
-                <h4>
-                    <a href="product_whiteBread.php" style="color: white; text-decoration: none;">Bread </a>
-                </h4>
-                <p style="margin-bottom: 0 ">7$/bag</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="6" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="6" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="6" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            -->
 
         </div>
     </div>
@@ -350,14 +136,7 @@
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.open("POST", "bakery.php");
             xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xmlhttp.send(encodedArrayCart);*/
-
-           
-                
-
-           
-            
-           
+            xmlhttp.send(encodedArrayCart);*/    
 
         }
 

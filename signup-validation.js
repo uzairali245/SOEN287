@@ -48,6 +48,17 @@ function confirmemail() {
     } else
         return true;
 }
+//confirms if adresses are equal
+function confirmAdress() {
+    var address = document.getElementById("address").value
+    var addressc = document.getElementById("addressC").value
+
+    if (address != addressc) {  //if address and addressc values are not the same, alert
+        alert("The addess entered does not match");
+        return false;
+    } else
+        return true;
+}
 function checkPassword() {
 
     var pw = document.getElementById("password");

@@ -29,7 +29,7 @@
     }
 
     .aisle-item{
-        margin: 10px 0;
+        margin: 10px 20px;
     }
 
     .h4{
@@ -38,7 +38,9 @@
 
   </style>
   <body>
-    <?php include "includes/header.html"; ?>
+    <?php include "includes/header.html";
+          include "includes/dbc.php";
+     ?>
 
 
     <!--CONTENTS OF PAGE STARTS HERE-->
@@ -49,124 +51,45 @@
 
         <div class="d-flex flex-wrap justify-content-evenly"> 
 
-            <div class="aisle-item"> 
-                <a href="./product_romulan_ale.php">
-                    <img src="resources/img/interstellar-foods/romulan-ale.jpg" alt="Romulan Ale">
-                    <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Romulan Ale</h4>
-                    <p style="margin-bottom: 0 "><strong>73.69$ (6)</strong></p>
-                </a>
+        <?php
+                 $sql = "SELECT * FROM products WHERE aisle = 'Interstellar Foods'";
+                 $result = mysqli_query($conn, $sql);
+                 $index = 0;
+                 while ($row = mysqli_fetch_assoc($result))
+                 {
+                     echo"                     
+                     <div class='aisle-item'>
+                        <a href='product_display.php?varname={$row['product_id']}'>
+                        <img src='{$row['image']}' alt='{$row['name']}'>
+                        <h4 style='font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;'>{$row['name']}</h4>
+                        <p style='margin-bottom: 0 '>{$row['price']}$/{$row['unit']}</p>
+                        </a>
+     
+                         <div class='d-flex bd-highlight'>
+                             <div class='flex-grow-1 bd-highlight'>
+                                 <form action=\"\" method=\"post\">
+                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                 <input type='text' name='qty' value='1' id ='{$index}' class='amount'>";
+                       
 
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton " id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="0"style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
+                                 echo"
+                                 <input hidden type='text' name='chosenFormat' value='{$row['format']}'>
+                                 <input hidden type=\"text\"  name='product_id' value={$row['product_id']}>
+                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 plusButton'   id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>                                
+                             </div>
+     
+                            <div class='bd-highlight'>
+                                 <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                 </form>
+                            </div>
+                        </div>
+                    </div> ";
+                    $index++;
+                 }           
             
-            <div class="aisle-item">
-                    <img src="resources/img/interstellar-foods/bloodwine.jpg" alt="Blood Wine">
-                    <h4 class="justify-text-center" style="font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Klingon Blood Wine</h4>
-                    <p style="margin-bottom: 0 ">37$</p>
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="1" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="aisle-item"> 
-                    <img src="resources/img/interstellar-foods/tube-grub.jpg" alt="Tube Grub">
-                    <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Ferengi Tube Grubs</h4>
-                    <p style="margin-bottom: 0 ">41$/kg</p>
+            ?>
 
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton " id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="2" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="aisle-item"> 
-                    <img src="resources/img/interstellar-foods/gagh.jpg" alt="Gagh">
-                    <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Klingon Gagh</h4>
-                    <p style="margin-bottom: 0 ">15.41$/kg</p>
-
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton " id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton"  id="3" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aisle-item"> 
-                    <img src="resources/img/interstellar-foods/hasperat.jpg" alt="Hasperat">
-                    <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bajoran Hasperat</h4>
-                    <p style="margin-bottom: 0 ">10$</p>
-                
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton"  id="4" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="aisle-item"> 
-                    <img src="resources/img/interstellar-foods/jiballian-fudge.jpg" alt="Jiballian Fudge">
-                    <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Jiballian Fudge Cake</h4>
-                    <p style="margin-bottom: 0 ">176$</p>
-
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton "id="5"style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton"  id="5" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-            
+       
         </div>
     </div> 
 

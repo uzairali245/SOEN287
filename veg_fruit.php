@@ -33,7 +33,7 @@
     }
 
     .aisle-item {
-        margin: 10px 0;
+        margin: 10px 55px;
         padding: 5px 0 ;
     }
 
@@ -43,7 +43,9 @@
 </style>
 
 <body>
-    <?php include "includes/header.html"; ?>
+    <?php include "includes/header.html"; 
+          include "includes/dbc.php";
+    ?>
 
 
     <!--CONTENTS OF PAGE STARTS HERE-->
@@ -54,181 +56,42 @@
 
         <div class="d-flex flex-wrap justify-content-evenly">
 
-            <div class="aisle-item">
-                <a href="product_original.php"><img src="resources/img/veg-fruit/blueberry.jpg" alt="Blueberries"></a>
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;"><a href="product_original.php">Wild Blueberries</a></h4>
-                <p style="margin-bottom: 0 ">18.99$/100g</p>
+        <?php
+                 $sql = "SELECT * FROM products WHERE aisle = 'Earth Produce'";
+                 $result = mysqli_query($conn, $sql);
+                 $index = 0;
+                 while ($row = mysqli_fetch_assoc($result))
+                 {
+                     echo"                     
+                     <div class='aisle-item'>
+                        <a href='product_display.php?varname={$row['product_id']}'>
+                        <img src='{$row['image']}' alt='{$row['name']}'>
+                        <h4 style='font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;'>{$row['name']}</h4>
+                        <p style='margin-bottom: 0 '>{$row['price']}$/{$row['unit']}</p>
+                        </a>
+     
+                         <div class='d-flex bd-highlight'>
+                             <div class='flex-grow-1 bd-highlight'>
+                                 <form action=\"\" method=\"post\">
+                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                 <input type='text' name='qty' value='1' id ='{$index}' class='amount'>
+                                 <input hidden type='text' name='chosenFormat' value='{$row['format']}'>
+                                 <input hidden type=\"text\"  name='product_id' value={$row['product_id']}>
+                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 plusButton'   id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>                                
+                             </div>
+     
+                            <div class='bd-highlight'>
+                                 <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                 </form>
+                            </div>
+                        </div>
+                    </div> ";
+                    $index++;
+                 }           
+            
+            ?>
 
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle minusButton" id="0">-</button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button type="button" name="button" class="button-circle plusButton" id="0">+</button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="0" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="aisle-item">
-                <img src="resources/img/veg-fruit/strawberries.jpg" alt="Strawberries">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Strawberries</h4>
-                <p style="margin-bottom: 0 ">23.25$/250g</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle minusButton" id="1">-</button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button type="button" name="button" class="button-circle plusButton" id="1">+</button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="1" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="aisle-item">
-                <img src="resources/img/veg-fruit/raspberries.jpg" alt="Raspberries">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Raspberries</h4>
-                <p style="margin-bottom: 0 ">18.67/100g</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle minusButton" id="2">-</button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button type="button" name="button" class="button-circle plusButton" id="2">+</button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="2" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="aisle-item">
-                <img src="resources/img/veg-fruit/orange.jpg" alt="Orange">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Navel Oranges</h4>
-                <p style="margin-bottom: 0 ">10.89$/lb</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle minusButton" id="3">-</button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button type="button" name="button" class="button-circle plusButton" id="3">+</button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="3" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aisle-item">
-                <img src="resources/img/veg-fruit/apple.jpg" alt="apple">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Cortland Apple</h4>
-                <p style="margin-bottom: 0 ">7$/unit</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle minusButton" id="4">-</button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button type="button" name="button" class="button-circle plusButton" id="4">+</button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="4" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aisle-item">
-                <img src="resources/img/veg-fruit/pumpkin.jpg" alt="Pumpkin">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Mini Pumpkins</h4>
-                <p style="margin-bottom: 0 ">34$/unit</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle minusButton" id="5">-</button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button type="button" name="button" class="button-circle plusButton" id="5">+</button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="5" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aisle-item">
-                <img src="resources/img/veg-fruit/artichoke.jpg" alt="Artichoke">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Artichoke</h4>
-                <p style="margin-bottom: 0 ">22.35$/unit</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle minusButton" id="6">-</button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button type="button" name="button" class="button-circle plusButton" id="6">+</button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="6" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aisle-item">
-                <img src="resources/img/veg-fruit/tomato.jpg" alt="tomato">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Roma Tomatoes</h4>
-                <p style="margin-bottom: 0 ">24$/pack of 6</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle minusButton" id="7">-</button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button type="button" name="button" class="button-circle plusButton" id="7">+</button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="7" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="aisle-item">
-                <img src="resources/img/veg-fruit/carrots.jpg" alt="Carrots">
-                <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Carrots</h4>
-                <p style="margin-bottom: 0 ">12.34$/lb</p>
-
-                <div class="d-flex bd-highlight">
-                    <div class="flex-grow-1 bd-highlight">
-                        <button type="button" name="button" class="button-circle minusButton" id="8">-</button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button type="button" name="button" class="button-circle plusButton" id="8">+</button>
-                    </div>
-
-                    <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="8" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
-                </div>
-            </div>
-
-
+     
         </div>
     </div>
 

@@ -89,7 +89,11 @@
             color: white;
             font-size: 12px;
             margin-top: 10px;
+        }
 
+        .error {
+            color: red !important;
+            text-align: center !important;
         }
     </style>
 
@@ -106,8 +110,14 @@
 
             <div class="container">
                 <h1>Signup</h1>
-                <form>
+                <form action="registration.inc.php" method="post">
                     <div class="row jumbotron">
+                        <?php
+                        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                        if (strpos($fullUrl, "signup=invalidemail") == true) {
+                            echo "<p class='error'> The Email you enterd is already in use!</p>";
+                        }
+                        ?>
                         <div class="col-sm-6 form-group">
                             <label for="name-f">First Name</label>
                             <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter your first name." required>
@@ -122,16 +132,28 @@
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="name-l">Confirm Email</label>
-                            <input type="email" class="form-control" name="lname" id="cemail"placeholder="Confirm Email." required>
+                            <input type="email" class="form-control" name="email" id="cemail" placeholder="Confirm Email." required>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="name-l">Postal Code</label>
-                            <input type="text" class="form-control" id="postal-code" placeholder="Enter your Postal Code Here." required>
+                            <input type="text" class="form-control" name="postal-code" id="postal-code" placeholder="Enter your Postal Code Here." required>
                         </div>
                         <div class="col-sm-6 form-group">
                             <label for="province">Province</label>
                             <input type="text" class="form-control" name="province" id="province" placeholder="Enter your Province." required>
                         </div>
+
+                        <div class="col-sm-6 form-group">
+                            <label for="province">Address</label>
+                            <input type="text" class="form-control" name="address" id="address" placeholder="Enter your Province." required>
+                        </div>
+
+                        <div class="col-sm-6 form-group">
+                            <label for="province">Confirm Address</label>
+                            <input type="text" class="form-control" name="addressC" id="addressC" placeholder="Enter your Province." required>
+                        </div>
+
+
                         <div class="col-sm-6 form-group">
                             <label for="pass">Password</label>
                             <input type="Password" name="password" class="form-control" id="password" placeholder="Enter your password." required>
