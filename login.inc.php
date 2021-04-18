@@ -14,7 +14,13 @@
         'id' => mysqli_fetch_assoc(mysqli_query($conn, "SELECT id FROM users WHERE email='$email'"))["id"],
         'role' => mysqli_fetch_assoc(mysqli_query($conn, "SELECT role FROM users WHERE email='$email'"))["role"],
         );
-        header("location: homepage.php");
+
+        if(isset($_SESSION['customercart'])){
+            header("location: shopping-cart.php");
+        } else {
+            header("location: homepage.php");
+        }   
+        
     }else{
         header("location: login.php?login=invalidlogin");
     }

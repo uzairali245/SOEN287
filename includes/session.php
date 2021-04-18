@@ -6,11 +6,11 @@
 
     //- INITIALIZE CART IF DOESN'T EXIST -//
 
-    //if (!isset($_SESSION["customercart"])) {
-    //    $_SESSION["customercart"] = array();
-    // }
+    if (!isset($_SESSION["customercart"])) {
+    $_SESSION["customercart"] = array();
+    }
 
-    if (!isset($_SESSION["customercart"])){
+    /*if (!isset($_SESSION["customercart"])){
     $_SESSION["customercart"] = array(
         array(
             'product_id'=> 2,
@@ -38,7 +38,7 @@
             'qty' => 3
         ),
         );
-    }
+    }*/
 
     //$key = 0;
     //$val =  array(
