@@ -649,6 +649,14 @@ Secondary bright orange: #EE4F3E;
   /*===========================================*/
   /*  MEDIA QUERIES  */
   /*===========================================*/
+
+  .section-products .one-third:first-child { display: none;}
+  .section-products .one-third { width: 48%;}
+  .product-info { max-width: 350px;}
+  .section-products img {
+    max-width: 338px;
+    float: right;
+  }
   
   /*Big tablet to 1200px (widths smaller than the 1140px row)*/
   @media only screen and (max-width: 1200px) {
