@@ -262,7 +262,6 @@
                                     <option value='10'>Same Day Delivery</option>
                                 </select>
                                 </p>
-                                <p>Shipping</p>
                                 <p>GST</p>
                                 <p>QST</p>
 
