@@ -381,7 +381,6 @@
         let formatItem = document.getElementById('productFormat'+index);
         let hasAFormat = false;
         
-        
         if (formatItem != null) {
             formatItem = parseInt(formatItem.value);
             quantity *= formatItem;
@@ -396,6 +395,9 @@
             } else {
                 document.getElementById('quantity'+index).value = inventory;
             }
+            return false;
+        } else if (quantity<=0){
+            document.getElementById('quantity'+index).value = 1;
             return false;
         } else {
             return true;
