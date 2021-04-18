@@ -333,6 +333,8 @@
 
                     } else {
                         echo "<h2> We weren't able to process all items </h2>";
+                        echo "<h2> Thank you for your order </h2>";
+                        echo " <h3 style= 'padding: 0 30px; font-weight: 300; font-style: normal; font-family: 'Exo', sans-serif'> Your order number is $order_id </h3>";
                     }
 
                     ?>
