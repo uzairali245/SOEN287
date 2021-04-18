@@ -148,25 +148,22 @@
                                 <div class='product-info-element'>
         
                                     <div class='colmn one-half qty'>
-                                        <button class='button-circle minusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                        <input type='text' name='qty' value='1' class='amount'>
-                                        <button class='button-circle plusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                        <form action=\"\" method=\"post\">
+                                        <button  type='button' class='button-circle minusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                        <input type='text' name='qty' value='1' class='amount'>                                        
+                                        <input hidden type='text' name='chosenFormat' value='{$row['format']}'>
+                                        <input hidden type=\"text\"  name='product_id' value={$row['product_id']}>
+                                        <button   type='button' class='button-circle plusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
                                     </div>
         
                                     <div class='colmn one-half'>
                                         <button type='submit' id='0' class='bttn bttn-full cartButton'> Add to cart </button>
+                                        </form>    
                                     </div>
         
                                 </div>
         
-                                <div class='clearfix'></div>
-
-                                
-        
-                                <button class='collapsible'>See More</button>
-                                <div class='content'>
-                                    <p class='description'></p>
-                                </div>";
+                                ";
                         ?>
 
                         <!--
@@ -228,21 +225,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
           // This code is for Product Description
-        var coll = document.getElementsByClassName("collapsible");
-var i;
+      //  var coll = document.getElementsByClassName("collapsible");
+//var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
-document.querySelector(".description").innerHTML="A Rare Find! Fresh wild blueberries delivered directly from Earth by the Perseverance rover.";
+//for (i = 0; i < coll.length; i++) {
+//  coll[i].addEventListener("click", function() {
+//    this.classList.toggle("active");
+ //   var content = this.nextElementSibling;
+ //   if (content.style.maxHeight){
+  //    content.style.maxHeight = null;
+  //  } else {
+ //     content.style.maxHeight = content.scrollHeight + "px";
+ //   }
+ // });
+//}
+//document.querySelector(".description").innerHTML="A Rare Find! Fresh wild blueberries delivered directly from Earth by the Perseverance rover.";
 //document.querySelector(".collapsible:after .active:after ").style.color="white";
 // Description sec ends here
         
