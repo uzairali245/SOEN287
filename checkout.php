@@ -291,19 +291,10 @@
                                         echo "console.log('Unable to remove order' " . mysqli_error($conn) . ");";
                                         echo "</script>";
                                     }
-
-
-
                                 }
-
                             }
-
-
                         }
-
-                    }
-
-                    
+                    } 
                 }
      
             ?>
