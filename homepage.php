@@ -45,7 +45,8 @@ img{
 }
   </style>
   <body>
-    <?php include "includes/header.html"; ?>
+    <?php include "includes/header.html";
+        include "includes/dbc.php"; ?>
 
 
     <!--CONTENTS OF PAGE STARTS HERE-->
@@ -84,18 +85,26 @@ img{
                     <span style="margin-bottom: 0 ">10$/dozen</span>
                     <span style="text-decoration: line-through; font-size: 70%"> 12$/dozen</span>
                     </a>
+                    
+                            <?php 
+                                echo"
+                                <div class='d-flex bd-highlight'>                    
+                                    <div class='flex-grow-1 bd-highlight'>
+                                        <form action=\"\" method=\"post\">
+                                        <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input hidden type='text' name='chosenFormat' value='NULL'>
+                                        <input hidden type=\"text\"  name='product_id' value='1005'>
+                                        <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                    </div>
 
-                    <div class="d-flex bd-highlight">                    
-                        <div class="flex-grow-1 bd-highlight">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                            <input type="text" name="qty" value="1" class="amount">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton " id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                        </div>
-
-                        <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton " id="0" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                        </div>
+                                <div class='bd-highlight'>
+                                    <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='0' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                </div>              
+                                </form>                  
+                                ";                            
+                            ?>
+                            
                     </div>
                 </div>
 
@@ -107,18 +116,27 @@ img{
                     <span style="text-decoration: line-through; font-size: 70%"> 20$/kg</span>
                     </a>
 
+                    <?php 
+                                echo"
+                                <div class='d-flex bd-highlight'>                    
+                                    <div class='flex-grow-1 bd-highlight'>
+                                        <form action=\"\" method=\"post\">
+                                        <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='1' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input hidden type='text' name='chosenFormat' value='NULL'>
+                                        <input hidden type=\"text\"  name='product_id' value='3543'>
+                                        <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='1' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                    </div>
 
-                    <div class="d-flex bd-highlight">                    
-                        <div class="flex-grow-1 bd-highlight">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                            <input type="text" name="qty" value="1" class="amount">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="1" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                        </div>
+                                <div class='bd-highlight'>
+                                    <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='1' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                </div>           
+                                </form>                     
+                                ";                            
+                    ?>
 
-                        <div class="bd-highlight">
 
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="1" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                        </div>
+                   
                     </div>
                 </div>
 
@@ -132,17 +150,25 @@ img{
                     </a>
 
 
-                    <div class="d-flex bd-highlight">                    
-                        <div class="flex-grow-1 bd-highlight">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="2" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                            <input type="text" name="qty" value="1" class="amount">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="2"style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                        </div>
+                   
+                    <?php 
+                                echo"
+                                <div class='d-flex bd-highlight'>                    
+                                    <div class='flex-grow-1 bd-highlight'>
+                                        <form action=\"\" method=\"post\">
+                                        <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='2' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input hidden type='text' name='chosenFormat' value='NULL'>
+                                        <input hidden type=\"text\"  name='product_id' value='3000'>
+                                        <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='2' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                    </div>
 
-                        <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="2" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                        </div>
+                                <div class='bd-highlight'>
+                                    <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='2' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                </div>           
+                                </form>                     
+                                ";                            
+                    ?>
                     </div>
                 </div>
 
@@ -154,19 +180,25 @@ img{
                     <span style="margin-bottom: 0 ">7$/unit</span>
                     <span style="text-decoration: line-through; font-size: 70%"> 10$/unit</span>
                     </a>
+                    
+                    <?php 
+                                echo"
+                                <div class='d-flex bd-highlight'>                    
+                                    <div class='flex-grow-1 bd-highlight'>
+                                        <form action=\"\" method=\"post\">
+                                        <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='3' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input hidden type='text' name='chosenFormat' value='NULL'>
+                                        <input hidden type=\"text\"  name='product_id' value='1001'>
+                                        <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='3' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                    </div>
 
-
-                    <div class="d-flex bd-highlight">                    
-                        <div class="flex-grow-1 bd-highlight">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                            <input type="text" name="qty" value="1" class="amount">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="3" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                        </div>
-
-                        <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton " id="3" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                        </div>
+                                <div class='bd-highlight'>
+                                    <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='3' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                </div>           
+                                </form>                     
+                                ";                            
+                    ?>
                     </div>
                 </div>            
             </div>
@@ -184,17 +216,25 @@ img{
                 <p style="margin-bottom: 0 ">10$/dozen</p>
                 </a>
 
-                <div class="d-flex bd-highlight">                    
-                    <div class="flex-grow-1 bd-highlight">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                        <input type="text" name="qty" value="1" class="amount">
-                        <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="4" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                    </div>
-                    
-                    <div class="bd-highlight">
-                        
-                    <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="4" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                    </div>
+               
+                <?php 
+                                echo"
+                                <div class='d-flex bd-highlight'>                    
+                                    <div class='flex-grow-1 bd-highlight'>
+                                        <form action=\"\" method=\"post\">
+                                        <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='4' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input hidden type='text' name='chosenFormat' value='NULL'>
+                                        <input hidden type=\"text\"  name='product_id' value='1000'>
+                                        <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='4' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                    </div>
+
+                                <div class='bd-highlight'>
+                                    <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='4' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                </div>           
+                                </form>                     
+                                ";                            
+                    ?>
                 </div>
                 </div>
 
@@ -205,17 +245,25 @@ img{
                     <p style="margin-bottom: 0 ">3$/unit</p>
                     </a>
 
-                    <div class="d-flex bd-highlight">                    
-                        <div class="flex-grow-1 bd-highlight">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton " id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                            <input type="text" name="qty" value="1" class="amount">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton " id="5" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                        </div>
+                   
+                    <?php 
+                                echo"
+                                <div class='d-flex bd-highlight'>                    
+                                    <div class='flex-grow-1 bd-highlight'>
+                                        <form action=\"\" method=\"post\">
+                                        <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='5' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input hidden type='text' name='chosenFormat' value='NULL'>
+                                        <input hidden type=\"text\"  name='product_id' value='1003'>
+                                        <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='5' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                    </div>
 
-                        <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton" id="5" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                        </div>
+                                <div class='bd-highlight'>
+                                    <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='5' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                </div>           
+                                </form>                     
+                                ";                            
+                    ?>
                     </div>
                 </div>
 
@@ -226,17 +274,25 @@ img{
                     <p style="margin-bottom: 0 ">5$/bag</p>
                     </a>
 
-                    <div class="d-flex bd-highlight">                    
-                        <div class="flex-grow-1 bd-highlight">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="6" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                            <input type="text" name="qty" value="1" class="amount">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="6"  style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                        </div>
+                   
+                    <?php 
+                                echo"
+                                <div class='d-flex bd-highlight'>                    
+                                    <div class='flex-grow-1 bd-highlight'>
+                                        <form action=\"\" method=\"post\">
+                                        <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='6' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input hidden type='text' name='chosenFormat' value='NULL'>
+                                        <input hidden type=\"text\"  name='product_id' value='3003'>
+                                        <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='6' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                    </div>
 
-                        <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton " id="6" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                        </div>
+                                <div class='bd-highlight'>
+                                    <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='6' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                </div>           
+                                </form>                     
+                                ";                            
+                    ?>
                     </div>
                 </div>
 
@@ -247,17 +303,25 @@ img{
                     <p style="margin-bottom: 0 ">41$/kg</p>
                     </a>
 
-                    <div class="d-flex bd-highlight">                    
-                        <div class="flex-grow-1 bd-highlight">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 minusButton" id="7" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                            <input type="text" name="qty" value="1" class="amount">
-                            <button class="btn btn-primary rounded-circle btn-sm py-0 plusButton" id="7" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                        </div>
+                   
+                    <?php 
+                                echo"
+                                <div class='d-flex bd-highlight'>                    
+                                    <div class='flex-grow-1 bd-highlight'>
+                                        <form action=\"\" method=\"post\">
+                                        <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='7' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
+                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input hidden type='text' name='chosenFormat' value='NULL'>
+                                        <input hidden type=\"text\"  name='product_id' value='6464'>
+                                        <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='7' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
+                                    </div>
 
-                        <div class="bd-highlight">
-
-                        <button class="btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton " id="7" style="background-color:  #EE4F3E; border-color: #EE4F3E;"> Add to Cart</button>
-                        </div>
+                                <div class='bd-highlight'>
+                                    <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='7' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
+                                </div>           
+                                </form>                     
+                                ";                            
+                    ?>
                     </div>
                 </div>   
             </div>            
@@ -354,6 +418,7 @@ img{
             console.log(counterArrayBakery);
             counterArrayBakery[index]++;
             document.getElementsByClassName("amount")[index].value = counterArrayBakery[index];
+            document.getElementsByClassName("amount")[index].setAttribute("value", counterArrayBakery[index]);
         }
 
         //DECREMENT BUTTON
@@ -375,6 +440,7 @@ img{
                 counterArrayBakery[index]--;
 
             document.getElementsByClassName("amount")[index].value = counterArrayBakery[index];
+            document.getElementsByClassName("amount")[index].setAttribute("value", counterArrayBakery[index]);
         }
     </script>
   </body>

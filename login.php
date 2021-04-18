@@ -90,6 +90,11 @@
             background-color: #99442B;
 
         }
+
+        .error {
+            color: red !important;
+            text-align: center !important;
+        }
     </style>
 
 </head>
@@ -101,28 +106,33 @@
     <div class="content-container">
         <?php include "includes/header.html"; ?>
 
-            <div class="content-without-footer">
-                <div class="container">
-                    <h1>LOGIN</h1>
-                    <form>
-                        <div class="row jumbotron">
-
-                            <div class="col-sm-6 form-group">
-                                <label for="pass">Email</label>
-                                <input type="email" name="password" class="form-control" id="pass" placeholder="Enter your Email." required>
-                                <label for="pass"> Password</label>
-                                <input type="Password" name="cnf-password" class="form-control" id="pass2" placeholder="Enter your password." required>
-                            </div>
-
-                            <div class="col-sm-12 form-group mb-0">
-                                <input type="submit" name="Login" value="Login">
-                            </div>
-                            <a href="signup.php">Not a Member? Sign up!</a>
-
+        <div class="content-without-footer">
+            <div class="container">
+                <h1>LOGIN</h1>
+                <form action="login.inc.php" method="post">
+                    <div class="row jumbotron">
+                        <?php
+                        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                        if (strpos($fullUrl, "login=invalidlogin") == true) {
+                            echo "<p class='error'> The Email or Password you enterd is incorrect!</p>";
+                        }
+                        ?>
+                        <div class="col-sm-6 form-group">
+                            <label for="pass">Email</label>
+                            <input type="email" name="email" class="form-control" id="pass" placeholder="Enter your Email." required>
+                            <label for="pass"> Password</label>
+                            <input type="Password" name="password" class="form-control" id="pass2" placeholder="Enter your password." required>
                         </div>
-                    </form>
-                </div>
+
+                        <div class="col-sm-12 form-group mb-0">
+                            <input type="submit" name="Login" value="Login">
+                        </div>
+                        <a href="signup.php">Not a Member? Sign up!</a>
+
+                    </div>
+                </form>
             </div>
+        </div>
         <?php include "includes/footer.html"; ?>
     </div>
 </body>
