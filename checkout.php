@@ -1,4 +1,5 @@
-<?php include "includes/session.php"; ?>
+<?php include "includes/session.php";?>
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -63,7 +64,9 @@
 
                 $_SESSION["user"] = 9; // TEMPORARY STATIC USER ID 
 
-                $todate = getdate()['mday']."/".getdate()['mon']."/".getdate()['year']; // Current date as DD/MM/YYYY
+                $todate = getdate()['hours']."/".getdate()['minutes']."/".getdate()['seconds']."/".getdate()['mday']."/".getdate()['mon']."/".getdate()['year']; // Current date as DD/MM/YYYY
+
+
 
                 foreach($_SESSION["customercart"] as $key => &$val){
 
@@ -72,6 +75,13 @@
                     $qty = $_SESSION["customercart"][$key]['qty'];
                         
                 }
+
+                $orderId = $_SESSION["user"]["id"].$todate;
+                echo $orderId;
+
+                //Free 
+                //Express
+                //Same Day 
 
                 //decrement inventory
 
