@@ -83,15 +83,14 @@
                        
                         console.log(price);
                         var identifier = "productFormat"+index;
-                        var format = null;
+                        var format = document.getElementById(identifier);
                         var defaultFormat = null;
-                        if (document.getElementById("price-per-unit" + index).innerHTML.substring(1).split("/")[1] != "un"){
-                            format = document.getElementById(identifier).value;
+                        if (format) {
+                            format = format.value;
                             defaultFormat = document.getElementById(identifier).getAttribute("data-initial");
-                            //$.post("/session.php",{"format": format, "product_id": productId });
                         }
+                        
                         var quantity = document.getElementById("quantity" + index).value;
-            
             
                         if (format != null){
                             price = price * (format / defaultFormat) * quantity;
@@ -256,6 +255,7 @@
                             <div class="price-descriptors">
                                 <p id="cartcount1">3 items</p>
                                 <p>
+                                <form action="checkout.php" method="post">
                                 <select class = 'productFormat' name='shipping' id = 'shipping-choice' onchange=updateDelivery()>
                                     <option selected value='0'>Free Delivery</option>
                                     <option value='5'>Express Delivery</option>
@@ -283,8 +283,9 @@
                     </div>
 
                     <div class="clearfix"></div>
-                    <div class="center"><button type="submit" class="long-bttn" onclick="window.location.href='/SOEN287/checkout.php'"> Order Now </button></div>
+                    <div class="center"><button type="submit" class="long-bttn" onclick="this.form.submit()"> Order Now </button></div>
                     <div class="center"><button class="long-bttn contShop" onclick="window.location.href='/SOEN287/homepage.php'"> Continue Shopping </button> </div>
+                    <form>
 
 
                 </div>
@@ -345,12 +346,15 @@
     function increment(index) {
         quantity = parseInt(document.getElementById('quantity'+index).value);
 
-        let inventory = document.getElementById("inventory"+index).innerHTML;
-            if (quantity == inventory) {
-                confirm("Ouf... I hope that next shipment is coming in soon.");
-            } else {
-                document.getElementById('quantity'+index).value = quantity + 1;
-            }
+        if(checkQuantity(index)){
+            document.getElementById('quantity'+index).value = quantity + 1;
+        } 
+        //let inventory = document.getElementById("inventory"+index).innerHTML;
+           // if (quantity == inventory) {
+           //     confirm("Ouf... I hope that next shipment is coming in soon.");
+           // } else {
+            //    document.getElementById('quantity'+index).value = quantity + 1;
+          //  }
         
         updateFormatPrice(index);
     }
@@ -372,12 +376,30 @@
     }
 
     function checkQuantity(index) {
-        quantity = parseInt(document.getElementById('quantity'+index).value);
-
+   
+        let quantity = parseInt(document.getElementById('quantity'+index).value);
         let inventory = document.getElementById("inventory"+index).innerHTML;
+        let formatItem = document.getElementById('productFormat'+index);
+        let hasAFormat = false;
+        
+        
+        if (formatItem != null) {
+            formatItem = parseInt(formatItem.value);
+            quantity *= formatItem;
+            hasAFormat = true;
+        }
+
         if (quantity > inventory) {
-                confirm("Ouf... I hope that next shipment is coming in soon.");
+            confirm("Ouf... I hope that next shipment is coming in soon.");
+            if (hasAFormat){
+                let newQty = parseInt(inventory / format);
+                    document.getElementById('quantity'+index).value = parseInt(inventory / formatItem);
+            } else {
                 document.getElementById('quantity'+index).value = inventory;
+            }
+            return false;
+        } else {
+            return true;
         }
 
     }
