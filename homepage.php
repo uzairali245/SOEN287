@@ -77,22 +77,6 @@ img{
             
             <div class="d-flex flex-wrap justify-content-evenly ">
                 
-                <!-- 
-                    <div class='flex-grow-1 bd-highlight'>
-                                 <form action=\"\" method=\"post\">
-                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                 <input type='text' name='qty' value='1' id ='{$index}' class='amount'>
-                                 <input hidden type='text' name='chosenFormat' value='{$row['format']}'>
-                                 <input hidden type=\"text\"  name='product_id' value={$row['product_id']}>
-                                 <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 plusButton'   id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>                                
-                             </div>
-     
-                            <div class='bd-highlight'>
-                                 <button class='btn btn-primary rounded-3 btn-sm btn-sm py-0 cartButton' id='{$index}' style='background-color:  #EE4F3E; border-color: #EE4F3E;' onClick='this.form.submit()'> Add to Cart</button>
-                                 </form>
-                            </div>
-
-                -->
                             
                 <div class="aisle-item"> 
                     <a href='product_display.php?varname=1005'>
