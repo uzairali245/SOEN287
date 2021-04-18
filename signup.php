@@ -89,7 +89,11 @@
             color: white;
             font-size: 12px;
             margin-top: 10px;
+        }
 
+        .error {
+            color: red !important;
+            text-align: center !important;
         }
     </style>
 
@@ -108,6 +112,12 @@
                 <h1>Signup</h1>
                 <form action="registration.inc.php" method="post">
                     <div class="row jumbotron">
+                        <?php
+                        $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                        if (strpos($fullUrl, "signup=error") == true) {
+                            echo "<p class='error'> The Email you enterd is already in use!</p>";
+                        }
+                        ?>
                         <div class="col-sm-6 form-group">
                             <label for="name-f">First Name</label>
                             <input type="text" class="form-control" name="fname" id="fname" placeholder="Enter your first name." required>

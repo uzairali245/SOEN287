@@ -21,21 +21,24 @@
     $num=mysqli_num_rows($result);
     //above finds doublicate user
 
-    if($num>0){
-        header("Loction: ../signup.php?error=emailtaken&email=".$email);
+    if($num==1){
+        header("Location: signup.php?signup=error");
         exit();
     }else{
+ 
         //finds number of rows amd adds unqiue id
         $a = "SELECT * from users";
         $rows = mysqli_query($conn, $a);
         $num = mysqli_num_rows($rows)+1;
+
         //creates new user 
         $input=" INSERT INTO users( user_id, role, email, password, first_name, last_name, postal_code, province, address) 
         values('$num', 'client', '$email', '$pass', '$fname', '$lname', '$postal', '$province', '$address')";
         mysqli_query($conn, $input);
+
     //creates session variable
     $_SESSION["user"]=array(
-        'id' => mysqli_fetch_assoc(mysqli_query($conn, "SELECT id FROM users WHERE email=$email"))['id'],
+        'id' => mysqli_fetch_assoc(mysqli_query($conn, "SELECT id FROM users WHERE email=$email"))["id"],
         'role'=> 'client'
     );
 
