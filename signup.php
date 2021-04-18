@@ -106,7 +106,7 @@
 
             <div class="container">
                 <h1>Signup</h1>
-                <form action="registration.php" method="post">
+                <form action="registration.inc.php" method="post">
                     <div class="row jumbotron">
                         <div class="col-sm-6 form-group">
                             <label for="name-f">First Name</label>
