@@ -112,7 +112,8 @@
               <a class="btn btn-success backstore-font add-btn" href="./editproduct.php">Add</a>
             </div>
             <div class="col-lg-10" style="overflow-x: auto;">
-              <table class="table table-striped table-bordered table-hover table-sm">
+            <input style="color: black; width:100px; text-align:left;" id='searchProducts' onkeyup='searchTable("Products")' type='text' placeholder="Search...">
+              <table id="Products" class="table table-striped table-bordered table-hover table-sm">
                 <thead class="thead"><tr>
                     <th class="text-center backstore-font">ID</th>
                     <th class="text-center backstore-font">Name</th>
@@ -148,7 +149,8 @@
               <a class="btn btn-success backstore-font add-btn" href="./backstore_edit_order_profile.php">Add</a>
             </div>
             <div class="col-lg-10" style="overflow-x: auto;">
-              <table class="table table-striped table-bordered table-hover table-sm">
+            <input style="color: black; width:100px; text-align:left;" id='searchOrders' onkeyup='searchTable("Orders")' type='text' placeholder="Search...">
+              <table id="Orders" class="table table-striped table-bordered table-hover table-sm">
                 <thead class="thead"><tr>
                     <th class="text-center backstore-font">ID</th>
                     <th class="text-center backstore-font">Order Date</th>
@@ -208,7 +210,8 @@
                 <a class="btn btn-success backstore-font add-btn" href="./userprofile.php">Add</a>
               </div>
               <div class="col-lg-10" style="overflow-x: auto; overflow-y: auto;">
-                <table class="table table-striped table-bordered table-hover table-sm">
+              <input style="color: black; width:100px; text-align:left;" id='searchUsers' onkeyup='searchTable("Users")' type='text' placeholder="Search...">
+                <table id="Users" class="table table-striped table-bordered table-hover table-sm">
                   <thead class="thead"><tr>
                       <th class="text-center backstore-font">ID</th>
                       <th class="text-center backstore-font">Name</th>
@@ -246,6 +249,29 @@
           return true;
         else 
           return false;
+      }
+
+      function searchTable(tableparam) {
+        var input, filter, found, table, tr, td, i, j;
+        input = document.getElementById("search" + tableparam);
+        filter = input.value.toUpperCase();
+        table = document.getElementById(tableparam);
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1];
+          if (tableparam == "Orders"){
+            td = tr[i].getElementsByTagName("td")[3];
+          }
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
       }
     </script>
     </div>
