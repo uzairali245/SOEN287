@@ -164,13 +164,18 @@
         $sql_Initial = "SELECT * FROM orders WHERE id=$temp";
         $result_Initial = mysqli_query($conn, $sql_Initial);
         $row_Initial = mysqli_fetch_assoc($result_Initial);
+
+        $sql_Name = "SELECT first_name FROM users WHERE id={$row_Initial['customer_id']}";
+        $result_Name = mysqli_query($conn, $sql_Name);
+        $row_Name = mysqli_fetch_assoc($result_Name);
     ?>    
 
       <form id="my-form" action="data_process.php" method="post">
         <input type="hidden" id="order-id" name="order-id" value="<?php echo $temp; ?>">
+        <input type="hidden" id="customer-id" name="customer-id" value="<?php echo $row_Initial['customer_id']; ?>">
 
         <br><label class="order-upper-text" for="customer-name">Customer Name:</label>
-        <input type="text" id="customer-name" name="customer-name" value="<?php echo $row_Initial['customer']; ?>">
+        <input type="text" id="customer-name" name="customer-name" value="<?php echo $row_Name['first_name']; ?>">
         <br><br>   
         
         <label class="order-upper-text" for="order-number">Order Number:</label>
@@ -191,9 +196,9 @@
         
         <label class="order-upper-text" for="shipping-speed">Shipping Speed:</label>
         <select class="input-box" name="shipping-speed" id="shipping-speed">
-          <option id="free-delivery" value="free-delivery">Free Delivery</option>
-          <option id="express-delivery" value="express-delivery">Express Delivery</option>
-          <option id="same-day-delivery" value="same-day-delivery">Same-day Delivery</option>
+          <option id="Free Delivery" value="Free Delivery">Free Delivery</option>
+          <option id="Express Delivery" value="Express Delivery">Express Delivery</option>
+          <option id="Same Day Delivery" value="Same Day Delivery">Same Day Delivery</option>
         </select>
       </form>  
       
