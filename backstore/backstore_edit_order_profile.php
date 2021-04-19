@@ -160,7 +160,7 @@
           } 
     ?>
 
-      <form action="data_process.php" method="post">
+      <form id="my-form" action="data_process.php" method="post">
         <input type="hidden" id="order-id" name="order-id" value="<?php echo $temp; ?>">
 
         <br><label class="order-upper-text" for="customer-name">Customer Name:</label>
@@ -189,55 +189,86 @@
           <option value="express-delivery">Express Delivery</option>
           <option value="same-day-delivery">Same-day Delivery</option>
         </select>
+      </form>  
       
-        <br><br><br>
+        <br><br><br><br>
         
 
 
-        <!--<p class = order-title>Products Ordered</p><br>
-        
+        <p class = order-title>Products Ordered</p><br>
         <table style="width:100%">
+        <tr>
+            <td></td>
+            <th class="order-lower-text">Name</th>
+            <th class="order-lower-text">Format</th>
+            <th class="order-lower-text">Quantity</th>
+            <th class="order-lower-text">Price</th>
+          </tr>
+        <?php
+        $sql = "SELECT order_id FROM orders WHERE id=$temp";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+
+        $sql1 = "SELECT product_id FROM sales WHERE order_id={$row['order_id']}";
+        $result1 = mysqli_query($conn, $sql);
+        
+        while($row1 = mysqli_fetch_assoc($result1)) {
+          $sql2 = "SELECT name, image FROM products WHERE product_id={$row1['product_id']}";
+          $result2 = mysqli_query($conn, $sql);
+          $row2 = mysqli_fetch_assoc($result2);
+          echo "<tr>
+          
+          <td class='order-lower-text'>{$row2['name']}</td>";
+
+          $sql3 = "SELECT format, quantity FROM sales WHERE product_id={$row1['product_id']}";
+          $result3 = mysqli_query($conn, $sql);
+          $row3 = mysqli_fetch_assoc($result3);
+          echo "<td class='order-lower-text'>{$row3['format']}</td>
+            <td class='order-lower-text'>{$row3['quantity']}</td>";
+          
+            $sql4 = "SELECT price FROM products WHERE product_id={$row1['product_id']}";
+            $result4 = mysqli_query($conn, $sql);
+            $row4 = mysqli_fetch_assoc($result4);
+            echo "<td class='order-lower-text'>{$row4['price']}$</td>
+            </tr>";
+        }
+        echo "</table>";
+        mysqli_close($conn);
+        ?>
+        
+        <!--<table style="width:100%">
           <tr>
-            <td><INPUT TYPE="Checkbox" Name="Product" ID="P1" Value="Candy" class="check-box-size"></td>
+            <td></td>
+            <th class="order-lower-text">Name</th>
+            <th class="order-lower-text">Format</th>
+            <th class="order-lower-text">Quantity</th>
+            <th class="order-lower-text">Price</th>
+          </tr>  
+          <tr>
             <td><img src="..\resources\img\snacks\candy_image.jpg" alt="Candy"></td>
             <td class="order-lower-text">Candy</td>
-            <td class="order-lower-text">133589</td>
-            <td class="order-lower-text">3.99$</td>
-            <td><select class="input-box" name="candy-quantity" id="candy-quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select></td>
+            <td class="order-lower-text">250g</td>
+            <td class="order-lower-text">10</td>
+            <td class="order-lower-text">5.99$</td>
           </tr>
           <tr>
-            <td><INPUT TYPE="Checkbox" Name="Product" ID="P2" Value="Donut" class="check-box-size"></td>
             <td><img src="..\resources\img\snacks\cookies_image.jpg" alt="Donut"></td>
             <td class="order-lower-text">Donut</td>
-            <td class="order-lower-text">133590</td>
-            <td class="order-lower-text">4.99$</td>
-            <td><select class="input-box" name="donut-quantity" id="donut-quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select></td>  
+            <td class="order-lower-text">50g</td>
+            <td class="order-lower-text">5</td> 
+            <td class="order-lower-text">2.99$</td>
           </tr>
           <tr>
-            <td><INPUT TYPE="Checkbox" Name="Product" ID="P3" Value="Mars" class="check-box-size"></td>
             <td><img class="img-responsive" src="..\resources\img\snacks\marshmallows_image.jpg" alt="Mars Bar"></td>
             <td class="order-lower-text">Mars</td>
-            <td class="order-lower-text">133593</td>
-            <td class="order-lower-text">5.99$</td>
-            <td><select class="input-box" name="mars-quantity" id="mars-quantity">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select></td>  
+            <td class="order-lower-text">60g</td>
+            <td class="order-lower-text">3</td>  
+            <td class="order-lower-text">3.98$</td>
           </tr>
-        </table><br><br>
+        </table>--><br><br>
         <label class="order-lower-text" for="total-order-amount">Total order amount: </label>&nbsp;
-        <input type="text" id="total-order-amount" name="total-order-amount">&nbsp;&nbsp;&nbsp;-->
-        <button type="submit" class="btn btn-info backstore-font">Save</button>
-      </form>
+        <input type="text" id="total-order-amount" name="total-order-amount">&nbsp;&nbsp;&nbsp;
+        <button type="submit" form="my-form" class="btn btn-info backstore-font">Save</button>
     </div>
     <br>
     <?php include "../includes/footer.html"; ?>
