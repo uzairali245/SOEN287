@@ -283,8 +283,9 @@
 
                     <div class="clearfix"></div>
                     <div class="center"><button type="submit" class="long-bttn" onclick="this.form.submit()"> Order Now </button></div>
+                    </form>
                     <div class="center"><button class="long-bttn contShop" onclick="window.location.href='/SOEN287/homepage.php'"> Continue Shopping </button> </div>
-                    <form>
+                    
 
 
                 </div>
