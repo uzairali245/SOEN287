@@ -1,4 +1,4 @@
-              <!DOCTYPE html>
+                    <!DOCTYPE html>
        <html lang="en" dir="ltr">
 
        <head>
@@ -112,6 +112,7 @@
 
              <?php  $sql = "SELECT first_name,last_name,email,password,postal_code,role FROM users WHERE user_id=$temp;";
               $result = mysqli_query($conn, $sql);
+              if($temp!="NULL"){
               while ($row = mysqli_fetch_assoc($result))
                 {
 
@@ -169,7 +170,56 @@
 
 
              </form>
-             <?php } ?>
+           <?php }} else {  //////This is else block
+             ?>
+             <form class="fo" action="data_editprofile.php" method="post">
+               <input type="hidden" id="user-id" name="user-id" value="<?php echo $temp; ?>">
+               <label for="">Name:</label>
+               <div class="row mb-3">
+                 <div class="col">
+
+                   <input type="name" class="form-control" placeholder="First name" id="first-name" name="first-name"value="<?php  ?>">
+                 </div>
+                 <div class="col">
+                   <input type="name" class="form-control" placeholder="Last name" id="last-name" name="last-name" value="<?php  ?>">
+                 </div>
+               </div>
+               <label for="">Email:</label>
+               <div class="row mb-3">
+
+                 <div class="col">
+                   <input type="email" class="form-control" placeholder="New Email" id="new-email" name="new-email">
+                 </div>
+               </div>
+               <label for="">Password:</label>
+               <div class="row mb-3">
+
+                 <div class="col">
+                   <input type="password" class="form-control" placeholder="New Password" id="new-password" name="new-password">
+                 </div>
+               </div>
+               <label for="">Postal Code:</label>
+               <div class="row mb-3">
+
+                 <div class="col">
+                   <input type="address" class="form-control" placeholder="New Postal code" id="new-postal" name="new-postal">
+                 </div>
+               </div>
+               <label>Are you staff or Customer?</label>
+               <div class="input-group mb-3">
+
+                 <select class="form-select" id="person-role" name="person-role">
+                   <option selected><?php  ?></option>
+                   <option id="person-role" name="person-role">Staff</option>
+                   <option id="person-role" name="person-role">Customer</option>
+
+                 </select>
+               </div>
+               <button type="submit" name="button" style="width:100px">Save</button>
+
+
+             </form>
+           <?php } ?>
 
 
            </div>
