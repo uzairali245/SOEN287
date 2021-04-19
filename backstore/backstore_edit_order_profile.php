@@ -160,34 +160,40 @@
           } 
     ?>
 
+    <?php
+        $sql_Initial = "SELECT * FROM orders WHERE id=$temp";
+        $result_Initial = mysqli_query($conn, $sql_Initial);
+        $row_Initial = mysqli_fetch_assoc($result_Initial);
+    ?>    
+
       <form id="my-form" action="data_process.php" method="post">
         <input type="hidden" id="order-id" name="order-id" value="<?php echo $temp; ?>">
 
         <br><label class="order-upper-text" for="customer-name">Customer Name:</label>
-        <input type="text" id="customer-name" name="customer-name">
+        <input type="text" id="customer-name" name="customer-name" value="<?php echo $row_Initial['customer']; ?>">
         <br><br>   
         
         <label class="order-upper-text" for="order-number">Order Number:</label>
-        <input type="text" id="order-number" name="order-number">
+        <input type="text" id="order-number" name="order-number" value="<?php echo $row_Initial['order_id']; ?>">
         <br><br>
         
         <label class="order-upper-text" for="order-date">Order Date:</label>
-        <input class="input-box" type="date" id="order-date" name="order-date">
+        <input class="input-box" type="date" id="order-date" name="order-date" value="<?php echo $row_Initial['order_date']; ?>">
         <br><br>
         
         <label class="order-upper-text" for="delivery-date">Delivery Date:</label>
-        <input class="input-box" type="date" id="delivery-date" name="delivery-date">
+        <input class="input-box" type="date" id="delivery-date" name="delivery-date" value="<?php echo $row_Initial['delivery_date']; ?>">
         <br><br>
         
         <label class="order-upper-text" for="delivery-address">Delivery Address:</label>
-        <input type="text" id="delivery-address" name="delivery-address">
+        <input type="text" id="delivery-address" name="delivery-address" value="<?php echo $row_Initial['delivery_address']; ?>">
         <br><br>
         
         <label class="order-upper-text" for="shipping-speed">Shipping Speed:</label>
         <select class="input-box" name="shipping-speed" id="shipping-speed">
-          <option value="free-delivery">Free Delivery</option>
-          <option value="express-delivery">Express Delivery</option>
-          <option value="same-day-delivery">Same-day Delivery</option>
+          <option id="free-delivery" value="free-delivery">Free Delivery</option>
+          <option id="express-delivery" value="express-delivery">Express Delivery</option>
+          <option id="same-day-delivery" value="same-day-delivery">Same-day Delivery</option>
         </select>
       </form>  
       
@@ -204,79 +210,72 @@
             <th class="order-lower-text">Quantity</th>
             <th class="order-lower-text">Price</th>
           </tr>
+       
         <?php
         $sql = "SELECT order_id FROM orders WHERE id=$temp";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
 
         $sql1 = "SELECT product_id FROM sales WHERE order_id={$row['order_id']}";
-        $result1 = mysqli_query($conn, $sql);
+        $result1 = mysqli_query($conn, $sql1);
         
         while($row1 = mysqli_fetch_assoc($result1)) {
           $sql2 = "SELECT name, image FROM products WHERE product_id={$row1['product_id']}";
-          $result2 = mysqli_query($conn, $sql);
+          $result2 = mysqli_query($conn, $sql2);
           $row2 = mysqli_fetch_assoc($result2);
           echo "<tr>
-          
+          <td><img src='../{$row2['image']}' alt='{$row2['name']}'></td>
           <td class='order-lower-text'>{$row2['name']}</td>";
 
           $sql3 = "SELECT format, quantity FROM sales WHERE product_id={$row1['product_id']}";
-          $result3 = mysqli_query($conn, $sql);
+          $result3 = mysqli_query($conn, $sql3);
           $row3 = mysqli_fetch_assoc($result3);
           echo "<td class='order-lower-text'>{$row3['format']}</td>
             <td class='order-lower-text'>{$row3['quantity']}</td>";
           
             $sql4 = "SELECT price FROM products WHERE product_id={$row1['product_id']}";
-            $result4 = mysqli_query($conn, $sql);
+            $result4 = mysqli_query($conn, $sql4);
             $row4 = mysqli_fetch_assoc($result4);
             echo "<td class='order-lower-text'>{$row4['price']}$</td>
             </tr>";
         }
         echo "</table>";
-        mysqli_close($conn);
-        ?>
+        ?>           
         
-        <!--<table style="width:100%">
-          <tr>
-            <td></td>
-            <th class="order-lower-text">Name</th>
-            <th class="order-lower-text">Format</th>
-            <th class="order-lower-text">Quantity</th>
-            <th class="order-lower-text">Price</th>
-          </tr>  
-          <tr>
-            <td><img src="..\resources\img\snacks\candy_image.jpg" alt="Candy"></td>
-            <td class="order-lower-text">Candy</td>
-            <td class="order-lower-text">250g</td>
-            <td class="order-lower-text">10</td>
-            <td class="order-lower-text">5.99$</td>
-          </tr>
-          <tr>
-            <td><img src="..\resources\img\snacks\cookies_image.jpg" alt="Donut"></td>
-            <td class="order-lower-text">Donut</td>
-            <td class="order-lower-text">50g</td>
-            <td class="order-lower-text">5</td> 
-            <td class="order-lower-text">2.99$</td>
-          </tr>
-          <tr>
-            <td><img class="img-responsive" src="..\resources\img\snacks\marshmallows_image.jpg" alt="Mars Bar"></td>
-            <td class="order-lower-text">Mars</td>
-            <td class="order-lower-text">60g</td>
-            <td class="order-lower-text">3</td>  
-            <td class="order-lower-text">3.98$</td>
-          </tr>
-        </table>--><br><br>
+        <br><br>
         <label class="order-lower-text" for="total-order-amount">Total order amount: </label>&nbsp;
-        <input type="text" id="total-order-amount" name="total-order-amount">&nbsp;&nbsp;&nbsp;
+        <?php
+            // Get order total from sales
+            $sql_sales = "SELECT product_id, format, quantity FROM sales WHERE order_id = {$row['order_id']}";
+            $result_sales = mysqli_query($conn, $sql_sales);
+            $order_total = 0;
+            while($row_sales = mysqli_fetch_assoc($result_sales)){
+              $sql_product = "SELECT price, format FROM products WHERE product_id = {$row_sales['product_id']}";
+              $result_products = mysqli_query($conn, $sql_product);
+              $row_products = mysqli_fetch_assoc($result_products);
+              $product_price = $row_products['price'];
+              $product_format = $row_products['format'];
+
+              if($product_format == null){
+                $order_total += $row_sales['quantity'] * $product_price;
+              } else {
+                $product_base_format = explode('/', $product_format)[0];
+                $order_total += $row_sales['quantity'] * $product_price * ($row_sales['format']/$product_base_format);
+              }
+            }
+        ?>
+        <input type="text" style="text-align:right; font-weight:bold" id="total-order-amount" name="total-order-amount" value="$ <?php echo $order_total; ?>" readonly>&nbsp;&nbsp;&nbsp;
         <button type="submit" form="my-form" class="btn btn-info backstore-font">Save</button>
     </div>
     <br>
+    <?php mysqli_close($conn); ?>
     <?php include "../includes/footer.html"; ?>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
       /* Custom JS */
+      document.getElementById("<?php echo $row_Initial['shipping_speed']; ?>").selected = "true";
     </script>
     </div>
   </body>
