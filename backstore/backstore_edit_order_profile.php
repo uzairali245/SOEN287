@@ -170,6 +170,22 @@
         $row_Name = mysqli_fetch_assoc($result_Name);
     ?>    
 
+    <?php 
+        $date = explode('-', $row_Initial['order_date']);
+        $year = $date[0];
+        $month = $date[1];
+        $day = $date[2];
+        
+        if ((int) $month < 10) {
+          $month = "0" . $date[1];
+        }
+        if ((int) $day < 10) {
+          $day = "0" . $date[2];
+        }
+
+        $dateToUse = $year . "-" . $month . "-" . $day;
+    ?>
+
       <form id="my-form" action="data_process.php" method="post">
         <input type="hidden" id="order-id" name="order-id" value="<?php echo $temp; ?>">
         <input type="hidden" id="customer-id" name="customer-id" value="<?php echo $row_Initial['customer_id']; ?>">
@@ -183,7 +199,7 @@
         <br><br>
         
         <label class="order-upper-text" for="order-date">Order Date:</label>
-        <input class="input-box" type="date" id="order-date" name="order-date" value="<?php echo $row_Initial['order_date']; ?>">
+        <input class="input-box" type="date" id="order-date" name="order-date" value="<?php echo $dateToUse; ?>">
         <br><br>
         
         <label class="order-upper-text" for="delivery-date">Delivery Date:</label>
