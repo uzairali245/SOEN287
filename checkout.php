@@ -58,7 +58,6 @@
     </head>
     
     <body>
-        <?php include "includes/session.php"; ?>
         <div class="content-container">
             <section class="section-checkout content-without-footer">
             <?php 
@@ -305,6 +304,7 @@
                     if($NumOfItemsProcessed == $NumItemsInCart){
                         echo "<h2> Thank you for your order </h2>";
                         echo " <h3 style= 'padding: 0 30px; font-weight: 300; font-style: normal; font-family: 'Exo', sans-serif'> Your order number is $order_id </h3>";
+                        $_SESSION["customercart"] = array();
                     } else if ($NumOfItemsProcessed == 0) {
                         echo "<h2> We're sorry, there was an error completing your order. Please try again later </h2>";
                         $remove_order= "DELETE FROM orders WHERE order_id =". $order_id . ";";
