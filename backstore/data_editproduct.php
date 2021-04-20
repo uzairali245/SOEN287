@@ -15,7 +15,7 @@
         $productPrice = $_POST["change-price"];
         $productInventory = $_POST["change-inventory"];
 
-        $sql = "UPDATE products SET name = '$productName',  aisle = '$productAisle', price = '$productPrice'/*, inventory = '$productInventory'*/ WHERE product_id = $temp2";
+        $sql = "UPDATE products SET name = '$productName',  aisle = '$productAisle', price = '$productPrice', inventory = '$productInventory' WHERE product_id = $temp2";
 
         if (mysqli_query($conn, $sql)) {
             echo "Record updated successfully";
@@ -30,8 +30,8 @@
       $productPrice = $_POST["change-price"];
       $productInventory = $_POST["change-inventory"];
 
-        $sql = "INSERT INTO products (name, aisle, price, inventory)
-        VALUES ('$productName', '$productAisle', '$orderDate', '$productPrice', '$productInventory')";
+        $sql = "INSERT INTO products (product_id,name, aisle, price, inventory,description,manufacturer,unit)
+        VALUES ('4008','$productName', '$productAisle',  '$productPrice', '$productInventory','new product','Earth co.','g')";
 
         if (mysqli_query($conn, $sql)) {
             echo "New record created successfully";
@@ -44,3 +44,4 @@
     ?>
 </body>
 </html>
+
