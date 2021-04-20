@@ -82,8 +82,8 @@ img{
                     <a href='product_display.php?varname=1005'>
                     <img src="resources/img/bakery/bakery-donut2.jpg" alt="Donut">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Donut</h4>
-                    <span style="margin-bottom: 0 ">10$/dozen</span>
-                    <span style="text-decoration: line-through; font-size: 70%"> 12$/dozen</span>
+                    <span style="margin-bottom: 0 ">33$/un</span>
+                    <span style="text-decoration: line-through; font-size: 70%"> 37$/un</span>
                     </a>
                     
                             <?php 
@@ -145,8 +145,8 @@ img{
                 <a href='product_display.php?varname=3000'>
                     <img src="resources/img/dairy/brie.jpg" alt="brie">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Brie</h4>
-                    <span style="margin-bottom: 0 ">10$/unit</span>
-                    <span style="text-decoration: line-through; font-size: 70%"> 15$/unit</span>
+                    <span style="margin-bottom: 0 ">73.69$/unit</span>
+                    <span style="text-decoration: line-through; font-size: 70%"> 88$/unit</span>
                     </a>
 
 
@@ -177,8 +177,8 @@ img{
                     <a href='product_display.php?varname=1001'>
                     <img src="resources/img/bakery/bakery-baguette2.jpg" alt="Baguette">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Baguette</h4>
-                    <span style="margin-bottom: 0 ">7$/unit</span>
-                    <span style="text-decoration: line-through; font-size: 70%"> 10$/unit</span>
+                    <span style="margin-bottom: 0 ">15$/unit</span>
+                    <span style="text-decoration: line-through; font-size: 70%"> 22$/unit</span>
                     </a>
                     
                     <?php 
@@ -213,7 +213,7 @@ img{
                 <a href='product_display.php?varname=1000'>
                 <img src="resources/img/bakery/bakery-bagel2.jpg" alt="Bagel">
                 <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Bagel</h4>
-                <p style="margin-bottom: 0 ">10$/dozen</p>
+                <p style="margin-bottom: 0 ">22$/unit</p>
                 </a>
 
                
@@ -242,7 +242,7 @@ img{
                     <a href='product_display.php?varname=1003'>
                     <img src="resources/img/bakery/bakery-chocolatine2.jpg" alt="chocolatine">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Chocolatine</h4>
-                    <p style="margin-bottom: 0 ">3$/unit</p>
+                    <p style="margin-bottom: 0 ">14$/unit</p>
                     </a>
 
                    
@@ -271,7 +271,7 @@ img{
                     <a href='product_display.php?varname=3003'>
                     <img src="resources/img/dairy/milk.jpg" alt="Milk">
                     <h4 style=" font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;">Milk</h4>
-                    <p style="margin-bottom: 0 ">5$/bag</p>
+                    <p style="margin-bottom: 0 ">15.41$/bag</p>
                     </a>
 
                    
