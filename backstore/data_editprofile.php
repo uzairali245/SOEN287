@@ -8,7 +8,7 @@
 
 <?php
 
-    if ($_POST['product-id'] != "NULL") {
+    if ($_POST['user-id'] != "NULL") {
         $temp2 = $_POST['user-id'];
         $firstName = $_POST["first-name"];
         $lastName = $_POST["last-name"];
@@ -34,8 +34,8 @@
       $userPostal = $_POST["new-postal"];
       $userRole = $_POST["person-role"];
 
-        $sql = "INSERT INTO users (first_name, last_name, email, password,postal_code,role)
-        VALUES ('$firstName', '$lastName', '$userEmail', '$userPass', '$userPostal' , '$userRole')";
+        $sql = "INSERT INTO users (user_id,first_name, last_name, email, password,postal_code,role,province,address)
+        VALUES ('11','$firstName', '$lastName', '$userEmail', '$userPass', '$userPostal' , '$userRole' ,'QC' ,'57-rue-laframboise')";
 
         if (mysqli_query($conn, $sql)) {
             echo "New record created successfully";
