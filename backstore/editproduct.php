@@ -1,4 +1,5 @@
 <?php 
+  include "../includes/session.php";
   if ((!isset($_SESSION['user'])) || ($_SESSION['user']['role'] != "admin")){ 
     header("location: ../homepage.php");
 }
