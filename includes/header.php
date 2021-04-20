@@ -20,7 +20,7 @@
   if ((isset($_SESSION['user'])) && ($_SESSION['user']['role'] == "admin")){ 
     echo '  <a href="http://localhost:8888/SOEN287/backstore_access.php" class="aisle-link"
     >Backstore</a
-  >';
+  >';}
 ?>
 
 </div>
