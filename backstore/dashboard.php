@@ -170,7 +170,7 @@
                       $customers_first_name = mysqli_fetch_assoc($result_first_name)['first_name'];
 
                       // Get order total from sales
-                      $sql_sales = "SELECT product_id, format, quantity FROM sales WHERE order_id = {$row['id']}";
+                      $sql_sales = "SELECT product_id, format, quantity FROM sales WHERE order_id = {$row['order_id']}";
                       $result_sales = mysqli_query($conn, $sql_sales);
                       $order_total = 0;
                       while($row_sales = mysqli_fetch_assoc($result_sales)){
