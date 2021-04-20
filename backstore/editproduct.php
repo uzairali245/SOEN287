@@ -147,6 +147,7 @@
               <div class="form-content">
                 <?php  $sql = "SELECT name,aisle,price,inventory FROM products WHERE product_id=$temp;";
                 $result = mysqli_query($conn, $sql);
+                if($temp!="NULL"){
                 while ($row = mysqli_fetch_assoc($result))
                 {
 
@@ -183,16 +184,51 @@
                   </div>
                   <label for="change-inventory">Inventory:</label>
                   <div class="row mb-3">
-                    <div class="flex-grow-1 bd-highlight">
-                      <button type="button" name="button" onclick="decrementFunction(this.form)" class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color: #bf0d00; border-color:  #bf0d00;" id="inc"> - </button>
-                      <input type="text" name="qty" value="<?php echo $row ['inventory']; ?>" class="amount" id="qty" id="change-inventory">
-                      <button type="button" name="button" onclick="incrementFunction(this.form)" class="btn btn-primary rounded-circle btn-sm py-0 " style="background-color:  #bf0d00; border-color:  #bf0d00;" id="dec"> + </button>
-                    </div>
+                    <input type="number" name="change-inventory" id="change-inventory"value="<?php echo $row ['inventory']; ?>">
                   </div>
 
                   <button class="btn" type="submit" name="button" style="margin-top:30px">Save</button><br>
                 </form>
-              <?php } ?>
+              <?php }
+            } else{    ////////THis is else block 
+              ?>
+              <form action="data_editproduct.php" method="post">
+                <input type="hidden" id="product-id" name="product-id" value="<?php echo $temp; ?>">
+
+
+                <label for="product-name">Product Name:</label>
+                <div class="row mb-3">
+
+
+                  <input type="name" class="form-control" id="product-name" name="product-name" value="<?php  ?>">
+                </div>
+                <label for="select-aisle">Select Aisle:</label>
+                <div class="row mb-3">
+
+
+                  <select class="form-select" name="select-aisle" id="select-aisle">
+                    <option selected><?php  ?></option>
+                    <option  name="select-aisle" id="select-aisle">Earth Produce</option>
+                    <option  name="select-aisle" id="select-aisle">Dairy</option>
+                    <option  name="select-aisle" id="select-aisle">Snacks</option>
+                    <option  name="select-aisle" id="select-aisle">Drinks</option>
+                    <option  name="select-aisle" id="select-aisle">Bakery</option>
+                    <option  name="select-aisle" id="select-aisle">Interstellar foods</option>
+
+
+                  </select>
+                </div>
+                <label for="change-price">Change Price:</label>
+                <div class="row mb-3">
+                  <input type="price" class="form-control"name="change-price" id="change-price" placeholder="Price " value="<?php  ?>">
+                </div>
+                <label for="change-inventory">Inventory:</label>
+                <div class="row mb-3">
+                  <input type="number" name="change-inventory" id="change-inventory"value="<?php  ?>">
+                </div>
+
+                <button class="btn" type="submit" name="button" style="margin-top:30px">Save</button><br>
+              </form> <?php } ?>
               </div>
             </td>
             <td>
@@ -223,4 +259,5 @@
 </body>
 
 </html>
+
 
