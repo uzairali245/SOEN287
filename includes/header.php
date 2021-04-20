@@ -4,21 +4,21 @@
     Aisles
   </h2>
   <hr id />
-  <a href="http://localhost:8888/SOEN287/veg_fruit.php" class="aisle-link"
+  <a href="http://localhost/SOEN287/veg_fruit.php" class="aisle-link"
     >Earth Produce</a
   >
-  <a href="http://localhost:8888/SOEN287/dairy.php" class="aisle-link">Dairy</a>
-  <a href="http://localhost:8888/SOEN287/snacks_aisle.php" class="aisle-link"
+  <a href="http://localhost/SOEN287/dairy.php" class="aisle-link">Dairy</a>
+  <a href="http://localhost/SOEN287/snacks_aisle.php" class="aisle-link"
     >Snacks</a
   >
-  <a href="http://localhost:8888/SOEN287/beverages.php" class="aisle-link">Drinks</a>
-  <a href="http://localhost:8888/SOEN287/bakery.php" class="aisle-link">Bakery</a>
-  <a href="http://localhost:8888/SOEN287/interstellar.php" class="aisle-link"
+  <a href="http://localhost/SOEN287/beverages.php" class="aisle-link">Drinks</a>
+  <a href="http://localhost/SOEN287/bakery.php" class="aisle-link">Bakery</a>
+  <a href="http://localhost/SOEN287/interstellar.php" class="aisle-link"
     >Interstellar foods</a
   >
   <?php 
   if ((isset($_SESSION['user'])) && ($_SESSION['user']['role'] == "admin")){ 
-    echo '  <a href="http://localhost:8888/SOEN287/backstore_access.php" class="aisle-link"
+    echo '  <a href="http://localhost/SOEN287/backstore_access.php" class="aisle-link"
     >Backstore</a
   >';}
 ?>
@@ -36,13 +36,13 @@
     >
       <a
         class="hide-mobile"
-        href="http://localhost:8888/SOEN287/homepage.php"
+        href="http://localhost/SOEN287/homepage.php"
         style="color: white; text-decoration: none; margin-right: 15px"
         >Mars Colonist Pantry</a
       >
       <a
         class="show-mobile"
-        href="http://localhost:8888/SOEN287/homepage.php"
+        href="http://localhost/SOEN287/homepage.php"
         style="color: white; text-decoration: none; margin-right: 15px"
         >MCP</a
       >
@@ -54,15 +54,15 @@
   </div>
 
   <div class="d-flex justify-content-end">
-    <a class="nav-link" href="http://localhost:8888/SOEN287/login.php">
+    <a class="nav-link" href="http://localhost/SOEN287/login.php">
       <ion-icon name="person"></ion-icon>
     </a>
 
-    <a class="nav-link" href="http://localhost:8888/SOEN287/shopping-cart.php">
+    <a class="nav-link" href="http://localhost/SOEN287/shopping-cart.php">
       <ion-icon name="cart-sharp"></ion-icon>
     </a>
 
-    <a class="nav-link" href="http://localhost:8888/SOEN287/logout.inc.php">Logout
+    <a class="nav-link" href="http://localhost/SOEN287/logout.inc.php">Logout
     <?php ?>
     </a>
   </div>
