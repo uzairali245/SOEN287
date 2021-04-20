@@ -1,4 +1,4 @@
-       <!DOCTYPE html>
+                    <!DOCTYPE html>
        <html lang="en" dir="ltr">
 
        <head>
@@ -81,12 +81,7 @@
            margin-left: 20px;
          }
 
-         .yo {
-           display: inline-block;
-           position: relative;
-           right: 240px;
-           top: 25px;
-         }
+
 
          .content-without-footer {
            padding-top: 0;
@@ -101,31 +96,37 @@
        <body>
          <div class="content-without-footer">
            <?php include "../includes/header.html";
-      include "../includes/dbc.php";
+                 include "../includes/dbc.php";
 
-        $temp = $_GET['user_id'];
+                 if(array_key_exists("user_id", $_GET)) {
+                   $temp = $_GET['user_id'];
+                 } else {
+                   $temp = "NULL";
+                 }
       ?>
            <div class="custom-page-container">
 
              <h3>Edit Profile</h3>
 
-             <button class="yo" type="submit" name="button">Change Photo </button>
+
 
              <?php  $sql = "SELECT first_name,last_name,email,password,postal_code,role FROM users WHERE user_id=$temp;";
-$result = mysqli_query($conn, $sql);
-while ($row = mysqli_fetch_assoc($result))
-{
+              $result = mysqli_query($conn, $sql);
+              if($temp!="NULL"){
+              while ($row = mysqli_fetch_assoc($result))
+                {
 
-?>
-             <form class="fo" action="" method="post">
+              ?>
+             <form class="fo" action="data_editprofile.php" method="post">
+               <input type="hidden" id="user-id" name="user-id" value="<?php echo $temp; ?>">
                <label for="">Name:</label>
                <div class="row mb-3">
                  <div class="col">
 
-                   <input type="name" class="form-control" placeholder="First name" value="<?php echo $row ['first_name']; ?>">
+                   <input type="name" class="form-control" placeholder="First name" id="first-name" name="first-name"value="<?php echo $row ['first_name']; ?>">
                  </div>
                  <div class="col">
-                   <input type="name" class="form-control" placeholder="Last name" value="<?php echo $row ['last_name']; ?>">
+                   <input type="name" class="form-control" placeholder="Last name" id="last-name" name="last-name" value="<?php echo $row ['last_name']; ?>">
                  </div>
                </div>
                <label for="">Email:</label>
@@ -134,16 +135,16 @@ while ($row = mysqli_fetch_assoc($result))
                    <input type="email" class="form-control" placeholder="Current Email" value="<?php echo $row ['email']; ?>">
                  </div>
                  <div class="col">
-                   <input type="email" class="form-control" placeholder="New Email">
+                   <input type="email" class="form-control" placeholder="New Email" id="new-email" name="new-email">
                  </div>
                </div>
                <label for="">Password:</label>
                <div class="row mb-3">
                  <div class="col">
-                   <input type="password" class="form-control" placeholder="Current Password" value="<?php echo $row ['password']; ?>">
+                   <input type="password" class="form-control" placeholder="Current Password"  value="<?php echo $row ['password']; ?>">
                  </div>
                  <div class="col">
-                   <input type="name" class="form-control" placeholder="New Password">
+                   <input type="name" class="form-control" placeholder="New Password" id="new-password" name="new-password">
                  </div>
                </div>
                <label for="">Postal Code:</label>
@@ -152,16 +153,16 @@ while ($row = mysqli_fetch_assoc($result))
                    <input type="address" class="form-control" placeholder="Current Postal code" value="<?php echo $row ['postal_code']; ?> ">
                  </div>
                  <div class="col">
-                   <input type="address" class="form-control" placeholder="New Postal code">
+                   <input type="address" class="form-control" placeholder="New Postal code" id="new-postal" name="new-postal">
                  </div>
                </div>
                <label>Are you staff or Customer?</label>
                <div class="input-group mb-3">
 
-                 <select class="form-select">
+                 <select class="form-select" id="person-role" name="person-role">
                    <option selected><?php echo $row ['role']; ?></option>
-                   <option value="1">Staff</option>
-                   <option value="2">Customer</option>
+                   <option id="person-role" name="person-role">Staff</option>
+                   <option id="person-role" name="person-role">Customer</option>
 
                  </select>
                </div>
@@ -169,7 +170,56 @@ while ($row = mysqli_fetch_assoc($result))
 
 
              </form>
-             <?php } ?>
+           <?php }} else {  //////This is else block
+             ?>
+             <form class="fo" action="data_editprofile.php" method="post">
+               <input type="hidden" id="user-id" name="user-id" value="<?php echo $temp; ?>">
+               <label for="">Name:</label>
+               <div class="row mb-3">
+                 <div class="col">
+
+                   <input type="name" class="form-control" placeholder="First name" id="first-name" name="first-name"value="<?php  ?>">
+                 </div>
+                 <div class="col">
+                   <input type="name" class="form-control" placeholder="Last name" id="last-name" name="last-name" value="<?php  ?>">
+                 </div>
+               </div>
+               <label for="">Email:</label>
+               <div class="row mb-3">
+
+                 <div class="col">
+                   <input type="email" class="form-control" placeholder="New Email" id="new-email" name="new-email">
+                 </div>
+               </div>
+               <label for="">Password:</label>
+               <div class="row mb-3">
+
+                 <div class="col">
+                   <input type="password" class="form-control" placeholder="New Password" id="new-password" name="new-password">
+                 </div>
+               </div>
+               <label for="">Postal Code:</label>
+               <div class="row mb-3">
+
+                 <div class="col">
+                   <input type="address" class="form-control" placeholder="New Postal code" id="new-postal" name="new-postal">
+                 </div>
+               </div>
+               <label>Are you staff or Customer?</label>
+               <div class="input-group mb-3">
+
+                 <select class="form-select" id="person-role" name="person-role">
+                   <option selected><?php  ?></option>
+                   <option id="person-role" name="person-role">Staff</option>
+                   <option id="person-role" name="person-role">Customer</option>
+
+                 </select>
+               </div>
+               <button type="submit" name="button" style="width:100px">Save</button>
+
+
+             </form>
+           <?php } ?>
 
 
            </div>

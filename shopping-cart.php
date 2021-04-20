@@ -170,7 +170,7 @@
                         $row = mysqli_fetch_assoc($result);
 
                        
-                            $formatArr = explode("/",$row['format']);
+                        $formatArr = explode("/",$row['format']);
 
                         //TO ADD TO CODE:
                         //<input type='hidden' name='product_id' id='product_id{$row['product_id]}' value='{$row['product_id]}'>
@@ -198,9 +198,9 @@
                                             if(!is_null($row['format'])){
                                                     foreach ($formatArr as $formats){
                                                         if ($formats == $format){
-                                                            echo "<option selected value=$formats>{$formats}g</option>";
+                                                            echo "<option selected value=$formats>{$formats}{$row['unit']}</option>";
                                                         } else {
-                                                            echo "<option value=$formats>{$formats}g</option>";  
+                                                            echo "<option value=$formats>{$formats}{$row['unit']}</option>";  
                                                         }
                                                     }
                                             }
@@ -283,8 +283,9 @@
 
                     <div class="clearfix"></div>
                     <div class="center"><button type="submit" class="long-bttn" onclick="this.form.submit()"> Order Now </button></div>
+                    </form>
                     <div class="center"><button class="long-bttn contShop" onclick="window.location.href='/SOEN287/homepage.php'"> Continue Shopping </button> </div>
-                    <form>
+                    
 
 
                 </div>
