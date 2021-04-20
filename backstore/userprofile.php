@@ -1,4 +1,9 @@
-                    <!DOCTYPE html>
+<?php 
+  if ((!isset($_SESSION['user'])) || ($_SESSION['user']['role'] != "admin")){ 
+    header("location: ../homepage.php");
+}
+?>
+<!DOCTYPE html>
        <html lang="en" dir="ltr">
 
        <head>
