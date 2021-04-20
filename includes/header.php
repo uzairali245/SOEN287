@@ -16,9 +16,13 @@
   <a href="http://localhost:8888/SOEN287/interstellar.php" class="aisle-link"
     >Interstellar foods</a
   >
-  <a href="http://localhost:8888/SOEN287/backstore_access.php" class="aisle-link"
+  <?php 
+  if ((isset($_SESSION['user'])) && ($_SESSION['user']['role'] == "admin")){ 
+    echo '  <a href="http://localhost:8888/SOEN287/backstore_access.php" class="aisle-link"
     >Backstore</a
-  >
+  >';
+?>
+
 </div>
 
 <nav class="navbar navbar-custom fixed-top header">

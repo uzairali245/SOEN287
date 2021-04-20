@@ -87,7 +87,7 @@
       }
       
       
-      include "../includes/header.html"; 
+      include "../includes/header.php"; 
       
     ?>
       <!-- Tab list -->

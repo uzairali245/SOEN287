@@ -104,7 +104,7 @@
 
 <body>
     <div class="content-container">
-        <?php include "includes/header.html"; ?>
+        <?php include "includes/header.php"; ?>
 
         <div class="content-without-footer">
             <div class="container">

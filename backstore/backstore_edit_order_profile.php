@@ -150,7 +150,7 @@
     <div class="content-container">
     <div class="content-without-footer">
     <?php 
-          include "../includes/header.html";
+          include "../includes/header.php";
           include "../includes/dbc.php";
           
           if(array_key_exists("order_id", $_GET)) {

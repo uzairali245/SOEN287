@@ -95,7 +95,7 @@
 
        <body>
          <div class="content-without-footer">
-           <?php include "../includes/header.html";
+           <?php include "../includes/header.php";
                  include "../includes/dbc.php";
 
                  if(array_key_exists("user_id", $_GET)) {

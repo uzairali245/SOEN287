@@ -119,7 +119,7 @@
     <div class="content-container ">
 
 
-      <?php include "../includes/header.html";
+      <?php include "../includes/header.php";
             include "../includes/dbc.php";
 
             if(array_key_exists("product_id", $_GET)) {

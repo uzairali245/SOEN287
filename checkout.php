@@ -62,7 +62,7 @@
             <section class="section-checkout content-without-footer">
             <?php 
             
-                include "includes/header.html"; 
+                include "includes/header.php"; 
                 include "includes/dbc.php";
 
                 if(isset($_POST['shipping'])){

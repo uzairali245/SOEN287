@@ -39,7 +39,7 @@
 </style>
 
 <body>
-    <?php include "includes/header.html";
+    <?php include "includes/header.php";
           include "includes/dbc.php";
      ?>
 

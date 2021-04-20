@@ -53,7 +53,7 @@
     <div class="content-container">
 
         <section class="section-cart content-without-footer">
-            <?php include "includes/header.html"; ?>
+            <?php include "includes/header.php"; ?>
             <div class="custom-row" id="cart-title">
                 <h2>My Cart</h2>
             </div>

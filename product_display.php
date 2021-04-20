@@ -85,7 +85,7 @@
     <div class="content-container">
         <section class="section-products content-without-footer">
             <?php 
-                include "includes/header.html";
+                include "includes/header.php";
                 include "includes/dbc.php";
              ?>
             <div class="custom-row">
