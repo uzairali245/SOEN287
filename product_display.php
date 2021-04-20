@@ -123,20 +123,56 @@
                                     <h3 id='manufacturer'>{$row['manufacturer']}</h3>
                                     <h3 id='product-name'>{$row['name']}</h3>
                                 </div>";
-    
-                           /* <div class='product-info-element btn-group productFormat' role='group' aria-label='Basic example' id='productFormat data-initial='100'>
-                                <button class="bttn-full bttn btn" type="button" value="100" id="format1" onClick="updatePrice(1)">100g</button>
-                                <button class="bttn-full bttn btn" type="button" value="250" id="format2" onClick="updatePrice(2)">250g</button>
-                                <button class="bttn-full bttn btn" type="button" value="500" id="format3" onClick="updatePrice(3)">500g</button>
-                            </div>
-                            */
+
+
+                                   /* 
+ <div class='product-info-element btn-group productFormat' role='group' aria-label='Basic example' id='productFormat data-initial='100'>
+                                        <button class='bttn-full bttn btn' type='button' value={$formatArr[0]} id="format1" onClick="updatePrice(1)">100g</button>
+                                        <button class="bttn-full bttn btn" type="button" value="250" id="format2" onClick="updatePrice(2)">250g</button>
+                                        <button class="bttn-full bttn btn" type="button" value="500" id="format3" onClick="updatePrice(3)">500g</button>
+                                        </div> 
+                                    
+                                    */        
+                                echo"
+                                    <div class='product-info-element'>
+                                    <h3 id='price-per-unit'>{$row['price']}$/";
+
+                                $formatArr;
+                                if(!is_null($row['format']))
+                                {
+                                    $formats = $row['format'];
+                                    $formatArr = explode("/",$row['format']);
+                                    $length = count($formatArr); //not sure if a thing
+                                    echo"$formatArr[0]";
+                                }   
+                                echo"{$row['unit']}</h3>
+                                </div>";
+
+                                /*
+                                     
+                                */ 
 
                                 
-                            echo"
-                                <div class='product-info-element'>
-                                    <h3 id='price-per-unit'>{$row['price']}$/{$row['unit']}</h3>
-                                </div>
-        
+                                $formatArr;
+                                if(!is_null($row['format']))
+                                {
+                                    $formats = $row['format'];
+                                    $formatArr = explode("/",$row['format']);
+                                    $length = count($formatArr); 
+                                    echo"
+                                    <div class='product-info-element btn-group productFormat' role='group' aria-label='Basic example' id='productFormat data-initial='100'>";
+                                   
+                                    for($i=0; $i < $length; $i++){
+                                        echo"                                       
+                                        <button class='bttn-full bttn btn' type='button' value={$formatArr[$i]} id='format$i' onClick='updatePrice(($i+1))'>$formatArr[$i]</button> 
+                                        ";
+                                    }
+                                    echo"</div>";
+                                }
+
+
+
+                                echo"
                                 <div class='product-info-element'>
                                     <h3 id='price'>{$row['price']}$</h3>
                                 </div>
