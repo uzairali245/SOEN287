@@ -70,6 +70,7 @@
                         <h4 style='font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;'>{$row['name']}</h4>
                         <p style='margin-bottom: 0 '>{$row['price']}$/";
 
+                        $formatArr; 
                         if(!is_null($row['format']))
                         {
                            $formats = $row['format'];
@@ -84,8 +85,16 @@
                              <div class='flex-grow-1 bd-highlight'>
                                  <form action=\"\" method=\"post\">
                                  <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                 <input type='text' name='qty' value='1' id ='{$index}' class='amount' pattern='^[1-9]\d*$'>
-                                 <input hidden type='text' name='chosenFormat' value='{$row['format']}'>
+                                 <input type='text' name='qty' value='1' id ='{$index}' class='amount' pattern='^[1-9]\d*$'>";
+                                if(!is_null($row['format']))
+                                {
+                                    echo" <input hidden type='text' name='chosenFormat' value='$formatArr[0]'>";
+                                }
+                                else
+                                    echo"  <input hidden type='text' name='chosenFormat' value='{$row['format']}'>";
+
+                                 echo"                                 
+                                
                                  <input hidden type=\"text\"  name='product_id' value={$row['product_id']}>
                                  <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 plusButton'   id='{$index}' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>                                
                              </div>
