@@ -364,6 +364,9 @@ img{
 
         function addToCart(button) { //what happens when add to cart is clicked
             var index = button.id;
+            if(parseInt(document.getElementsByClassName("amount")[index].value) =< 0){break;}
+                
+
             counterArrayBakery[index] = parseInt(document.getElementsByClassName("amount")[index].value);
         }
 
