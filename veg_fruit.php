@@ -62,12 +62,22 @@
                  $index = 0;
                  while ($row = mysqli_fetch_assoc($result))
                  {
+                    
                      echo"                     
                      <div class='aisle-item'>
                         <a href='product_display.php?varname={$row['product_id']}'>
                         <img src='{$row['image']}' alt='{$row['name']}'>
                         <h4 style='font-family: 'Exo', sans-serif; font-weight: bold; margin-top: 10px;'>{$row['name']}</h4>
-                        <p style='margin-bottom: 0 '>{$row['price']}$/{$row['unit']}</p>
+                        <p style='margin-bottom: 0 '>{$row['price']}$/";
+
+                        if(!is_null($row['format']))
+                        {
+                           $formats = $row['format'];
+                           $formatArr = explode("/",$row['format']);
+                           echo"$formatArr[0]";
+                        }
+                        
+                        echo "{$row['unit']}</p>
                         </a>
      
                          <div class='d-flex bd-highlight'>

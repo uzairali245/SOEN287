@@ -92,7 +92,7 @@ img{
                                     <div class='flex-grow-1 bd-highlight'>
                                         <form action=\"\" method=\"post\">
                                         <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input type='text' name='qty' value='1' class='amount' pattern='^[1-9]\d*$'>
                                         <input hidden type='text' name='chosenFormat' value='NULL'>
                                         <input hidden type=\"text\"  name='product_id' value='1005'>
                                         <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
@@ -122,7 +122,7 @@ img{
                                     <div class='flex-grow-1 bd-highlight'>
                                         <form action=\"\" method=\"post\">
                                         <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='1' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input type='text' name='qty' value='1' class='amount' pattern='^[1-9]\d*$'>
                                         <input hidden type='text' name='chosenFormat' value='NULL'>
                                         <input hidden type=\"text\"  name='product_id' value='3543'>
                                         <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='1' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
@@ -157,7 +157,7 @@ img{
                                     <div class='flex-grow-1 bd-highlight'>
                                         <form action=\"\" method=\"post\">
                                         <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='2' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input type='text' name='qty' value='1' class='amount' pattern='^[1-9]\d*$'>
                                         <input hidden type='text' name='chosenFormat' value='NULL'>
                                         <input hidden type=\"text\"  name='product_id' value='3000'>
                                         <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='2' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
@@ -187,7 +187,7 @@ img{
                                     <div class='flex-grow-1 bd-highlight'>
                                         <form action=\"\" method=\"post\">
                                         <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='3' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input type='text' name='qty' value='1' class='amount' pattern='^[1-9]\d*$'>
                                         <input hidden type='text' name='chosenFormat' value='NULL'>
                                         <input hidden type=\"text\"  name='product_id' value='1001'>
                                         <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='3' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
@@ -223,7 +223,7 @@ img{
                                     <div class='flex-grow-1 bd-highlight'>
                                         <form action=\"\" method=\"post\">
                                         <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='4' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input type='text' name='qty' value='1' class='amount' pattern='^[1-9]\d*$'>
                                         <input hidden type='text' name='chosenFormat' value='NULL'>
                                         <input hidden type=\"text\"  name='product_id' value='1000'>
                                         <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='4' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
@@ -252,7 +252,7 @@ img{
                                     <div class='flex-grow-1 bd-highlight'>
                                         <form action=\"\" method=\"post\">
                                         <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='5' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input type='text' name='qty' value='1' class='amount' pattern='^[1-9]\d*$'>
                                         <input hidden type='text' name='chosenFormat' value='NULL'>
                                         <input hidden type=\"text\"  name='product_id' value='1003'>
                                         <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='5' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
@@ -281,7 +281,7 @@ img{
                                     <div class='flex-grow-1 bd-highlight'>
                                         <form action=\"\" method=\"post\">
                                         <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='6' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input type='text' name='qty' value='1' class='amount' pattern='^[1-9]\d*$'>
                                         <input hidden type='text' name='chosenFormat' value='NULL'>
                                         <input hidden type=\"text\"  name='product_id' value='3003'>
                                         <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='6' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
@@ -310,7 +310,7 @@ img{
                                     <div class='flex-grow-1 bd-highlight'>
                                         <form action=\"\" method=\"post\">
                                         <button type='button' class='btn btn-primary rounded-circle btn-sm py-0 minusButton' id='7' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
-                                        <input type='text' name='qty' value='1' class='amount'>
+                                        <input type='text' name='qty' value='1' class='amount' pattern='^[1-9]\d*$'>
                                         <input hidden type='text' name='chosenFormat' value='NULL'>
                                         <input hidden type=\"text\"  name='product_id' value='6464'>
                                         <button type='button'  class='btn btn-primary rounded-circle btn-sm py-0 plusButton' id='7' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
