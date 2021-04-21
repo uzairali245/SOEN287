@@ -124,53 +124,42 @@
                                     <h3 id='product-name'>{$row['name']}</h3>
                                 </div>";
 
-
-                                   /* 
- <div class='product-info-element btn-group productFormat' role='group' aria-label='Basic example' id='productFormat data-initial='100'>
-                                        <button class='bttn-full bttn btn' type='button' value={$formatArr[0]} id="format1" onClick="updatePrice(1)">100g</button>
-                                        <button class="bttn-full bttn btn" type="button" value="250" id="format2" onClick="updatePrice(2)">250g</button>
-                                        <button class="bttn-full bttn btn" type="button" value="500" id="format3" onClick="updatePrice(3)">500g</button>
-                                        </div> 
-                                    
-                                    */        
+                                        
                                 echo"
                                     <div class='product-info-element'>
                                     <h3 id='price-per-unit'>{$row['price']}$/";
 
                                 $formatArr;
-                                if(!is_null($row['format']))
+                                if(!is_null($row['format'])) //display the initial format
                                 {
                                     $formats = $row['format'];
                                     $formatArr = explode("/",$row['format']);
-                                    $length = count($formatArr); //not sure if a thing
+                                    $length = count($formatArr); 
                                     echo"$formatArr[0]";
                                 }   
                                 echo"{$row['unit']}</h3>
                                 </div>";
-
-                                /*
-                                     
-                                */ 
-
                                 
                                 $formatArr;
-                                if(!is_null($row['format']))
+                                if(!is_null($row['format']))//format buttons display
                                 {
                                     $formats = $row['format'];
                                     $formatArr = explode("/",$row['format']);
                                     $length = count($formatArr); 
                                     echo"
-                                    <div class='product-info-element btn-group productFormat' role='group' aria-label='Basic example' id='productFormat data-initial='100'>";
+                                    
+                                    <div class='product-info-element btn-group productFormat' role='group' aria-label='Basic example' id='productFormat' data-initial='{$formatArr[0]}'> ";
                                    
                                     for($i=0; $i < $length; $i++){
+                                        $a = $i +1;
                                         echo"                                       
-                                        <button class='bttn-full bttn btn' type='button' value={$formatArr[$i]} id='format$i' onClick='updatePrice(($i+1))'>$formatArr[$i]</button> 
+                                        <button class='bttn-full bttn btn' type='button' value='{$formatArr[$i]}' id='format$a' onClick='updatePrice($a)'>$formatArr[$i]</button> 
+                                        
                                         ";
+                                        
                                     }
                                     echo"</div>";
                                 }
-
-
 
                                 echo"
                                 <div class='product-info-element'>
@@ -187,7 +176,7 @@
                                         <form action=\"\" method=\"post\">
                                         <button  type='button' class='button-circle minusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> - </button>
                                         <input type='text' name='qty' value='1' class='amount'>                                        
-                                        <input hidden type='text' name='chosenFormat' value='{$row['format']}'>
+                                        <input hidden type='text' name='chosenFormat' id='chosenFormat' value='{$row['format']}'>
                                         <input hidden type=\"text\"  name='product_id' value={$row['product_id']}>
                                         <button   type='button' class='button-circle plusButton' id='0' style='background-color:  #EE4F3E; border-color:  #EE4F3E;'> + </button>
                                     </div>
@@ -202,50 +191,7 @@
                                 ";
                         ?>
 
-                        <!--
-                        <div class="product-info-element">
-                            <h3 id="manufacturer">Earth co.</h3>
-                            <h3 id="product-name">Wild Blueberries</h3>
-                        </div>
-
-                        <div class=" product-info-element btn-group productFormat" role="group" aria-label="Basic example" id="productFormat" data-initial="100">
-                            <button class="bttn-full bttn btn" type="button" value="100" id="format1" onClick="updatePrice(1)">100g</button>
-                            <button class="bttn-full bttn btn" type="button" value="250" id="format2" onClick="updatePrice(2)">250g</button>
-                            <button class="bttn-full bttn btn" type="button" value="500" id="format3" onClick="updatePrice(3)">500g</button>
-                        </div>
-
-                        <div class="product-info-element">
-                            <h3 id="price-per-unit">$18.99/100g</h3>
-                        </div>
-
-                        <div class="product-info-element">
-                            <h3 id="price">$18.99</h3>
-                        </div>
-
-
-
-                        <div class="product-info-element">
-
-                            <div class="colmn one-half qty">
-                                <button class="button-circle minusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> - </button>
-                                <input type="text" name="qty" value="1" class="amount">
-                                <button class="button-circle plusButton" id="0" style="background-color:  #EE4F3E; border-color:  #EE4F3E;"> + </button>
-                            </div>
-
-                            <div class="colmn one-half">
-                                <button type="submit" id="0" class="bttn bttn-full cartButton"> Add to cart </button>
-                            </div>
-
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                       <button class="collapsible">See More</button>
-                         <div class="content">
-                           <p class="description"></p>
-                            </div>
-                        -->
-
+                       
                     </div>
 
                 </div>
@@ -260,30 +206,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script>
-          // This code is for Product Description
-      //  var coll = document.getElementsByClassName("collapsible");
-//var i;
-
-//for (i = 0; i < coll.length; i++) {
-//  coll[i].addEventListener("click", function() {
-//    this.classList.toggle("active");
- //   var content = this.nextElementSibling;
- //   if (content.style.maxHeight){
-  //    content.style.maxHeight = null;
-  //  } else {
- //     content.style.maxHeight = content.scrollHeight + "px";
- //   }
- // });
-//}
-//document.querySelector(".description").innerHTML="A Rare Find! Fresh wild blueberries delivered directly from Earth by the Perseverance rover.";
-//document.querySelector(".collapsible:after .active:after ").style.color="white";
-// Description sec ends here
-        
-        
-        
-        
-        
-        
+          
         var numOfProducts = document.getElementsByClassName("amount").length;
         var counterArray = new Array(numOfProducts);
         var formatValues = {};
@@ -308,10 +231,14 @@
         
         //UPDATE PRICE when format changed
         function updatePrice(index) {
-            var price = document.getElementById("price-per-unit").innerHTML.substring(1).split('/')[0];
+            console.log("---------------------");
+            var price = document.getElementById("price-per-unit").innerHTML.substring(0).split('$')[0];
+            console.log("initial price: " + price);
             var format = document.getElementById("format"+index).value;
+            console.log("format: " + format); 
             var defaultFormat = document.getElementById("productFormat").getAttribute("data-initial");
-
+            console.log("default format: " + defaultFormat);
+                                
             price = price * (format / defaultFormat);
 
             //STORAGE PURPOSE
@@ -324,6 +251,11 @@
             console.log(defaultFormat);
 
             document.getElementById("price").innerHTML = "$" + price.toFixed(2);
+
+            console.log("The format is " + format);
+            
+            //to change the input in the form
+            document.getElementById("chosenFormat").value = format;
         }
 
         var storedItemCount = JSON.parse(localStorage.getItem('counterArray'));
@@ -352,6 +284,7 @@
         }
 
         function addToCart(button) { //what happens when add to cart is clicked
+
             var index = button.id;
             counterArray[index] = parseInt(document.getElementsByClassName("amount")[index].value);
         }
