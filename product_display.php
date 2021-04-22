@@ -210,9 +210,10 @@
         var numOfProducts = document.getElementsByClassName("amount").length;
         var counterArray = new Array(numOfProducts);
         var formatValues = {};
-        var storedFormatValues = JSON.parse(localStorage.getItem('formatProductValues'));
+       // var storedFormatValues = JSON.parse(localStorage.getItem('formatProductValues'));
 
         //KEEP FORMAT UPDATED
+        /*
         if (storedFormatValues) {
             console.log(JSON.parse(localStorage.getItem('formatProductValues')));
             for (let r = 0; r < Object.keys(storedFormatValues).length; r++){
@@ -228,13 +229,14 @@
                     updatePrice(index);
             }
         }
+        */
         
         //UPDATE PRICE when format changed
         function updatePrice(index) {
             console.log("---------------------");
             var price = document.getElementById("price-per-unit").innerHTML.substring(0).split('$')[0];
             console.log("initial price: " + price);
-            var format = document.getElementById("format"+index).value;
+            var format = document.getElementById("format"+index).innerHTML;
             console.log("format: " + format); 
             var defaultFormat = document.getElementById("productFormat").getAttribute("data-initial");
             console.log("default format: " + defaultFormat);
